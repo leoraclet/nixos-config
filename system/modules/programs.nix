@@ -1,8 +1,4 @@
-{
-  pkgs,
-  lib,
-  ...
-}: {
+{pkgs, ...}: {
   xdg.portal = {
     enable = true;
     wlr.enable = false;
@@ -39,6 +35,15 @@
       };
     };
 
+    xfconf.enable = true;
+    thunar = {
+      enable = true;
+      plugins = with pkgs.xfce; [
+        thunar-archive-plugin
+        thunar-volman
+      ];
+    };
+
     zsh = {
       enable = true;
       enableCompletion = true;
@@ -47,7 +52,7 @@
 
       shellAliases = {
         ll = "ls -la";
-
+        ps = "procs";
         edit = "sudo -e";
 
         update = "sudo nixos-rebuild switch";
@@ -69,6 +74,9 @@
         ldock = "lazydocker";
         conf = "cd ~/.config";
         ngc = "sudo nix-collect-garbage -d";
+        hex = "hexyl";
+        dua = "dua i";
+        code = "codium";
 
         rebuild = "rm -rf ~/.config && rm -f ~/.zshrc && sudo nixos-rebuild switch --flake ~/Downloads/nixconfigs/config2/#leonne";
       };
@@ -88,7 +96,7 @@
           vimAlias = true;
 
           spellcheck = {
-            enable = true;
+            enable = false;
           };
 
           keymaps = [
@@ -130,6 +138,16 @@
             {
               key = "<leader>tt";
               action = "<CMD>Trouble diagnostics toggle<CR>";
+              mode = "n";
+            }
+            {
+              key = "j";
+              action = "jzz";
+              mode = "n";
+            }
+            {
+              key = "k";
+              action = "kzz";
               mode = "n";
             }
           ];
@@ -203,10 +221,18 @@
 
           telescope.enable = true;
 
+          notes = {
+            todo-comments.enable = true;
+          };
+
           git = {
             enable = true;
             gitsigns.enable = true;
             gitsigns.codeActions.enable = false; # throws an annoying debug message
+          };
+
+          comments = {
+            comment-nvim.enable = true;
           };
 
           ui = {

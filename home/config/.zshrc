@@ -52,9 +52,20 @@ _fzf_compgen_dir() {
 }
 
 alias ff="fzf --preview '$show_file_or_dir_preview'"
+alias f="fd --type f | fzf --preview '$show_file_or_dir_preview' | sed 's/\ /\\\ /g' | xargs nvim"
 
 # ---- Zoxide (better cd) ----
 eval "$(zoxide init zsh)"
+
+function dm() {
+  local dir=$(
+    zoxide query --list --score |
+    fzf --height 40% --layout reverse --info inline \
+        --nth 2.. --tac --no-sort --query "$*" \
+        --bind 'enter:become:echo {2..}'
+  )
+  cd "$dir"
+}
 
 alias cd="z"
 
@@ -65,9 +76,6 @@ alias ls="eza --color=always --long --git --icons=always"
 # thefuck alias
 eval $(thefuck --alias)
 eval $(thefuck --alias fk)
-
-# ---- Zoxide (better cd) ----
-eval "$(zoxide init zsh)"
 
 # ---- TLDR ----
 alias man="tldr"
@@ -86,32 +94,5 @@ function y() {
 # Atuin
 eval "$(atuin init zsh)"
 
-####################################
-# WELCOME MESSAGE
-####################################
-
-# Color
-RED='\033[0;31m'
-GREEN='\033[0;32m'
-YELLOW='\033[0;33m'
-NC='\033[0m' # No Color
-
-function red {
-    printf "${RED}$@${NC}\n"
-}
-
-function green {
-    printf "${GREEN}$@${NC}\n"
-}
-
-function yellow {
-    printf "${YELLOW}$@${NC}\n"
-}
-
-
-echo ""
-echo "$(red '     Distro:  NixOS')"
-echo "     Langs:   Rust  Zig  Go  JS 󰛦 TS  Python  Lua"
-echo "$(green '     Shell:  󰈺 Zsh')"
-echo "$(yellow '    󰟶 Mood:   👨‍💻')"
-echo ""
+# Starship
+eval "$(starship init zsh)"

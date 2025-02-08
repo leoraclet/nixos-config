@@ -3,6 +3,8 @@
     ./git.nix
     ./config.nix
     ./environment.nix
-    ./librewolf.nix
+    ./firefox.nix
+    ./gtk-qt.nix
+    ./codium.nix
   ];
 }

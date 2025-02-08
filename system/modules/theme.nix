@@ -8,5 +8,8 @@
         loginBackground = true;
       }
     )
+
+    # Icon theme
+    pkgs.papirus-icon-theme
   ];
 }

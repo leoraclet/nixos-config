@@ -20,5 +20,7 @@ in {
     ".config/mpv".source = "${configDir}/mpv";
     ".config/lazygit".source = "${configDir}/lazygit";
     ".config/zathura".source = "${configDir}/zathura";
+    ".config/avizo".source = "${configDir}/avizo";
+    ".config/tmux".source = "${configDir}/tmux";
   };
 }

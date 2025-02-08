@@ -21,17 +21,19 @@
     };
   };
   outputs = {
-    self,
     nixpkgs,
     nixpkgs-unstable,
     home-manager,
     nvf,
+    firefox-addons,
     ...
   } @ inputs: let
     lib = nixpkgs.lib;
     system = "x86_64-linux";
-    pkgs = nixpkgs.legacyPackages.${system};
-    pkgs-unstable = nixpkgs-unstable.legacyPackages.${system};
+    pkgs-unstable = import "${nixpkgs-unstable}" {
+      inherit system;
+      config.allowUnfree = true;
+    };
   in {
     nixosConfigurations.leonne = lib.nixosSystem {
       inherit system;
@@ -39,8 +41,8 @@
         inherit pkgs-unstable inputs;
       };
       modules = [
-        nvf.nixosModules.default
         ./system/configuration.nix
+        nvf.nixosModules.default
         inputs
         .home-manager
         .nixosModules
@@ -48,8 +50,15 @@
         {
           home-manager.useGlobalPkgs = true;
           home-manager.useUserPackages = true;
-          home-manager.users.leonne = import ./home;
-          home-manager.extraSpecialArgs = {inherit inputs;};
+          home-manager.users.leonne = {
+            imports = [
+              ./home
+            ];
+          };
+          home-manager.extraSpecialArgs = {
+            inherit inputs pkgs-unstable;
+            firefox-addons-allowUnfree = pkgs-unstable.callPackage firefox-addons {};
+          };
         }
       ];
     };

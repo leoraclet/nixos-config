@@ -21,6 +21,5 @@
     ./swap.nix
     ./system.nix
     ./theme.nix
-    #./neovim.nix
   ];
 }

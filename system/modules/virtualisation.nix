@@ -23,6 +23,7 @@
   };
 
   environment.systemPackages = with pkgs; [
+    podman-tui
     podman-compose
     qemu
     quickemu
