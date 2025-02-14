@@ -11,7 +11,18 @@ autoload -Uz compinit
 compinit
 # End of lines added by compinstall
 
-eval "$(fzf --zsh)"
+source ~/.config/scripts/zsh-defer/zsh-defer.plugin.zsh
+
+# Starship
+eval "$(starship init zsh)"
+zsh-defer eval "$(fzf --zsh)"
+zsh-defer eval "$(atuin init zsh)"
+zsh-defer eval "$(zoxide init zsh)"
+zsh-defer eval "$(thefuck --alias)"
+zsh-defer eval "$(thefuck --alias fk)"
+zsh-defer eval "$(direnv hook zsh)"
+zsh-defer source ~/.config/scripts/fzf-git.sh/fzf-git.sh
+
 
 export BAT_THEME="Monokai Extended"
 
@@ -55,7 +66,6 @@ alias ff="fzf --preview '$show_file_or_dir_preview'"
 alias f="fd --type f | fzf --preview '$show_file_or_dir_preview' | sed 's/\ /\\\ /g' | xargs nvim"
 
 # ---- Zoxide (better cd) ----
-eval "$(zoxide init zsh)"
 
 function dm() {
   local dir=$(
@@ -74,13 +84,9 @@ alias cd="z"
 alias ls="eza --color=always --long --git --icons=always"
 
 # thefuck alias
-eval $(thefuck --alias)
-eval $(thefuck --alias fk)
 
 # ---- TLDR ----
 alias man="tldr"
-
-source ~/.config/scripts/fzf-git.sh/fzf-git.sh
 
 function y() {
 	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
@@ -91,8 +97,3 @@ function y() {
 	rm -f -- "$tmp"
 }
 
-# Atuin
-eval "$(atuin init zsh)"
-
-# Starship
-eval "$(starship init zsh)"

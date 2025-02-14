@@ -20,11 +20,9 @@
 
     hyprland = {
       enable = true;
-
       xwayland = {
         enable = true;
       };
-
       portalPackage = pkgs.xdg-desktop-portal-hyprland;
     };
 
@@ -57,17 +55,33 @@
 
         update = "sudo nixos-rebuild switch";
         se = "sudoedit";
+
+        # Cd
+        home = "cd ~";
         ".." = "cd ..";
         "..." = "cd ../../";
         "...." = "cd ../../../";
         "....." = "cd ../../../../";
 
+        # Git
         ga = "git add";
         gc = "git commit";
         gs = "git status";
         gp = "git push";
         gi = "git init";
+        gl = "git log --all --color --decorate --oneline --graph";
+
+        # Make
+        mk = "make";
+        mc = "make clean";
+        mb = "make build";
+        mr = "make run";
+
+        # Clear
         cl = "clear";
+        cls = "clear";
+
+        open = "xdg-open";
         cat = "bat";
         df = "dysk";
         lgit = "lazygit";
@@ -78,7 +92,8 @@
         dua = "dua i";
         code = "codium";
 
-        rebuild = "rm -rf ~/.config && rm -f ~/.zshrc && sudo nixos-rebuild switch --flake ~/Downloads/nixconfigs/config2/#leonne";
+        fixsd = "lspci -knn | grep -iA2 card && modprobe rtsx_pci";
+        rebuild = "rm -rf ~/.config && rm -f ~/.zshrc && sudo nixos-rebuild switch --flake ~/Config/#leonne";
       };
 
       ohMyZsh = {
@@ -94,6 +109,7 @@
         vim = {
           viAlias = true;
           vimAlias = true;
+          hideSearchHighlight = true;
 
           spellcheck = {
             enable = false;
@@ -239,7 +255,6 @@
             smartcolumn = {
               enable = true;
               setupOpts.custom_colorcolumn = {
-                # this is a freeform module, it's `buftype = int;` for configuring column position
                 nix = "110";
                 ruby = "120";
                 java = "130";

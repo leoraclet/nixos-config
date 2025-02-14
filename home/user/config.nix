@@ -22,5 +22,8 @@ in {
     ".config/zathura".source = "${configDir}/zathura";
     ".config/avizo".source = "${configDir}/avizo";
     ".config/tmux".source = "${configDir}/tmux";
+    ".config/discord".source = "${configDir}/discord";
+    ".config/gh".source = "${configDir}/gh";
+    ".config/helix".source = "${configDir}/helix";
   };
 }

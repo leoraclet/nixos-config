@@ -22,6 +22,10 @@
       ];
     };
 
+    extraOptions = ''
+      trusted-users = root leonne
+    '';
+
     optimise.automatic = true;
 
     gc = {

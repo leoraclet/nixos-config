@@ -27,6 +27,7 @@
           onetab
           languagetool
           localcdn
+          feedbroreader
         ];
         settings = {
           "signon.rememberSignons" = false;

@@ -7,6 +7,7 @@
     # Dev
     ###################################################
 
+    conda # Conda is a package manager for Python
     gnumake # Make utility
     cmake # CMake utility
     gcc # GCC compiler
@@ -21,13 +22,17 @@
     alejandra # Nix language formatter
     uv # Python package manager
     helix # Modern modal text editor
+    devenv # Fast, Declarative, Reproducible, and Composable Developer Environments
+    direnv # Shell extension that manages your environment
+    ghdl-llvm # VHDL 2008/93/87 simulator
+    iverilog # Icarus Verilog compiler
+    scrcpy # Display and control Android devices over USB or TCP/IP
 
     ###################################################
     # AI
     ###################################################
 
     ollama # Get up and running with large language models locally
-    oterm # Text-based terminal client for Ollama
 
     ###################################################
     # CLI
@@ -45,7 +50,7 @@
     poppler # PDF rendering library
     atuin # Sqlite bash history
     delta # Syntax-highlighting pager for git
-    tldr # Like man but better
+    tealdeer # Very fast implementation of tldr (aka man) in Rust
     swappy # Snapshot editing tool
     imv # Image viewer
     mpv # Media player
@@ -79,11 +84,14 @@
     avizo # Notification deamon for multimedia keys
     pamixer # PulseAudio command line mixer
     bluez-tools # Set of tools to manage bluetooth devices
-    rsync # Fast incremental file transfer utility
     texliveFull # TeX Live environment
-    wf-recorder # Screen recording
     bottom # System monitor
     impala # TUI for managing wifi
+    wlsunset # Day/night gamma adjustments for Wayland
+    mosh # Mobile shell (ssh replacement)
+    xh # Friendly and fast tool for sending HTTP requests
+    gh # GitHub CLI tool
+    killall # Like pkill but better
 
     ###################################################
     # NixOS utils
@@ -105,11 +113,13 @@
     # GUI apps
     ###################################################
 
-    libreoffice-qt6
     thunderbird
     qbittorrent
     obsidian
-    vesktop
+    (discord.override {
+      withOpenASAR = true;
+      withVencord = true;
+    })
     spotify
     tor-browser
     vlc
@@ -119,6 +129,11 @@
     signal-desktop
     orca-slicer
     whatsie
+    onionshare-gui
+    inkscape
+    obs-studio
+    libreoffice-fresh
+    qalculate-gtk
 
     ###################################################
     # Hyprland
@@ -128,6 +143,7 @@
     networkmanagerapplet
     hypridle
     hyprlock
+    hyprpicker
     hyprpaper
     kitty
     libnotify
@@ -136,5 +152,30 @@
     wl-clipboard
     rofi-wayland
     waybar
+
+    ###################################################
+    # Hacking
+    ###################################################
+
+    #wireshark
+    #burpsuite
+    #nmap
+    #sqlmap
+    #metasploit
+    #sage
+    #aircrack-ng
+    #scalpel
+    #hashcat
+    #hashcat-utils
+    #john
+    #radare2
+    #cutter
+    #ghidra
+    #ida-free
+    #metasploit
+    #nth
+    #exiftool
+    #theharvester
+    #imagemagick
   ];
 }

@@ -14,7 +14,6 @@
       james-yu.latex-workshop
       shardulm94.trailing-spaces
       redhat.vscode-yaml
-      pylyzer.pylyzer
       ms-vscode.hexeditor
       ms-vscode.cmake-tools
       ms-vscode.cpptools
@@ -67,6 +66,12 @@
       platformio.platformio-vscode-ide
       meganrogge.template-string-converter
       ms-toolsai.jupyter
+      ms-python.python
+      ms-python.isort
+      ms-python.black-formatter
+      ms-python.vscode-pylance
+      ms-python.debugpy
+      ms-python.pylint
     ];
   };
 }
