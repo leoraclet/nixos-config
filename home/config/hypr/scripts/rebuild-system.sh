@@ -28,12 +28,18 @@ git add -A -N # Just in case (not sure what it does thought ...)
 
 echo "NixOS Rebuilding..."
 
+# Rebuild, output simplified errors, log trackebacks
+sudo nixos-rebuild build --flake ./#leonne &>nixos-switch.log || (cat nixos-switch.log | grep --color error && exit 1)
+
 # Remove all symlinks of home-manager
 rm -rf ~/.zshrc
 find ~/.config -type l -delete # Delete symlinks
 
-# Rebuild, output simplified errors, log trackebacks
-sudo nixos-rebuild switch --flake ./#leonne &>nixos-switch.log || (cat nixos-switch.log | grep --color error && exit 1)
+echo "Build successfull"
+echo "Switching to new configuration ..."
+
+# If it built successfully
+sudo nixos-rebuild switch --flake ./#leonne
 
 # Get current generation metadata
 current=$(nixos-rebuild list-generations | grep current)
