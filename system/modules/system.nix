@@ -15,7 +15,7 @@
       "--commit-lock-file"
       "-L" # print build logs
     ];
-    dates = "02:00";
+    dates = "weekly";
     randomizedDelaySec = "45min";
   };
   */

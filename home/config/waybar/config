@@ -10,7 +10,7 @@
     "spacing": 4,
     "modules-left": ["hyprland/workspaces", "hyprland/submap"],
     "modules-center": ["clock#time", "custom/separator", "clock#week", "custom/separator_dot", "clock#month", "custom/separator", "clock#calendar"],
-    "modules-right": [ "bluetooth", "network", "group/misc"],
+    "modules-right": ["custom/weather" "bluetooth", "network", "group/misc"],
 
     // Modules Config
     "hyprland/workspaces": {
@@ -178,6 +178,14 @@
         "tooltip-format-activated": "idle-inhibitor <span color='#a6da95'>on</span>",
         "tooltip-format-deactivated": "idle-inhibitor <span color='#ee99a0'>off</span>",
         "start-activated": true,
+    },
+
+    "custom/weather": {
+        "format": "{}°",
+        "tooltip": true,
+        "interval": 3600,
+        "exec": "wttrbar --date-format "%d-%m-%Y" --location Saint-Etienne --hide-conditions",
+        "return-type": "json"
     },
 },
 
