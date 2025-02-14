@@ -9,8 +9,10 @@
   xdg.mime = {
     enable = true;
     defaultApplications = {
-      "application/pdf" = "zathura.desktop";
+      # PDF
+      "application/pdf" = "org.pwmt.zathura.desktop";
 
+      # Web
       "x-scheme-handler/http" = "firefox.desktop";
       "x-scheme-handler/https" = "firefox.desktop";
       "x-scheme-handler/chrome" = "firefox.desktop";
@@ -22,11 +24,15 @@
       "application/x-extension-xhtml" = "firefox.desktop";
       "application/x-extension-xht" = "firefox.desktop";
 
-      "image/bmp" = "feh.desktop";
-      "image/gif" = "feh.desktop";
-      "image/jpeg" = "feh.desktop";
-      "image/png" = "feh.desktop";
-      "image/webp" = "feh.desktop";
+      # Images
+      "image/bmp" = "imv.desktop";
+      "image/gif" = "imv.desktop";
+      "image/jpeg" = "imv.desktop";
+      "image/png" = "imv.desktop";
+      "image/webp" = "imv.desktop";
+
+      # Videos
+      "video/mp4" = "umpv.desktop";
     };
   };
 }

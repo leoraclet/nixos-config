@@ -53,7 +53,6 @@
     tealdeer # Very fast implementation of tldr (aka man) in Rust
     swappy # Snapshot editing tool
     imv # Image viewer
-    feh # Image viewer (better ... )
     mpv # Media player
     bat # Like cat, but WAY betters
     eza # Like ls, but better
