@@ -2,23 +2,22 @@
   "workbench.colorTheme": "Dracula Theme",
   "workbench.iconTheme": "material-icon-theme",
   "window.menuBarVisibility": "toggle",
-  "editor.fontSize": 12,
+  "editor.fontSize": 16,
   "editor.scrollbar.vertical": "hidden",
   "editor.scrollbar.verticalScrollbarSize": 0,
   "security.workspace.trust.untrustedFiles": "newWindow",
   "security.workspace.trust.startupPrompt": "never",
   "security.workspace.trust.enabled": false,
   "editor.minimap.enabled": false,
-  "editor.fontFamily": "JetbrainsMono Nerd Font','Maple Mono', monospace",
   "extensions.autoUpdate": false,
-  "workbench.statusBar.visible": false,
+  "workbench.statusBar.visible": true,
   "terminal.external.linuxExec": "kitty",
   "terminal.explorerKind": "both",
   "terminal.sourceControlRepositoriesKind": "both",
   "telemetry.telemetryLevel": "off",
   "workbench.activityBar.location": "top",
   "window.customTitleBarVisibility": "auto",
-  "workbench.sideBar.location": "right",
+  "workbench.sideBar.location": "left",
   "[python]": {
     "editor.defaultFormatter": "ms-python.black-formatter"
   },
@@ -41,5 +40,7 @@
   "[javascript]": {
     "editor.defaultFormatter": "vscode.typescript-language-features"
   },
-  "breadcrumbs.enabled": false
+  "breadcrumbs.enabled": false,
+  "editor.titleBar.enabled": false,
+  "editor.formatOnSave": true
 }
