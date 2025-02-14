@@ -25,5 +25,7 @@ in {
     ".config/discord".source = "${configDir}/discord";
     ".config/gh".source = "${configDir}/gh";
     ".config/helix".source = "${configDir}/helix";
+    ".config/cava".source = "${configDir}/cava";
+    ".config/tealdeer".source = "${configDir}/tealdeer";
   };
 }
