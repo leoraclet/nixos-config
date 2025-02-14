@@ -30,14 +30,30 @@
           feedbroreader
         ];
         settings = {
-          "signon.rememberSignons" = false;
+          # Disable telemetry
+          "browser.newtabpage.activity-stream.feeds.telemetry" = false;
+          "browser.ping-centre.telemetry" = false;
+          "browser.tabs.crashReporting.sendReport" = false;
+          "devtools.onboarding.telemetry.logged" = false;
+          "toolkit.telemetry.enabled" = false;
+          "toolkit.telemetry.unified" = false;
+          "toolkit.telemetry.server" = "";
+
+          # Disable Pocket
+          "browser.newtabpage.activity-stream.feeds.discoverystreamfeed" = false;
+          "browser.newtabpage.activity-stream.feeds.section.topstories" = false;
+          "browser.newtabpage.activity-stream.section.highlights.includePocket" = false;
           "browser.newtabpage.activity-stream.showSponsored" = false;
+          "extensions.pocket.enabled" = false;
+
+          "signon.rememberSignons" = false;
           "browser.newtabpage.activity-stream.showSponsoredTopSites" = false;
           "browser.bookmarks.addedImportButton" = false;
           "extensions.autoDisableScopes" = 0; # Don't auto-disable extensions
           "extensions.activeThemeID" = "firefox-alpenglow@mozilla.org";
           "browser.startup.page" = 3;
           "layout.css.prefers-color-scheme.content-override" = 1;
+
           "browser.uiCustomization.state" = ''{"placements":{"widget-overflow-fixed-list":[],"unified-extensions-area":["idcac-pub_guus_ninja-browser-action","firefox_tampermonkey_net-browser-action"],"nav-bar":["back-button","forward-button","stop-reload-button","home-button","urlbar-container","save-to-pocket-button","downloads-button","extension_one-tab_com-browser-action","_446900e4-71c2-419f-a6a7-df9c091e268b_-browser-action","ublock0_raymondhill_net-browser-action","addon_darkreader_org-browser-action","unified-extensions-button"],"toolbar-menubar":["menubar-items"],"TabsToolbar":["tabbrowser-tabs","new-tab-button"],"vertical-tabs":[],"PersonalToolbar":["import-button","personal-bookmarks"]},"seen":["addon_darkreader_org-browser-action","idcac-pub_guus_ninja-browser-action","firefox_tampermonkey_net-browser-action","ublock0_raymondhill_net-browser-action","extension_one-tab_com-browser-action","_446900e4-71c2-419f-a6a7-df9c091e268b_-browser-action","developer-button"],"dirtyAreaCache":["unified-extensions-area","nav-bar","vertical-tabs","PersonalToolbar","toolbar-menubar","TabsToolbar"],"currentVersion":20,"newElementCount":6}'';
         };
       };

@@ -97,3 +97,7 @@ function y() {
 	rm -f -- "$tmp"
 }
 
+function switch() {
+    eval "~/.config/hypr/scripts/rebuild-system.sh"
+}
+

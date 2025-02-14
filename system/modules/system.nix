@@ -12,6 +12,7 @@
     flags = [
       "--update-input"
       "nixpkgs"
+      "--commit-lock-file"
       "-L" # print build logs
     ];
     dates = "02:00";
