@@ -181,7 +181,7 @@
     },
 
     "custom/weather": {
-        "format": "{}°",
+        "format": "{}° ",
         "tooltip": true,
         "interval": 3600,
         "exec": "wttrbar --date-format '%d-%m-%Y' --location Saint-Etienne --hide-conditions",
@@ -220,7 +220,7 @@
     "keyboard-state": {
         "capslock": true,
         "numlock": true,
-        "format": "{name} {icon}",
+        "format": "{name} {icon}  ",
         "format-icons": {
             "locked": "",
             "unlocked": ""

@@ -39,7 +39,7 @@ echo "Build successfull"
 echo "Switching to new configuration ..."
 
 # If it built successfully
-sudo nixos-rebuild switch --flake ./#leonne >/dev/null
+sudo nixos-rebuild switch --flake ./#leonne &>/dev/null
 
 # Get current generation metadata
 current=$(nixos-rebuild list-generations | grep current)
