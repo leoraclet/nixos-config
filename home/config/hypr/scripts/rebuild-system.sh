@@ -46,6 +46,8 @@ git commit -am "$current"
 # Notify all OK!
 notify-send -e "NixOS Rebuilt OK"
 
+# Remove log ...
+
 # Back to where you were
 popd >/dev/null
 exit 1
