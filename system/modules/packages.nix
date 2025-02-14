@@ -108,6 +108,7 @@
     onefetch # Git repo
     cpufetch # Cpu
     ramfetch # Memory
+    fastfetch # Faster neofecth ... :)
 
     ###################################################
     # GUI apps

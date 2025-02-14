@@ -57,6 +57,7 @@
         se = "sudoedit";
 
         # Cd
+        mkdir = "mkdir -p";
         home = "cd ~";
         ".." = "cd ..";
         "..." = "cd ../../";
@@ -90,6 +91,8 @@
         ngc = "sudo nix-collect-garbage -d";
         hex = "hexyl";
         dua = "dua i";
+
+        vc = "codium";
         code = "codium";
 
         fixsd = "lspci -knn | grep -iA2 card && modprobe rtsx_pci";
