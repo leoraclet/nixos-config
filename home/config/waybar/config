@@ -184,8 +184,8 @@
         "format": "{}°",
         "tooltip": true,
         "interval": 3600,
-        "exec": "wttrbar --date-format "%d-%m-%Y" --location Saint-Etienne --hide-conditions",
-        "return-type": "json"
+        "exec": "wttrbar --date-format '%d-%m-%Y' --location Saint-Etienne --hide-conditions",
+        "return-type": "json",
     },
 },
 
