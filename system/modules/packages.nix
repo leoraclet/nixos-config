@@ -140,6 +140,7 @@
     # Hyprland
     ###################################################
 
+    appimage-run
     clipse
     networkmanagerapplet
     hypridle

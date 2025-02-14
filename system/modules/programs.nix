@@ -1,8 +1,8 @@
 {pkgs, ...}: {
   xdg.portal = {
     enable = true;
-    wlr.enable = false;
-    xdgOpenUsePortal = false;
+    wlr.enable = true;
+    xdgOpenUsePortal = true;
     extraPortals = [
       pkgs.xdg-desktop-portal-hyprland
       pkgs.xdg-desktop-portal-gtk
