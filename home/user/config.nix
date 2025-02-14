@@ -11,7 +11,6 @@ in {
     ".config/btop".source = "${configDir}/btop";
     ".config/kitty".source = "${configDir}/kitty";
     ".config/rofi".source = "${configDir}/rofi";
-    ".config/neofetch".source = "${configDir}/neofetch";
     ".config/background.png".source = "${configDir}/background";
     ".config/yazi".source = "${configDir}/yazi";
     ".config/swappy".source = "${configDir}/swappy";
@@ -27,5 +26,6 @@ in {
     ".config/helix".source = "${configDir}/helix";
     ".config/cava".source = "${configDir}/cava";
     ".config/tealdeer".source = "${configDir}/tealdeer";
+    ".config/VSCodium/User/settings.json".source = "${configDir}/VSCodium/settings.json";
   };
 }

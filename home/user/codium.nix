@@ -4,7 +4,6 @@
     package = pkgs.vscodium;
     extensions = with pkgs.vscode-extensions; [
       dracula-theme.theme-dracula
-      vscodevim.vim
       yzhang.markdown-all-in-one
       donjayamanne.githistory
       eamodio.gitlens
@@ -72,6 +71,7 @@
       ms-python.vscode-pylance
       ms-python.debugpy
       ms-python.pylint
+      mkhl.direnv
     ];
   };
 }

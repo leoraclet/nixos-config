@@ -70,7 +70,6 @@
     ripgrep # Text search
     ffmpeg-full # FFMPEG utility
     wget # Tool for retrieving files using HTTP, HTTPS, and FTP
-    neofetch # Fast, highly customizable system info script
     btop # Monitor of resources
     zsh # Z shell
     cmatrix # Terminal matrix effect
