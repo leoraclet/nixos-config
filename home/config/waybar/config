@@ -211,7 +211,7 @@
 
     "keyboard-state": {
         "capslock": true,
-        // "numlock": true,
+        "numlock": true,
         "format": "{name} {icon}",
         "format-icons": {
             "locked": "",

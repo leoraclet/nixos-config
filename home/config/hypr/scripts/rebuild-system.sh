@@ -39,7 +39,7 @@ echo "Build successfull"
 echo "Switching to new configuration ..."
 
 # If it built successfully
-sudo nixos-rebuild switch --flake ./#leonne
+sudo nixos-rebuild switch --flake ./#leonne &>nixos-switch.log
 
 # Get current generation metadata
 current=$(nixos-rebuild list-generations | grep current)
@@ -50,9 +50,10 @@ echo "Done !"
 git commit -am "$current"
 
 # Notify all OK!
-notify-send -e "NixOS Rebuilt OK"
+notify-send -e "NixOS Rebuilt OK" -t 2000
 
 # Remove log ...
+rm nixos-switch.log
 
 # Back to where you were
 popd >/dev/null
