@@ -4,6 +4,7 @@
 {
     // Main Config
     "name": "top_bar",
+    "reload_style_on_change": true,
     "layer": "top", // Waybar at top layer
     "position": "top", // Waybar position (top|bottom|left|right)
     "height": 36, // Waybar height (to be removed for auto height)
@@ -132,6 +133,7 @@
     },
 
     "network": {
+        "interval": 5,
         "format": "󰤭",
         "format-wifi": "{icon}  ({signalStrength}%){essid}",
         "format-icons": [ "󰤯", "󰤟", "󰤢", "󰤥", "󰤨" ],
@@ -194,6 +196,7 @@
 {
     // Main Config
     "name": "bottom_bar",
+    "reload_style_on_change": true,
     "layer": "top", // Waybar at top layer
     "position": "bottom", // Waybar position (top|bottom|left|right)
     "height": 36, // Waybar height (to be removed for auto height)
@@ -241,7 +244,8 @@
     "layer": "top", // Waybar at top layer
     "position": "left", // Waybar position (top|bottom|left|right)
     "spacing": 4, // Gaps between modules (4px)
-    "width": 75,
+    "width": 70,
+    "reload_style_on_change": true,
     "margin-top": 10,
     "margin-bottom": 10,
     "modules-left": ["wlr/taskbar"],
@@ -265,6 +269,7 @@
     },
 
     "cpu": {
+        "interval": 5,
         "format": "󰻠 {usage}%",
         "states": {
             "high": 90,
@@ -273,11 +278,10 @@
             "lower-medium": 30,
             "low": 10,
         },
-        "on-click": "wezterm start btop",
-        "on-click-right": "wezterm start btm",
     },
     
     "memory": {
+        "interval": 5,
         "format": " {percentage}%",
         "tooltip-format": "Main: ({used} GiB/{total} GiB)({percentage}%), available {avail} GiB\nSwap: ({swapUsed} GiB/{swapTotal} GiB)({swapPercentage}%), available {swapAvail} GiB",
         "states": {
@@ -287,11 +291,10 @@
             "lower-medium": 30,
             "low": 10,
         },
-        "on-click": "wezterm start btop",
-        "on-click-right": "wezterm start btm",
     },
 
     "disk": {
+        "interval": 5,
         "format": "󰋊 {percentage_used}%",  
         "tooltip-format": "({used}/{total})({percentage_used}%) in '{path}', available {free}({percentage_free}%)",
         "states": {
@@ -301,20 +304,20 @@
             "lower-medium": 30,
             "low": 10,
         },
-        "on-click": "wezterm start btop",
-        "on-click-right": "wezterm start btm",
     },
 
     "temperature": {
+        "interval": 5,
         "tooltip": false,
         "thermal-zone": 8,
         "critical-threshold": 80,
         "format": "{icon} {temperatureC}󰔄",
-        "format-critical": "🔥{icon} {temperatureC}󰔄",
+        "format-critical": "{icon}🔥 {temperatureC}󰔄",
         "format-icons": [ "", "", "", "", "" ],
     },
 
     "battery": {
+        "interval": 5,
         "states": {
             "high": 90,
             "upper-medium": 70,
@@ -323,8 +326,8 @@
             "low": 10,
         },
         "format": "{icon} {capacity}%",
-        "format-charging": "󱐋{icon} {capacity}%",
-        "format-plugged": "󰚥{icon} {capacity}%",
+        "format-charging": "{icon}󱐋 {capacity}%",
+        "format-plugged": "{icon}󰚥 {capacity}%",
         "format-time": "{H} h {M} min",
         "format-icons": [ "󱃍", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹" ],
         "tooltip-format": "{timeTo}",

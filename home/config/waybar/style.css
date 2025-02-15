@@ -273,7 +273,7 @@ window.left_bar .modules-center {
   margin-left: 10;
 }
 
-#tray>.needs-attention {
+#tray > .needs-attention {
   background-color: alpha(@maroon, 0.7);
   border-radius: 10;
 }

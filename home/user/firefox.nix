@@ -34,10 +34,48 @@
           "browser.newtabpage.activity-stream.feeds.telemetry" = false;
           "browser.ping-centre.telemetry" = false;
           "browser.tabs.crashReporting.sendReport" = false;
+
+          # personalized Extension Recommendations in about:addons and AMO [FF65+]
+          # https://support.mozilla.org/kb/personalized-extension-recommendations
+          "browser.discovery.enabled" = false;
+          "browser.helperApps.deleteTempFileOnExit" = true;
+
+          "browser.newtabpage.activity-stream.default.sites" = "";
+          "browser.newtabpage.activity-stream.feeds.topsites" = false;
+          "browser.uitour.enabled" = false;
+
           "devtools.onboarding.telemetry.logged" = false;
           "toolkit.telemetry.enabled" = false;
           "toolkit.telemetry.unified" = false;
           "toolkit.telemetry.server" = "";
+          "toolkit.telemetry.archive.enabled" = false;
+          "toolkit.telemetry.newProfilePing.enabled" = false;
+          "toolkit.telemetry.shutdownPingSender.enabled" = false;
+          "toolkit.telemetry.updatePing.enabled" = false;
+          "toolkit.telemetry.bhrPing.enabled" = false;
+          "toolkit.telemetry.firstShutdownPing.enabled" = false;
+
+          # Disable Telemetry Coverage
+          "toolkit.telemetry.coverage.opt-out" = true; # [HIDDEN PREF]
+          "toolkit.coverage.opt-out" = true; # [FF64+] [HIDDEN PREF]
+          "toolkit.coverage.endpoint.base" = "";
+
+          "browser.newtabpage.activity-stream.telemetry" = false;
+          "toolkit.telemetry.reportingpolicy.firstRun" = false;
+          "toolkit.telemetry.shutdownPingSender.enabledFirstsession" = false;
+          "browser.vpn_promo.enabled" = false;
+
+          # integrated calculator
+          "browser.urlbar.suggest.calculator" = true;
+
+          # HIDDEN PREF: disable recommendation pane in about:addons (uses Google Analytics)
+          "extensions.getAddons.showPane" = false;
+          # recommendations in about:addons' Extensions and Themes panes [FF68+]
+          "extensions.htmlaboutaddons.recommendations.enabled" = false;
+
+          # disable using the OS's geolocation service
+          "geo.provider.use_gpsd" = false;
+          "geo.provider.use_geoclue" = false;
 
           # Disable Pocket
           "browser.newtabpage.activity-stream.feeds.discoverystreamfeed" = false;

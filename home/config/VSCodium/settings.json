@@ -47,5 +47,13 @@
   "editor.formatOnSave": true,
   "gopls": {
     "ui.semanticTokens": true
-  }
+  },
+  "material-icon-theme.hidesExplorerArrows": true,
+  "trailing-spaces.trimOnSave": true,
+  "editor.formatOnPaste": true,
+  "rewrap.autoWrap.enabled": true,
+  "rewrap.onSave": true,
+  "rewrap.wrappingColumn": 100,
+  "todo-tree.highlights.enabled": false,
+  "todo-tree.filtering.ignoreGitSubmodules": true
 }

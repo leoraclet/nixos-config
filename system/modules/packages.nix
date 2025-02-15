@@ -112,6 +112,7 @@
     cpufetch # Cpu
     ramfetch # Memory
     neofetch # system information
+    fastfetch # Faster ... :)
 
     ###################################################
     # GUI apps
@@ -139,12 +140,13 @@
     obs-studio
     libreoffice-fresh
     qalculate-gtk
+    appimage-run
 
     ###################################################
     # Hyprland
     ###################################################
 
-    appimage-run
+    ags
     clipse
     networkmanagerapplet
     hypridle

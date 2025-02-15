@@ -21,6 +21,7 @@
       "image/bmp" = "imv.desktop";
       "image/gif" = "imv.desktop";
       "image/jpeg" = "imv.desktop";
+      "image/jpg" = "imv.desktop";
       "image/png" = "imv.desktop";
       "image/webp" = "imv.desktop";
 
