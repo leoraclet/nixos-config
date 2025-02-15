@@ -33,6 +33,7 @@ sudo nixos-rebuild build --flake ./#leonne &>nixos-switch.log || (cat nixos-swit
 
 # Remove all symlinks of home-manager
 rm -rf ~/.zshrc
+rm -rf ~/.vscode-oss
 find ~/.config -type l -delete # Delete symlinks
 
 echo "Build successfull"
@@ -52,8 +53,9 @@ git commit -am "$current"
 # Notify all OK!
 notify-send -e "NixOS Rebuilt OK" -t 2000
 
-# Remove log ...
+# Remove log and build files
 rm nixos-switch.log
+rm -rf result
 
 # Back to where you were
 popd >/dev/null

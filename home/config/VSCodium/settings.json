@@ -1,5 +1,5 @@
 {
-  "workbench.colorTheme": "Dracula Theme",
+  "workbench.colorTheme": "Dracula",
   "workbench.iconTheme": "material-icon-theme",
   "window.menuBarVisibility": "toggle",
   "editor.fontSize": 16,
@@ -16,7 +16,7 @@
   "terminal.sourceControlRepositoriesKind": "both",
   "telemetry.telemetryLevel": "off",
   "workbench.activityBar.location": "top",
-  "window.customTitleBarVisibility": "auto",
+  "window.customTitleBarVisibility": "never",
   "workbench.sideBar.location": "left",
   "[python]": {
     "editor.defaultFormatter": "ms-python.black-formatter"

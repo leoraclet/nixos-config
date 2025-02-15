@@ -2,6 +2,20 @@
   programs.vscode = {
     enable = true;
     package = pkgs.vscodium;
+    keybindings = [
+      {
+        "key" = "ctrl+[Quote]";
+        "command" = "workbench.action.terminal.toggleTerminal";
+      }
+      {
+        "key" = "ctrl+numpad_subtract";
+        "command" = "editor.action.fontZoomOut";
+      }
+      {
+        "key" = "ctrl+numpad_add";
+        "command" = "editor.action.fontZoomIn";
+      }
+    ];
     extensions = with pkgs.vscode-extensions; [
       dracula-theme.theme-dracula
       yzhang.markdown-all-in-one

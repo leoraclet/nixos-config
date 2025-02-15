@@ -1,0 +1,19 @@
+warning: Git tree '/home/leonne/Config' is dirty
+building the system configuration...
+warning: Git tree '/home/leonne/Config' is dirty
+updating GRUB 2 menu...
+Warning: os-prober will be executed to detect other bootable partitions.
+Its output will be used to detect bootable binaries on them and create new boot entries.
+lsblk: /dev/mapper/no*[0-9]: not a block device
+lsblk: /dev/mapper/block*[0-9]: not a block device
+lsblk: /dev/mapper/devices*[0-9]: not a block device
+lsblk: /dev/mapper/found*[0-9]: not a block device
+Found Windows Boot Manager on /dev/nvme1n1p1@/efi/Microsoft/Boot/bootmgfw.efi
+activating the configuration...
+setting up /etc...
+reloading user units for leonne...
+restarting sysinit-reactivation.target
+reloading the following units: dbus.service
+restarting the following units: polkit.service
+the following new units were started: libvirtd.service, NetworkManager-dispatcher.service
+Done. The new configuration is /nix/store/wcl998h4dg8m3psy5xbj3gncpwrvjyd9-nixos-system-nixos-25.05.20250203.cc9f36c

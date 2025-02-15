@@ -91,6 +91,10 @@
     xh # Friendly and fast tool for sending HTTP requests
     gh # GitHub CLI tool
     killall # Like pkill but better
+    hyperfine # Command-line benchmarking tool
+    udiskie # Removable disk automounter for udisks
+    imagemagick # Software suite to create, edit, compose, or convert bitmap images
+    chafa # Terminal graphics for the 21st century
 
     ###################################################
     # NixOS utils
@@ -107,7 +111,7 @@
     onefetch # Git repo
     cpufetch # Cpu
     ramfetch # Memory
-    fastfetch # Faster neofecth ... :)
+    neofetch # system information
 
     ###################################################
     # GUI apps
@@ -131,6 +135,7 @@
     whatsie
     onionshare-gui
     inkscape
+    gimp
     obs-studio
     libreoffice-fresh
     qalculate-gtk
@@ -177,7 +182,6 @@
     #metasploit
     #nth
     #theharvester
-    imagemagick
     exiftool
   ];
 }
