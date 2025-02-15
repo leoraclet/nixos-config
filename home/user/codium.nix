@@ -17,7 +17,7 @@
       }
     ];
     extensions = with pkgs.vscode-extensions; [
-      dracula-theme.theme-dracula
+      catppuccin.catppuccin-vsc
       yzhang.markdown-all-in-one
       donjayamanne.githistory
       eamodio.gitlens

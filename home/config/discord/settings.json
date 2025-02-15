@@ -10,5 +10,15 @@
   "IS_MAXIMIZED": false,
   "IS_MINIMIZED": false,
   "trayBalloonShown": true,
-  "chromiumSwitches": {}
+  "chromiumSwitches": {},
+  "DANGEROUS_ENABLE_DEVTOOLS_ONLY_ENABLE_IF_YOU_KNOW_WHAT_YOURE_DOING": true,
+  "MIN_WIDTH": 940,
+  "MIN_HEIGHT": 500,
+  "BACKGROUND_COLOR": "#2b2d31",
+  "WINDOW_BOUNDS": {
+    "x": 86,
+    "y": 48,
+    "width": 1823,
+    "height": 985
+  }
 }

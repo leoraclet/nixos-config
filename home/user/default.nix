@@ -7,5 +7,6 @@
     ./gtk-qt.nix
     ./codium.nix
     ./xdg.nix
+    ./udiskie.nix
   ];
 }

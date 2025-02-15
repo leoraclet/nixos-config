@@ -1,8 +1,4 @@
-{
-  config,
-  lib,
-  ...
-}: let
+{config, ...}: let
   configDir = ../config;
   isMutable = true;
   pathToDotfiles = "${config.home.homeDirectory}/Config/home/config";
@@ -33,6 +29,7 @@ in {
     ".config/tmux".source = pathToFile "tmux";
     ".config/gh".source = pathToFile "gh";
     ".config/helix".source = pathToFile "helix";
+    ".config/neofetch".source = pathToFile "neofetch";
     ".config/cava".source = pathToFile "cava";
     ".config/tealdeer".source = pathToFile "tealdeer";
     ".config/discord/settings.json".source = pathToFile "discord/settings.json";

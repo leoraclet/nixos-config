@@ -1,5 +1,7 @@
 {
-  "workbench.colorTheme": "Dracula",
+  "editor.semanticHighlighting.enabled": true,
+  "terminal.integrated.minimumContrastRatio": 1,
+  "workbench.colorTheme": "Catppuccin Mocha",
   "workbench.iconTheme": "material-icon-theme",
   "window.menuBarVisibility": "toggle",
   "editor.fontSize": 16,
@@ -42,5 +44,8 @@
   },
   "breadcrumbs.enabled": false,
   "editor.titleBar.enabled": false,
-  "editor.formatOnSave": true
+  "editor.formatOnSave": true,
+  "gopls": {
+    "ui.semanticTokens": true
+  }
 }
