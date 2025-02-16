@@ -8,5 +8,6 @@
     ./codium.nix
     ./xdg.nix
     ./udiskie.nix
+    ./spicetify.nix
   ];
 }

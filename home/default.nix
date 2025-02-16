@@ -1,10 +1,7 @@
-{
-  config,
-  lib,
-  ...
-}: {
+{inputs, ...}: {
   imports = [
     ./user
+    inputs.spicetify-nix.homeManagerModules.default
   ];
 
   home = {
