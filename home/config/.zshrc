@@ -114,5 +114,7 @@ function switch() {
 ###########################################################
 ###########################################################
 
+alias poke="pokemon-colorscripts -r"
+
 # Display Pokemon
-pokemon-colorscripts --no-title -r 1,3,6
+pokemon-colorscripts -r

@@ -10,23 +10,13 @@
     conda # Conda is a package manager for Python
     gnumake # Make utility
     cmake # CMake utility
-    gcc # GCC compiler
-    go # GO programming language
-    lua # LUA programming language
-    zig # ZIG programming language
-    bun # Incredibly fast JavaScript runtime, bundler, transpiler and package manager
-    clang # C/C++ LLVM compiler
     git # Git utility
     lazygit # Git interface
     neovim # Modal text editor
     alejandra # Nix language formatter
-    uv # Python package manager
     helix # Modern modal text editor
     devenv # Fast, Declarative, Reproducible, and Composable Developer Environments
     direnv # Shell extension that manages your environment
-    ghdl-llvm # VHDL 2008/93/87 simulator
-    iverilog # Icarus Verilog compiler
-    scrcpy # Display and control Android devices over USB or TCP/IP
 
     ###################################################
     # AI
@@ -52,7 +42,6 @@
     ###################################################
 
     tmux # Terminal multiplexer
-    calc # C-style arbitrary precision calculator
     dust # Disk analyzer
     dua # Disk usage analyzer
     yazi # Terminal file manager
@@ -81,7 +70,7 @@
     file # File Command
     fzf # Fuzzy finder
     ripgrep # Text search
-    ffmpeg-full # FFMPEG utility
+    ffmpeg # FFMPEG utility
     wget # Tool for retrieving files using HTTP, HTTPS, and FTP
     btop # Monitor of resources
     zsh # Z shell
@@ -109,6 +98,7 @@
     imagemagick # Software suite to create, edit, compose, or convert bitmap images
     chafa # Terminal graphics for the 21st century
     pokemon-colorscripts-mac # Pokémon colorscripts for the terminal
+    openssl # Cryptographic library that implements the SSL and TLS protocols
 
     ###################################################
     # NixOS utils
@@ -147,7 +137,6 @@
     firefox
     xfce.thunar
     signal-desktop
-    telegram-desktop
     orca-slicer
     whatsie
     onionshare-gui
@@ -156,7 +145,7 @@
     obs-studio
     libreoffice-fresh
     qalculate-gtk
-    appimage-run
+    libqalculate
 
     ###################################################
     # Hyprland
@@ -201,5 +190,12 @@
     #nth
     #theharvester
     exiftool
+
+    ###################################################
+    # Hacking
+    ###################################################
+
+    nautilus # File manager for GNOME
+    nemo # File browser for Cinnamon
   ];
 }
