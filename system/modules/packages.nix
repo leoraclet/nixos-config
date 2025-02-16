@@ -108,7 +108,7 @@
     udiskie # Removable disk automounter for udisks
     imagemagick # Software suite to create, edit, compose, or convert bitmap images
     chafa # Terminal graphics for the 21st century
-    fuzzel # Wayland-native application launcher, similar to rofi’s drun mode
+    pokemon-colorscripts-mac # Pokémon colorscripts for the terminal
 
     ###################################################
     # NixOS utils

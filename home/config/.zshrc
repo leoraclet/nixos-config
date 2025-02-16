@@ -26,6 +26,10 @@ zsh-defer source ~/.config/scripts/fzf-git.sh/fzf-git.sh
 
 export BAT_THEME="Monokai Extended"
 
+###########################################################
+# ---- FZF (Fuzzy finder) ----
+###########################################################
+
 show_file_or_dir_preview="if [ -d {} ]; then eza --tree --color=always {} | head -200; else bat -n --color=always --line-range :500 {}; fi"
 
 export FZF_CTRL_T_OPTS="--preview '$show_file_or_dir_preview'"
@@ -65,7 +69,9 @@ _fzf_compgen_dir() {
 alias ff="fzf --preview '$show_file_or_dir_preview'"
 alias f="fd --type f | fzf --preview '$show_file_or_dir_preview' | sed 's/\ /\\\ /g' | xargs nvim"
 
+###########################################################
 # ---- Zoxide (better cd) ----
+###########################################################
 
 function dm() {
   local dir=$(
@@ -79,13 +85,17 @@ function dm() {
 
 alias cd="z"
 
+###########################################################
 # ---- Eza (better ls) -----
+###########################################################
 
 alias ls="eza --color=always --long --git --icons=always"
 
 # thefuck alias
 
+###########################################################
 # ---- TLDR ----
+###########################################################
 alias man="tldr"
 
 function y() {
@@ -101,3 +111,8 @@ function switch() {
     eval "~/.config/hypr/scripts/rebuild-system.sh"
 }
 
+###########################################################
+###########################################################
+
+# Display Pokemon
+pokemon-colorscripts --no-title -r 1,3,6
