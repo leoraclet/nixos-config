@@ -169,6 +169,42 @@
               action = "kzz";
               mode = "n";
             }
+            {
+              key = "<leader>x";
+              action = "<cmd>!chmod +x %<CR>";
+              mode = "n";
+              silent = true;
+            }
+            {
+              key = "<leader>s";
+              action = ":%s/\\<<C-r><C-w>\\>/<C-r><C-w>/gI<Left><Left><Left>";
+              mode = "n";
+            }
+            {
+              key = "<leader>Y";
+              action = "\"+Y";
+              mode = "n";
+            }
+            {
+              key = "<leader>y";
+              action = "\"+y";
+              mode = ["n" "v"];
+            }
+            {
+              key = "<leader>p";
+              action = "\"_dP";
+              mode = "x";
+            }
+            {
+              key = "<leader>d";
+              action = "\"_d";
+              mode = ["n" "v"];
+            }
+            {
+              key = "<leader>zig";
+              action = "<cmd>LspRestart<cr>";
+              mode = "n";
+            }
           ];
 
           options = {

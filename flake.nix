@@ -4,6 +4,7 @@
   inputs = {
     nixpkgs-unstable.url = "github:nixos/nixpkgs?ref=nixos-unstable";
     nixpkgs.url = "github:nixos/nixpkgs";
+    nixos-hardware.url = "github:NixOS/nixos-hardware/master";
 
     nvf = {
       url = "github:notashelf/nvf";
@@ -17,6 +18,11 @@
 
     firefox-addons = {
       url = "gitlab:rycee/nur-expressions?dir=pkgs/firefox-addons";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    spicetify-nix = {
+      url = "github:Gerg-L/spicetify-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
@@ -60,6 +66,7 @@
             firefox-addons-allowUnfree = pkgs-unstable.callPackage firefox-addons {};
           };
         }
+        inputs.nixos-hardware.nixosModules.dell-latitude-5520
       ];
     };
   };

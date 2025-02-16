@@ -2,14 +2,17 @@
   configDir = ../config;
   isMutable = true;
   pathToDotfiles = "${config.home.homeDirectory}/Config/home/config";
+
+  # Creates bidirectional symlinks if mutable
   pathToFile = path:
     if !isMutable
     then "${configDir}/${path}"
     else config.lib.file.mkOutOfStoreSymlink "${pathToDotfiles}/${path}";
 in {
   home.file = {
-    ".config/hypr".source = pathToFile "hypr";
     ".zshrc".source = pathToFile ".zshrc";
+    ".config/background.png".source = pathToFile "background";
+    ".config/hypr".source = pathToFile "hypr";
     ".config/scripts".source = pathToFile "scripts";
     ".config/waybar".source = pathToFile "waybar";
     ".config/dunst".source = pathToFile "dunst";
@@ -17,7 +20,6 @@ in {
     ".config/btop".source = pathToFile "btop";
     ".config/kitty".source = pathToFile "kitty";
     ".config/rofi".source = pathToFile "rofi";
-    ".config/background.png".source = pathToFile "background";
     ".config/yazi".source = pathToFile "yazi";
     ".config/swappy".source = pathToFile "swappy";
     ".config/bat".source = pathToFile "bat";
@@ -33,6 +35,8 @@ in {
     ".config/cava".source = pathToFile "cava";
     ".config/tealdeer".source = pathToFile "tealdeer";
     ".config/fastfetch".source = pathToFile "fastfetch";
+    ".config/ags".source = pathToFile "ags";
+    ".config/fuzzel".source = pathToFile "fuzzel";
     ".config/discord/settings.json".source = pathToFile "discord/settings.json";
     ".config/VSCodium/User/settings.json".source = pathToFile "VSCodium/settings.json";
 

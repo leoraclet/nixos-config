@@ -4,7 +4,7 @@
 
   environment.systemPackages = with pkgs; [
     ###################################################
-    # Dev
+    # Developement
     ###################################################
 
     conda # Conda is a package manager for Python
@@ -33,6 +33,19 @@
     ###################################################
 
     ollama # Get up and running with large language models locally
+
+    ###################################################
+    # GAMING
+    ###################################################
+
+    /*
+    mangohud # Vulkan and OpenGL overlay for monitoring FPS, temperatures, CPU/GPU load and more
+    gamemode # Optimise Linux system performance on demand
+    protonup-ng # CLI program and API to automate the installation and update of GloriousEggroll's Proton-GE
+    gamescope # SteamOS session compositing window manager
+    lutris # Open Source gaming platform for GNU/Linux
+    bottles # Easy-to-use wineprefix manager
+    */
 
     ###################################################
     # CLI
@@ -95,6 +108,7 @@
     udiskie # Removable disk automounter for udisks
     imagemagick # Software suite to create, edit, compose, or convert bitmap images
     chafa # Terminal graphics for the 21st century
+    fuzzel # Wayland-native application launcher, similar to rofi’s drun mode
 
     ###################################################
     # NixOS utils
@@ -103,6 +117,7 @@
     nh # Nix helper
     nvd # Nix/NixOS package version diff tool
     nix-output-monitor # Processes output of Nix commands to show helpful and pretty information
+    home-manager # Nix-based user environment configurator
 
     ###################################################
     # Fetch everything
@@ -111,7 +126,7 @@
     onefetch # Git repo
     cpufetch # Cpu
     ramfetch # Memory
-    neofetch # system information
+    neofetch # System information
     fastfetch # Faster ... :)
 
     ###################################################
@@ -132,6 +147,7 @@
     firefox
     xfce.thunar
     signal-desktop
+    telegram-desktop
     orca-slicer
     whatsie
     onionshare-gui

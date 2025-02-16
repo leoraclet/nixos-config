@@ -28,6 +28,7 @@
           languagetool
           localcdn
           feedbroreader
+          clearurls
         ];
         settings = {
           # Disable telemetry
