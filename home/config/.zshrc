@@ -116,6 +116,7 @@ function switch() {
 
 alias poke="pokemon-colorscripts -r"
 alias c="clear"
+alias vm="quickemu --vm ~/VM/windows-10.conf --display spice --width 1920 --height 1080"
 
 # Display Pokemon
 pokemon-colorscripts -r

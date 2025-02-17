@@ -36,12 +36,8 @@ in {
     ".config/tealdeer".source = pathToFile "tealdeer";
     ".config/fastfetch".source = pathToFile "fastfetch";
     ".config/ags".source = pathToFile "ags";
-    ".config/fuzzel".source = pathToFile "fuzzel";
+    ".config/aichat".source = pathToFile "aichat";
     ".config/discord/settings.json".source = pathToFile "discord/settings.json";
     ".config/VSCodium/User/settings.json".source = pathToFile "VSCodium/settings.json";
-
-    # Another ROFI config
-    # ".config/rofi".source = pathToFile "rofi2";
-    # ".config/wlogout".source = pathToFile "wlogout2";
   };
 }

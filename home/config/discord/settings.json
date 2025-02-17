@@ -16,9 +16,9 @@
   "MIN_HEIGHT": 500,
   "BACKGROUND_COLOR": "#2b2d31",
   "WINDOW_BOUNDS": {
-    "x": 86,
+    "x": 81,
     "y": 48,
-    "width": 1823,
+    "width": 1828,
     "height": 985
   }
 }
