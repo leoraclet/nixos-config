@@ -25,7 +25,7 @@
     ollama # Get up and running with large language models locally
     aichat # Use GPT-4(V), Gemini, LocalAI, Ollama and other LLMs in the terminal
     aider-chat # AI pair programming in your terminal
-    oterm # Text-based terminal client for Ollama
+    searxng # Fork of Searx, a privacy-respecting, hackable metasearch engine
 
     ###################################################
     # GAMING

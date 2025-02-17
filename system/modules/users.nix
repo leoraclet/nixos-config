@@ -2,7 +2,7 @@
   users.users.leonne = {
     isNormalUser = true;
     description = "leonne";
-    extraGroups = ["networkmanager" "wheel" "qemu" "kvm" "libvirtd" "input"];
+    extraGroups = ["networkmanager" "wheel" "qemu" "kvm" "libvirtd" "input" "video" "audio"];
     shell = pkgs.zsh;
   };
 
