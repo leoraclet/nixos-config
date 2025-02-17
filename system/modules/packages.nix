@@ -99,6 +99,10 @@
     chafa # Terminal graphics for the 21st century
     pokemon-colorscripts-mac # Pokémon colorscripts for the terminal
     openssl # Cryptographic library that implements the SSL and TLS protocols
+    topgrade # Upgrade all the things
+    viu # View images from the terminal
+    tre-command # Tree command, improved
+    ouch # Command-line utility for easily compressing and decompressing files and directories
 
     ###################################################
     # NixOS utils
@@ -113,9 +117,8 @@
     # Fetch everything
     ###################################################
 
-    onefetch # Git repo
-    cpufetch # Cpu
-    ramfetch # Memory
+    onefetch # Git repository summary on your terminal
+    starfetch # CLI star constellations displayer
     neofetch # System information
     fastfetch # Faster ... :)
 
@@ -129,13 +132,14 @@
     (discord.override {
       withOpenASAR = true;
       withVencord = true;
+      withTTS = true;
     })
     spotify
     tor-browser
     vlc
     vscodium
     firefox
-    xfce.thunar
+    nemo
     signal-desktop
     orca-slicer
     whatsie
@@ -192,10 +196,7 @@
     exiftool
 
     ###################################################
-    # Hacking
+    # TEST
     ###################################################
-
-    nautilus # File manager for GNOME
-    nemo # File browser for Cinnamon
   ];
 }

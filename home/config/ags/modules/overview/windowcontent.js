@@ -8,10 +8,9 @@ const { execAsync, exec } = Utils;
 import { execAndClose, expandTilde, hasUnterminatedBackslash, couldBeMath, launchCustomCommand, ls } from './miscfunctions.js';
 import {
     CalculationResultButton, CustomCommandButton, DirectoryButton,
-    DesktopEntryButton, ExecuteCommandButton, SearchButton, AiButton, NoResultButton,
+    DesktopEntryButton, ExecuteCommandButton, SearchButton
 } from './searchbuttons.js';
 import { checkKeybind } from '../.widgetutils/keybind.js';
-import GeminiService from '../../services/gemini.js';
 
 // Add math funcs
 const { abs, sin, cos, tan, cot, asin, acos, atan, acot } = Math;
@@ -28,7 +27,7 @@ const acotd = x => acot(x) * 180 / pi;
 
 const MAX_RESULTS = 10;
 const OVERVIEW_SCALE = 0.18; // = overview workspace box / screen size
-const OVERVIEW_WS_NUM_SCALE = 0.09;
+const OVERVIEW_WS_NUM_SCALE = 0.0;
 const OVERVIEW_WS_NUM_MARGIN_SCALE = 0.07;
 const TARGET = [Gtk.TargetEntry.new('text/plain', Gtk.TargetFlags.SAME_APP, 0)];
 
@@ -51,9 +50,16 @@ const overviewContent = await OptionalOverview();
 export const SearchAndWindows = () => {
     var _appSearchResults = [];
 
+    const ClickToClose = ({ ...props }) => Widget.EventBox({
+        ...props,
+        onPrimaryClick: () => App.closeWindow('overview'),
+        onSecondaryClick: () => App.closeWindow('overview'),
+        onMiddleClick: () => App.closeWindow('overview'),
+    });
     const resultsBox = Widget.Box({
         className: 'overview-search-results',
         vertical: true,
+        vexpand: true,
     });
     const resultsRevealer = Widget.Revealer({
         transitionDuration: userOptions.animations.durationLarge,
@@ -70,7 +76,7 @@ export const SearchAndWindows = () => {
         hpack: 'center',
         child: Widget.Label({
             className: 'overview-search-prompt txt-small txt',
-            label: getString('Type to search')
+            label: 'Type to search'
         }),
     });
 
@@ -81,7 +87,7 @@ export const SearchAndWindows = () => {
         hpack: 'end',
         child: Widget.Label({
             className: 'txt txt-large icon-material overview-search-icon',
-            label: 'search',
+            label: ' ',
         }),
     });
 
@@ -94,7 +100,49 @@ export const SearchAndWindows = () => {
         className: 'overview-search-box txt-small txt',
         hpack: 'center',
         onAccept: (self) => { // This is when you hit Enter
-            resultsBox.children[0].onClicked();
+            const text = self.text;
+            if (text.length == 0) return;
+            const isAction = text.startsWith('>');
+            const isDir = (['/', '~'].includes(entry.text[0]));
+
+            if (couldBeMath(text)) { // Eval on typing is dangerous, this is a workaround
+                try {
+                    const fullResult = eval(text.replace(/\^/g, "**"));
+                    // copy
+                    execAsync(['wl-copy', `${fullResult}`]).catch(print);
+                    App.closeWindow('overview');
+                    return;
+                } catch (e) {
+                    // console.log(e);
+                }
+            }
+            if (isDir) {
+                App.closeWindow('overview');
+                execAsync(['bash', '-c', `xdg-open "${expandTilde(text)}"`, `&`]).catch(print);
+                return;
+            }
+            if (_appSearchResults.length > 0) {
+                App.closeWindow('overview');
+                _appSearchResults[0].launch();
+                return;
+            }
+            else if (text[0] == '>') { // Custom commands
+                App.closeWindow('overview');
+                launchCustomCommand(text);
+                return;
+            }
+            // Fallback: Execute command
+            if (!isAction && exec(`bash -c "command -v ${text.split(' ')[0]}"`) != '') {
+                if (text.startsWith('sudo'))
+                    execAndClose(text, true);
+                else
+                    execAndClose(text, false);
+            }
+
+            else {
+                App.closeWindow('overview');
+                execAsync(['bash', '-c', `xdg-open '${userOptions.search.engineBaseUrl}${text} ${['', ...userOptions.search.excludedSites].join(' -site:')}' &`]).catch(print);
+            }
         },
         onChange: (entry) => { // this is when you type
             const isAction = entry.text[0] == '>';
@@ -119,7 +167,7 @@ export const SearchAndWindows = () => {
             _appSearchResults = Applications.query(text);
 
             // Calculate
-            if (userOptions.search.enableFeatures.mathResults && couldBeMath(text)) { // Eval on typing is dangerous; this is a small workaround.
+            if (couldBeMath(text)) { // Eval on typing is dangerous; this is a small workaround.
                 try {
                     const fullResult = eval(text.replace(/\^/g, "**"));
                     resultsBox.add(CalculationResultButton({ result: fullResult, text: text }));
@@ -127,14 +175,14 @@ export const SearchAndWindows = () => {
                     // console.log(e);
                 }
             }
-            if (userOptions.search.enableFeatures.directorySearch && isDir) {
+            if (isDir) {
                 var contents = [];
                 contents = ls({ path: text, silent: true });
                 contents.forEach((item) => {
                     resultsBox.add(DirectoryButton(item));
                 })
             }
-            if (userOptions.search.enableFeatures.actions && isAction) { // Eval on typing is dangerous, this is a workaround.
+            if (isAction) { // Eval on typing is dangerous, this is a workaround.
                 resultsBox.add(CustomCommandButton({ text: entry.text }));
             }
             // Add application entries
@@ -147,22 +195,23 @@ export const SearchAndWindows = () => {
 
             // Fallbacks
             // if the first word is an actual command
-            if (userOptions.search.enableFeatures.commands && !isAction && !hasUnterminatedBackslash(text) && exec(`bash -c "command -v ${text.split(' ')[0]}"`) != '') {
+            if (!isAction && !hasUnterminatedBackslash(text) && exec(`bash -c "command -v ${text.split(' ')[0]}"`) != '') {
                 resultsBox.add(ExecuteCommandButton({ command: entry.text, terminal: entry.text.startsWith('sudo') }));
             }
 
             // Add fallback: search
-            if (userOptions.search.enableFeatures.aiSearch)
-                resultsBox.add(AiButton({ text: entry.text }));
-            if (userOptions.search.enableFeatures.webSearch)
-                resultsBox.add(SearchButton({ text: entry.text }));
-            if (resultsBox.children.length == 0) resultsBox.add(NoResultButton());
+            resultsBox.add(SearchButton({ text: entry.text }));
             resultsBox.show_all();
         },
     });
     return Widget.Box({
         vertical: true,
         children: [
+            ClickToClose({ // Top margin. Also works as a click-outside-to-close thing
+                child: Widget.Box({
+                    className: 'bar-height',
+                })
+            }),
             Widget.Box({
                 hpack: 'center',
                 children: [
@@ -210,4 +259,4 @@ export const SearchAndWindows = () => {
             })
         ,
     });
-};
+}; 

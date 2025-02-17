@@ -33,15 +33,6 @@
       };
     };
 
-    xfconf.enable = true;
-    thunar = {
-      enable = true;
-      plugins = with pkgs.xfce; [
-        thunar-archive-plugin
-        thunar-volman
-      ];
-    };
-
     zsh = {
       enable = true;
       enableCompletion = true;
@@ -255,6 +246,12 @@
             lualine = {
               enable = true;
               theme = "gruvbox";
+            };
+          };
+
+          filetree = {
+            neo-tree = {
+              enable = true;
             };
           };
 

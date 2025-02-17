@@ -7,6 +7,7 @@ rofi_theme="~/.config/rofi/config.rasi"
 # Check if rofi is already running
 if pidof rofi > /dev/null; then
   pkill rofi
+  exit 0
 fi
 
 sed '1,/^# # DATA # #$/d' "$0" | \

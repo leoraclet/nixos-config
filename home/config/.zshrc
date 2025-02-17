@@ -115,6 +115,7 @@ function switch() {
 ###########################################################
 
 alias poke="pokemon-colorscripts -r"
+alias c="clear"
 
 # Display Pokemon
 pokemon-colorscripts -r

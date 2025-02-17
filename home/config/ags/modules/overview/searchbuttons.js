@@ -5,16 +5,6 @@ import * as Utils from 'resource:///com/github/Aylur/ags/utils.js';
 const { execAsync, exec } = Utils;
 import { searchItem } from './searchitem.js';
 import { execAndClose, couldBeMath, launchCustomCommand } from './miscfunctions.js';
-import GeminiService from '../../services/gemini.js';
-
-export const NoResultButton = () => searchItem({
-    materialIconName: 'Error',
-    name: "Search invalid",
-    content: "No results found!",
-    onActivate: () => {
-        App.closeWindow('overview');
-    },
-});
 
 export const DirectoryButton = ({ parentPath, name, type, icon }) => {
     const actionText = Widget.Revealer({
@@ -74,7 +64,7 @@ export const DirectoryButton = ({ parentPath, name, type, icon }) => {
 }
 
 export const CalculationResultButton = ({ result, text }) => searchItem({
-    materialIconName: 'calculate',
+    materialIconName: '󱖦 ',
     name: `Math result`,
     actionName: "Copy",
     content: `${result}`,
@@ -142,7 +132,7 @@ export const DesktopEntryButton = (app) => {
 }
 
 export const ExecuteCommandButton = ({ command, terminal = false }) => searchItem({
-    materialIconName: `${terminal ? 'terminal' : 'settings_b_roll'}`,
+    materialIconName: `${terminal ? 'terminal' : ' '}`,
     name: `Run command`,
     actionName: `Execute ${terminal ? 'in terminal' : ''}`,
     content: `${command}`,
@@ -151,7 +141,7 @@ export const ExecuteCommandButton = ({ command, terminal = false }) => searchIte
 })
 
 export const CustomCommandButton = ({ text = '' }) => searchItem({
-    materialIconName: 'settings_suggest',
+    materialIconName: ' ',
     name: 'Action',
     actionName: 'Run',
     content: `${text}`,
@@ -162,28 +152,12 @@ export const CustomCommandButton = ({ text = '' }) => searchItem({
 });
 
 export const SearchButton = ({ text = '' }) => searchItem({
-    materialIconName: 'travel_explore',
+    materialIconName: '󰜏 ',
     name: 'Search the web',
     actionName: 'Go',
     content: `${text}`,
     onActivate: () => {
         App.closeWindow('overview');
-        let search = userOptions.search.engineBaseUrl + text;
-        for (let site of userOptions.search.excludedSites) {
-            if (site) search += ` -site:${site}`;
-        }
-        execAsync(['bash', '-c', `xdg-open '${search}' &`]).catch(print);
-    },
-});
-
-export const AiButton = ({ text }) => searchItem({
-    materialIconName: 'chat_paste_go',
-    name: 'Ask Gemini',
-    actionName: 'Ask',
-    content: `${text}`,
-    onActivate: () => {
-        GeminiService.send(text);
-        App.closeWindow('overview');
-        App.openWindow('sideleft');
+        execAsync(['bash', '-c', `xdg-open '${userOptions.search.engineBaseUrl}${text} ${['', ...userOptions.search.excludedSites].join(' -site:')}' &`]).catch(print);
     },
 });
