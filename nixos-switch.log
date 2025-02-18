@@ -8,10 +8,12 @@ lsblk: /dev/mapper/no*[0-9]: not a block device
 lsblk: /dev/mapper/block*[0-9]: not a block device
 lsblk: /dev/mapper/devices*[0-9]: not a block device
 lsblk: /dev/mapper/found*[0-9]: not a block device
-Found Windows Boot Manager on /dev/nvme0n1p1@/efi/Microsoft/Boot/bootmgfw.efi
+Found Windows Boot Manager on /dev/nvme1n1p1@/efi/Microsoft/Boot/bootmgfw.efi
 activating the configuration...
 setting up /etc...
 reloading user units for leonne...
 restarting sysinit-reactivation.target
-the following new units were started: libvirtd.service, NetworkManager-dispatcher.service, searx.service
-Done. The new configuration is /nix/store/761i696b4xxaj5mi58608kr74d513ra5-nixos-system-nixos-25.05.20250203.cc9f36c
+reloading the following units: dbus.service
+restarting the following units: polkit.service
+the following new units were started: libvirtd.service, NetworkManager-dispatcher.service
+Done. The new configuration is /nix/store/nq9mxmcg5pvydmjy4bfw2c94qf6afcin-nixos-system-nixos-25.05.20250203.cc9f36c

@@ -8,10 +8,10 @@
     "layer": "top", // Waybar at top layer
     "position": "top", // Waybar position (top|bottom|left|right)
     "height": 36, // Waybar height (to be removed for auto height)
-    "spacing": 4,
+    "spacing": 8,
     "modules-left": ["hyprland/workspaces", "hyprland/submap"],
     "modules-center": ["clock#time", "custom/separator", "clock#week", "custom/separator_dot", "clock#month", "custom/separator", "clock#calendar"],
-    "modules-right": ["custom/weather", "bluetooth", "network", "group/misc"],
+    "modules-right": ["cava", "custom/weather", "bluetooth", "network", "group/misc"],
 
     // Modules Config
     "hyprland/workspaces": {
@@ -117,6 +117,7 @@
     },
 
     "bluetooth": {
+        "interval": 1,
         "format": "󰂯",
         "format-disabled": "󰂲",
         "format-connected": "󰂱 {device_alias}",
@@ -128,12 +129,11 @@
         "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
         "tooltip-format-enumerate-connected-battery": "{device_alias}\t{device_address}\t({device_battery_percentage}%)",
         "max-length": 35,
-        "on-click": "fish -c bluetooth_toggle",
-        "on-click-right": "overskride",
+        "on-click": "",
     },
 
     "network": {
-        "interval": 5,
+        "interval": 1,
         "format": "󰤭",
         "format-wifi": "{icon}  ({signalStrength}%){essid}",
         "format-icons": [ "󰤯", "󰤟", "󰤢", "󰤥", "󰤨" ],
@@ -145,8 +145,7 @@
         // "format-linked": "󰈀 {ifname} (No IP)",
         // "tooltip-format-ethernet":"Interface: {ifname}\nIP: {ipaddr}\nGW: {gwaddr}\nNetmask: {netmask}\nCIDR: {cidr}\n\n<span color='#a6da95'>{bandwidthUpBits}</span>\t<span color='#ee99a0'>{bandwidthDownBits}</span>\t<span color='#c6a0f6'>󰹹{bandwidthTotalBits}</span>",
         "max-length": 35,
-        "on-click": "fish -c wifi_toggle",
-        "on-click-right": "iwgtk",
+        "on-click": "~/.config/hypr/scripts/check-airplane-mode.sh",
     },
 
     "group/misc": {
@@ -154,11 +153,16 @@
         "modules": [
             "privacy",
             "idle_inhibitor",
+            "custom/geo",
+            "custom/airplane_mode",
+            "custom/night_mode",
+            "custom/dunst",
+            "custom/logout_menu",
         ],
     },
 
     "privacy": {
-        "icon-spacing": 1,
+        "icon-spacing": 4,
         "icon-size": 12,
         "transition-duration": 250,
         "modules": [
@@ -171,8 +175,66 @@
         ]
     },
 
+    "cava": {
+        "framerate": 30,
+        "autosens": 1,
+        "sensitivity": 2,
+        "bars": 14,
+        "lower_cutoff_freq": 50,
+        "higher_cutoff_freq": 10000,
+        "method": "pulse",
+        "source": "auto",
+        "stereo": true,
+        "reverse": false,
+        "bar_delimiter": 0,
+        "monstercat": false,
+        "waves": false,
+        "noise_reduction": 0.77,
+        "input_delay": 2,
+        "format-icons" : ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█" ],
+        "actions": {
+            "on-click-right": "mode"
+        }
+    },
+
+    "custom/geo": {
+        "interval": 1,
+        "exec-if": "pgrep geoclue",
+        "exec": "~/.config/hypr/scripts/check-geo.sh",
+        "return-type": "json",
+    },
+
+    "custom/dunst": {
+        "return-type": "json",
+        "exec": "~/.config/hypr/scripts/dunst-pause.sh",
+        "on-click": "dunstctl set-paused toggle",
+        "restart-interval": 1,
+        "interval": 2,
+    },
+
+    "custom/airplane_mode": {
+        "return-type": "json",
+        "interval": 2,
+        "exec": "~/.config/hypr/scripts/check-airplane-mode.sh",
+        "on-click": "~/.config/hypr/scripts/airplane-mode.sh",
+    },
+
+    "custom/night_mode": {
+        "return-type": "json",
+        "interval": 2,
+        "exec": "~/.config/hypr/scripts/check-night-mode.sh",
+        "on-click": "~/.config/hypr/scripts/night-vision.sh",
+    },
+
+    "custom/logout_menu": {
+        "return-type": "json",
+        "exec": "echo '{ \"text\":\"󰐥\", \"tooltip\": \"logout menu\" }'",
+        "interval": "once",
+        "on-click": "wlogout",
+    },
+
     "idle_inhibitor": {
-        "format": "{icon} ",
+        "format": " {icon} ",
         "format-icons": {
             "activated": "󰛐",
             "deactivated": "󰛑"

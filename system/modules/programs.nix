@@ -242,6 +242,12 @@
             };
           };
 
+          visuals = {
+            nvim-web-devicons.enable = true;
+            highlight-undo.enable = true;
+            indent-blankline.enable = true;
+          };
+
           statusline = {
             lualine = {
               enable = true;

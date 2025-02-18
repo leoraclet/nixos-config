@@ -8,13 +8,14 @@
     ###################################################
 
     conda # Conda is a package manager for Python
-    gnumake # Make utility
-    cmake # CMake utility
-    git # Git utility
-    lazygit # Git interface
-    neovim # Modal text editor
-    alejandra # Nix language formatter
-    helix # Modern modal text editor
+    gnumake # Tool to control the generation of non-source files from sources
+    cmake # Cross-platform, open-source build system generator
+    git # Distributed version control system
+    lazygit # Simple terminal UI for git commands
+    neovim # Vim text editor fork focused on extensibility and agility
+    alejandra # Uncompromising Nix Code Formatter
+    helix # Post-modern modal text editor
+    helix-gpt # Code completion LSP for Helix with support for Copilot + OpenAI
     devenv # Fast, Declarative, Reproducible, and Composable Developer Environments
     direnv # Shell extension that manages your environment
 
@@ -103,9 +104,9 @@
     pokemon-colorscripts-mac # Pokémon colorscripts for the terminal
     openssl # Cryptographic library that implements the SSL and TLS protocols
     topgrade # Upgrade all the things
-    viu # View images from the terminal
     tre-command # Tree command, improved
     ouch # Command-line utility for easily compressing and decompressing files and directories
+    geoclue2 # Geolocation framework and some data providers
 
     ###################################################
     # NixOS utils

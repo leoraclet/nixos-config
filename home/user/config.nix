@@ -12,6 +12,7 @@ in {
   home.file = {
     ".zshrc".source = pathToFile ".zshrc";
     ".config/background.png".source = pathToFile "background";
+    ".config/open-webui-config.json".source = pathToFile "open-webui-config.json";
     ".config/hypr".source = pathToFile "hypr";
     ".config/scripts".source = pathToFile "scripts";
     ".config/waybar".source = pathToFile "waybar";

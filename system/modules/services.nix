@@ -1,12 +1,16 @@
 {
   pkgs,
-  config,
   lib,
   ...
 }: {
+  location.provider = "geoclue2";
+
   services = {
     openssh.enable = true;
     printing.enable = true;
+
+    # Location
+    geoclue2.enable = true;
 
     # Power and Bluetooth
     blueman.enable = true;
