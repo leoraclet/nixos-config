@@ -11,6 +11,7 @@
 in {
   home.file = {
     ".zshrc".source = pathToFile ".zshrc";
+    ".config/starship.toml".source = pathToFile "starship.toml";
     ".config/background.png".source = pathToFile "background";
     ".config/open-webui-config.json".source = pathToFile "open-webui-config.json";
     ".config/hypr".source = pathToFile "hypr";

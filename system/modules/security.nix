@@ -15,6 +15,7 @@
     interval = "Sat *-*-* 04:00:00";
   };
 
+  /*
   services.clamav = {
     daemon.enable = true;
     fangfrisch.enable = true;
@@ -25,6 +26,7 @@
       frequency = 12;
     };
   };
+  */
 
   programs.firejail = {
     enable = true;

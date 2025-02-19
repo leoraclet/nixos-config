@@ -46,7 +46,8 @@
     },
 
     "clock#time": {
-        "format": "{:%I:%M %p %Ez}",
+        "interval": 1,
+        "format": "{:%H:%M:%S}",
         // "locale": "en_US.UTF-8",
         // "timezones": [ "Europe/Kyiv", "America/New_York" ],
     },
@@ -70,7 +71,7 @@
     },
 
     "clock#calendar": {
-        "format": "{:%F}",
+        "format": "{:%d-%m-%Y}",
         "tooltip-format": "<tt><small>{calendar}</small></tt>",
         "actions": {
             "on-click-right": "mode",
@@ -92,7 +93,7 @@
     },
 
     "clock": {
-        "format": "{:%I:%M %p %Ez | %a • %h | %F}",
+        "format": "{:%H:%M:%S | %a • %h | %d-%m-%Y}",
         "format-alt": "{:%I:%M %p}",
         "tooltip-format": "<tt><small>{calendar}</small></tt>",
         // "locale": "en_US.UTF-8",
@@ -135,15 +136,15 @@
     "network": {
         "interval": 1,
         "format": "󰤭",
-        "format-wifi": "{icon}  ({signalStrength}%){essid}",
+        "format-wifi": "{icon}  ({signalStrength}%) {essid}",
         "format-icons": [ "󰤯", "󰤟", "󰤢", "󰤥", "󰤨" ],
         "format-disconnected": "󰤫  Disconnected",
         "tooltip-format": "wifi <span color='#ee99a0'>off</span>",
         "tooltip-format-wifi":"SSID: {essid}({signalStrength}%), {frequency} MHz\nInterface: {ifname}\nIP: {ipaddr}\nGW: {gwaddr}\n\n<span color='#a6da95'>{bandwidthUpBits}</span>\t<span color='#ee99a0'>{bandwidthDownBits}</span>\t<span color='#c6a0f6'>󰹹{bandwidthTotalBits}</span>",
         "tooltip-format-disconnected": "<span color='#ed8796'>disconnected</span>",
-        // "format-ethernet": "󰈀 {ipaddr}/{cidr}",
-        // "format-linked": "󰈀 {ifname} (No IP)",
-        // "tooltip-format-ethernet":"Interface: {ifname}\nIP: {ipaddr}\nGW: {gwaddr}\nNetmask: {netmask}\nCIDR: {cidr}\n\n<span color='#a6da95'>{bandwidthUpBits}</span>\t<span color='#ee99a0'>{bandwidthDownBits}</span>\t<span color='#c6a0f6'>󰹹{bandwidthTotalBits}</span>",
+        "format-ethernet": "󰈀 {ipaddr} / {cidr}",
+        "format-linked": "󰈀 {ifname} (No IP)",
+        "tooltip-format-ethernet":"Interface: {ifname}\nIP: {ipaddr}\nGW: {gwaddr}\nNetmask: {netmask}\nCIDR: {cidr}\n\n<span color='#a6da95'>{bandwidthUpBits}</span>\t<span color='#ee99a0'>{bandwidthDownBits}</span>\t<span color='#c6a0f6'>󰹹{bandwidthTotalBits}</span>",
         "max-length": 35,
         "on-click": "~/.config/hypr/scripts/check-airplane-mode.sh",
     },
