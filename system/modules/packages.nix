@@ -79,7 +79,6 @@
     btop # Monitor of resources
     zsh # Z shell
     cmatrix # Terminal matrix effect
-    tokei # Program that allows you to count your code, quickly
     hexyl # Command-line hex viewer
     pandoc # Conversion between documentation formats
     zathura # PDF viewer
@@ -107,6 +106,7 @@
     tre-command # Tree command, improved
     ouch # Command-line utility for easily compressing and decompressing files and directories
     geoclue2 # Geolocation framework and some data providers
+    samba # Standard Windows interoperability suite of programs for Linux and Unix
 
     ###################################################
     # NixOS utils
@@ -154,6 +154,21 @@
     libreoffice-fresh
     qalculate-gtk
     libqalculate
+
+    ###################################################
+    # Robotics
+    ###################################################
+
+    kicad # Open Source Electronics Design Automation suite
+    openscad # 3D parametric model compiler
+    turbocase # Generate an OpenSCAD case template from a KiCAD PCB
+
+    ###################################################
+    # Backup
+    ###################################################
+
+    rclone # Sync files and directories to and from major cloud storage
+    rclone-browser # Graphical Frontend to Rclone written in Qt
 
     ###################################################
     # Hyprland

@@ -6,7 +6,16 @@
   location.provider = "geoclue2";
 
   services = {
-    openssh.enable = true;
+    openssh = {
+      enable = true;
+      settings = {
+        PasswordAuthentication = false;
+        KbdInteractiveAuthentication = false;
+        PermitRootLogin = "no";
+        AllowUsers = ["leonne"];
+      };
+    };
+
     printing.enable = true;
 
     # Location
@@ -19,6 +28,9 @@
     thermald.enable = true;
     tlp.enable = true;
     auto-cpufreq.enable = true;
+
+    # Virtulisation
+    spice-vdagentd.enable = true;
 
     # File manager
     gvfs.enable = true; # Mount, trash, and other functionalities

@@ -1,6 +1,9 @@
 {...}: {
-  nixpkgs.config.allowUnfree = true;
-  nixpkgs.config.allowUnfreePredicate = _: true;
+  nixpkgs.config = {
+    allowUnfree = true;
+    allowUnfreePredicate = _: true;
+    allowBroken = true;
+  };
 
   nix = {
     settings = {
