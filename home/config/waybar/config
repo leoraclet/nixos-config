@@ -8,7 +8,7 @@
     "layer": "top", // Waybar at top layer
     "position": "top", // Waybar position (top|bottom|left|right)
     "height": 36, // Waybar height (to be removed for auto height)
-    "spacing": 8,
+    "spacing": 4,
     "modules-left": ["hyprland/workspaces", "hyprland/submap"],
     "modules-center": ["clock#time", "custom/separator", "clock#week", "custom/separator_dot", "clock#month", "custom/separator", "clock#calendar"],
     "modules-right": ["custom/weather", "bluetooth", "network", "group/misc"],

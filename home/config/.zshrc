@@ -18,7 +18,6 @@ eval "$(starship init zsh)"
 zsh-defer eval "$(fzf --zsh)"
 zsh-defer eval "$(atuin init zsh)"
 zsh-defer eval "$(zoxide init zsh)"
-zsh-defer eval "$(thefuck --alias)"
 zsh-defer eval "$(thefuck --alias fk)"
 zsh-defer eval "$(direnv hook zsh)"
 zsh-defer source ~/.config/scripts/fzf-git.sh/fzf-git.sh
@@ -114,7 +113,6 @@ function switch() {
 ###########################################################
 ###########################################################
 
-alias poke="pokemon-colorscripts -r"
 alias c="clear"
 alias clk="rsclock -c"
 alias vm="quickemu --vm ~/VM/windows-10.conf --display spice --width 1920 --height 1080"
@@ -122,6 +120,5 @@ alias tre="tre -e"
 alias tree="tre -e"
 alias neo="neofetch"
 alias fast="fastfetch"
-
-# Display Pokemon
-pokemon-colorscripts -r
+alias conf="z ~/.config/"
+alias store="z /nix/store/"

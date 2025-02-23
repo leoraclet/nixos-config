@@ -39,6 +39,7 @@ in {
     ".config/fastfetch".source = pathToFile "fastfetch";
     ".config/ags".source = pathToFile "ags";
     ".config/aichat".source = pathToFile "aichat";
+    ".config/fish".source = pathToFile "fish";
     ".config/discord/settings.json".source = pathToFile "discord/settings.json";
     ".config/VSCodium/User/settings.json".source = pathToFile "VSCodium/settings.json";
   };

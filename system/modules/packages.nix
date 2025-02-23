@@ -92,7 +92,6 @@
     bottom # System monitor
     impala # TUI for managing wifi
     wlsunset # Day/night gamma adjustments for Wayland
-    mosh # Mobile shell (ssh replacement)
     xh # Friendly and fast tool for sending HTTP requests
     gh # GitHub CLI tool
     killall # Like pkill but better
@@ -100,13 +99,14 @@
     udiskie # Removable disk automounter for udisks
     imagemagick # Software suite to create, edit, compose, or convert bitmap images
     chafa # Terminal graphics for the 21st century
-    pokemon-colorscripts-mac # Pokémon colorscripts for the terminal
     openssl # Cryptographic library that implements the SSL and TLS protocols
     topgrade # Upgrade all the things
     tre-command # Tree command, improved
     ouch # Command-line utility for easily compressing and decompressing files and directories
     geoclue2 # Geolocation framework and some data providers
     samba # Standard Windows interoperability suite of programs for Linux and Unix
+    libqalculate # Advanced calculator library
+    fish # Smart and user-friendly command line shell
 
     ###################################################
     # NixOS utils
@@ -153,7 +153,6 @@
     obs-studio
     libreoffice-fresh
     qalculate-gtk
-    libqalculate
 
     ###################################################
     # Robotics
@@ -212,7 +211,10 @@
     #metasploit
     #nth
     #theharvester
+
+    # Utilities
     exiftool
+    macchanger
 
     ###################################################
     # TEST
