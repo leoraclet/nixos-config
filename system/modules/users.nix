@@ -3,7 +3,7 @@
     isNormalUser = true;
     description = "leonne";
     extraGroups = ["networkmanager" "wheel" "qemu" "kvm" "libvirtd" "input" "video" "audio"];
-    shell = pkgs.zsh;
+    shell = pkgs.fish;
   };
 
   xdg.mime = {

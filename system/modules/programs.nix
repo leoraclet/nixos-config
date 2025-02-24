@@ -18,6 +18,8 @@
       # programs here, NOT in environment.systemPackages
     ];
 
+    fish.enable = true;
+
     hyprland = {
       enable = true;
       xwayland = {
@@ -92,7 +94,7 @@
 
       ohMyZsh = {
         enable = true;
-        plugins = ["git" "thefuck"];
+        plugins = ["git"];
         theme = "robbyrussell";
       };
     };

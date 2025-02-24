@@ -12,10 +12,10 @@ function fish_user_key_bindings
     bind \cT '' -M insert
     bind \cR '' -M insert
 
-    bind \er fzf-history-widget -M insert
-    bind \ef fzf-file-preview-widget -M insert
-    bind \ec fzf-cd-preview-widget -M insert
-    bind \ep fzf-ps-widget -M insert
+    bind \e\cr fzf-history-widget -M insert
+    bind \e\cf fzf-file-preview-widget -M insert
+    bind \e\cd fzf-cd-preview-widget -M insert
+    bind \e\cp fzf-ps-widget -M insert
 
     bind \e\f clear-op -M insert
     bind \eb back-op -M insert

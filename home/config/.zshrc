@@ -18,7 +18,6 @@ eval "$(starship init zsh)"
 zsh-defer eval "$(fzf --zsh)"
 zsh-defer eval "$(atuin init zsh)"
 zsh-defer eval "$(zoxide init zsh)"
-zsh-defer eval "$(thefuck --alias fk)"
 zsh-defer eval "$(direnv hook zsh)"
 zsh-defer source ~/.config/scripts/fzf-git.sh/fzf-git.sh
 
