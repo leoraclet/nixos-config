@@ -3,8 +3,6 @@
   lib,
   ...
 }: {
-  location.provider = "geoclue2";
-
   services = {
     openssh = {
       enable = true;

@@ -6,6 +6,8 @@
     shell = pkgs.fish;
   };
 
+  users.defaultUserShell = pkgs.fish;
+
   xdg.mime = {
     enable = true;
     defaultApplications = {

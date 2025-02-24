@@ -77,7 +77,6 @@
     ffmpeg # FFMPEG utility
     wget # Tool for retrieving files using HTTP, HTTPS, and FTP
     btop # Monitor of resources
-    zsh # Z shell
     cmatrix # Terminal matrix effect
     hexyl # Command-line hex viewer
     pandoc # Conversion between documentation formats
@@ -103,7 +102,6 @@
     topgrade # Upgrade all the things
     tre-command # Tree command, improved
     ouch # Command-line utility for easily compressing and decompressing files and directories
-    geoclue2 # Geolocation framework and some data providers
     samba # Standard Windows interoperability suite of programs for Linux and Unix
     libqalculate # Advanced calculator library
     fish # Smart and user-friendly command line shell
