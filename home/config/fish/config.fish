@@ -27,6 +27,11 @@ alias conf="z ~/.config/"
 alias ls="eza --color=always --long --git --icons=always"
 alias cd="z"
 alias ps="procs"
+alias man="tldr"
+alias ll="ls -la"
+
+# Fzf
+alias f="fzf-file-preview-widget"
 
 # Git
 alias ga="git add"
@@ -58,20 +63,12 @@ alias code="codium"
 alias fixsd="lspci -knn | grep -iA2 card && modprobe rtsx_pci"
 alias rebuild="~/.config/hypr/scripts/rebuild-system.sh"
 
-# if [ -z "$DISPLAY" ] && [ "$XDG_VTNR" -eq 1 ]
-#   exec Hyprland
-# end
-
 function multicd
     echo cd (string repeat -n (math (string length -- $argv[1]) - 1) ../)
 end
 abbr --add dotdot --regex '^\.\.+$' --function multicd
 
-set -gx EDITOR hx
-set -gx VOLUME_STEP 5
-set -gx BRIGHTNESS_STEP 5
-
-set -gx PATH $HOME/.cargo/bin $PATH
+set -gx EDITOR nvim
 
 set fish_vi_force_cursor
 set fish_cursor_default block

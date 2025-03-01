@@ -96,7 +96,8 @@
     killall # Like pkill but better
     hyperfine # Command-line benchmarking tool
     udiskie # Removable disk automounter for udisks
-    imagemagick # Software suite to create, edit, compose, or convert bitmap images
+    imagemagickBig # Software suite to create, edit, compose, or convert bitmap images
+    ghostscript # PostScript interpreter
     chafa # Terminal graphics for the 21st century
     openssl # Cryptographic library that implements the SSL and TLS protocols
     topgrade # Upgrade all the things
@@ -113,7 +114,6 @@
     nh # Nix helper
     nvd # Nix/NixOS package version diff tool
     nix-output-monitor # Processes output of Nix commands to show helpful and pretty information
-    home-manager # Nix-based user environment configurator
 
     ###################################################
     # Fetch everything
@@ -144,7 +144,6 @@
     nemo
     signal-desktop
     orca-slicer
-    whatsie
     onionshare-gui
     inkscape
     gimp
@@ -174,10 +173,13 @@
     ags
     clipse
     networkmanagerapplet
+    hyprpolkitagent
     hypridle
     hyprlock
     hyprpicker
     hyprpaper
+    pyprland
+    pavucontrol
     kitty
     libnotify
     dunst
@@ -215,7 +217,16 @@
     macchanger
 
     ###################################################
-    # TEST
+    # TEST APPS
     ###################################################
+
+    ardour # Audio
+    freecad # CAD
+    telegram-desktop
+
+    jitsi
+    jitsi-meet-electron
+    jitsi-videobridge
+    jitsi-excalidraw
   ];
 }

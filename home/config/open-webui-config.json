@@ -71,7 +71,7 @@
       "search": {
         "enable": true,
         "engine": "searxng",
-        "searxng_query_url": "http://localhost:7777/search?q=<query>",
+        "searxng_query_url": "http://localhost:8888/search?q=<query>",
         "google_pse_api_key": "",
         "google_pse_engine_id": "",
         "brave_search_api_key": "",

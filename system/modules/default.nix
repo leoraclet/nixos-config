@@ -21,5 +21,6 @@
     ./swap.nix
     ./system.nix
     ./theme.nix
+    ./mac-randomize.nix
   ];
 }

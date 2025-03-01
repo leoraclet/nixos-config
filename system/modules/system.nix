@@ -5,7 +5,6 @@
     options = ["rw" "nofail" "uid=1000" "gid=100" "dmask=007" "fmask=117"];
   };
 
-  /*
   system.autoUpgrade = {
     enable = true;
     flake = inputs.self.outPath;
@@ -18,5 +17,4 @@
     dates = "weekly";
     randomizedDelaySec = "45min";
   };
-  */
 }

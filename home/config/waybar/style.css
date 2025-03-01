@@ -2,6 +2,7 @@
 
 * {
   border: none;
+  font-family: "JetBrains Mono";
 }
 
 window.bottom_bar#waybar {

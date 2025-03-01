@@ -4,6 +4,7 @@
     description = "leonne";
     extraGroups = ["networkmanager" "wheel" "qemu" "kvm" "libvirtd" "input" "video" "audio"];
     shell = pkgs.fish;
+    useDefaultShell = true;
   };
 
   users.defaultUserShell = pkgs.fish;

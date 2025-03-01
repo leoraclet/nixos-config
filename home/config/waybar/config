@@ -7,7 +7,7 @@
     "reload_style_on_change": true,
     "layer": "top", // Waybar at top layer
     "position": "top", // Waybar position (top|bottom|left|right)
-    "height": 36, // Waybar height (to be removed for auto height)
+    "height": 34, // Waybar height (to be removed for auto height)
     "spacing": 4,
     "modules-left": ["hyprland/workspaces", "hyprland/submap"],
     "modules-center": ["clock#time", "custom/separator", "clock#week", "custom/separator_dot", "clock#month", "custom/separator", "clock#calendar"],
@@ -128,6 +128,7 @@
         "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
         "tooltip-format-enumerate-connected-battery": "{device_alias}\t{device_address}\t({device_battery_percentage}%)",
         "max-length": 35,
+        "on-click": "fish -c bluetooth_toggle",
     },
 
     "network": {
@@ -143,6 +144,7 @@
         "format-linked": "󰈀 {ifname} (No IP)",
         "tooltip-format-ethernet":"Interface: {ifname}\nIP: {ipaddr}\nGW: {gwaddr}\nNetmask: {netmask}\nCIDR: {cidr}\n\n<span color='#a6da95'>{bandwidthUpBits}</span>\t<span color='#ee99a0'>{bandwidthDownBits}</span>\t<span color='#c6a0f6'>󰹹{bandwidthTotalBits}</span>",
         "max-length": 35,
+        "on-click": "fish -c wifi_toggle"
     },
 
     "group/misc": {
@@ -150,7 +152,6 @@
         "modules": [
             "privacy",
             "idle_inhibitor",
-            "custom/geo",
             "custom/airplane_mode",
             "custom/night_mode",
             "custom/dunst",
@@ -172,38 +173,31 @@
         ]
     },
 
-    "custom/geo": {
-        "interval": 1,
-        "exec-if": "pgrep geoclue",
-        "exec": "~/.config/hypr/scripts/check-geo.sh",
-        "return-type": "json",
-    },
-
     "custom/dunst": {
         "return-type": "json",
-        "exec": "~/.config/hypr/scripts/dunst-pause.sh",
+        "exec": "fish -c dunst_pause",
         "on-click": "dunstctl set-paused toggle",
         "restart-interval": 1,
-        "interval": 2,
+        "interval": 1,
     },
 
     "custom/airplane_mode": {
         "return-type": "json",
-        "interval": 2,
-        "exec": "~/.config/hypr/scripts/check-airplane-mode.sh",
-        "on-click": "~/.config/hypr/scripts/airplane-mode.sh",
+        "interval": 1,
+        "exec": "fish -c check_airplane_mode",
+        "on-click": "fish -c airplane_mode_toggle",
     },
 
     "custom/night_mode": {
         "return-type": "json",
-        "interval": 2,
-        "exec": "~/.config/hypr/scripts/check-night-mode.sh",
-        "on-click": "~/.config/hypr/scripts/night-vision.sh",
+        "interval": 1,
+        "exec": "fish -c check_night_mode",
+        "on-click": "fish -c night_mode_toggle",
     },
 
     "custom/logout_menu": {
         "return-type": "json",
-        "exec": "echo '{ \"text\":\"󰐥\", \"tooltip\": \"logout menu\" }'",
+        "exec": "echo '{ \"text\":\" 󰐥 \", \"tooltip\": \"logout menu\" }'",
         "interval": "once",
         "on-click": "wlogout",
     },
@@ -236,7 +230,7 @@
     "reload_style_on_change": true,
     "layer": "top", // Waybar at top layer
     "position": "bottom", // Waybar position (top|bottom|left|right)
-    "height": 36, // Waybar height (to be removed for auto height)
+    "height": 34, // Waybar height (to be removed for auto height)
     "spacing": 4, // Gaps between modules (4px)
     "modules-left": ["user"],
     "modules-center": ["hyprland/window"],
@@ -268,7 +262,7 @@
     },
 
     "user": {
-        "format": " <span color='#8bd5ca'>{user}</span> (up <span color='#f5bde6'>{work_d} d</span> <span color='#8aadf4'>{work_H} h</span> <span color='#eed49f'>{work_M} min</span> <span color='#a6da95'>↑</span>)",
+        "format": "<span color='#8bd5ca'>{user}</span> (up <span color='#f5bde6'>{work_d} d</span> <span color='#8aadf4'>{work_H} h</span> <span color='#eed49f'>{work_M} min</span> <span color='#a6da95'>↑</span>)",
         "icon": true,
     },
 },
@@ -281,7 +275,7 @@
     "layer": "top", // Waybar at top layer
     "position": "left", // Waybar position (top|bottom|left|right)
     "spacing": 4, // Gaps between modules (4px)
-    "width": 70,
+    "width": 65,
     "reload_style_on_change": true,
     "margin-top": 10,
     "margin-bottom": 10,
@@ -333,7 +327,7 @@
     },
 
     "disk": {
-        "interval": 5,
+        "interval": 1,
         "format": "󰋊 {percentage_used}%",  
         "tooltip-format": "({used}/{total})({percentage_used}%) in '{path}', available {free}({percentage_free}%)",
         "states": {

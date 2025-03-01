@@ -17,10 +17,8 @@ function fish_user_key_bindings
     bind \e\cd fzf-cd-preview-widget -M insert
     bind \e\cp fzf-ps-widget -M insert
 
-    bind \e\f clear-op -M insert
-    bind \eb back-op -M insert
-    bind \eB backtrack-op -M insert
-    bind \e/ list-op -M insert
+    bind \e\co recent_directories -M insert
+    bind \e\cy yazi_cd_quit -M insert
 
     bind \ea aichat_fish -M insert
 end

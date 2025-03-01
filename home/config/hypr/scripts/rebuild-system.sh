@@ -32,9 +32,13 @@ echo "NixOS Rebuilding..."
 sudo nixos-rebuild build --flake ./#leonne &>nixos-switch.log || (cat nixos-switch.log | grep --color error && exit 1)
 
 # Remove all symlinks of home-manager
-rm -rf ~/.zshrc
-rm -rf ~/.vscode-oss
 find ~/.config -type l -delete # Delete symlinks
+
+# Remove other files and folders
+rm -rf ~/.vscode-oss
+rm -rf ~/.config/**/*.bkp
+rm -rf ~/.config/*.bkp
+rm -rf ~/.config/fish.bkp
 
 echo "Build successfull"
 echo "Switching to new configuration ..."
