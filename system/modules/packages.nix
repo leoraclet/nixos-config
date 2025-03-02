@@ -33,9 +33,9 @@
     ###################################################
 
     /*
-    mangohud # Vulkan and OpenGL overlay for monitoring FPS, temperatures, CPU/GPU load and more
+    mangohud # Vulkan and OpenGL overlay for monitoring
     gamemode # Optimise Linux system performance on demand
-    protonup-ng # CLI program and API to automate the installation and update of GloriousEggroll's Proton-GE
+    protonup-ng # CLI program and API to automate the installation and update of Proton-GE
     gamescope # SteamOS session compositing window manager
     lutris # Open Source gaming platform for GNU/Linux
     bottles # Easy-to-use wineprefix manager
@@ -113,7 +113,7 @@
 
     nh # Nix helper
     nvd # Nix/NixOS package version diff tool
-    nix-output-monitor # Processes output of Nix commands to show helpful and pretty information
+    nix-output-monitor # Processes output of Nix commands to show helpful pretty information
 
     ###################################################
     # Fetch everything

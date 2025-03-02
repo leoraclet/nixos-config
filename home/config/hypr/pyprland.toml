@@ -17,7 +17,7 @@ lazy = true
 multi = false
 
 [scratchpads.volume]
-command = "pavucontrol --class volume_sidemenu"
+command = "pavucontrol"
 animation = "fromLeft"
 class = "volume_sidemenu"
 size = "40% 70%"

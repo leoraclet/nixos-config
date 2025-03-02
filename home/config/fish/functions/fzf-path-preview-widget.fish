@@ -1,12 +1,13 @@
-function fzf-cd-preview-widget
+function fzf-path-preview-widget
     set selected (fd --hidden --no-ignore --exclude .git --exclude .direnv | fzf --height 60% --reverse --preview='dir-preview {}' --preview-window=right:60%)
 
     if test -n "$selected"
         if [ -f "$selected" ]
-            cd "$(dirname $selected)"
+            commandline -i $(dirname $selected)
         else
-            cd "$selected"
+            commandline -i "$selected"
         end
     end
+
     commandline -f repaint
 end

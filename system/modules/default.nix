@@ -1,8 +1,4 @@
-{
-  config,
-  pkgs,
-  ...
-}: {
+{...}: {
   imports = [
     ./boot.nix
     ./fonts.nix
@@ -21,6 +17,7 @@
     ./swap.nix
     ./system.nix
     ./theme.nix
-    ./mac-randomize.nix
+    ./dns.nix
+    ./upgrade.nix
   ];
 }

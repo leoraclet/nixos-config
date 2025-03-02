@@ -5,7 +5,6 @@ import userOptions from "./modules/.configuration/user_options.js";
 import Overview from "./modules/overview/main.js";
 
 const COMPILED_STYLE_DIR = `${GLib.get_user_config_dir()}/ags/user/`;
-//const COMPILED_STYLE_DIR = `/home/leonne/.config/ags/user`;
 
 async function applyStyle() {
   App.resetCss();
