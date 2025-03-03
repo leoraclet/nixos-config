@@ -219,6 +219,7 @@
         "interval": 600,
         "exec": "wttrbar --date-format '%d-%m-%Y' --location Saint-Etienne --hide-conditions",
         "return-type": "json",
+        "on-click": "wttrbar --date-format '%d-%m-%Y' --location Saint-Etienne --hide-conditions"
     },
 },
 

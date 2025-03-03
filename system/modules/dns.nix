@@ -87,5 +87,5 @@
   };
 
   # Make sure this directory exists so the service doesn't fail on boot
-  systemd.tmpfiles.rules = ["d /var/lib/dnscrypt-proxy 0755 root root -"];
+  systemd.tmpfiles.rules = ["d /var/lib/dnscrypt-proxy 0777 root root -"];
 }
