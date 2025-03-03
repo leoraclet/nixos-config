@@ -309,7 +309,6 @@
             "lower-medium": 30,
             "low": 10,
         },
-        "on-click": "kitty btm",
     },
     
     "memory": {
@@ -323,7 +322,6 @@
             "lower-medium": 30,
             "low": 10,
         },
-        "on-click": "kitty btm",
     },
 
     "disk": {
@@ -337,7 +335,6 @@
             "lower-medium": 30,
             "low": 10,
         },
-        "on-click": "kitty btm",
     },
 
     "temperature": {
@@ -348,7 +345,6 @@
         "format": "{icon} {temperatureC}󰔄",
         "format-critical": "🔥 {temperatureC}󰔄",
         "format-icons": [ "", "", "", "", "" ],
-        "on-click": "kitty btm",
     },
 
     "battery": {
@@ -366,7 +362,6 @@
         "format-time": "{H} h {M} min",
         "format-icons": [ "󱃍", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹" ],
         "tooltip-format": "{timeTo}",
-        "on-click": "kitty btm",
     },
     
     "backlight": {
@@ -394,7 +389,6 @@
         },
         "reverse-scrolling": true,
         "reverse-mouse-scrolling": true,
-        "on-click": "kitty btm",
     },
 
     "pulseaudio": {

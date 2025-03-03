@@ -87,12 +87,9 @@
     pamixer # PulseAudio command line mixer
     bluez-tools # Set of tools to manage bluetooth devices
     texliveFull # TeX Live environment
-    impala # TUI for managing wifi
     wlsunset # Day/night gamma adjustments for Wayland
-    xh # Friendly and fast tool for sending HTTP requests
     gh # GitHub CLI tool
     killall # Like pkill but better
-    hyperfine # Command-line benchmarking tool
     udiskie # Removable disk automounter for udisks
     imagemagickBig # Software suite to create, edit, compose, or convert bitmap images
     ghostscript # PostScript interpreter
@@ -171,7 +168,7 @@
     # Hyprland
     ###################################################
 
-    ags
+    ags_1
     clipse
     networkmanagerapplet
     hyprpolkitagent
