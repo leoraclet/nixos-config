@@ -49,7 +49,6 @@
     dust # Disk analyzer
     dua # Disk usage analyzer
     yazi # Terminal file manager
-    thefuck # Command correcter
     dysk # Filesystem information (like df but better)
     grim # Wayland image grabber
     slurp # Wayland region selector
@@ -88,7 +87,6 @@
     pamixer # PulseAudio command line mixer
     bluez-tools # Set of tools to manage bluetooth devices
     texliveFull # TeX Live environment
-    bottom # System monitor
     impala # TUI for managing wifi
     wlsunset # Day/night gamma adjustments for Wayland
     xh # Friendly and fast tool for sending HTTP requests
@@ -150,6 +148,8 @@
     obs-studio
     libreoffice-fresh
     qalculate-gtk
+    ardour
+    telegram-desktop
 
     ###################################################
     # Robotics
@@ -158,6 +158,7 @@
     kicad # Open Source Electronics Design Automation suite
     openscad # 3D parametric model compiler
     turbocase # Generate an OpenSCAD case template from a KiCAD PCB
+    freecad # CAD
 
     ###################################################
     # Backup
@@ -219,10 +220,6 @@
     ###################################################
     # TEST APPS
     ###################################################
-
-    ardour # Audio
-    freecad # CAD
-    telegram-desktop
 
     jitsi
     jitsi-meet-electron

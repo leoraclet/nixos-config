@@ -55,5 +55,6 @@
   "rewrap.onSave": true,
   "rewrap.wrappingColumn": 100,
   "todo-tree.highlights.enabled": false,
-  "todo-tree.filtering.ignoreGitSubmodules": true
+  "todo-tree.filtering.ignoreGitSubmodules": true,
+  "explorer.confirmDelete": false
 }

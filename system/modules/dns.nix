@@ -1,7 +1,16 @@
 {...}: {
   # Enable Encrypted DNS
   networking = {
-    nameservers = ["127.0.0.1" "[::1]"];
+    nameservers = [
+      "127.0.0.1"
+      "[::1]"
+      "1.1.1.1"
+      "1.0.0.1"
+    ];
+
+    # These options are unnecessary when managing DNS ourselves
+    useDHCP = false;
+
     # If using dhcpcd:
     dhcpcd.enable = false; # disable, because enabled by default
     dhcpcd.extraConfig = "nohook resolv.conf";
@@ -26,6 +35,9 @@
 
       ipv6_servers = true;
       require_dnssec = true;
+
+      # Add this to test if dnscrypt-proxy is actually used to resolve DNS requests
+      query_log.file = "/var/log/dnscrypt-proxy/query.log";
 
       sources.public-resolvers = {
         urls = [
