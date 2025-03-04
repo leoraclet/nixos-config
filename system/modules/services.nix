@@ -14,12 +14,20 @@
       };
     };
 
+    #========================================#
+    # Printing
+    #========================================#
     printing.enable = true;
 
-    # Location
-    geoclue2.enable = true;
+    avahi = {
+      enable = true;
+      nssmdns4 = true;
+      openFirewall = true;
+    };
 
+    #========================================#
     # Power and Bluetooth
+    #========================================#
     blueman.enable = true;
     upower.enable = true;
 
@@ -27,17 +35,23 @@
     tlp.enable = true;
     auto-cpufreq.enable = true;
 
+    #========================================#
     # Virtulisation
+    #========================================#
     spice-vdagentd.enable = true;
 
+    #========================================#
     # File manager
+    #========================================#
     gvfs.enable = true; # Mount, trash, and other functionalities
     tumbler.enable = true; # Thumbnail support for images
     devmon.enable = true;
     udisks2.enable = true;
     fwupd.enable = true;
 
+    #========================================#
     # AI
+    #========================================#
     open-webui.enable = true;
 
     searx = {
@@ -61,7 +75,9 @@
         };
       };
 
+      #========================================#
       # Searx configuration
+      #========================================#
       settings = {
         # Instance settings
         general = {
@@ -195,7 +211,9 @@
       };
     };
 
+    #========================================#
     # Fingerprint scanner
+    #========================================#
     fprintd = {
       enable = true;
       tod.enable = true;

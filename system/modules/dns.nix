@@ -25,37 +25,32 @@
     wireless.iwd.settings.Network.NameResolvingService = "none";
   };
 
-  services.avahi = {
-    enable = true;
-    nssmdns4 = true;
-    publish = {
-      enable = true;
-      domain = true;
-      userServices = true;
-    };
-  };
-
   services.dnscrypt-proxy2 = {
     enable = true;
     settings = {
       listen_addresses = ["127.0.0.1:53" "[::1]:53"];
 
       ipv4_servers = true;
-      ipv6_servers = true;
+      ipv6_servers = false;
       block_ipv6 = false;
       doh_servers = true;
 
+      require_nolog = true;
       require_nofilter = false; # quad9 has some nice security filters
       require_dnssec = true;
 
       # Add this to test if dnscrypt-proxy is actually used to resolve DNS requests
       query_log.file = "/var/log/dnscrypt-proxy/query.log";
 
+      forwarding_rules = "${./rules/forwarding-rules.txt}";
+      captive_portals.map_file = "${./rules/captive-portals.txt}";
+
       sources.public-resolvers = {
         urls = [
           "https://raw.githubusercontent.com/DNSCrypt/dnscrypt-resolvers/master/v3/public-resolvers.md"
           "https://download.dnscrypt.info/resolvers-list/v3/public-resolvers.md"
         ];
+        refresh_delay = 72;
         cache_file = "/var/lib/dnscrypt-proxy/public-resolvers.md";
         minisign_key = "RWQf6LRCGA9i53mlYecO4IzT51TGPpvWucNSCh1CBM0QTaLn73Y7GFO3";
       };
@@ -67,11 +62,26 @@
         ];
         minisign_key = "RWQBphd2+f6eiAqBsvDZEBXBGHQBJfeG6G+wJPPKxCZMoEQYpmoysKUN";
         cache_file = "/var/lib/dnscrypt-proxy/quad9-resolvers.md";
+        refresh_delay = 72;
         prefix = "quad9-";
       };
 
       # You can choose a specific set of servers from https://github.com/DNSCrypt/dnscrypt-resolvers/blob/master/v3/public-resolvers.md
-      server_names = ["cloudflare" "cloudflare-ipv6" "cloudflare-security" "cloudflare-security-ipv6" "adguard-dns-doh" "mullvad-adblock-doh" "mullvad-doh" "nextdns" "nextdns-ipv6" "quad9-dnscrypt-ipv4-filter-pri" "google" "google-ipv6" "ibksturm"];
+      server_names = [
+        "cloudflare"
+        "cloudflare-ipv6"
+        "cloudflare-security"
+        "cloudflare-security-ipv6"
+        "adguard-dns-doh"
+        "mullvad-adblock-doh"
+        "mullvad-doh"
+        "nextdns"
+        "nextdns-ipv6"
+        "quad9-dnscrypt-ipv4-filter-pri"
+        "google"
+        "google-ipv6"
+        "ibksturm"
+      ];
     };
   };
 
