@@ -14,15 +14,30 @@
       };
     };
 
+    udev.packages = with pkgs; [
+      platformio # udev rules for platformio
+      openocd # required by paltformio, see https://github.com/NixOS/nixpkgs/issues/224895
+      android-udev-rules # required by adb
+      openfpgaloader
+    ];
+
     #========================================#
     # Printing
     #========================================#
     printing.enable = true;
 
+    # Network discovery, mDNS
+    # With this enabled, you can access your machine at <hostname>.local
+    # it's more convenient than using the IP address.
+    # https://avahi.org/
     avahi = {
       enable = true;
       nssmdns4 = true;
-      openFirewall = true;
+      publish = {
+        enable = true;
+        domain = true;
+        userServices = true;
+      };
     };
 
     #========================================#

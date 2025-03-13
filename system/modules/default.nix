@@ -19,5 +19,6 @@
     ./theme.nix
     ./dns.nix
     ./upgrade.nix
+    ./fhs.nix
   ];
 }

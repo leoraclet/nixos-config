@@ -2,7 +2,17 @@
   users.users.leonne = {
     isNormalUser = true;
     description = "leonne";
-    extraGroups = ["networkmanager" "wheel" "qemu" "kvm" "libvirtd" "input" "video" "audio"];
+    extraGroups = [
+      "docker"
+      "networkmanager"
+      "wheel"
+      "qemu"
+      "kvm"
+      "libvirtd"
+      "input"
+      "video"
+      "audio"
+    ];
     shell = pkgs.fish;
     useDefaultShell = true;
   };

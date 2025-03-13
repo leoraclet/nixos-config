@@ -34,29 +34,28 @@
     firefox-addons,
     ...
   } @ inputs: let
-    lib = nixpkgs.lib;
     system = "x86_64-linux";
     pkgs-unstable = import "${nixpkgs-unstable}" {
       inherit system;
       config.allowUnfree = true;
     };
   in {
-    nixosConfigurations.leonne = lib.nixosSystem {
+    nixosConfigurations.leonne = nixpkgs.lib.nixosSystem {
       inherit system;
       specialArgs = {
         inherit pkgs-unstable inputs;
       };
       modules = [
+        # Configuration
         ./system/configuration.nix
+        # NVF
         nvf.nixosModules.default
-        inputs
-        .home-manager
-        .nixosModules
-        .home-manager
+        # Home Manager
+        inputs.home-manager.nixosModules.home-manager
         {
           home-manager.useGlobalPkgs = true;
           home-manager.useUserPackages = true;
-          home-manager.backupFileExtension = "bkp";
+          home-manager.backupFileExtension = "dotfiles_backup";
           home-manager.users.leonne = {
             imports = [
               ./home
@@ -67,6 +66,7 @@
             firefox-addons-allowUnfree = pkgs-unstable.callPackage firefox-addons {};
           };
         }
+        # Hardware Configuration (Dell Latitude 5520)
         inputs.nixos-hardware.nixosModules.dell-latitude-5520
       ];
     };

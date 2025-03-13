@@ -9,6 +9,7 @@
 
     conda # Conda is a package manager for Python
     gnumake # Tool to control the generation of non-source files from sources
+    just # Handy way to save and run project-specific commands
     cmake # Cross-platform, open-source build system generator
     git # Distributed version control system
     lazygit # Simple terminal UI for git commands
@@ -18,6 +19,9 @@
     helix-gpt # Code completion LSP for Helix with support for Copilot + OpenAI
     devenv # Fast, Declarative, Reproducible, and Composable Developer Environments
     direnv # Shell extension that manages your environment
+    mkcert # Simple tool for making locally-trusted development certificates
+    pari # Computer algebra system for high-performance number theory computations
+    devbox # Instant, easy, predictable shells and containers
 
     ###################################################
     # AI
@@ -48,7 +52,7 @@
     dust # Disk analyzer
     dua # Disk usage analyzer
     yazi # Terminal file manager
-    dysk # Filesystem information (like df but better)
+    duf # Disk Usage/Free Utility
     grim # Wayland image grabber
     slurp # Wayland region selector
     poppler # PDF rendering library
@@ -102,6 +106,16 @@
     fish # Smart and user-friendly command line shell
 
     ###################################################
+    # Monitoring
+    ###################################################
+
+    iotop
+    iftop
+    strace
+    ltrace
+    lsof
+
+    ###################################################
     # NixOS utils
     ###################################################
 
@@ -122,6 +136,7 @@
     # GUI apps
     ###################################################
 
+    octaveFull
     thunderbird
     qbittorrent
     obsidian
@@ -145,6 +160,8 @@
     libreoffice-fresh
     qalculate-gtk
     ardour
+    brave # A chromium based browser as an alternative if needed
+    insomnia
 
     ###################################################
     # Robotics
@@ -207,6 +224,7 @@
     #metasploit
     #nth
     #theharvester
+    #mitmproxy
 
     # Utilities
     exiftool

@@ -56,5 +56,10 @@
   "rewrap.wrappingColumn": 100,
   "todo-tree.highlights.enabled": false,
   "todo-tree.filtering.ignoreGitSubmodules": true,
-  "explorer.confirmDelete": false
+  "explorer.confirmDelete": false,
+  "[yaml, yml]": {
+    "editor.defaultFormatter": "redhat.vscode-yaml"
+  },
+  "terminal.integrated.fontFamily": "JetBrainsMono Nerd Font",
+  "terminal.integrated.fontLigatures.enabled": true
 }

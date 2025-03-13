@@ -13,11 +13,9 @@ if git diff --quiet '*'; then
 fi
 
 # Autoformat your nix files
-alejandra . &>/dev/null ||
-	(
-		alejandra .
-		echo "formatting failed!" && exit 1
-	)
+alejandra . &>/dev/null
+
+echo "Config formatted !"
 
 # Shows your changes
 git diff -U0 '*'
@@ -32,13 +30,9 @@ echo "NixOS Rebuilding..."
 sudo nixos-rebuild build --flake ./#leonne &>nixos-switch.log || (cat nixos-switch.log | grep --color error && exit 1)
 
 # Remove all symlinks of home-manager
-find ~/.config -type l -delete # Delete symlinks
-
-# Remove other files and folders
-rm -rf ~/.vscode-oss
-rm -rf ~/.config/**/*.bkp
-rm -rf ~/.config/*.bkp
-rm -rf ~/.config/fish.bkp
+sudo find ~/.config -type l -delete
+sudo find ~/.config -name "*.bkp" -delete
+sudo find ~/ -name "*.dotfiles_backup" -delete
 
 echo "Build successfull"
 echo "Switching to new configuration ..."

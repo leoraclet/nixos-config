@@ -26,6 +26,7 @@
     podman-tui
     podman-compose
     qemu
+    qemu_kvm
     quickemu
     docker-compose
     lazydocker
