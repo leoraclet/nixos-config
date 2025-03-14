@@ -7,7 +7,7 @@
     # Developement
     ###################################################
 
-    conda # Conda is a package manager for Python
+    micromamba # Reimplementation of the conda package manager
     gnumake # Tool to control the generation of non-source files from sources
     just # Handy way to save and run project-specific commands
     cmake # Cross-platform, open-source build system generator
@@ -106,7 +106,7 @@
     fish # Smart and user-friendly command line shell
 
     ###################################################
-    # Monitoring
+    # Monitoring & Debugging
     ###################################################
 
     iotop
