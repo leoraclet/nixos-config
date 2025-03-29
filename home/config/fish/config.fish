@@ -33,6 +33,7 @@ alias ps="procs"
 alias man="tldr"
 alias ll="ls -la"
 alias du="dust"
+alias mamba="micromamba"
 
 # Fzf
 alias f="fzf-file-preview-widget"

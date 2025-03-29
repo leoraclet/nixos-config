@@ -21,7 +21,6 @@
       # Use all CPUs for building
       max-jobs = "auto";
       cores = 0; # 0 means all cores
-      builders-use-substitutes = true;
 
       # Add extra caches
       substituters = [

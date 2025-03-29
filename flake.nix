@@ -2,8 +2,8 @@
   description = "A very basic flake";
 
   inputs = {
-    nixpkgs-unstable.url = "github:nixos/nixpkgs?ref=nixos-unstable";
-    nixpkgs.url = "github:nixos/nixpkgs";
+    nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
+    #nixpkgs.url = "github:nixos/nixpkgs";
     nixos-hardware.url = "github:NixOS/nixos-hardware/master";
 
     nvf = {
@@ -28,14 +28,13 @@
   };
   outputs = {
     nixpkgs,
-    nixpkgs-unstable,
     home-manager,
     nvf,
     firefox-addons,
     ...
   } @ inputs: let
     system = "x86_64-linux";
-    pkgs-unstable = import "${nixpkgs-unstable}" {
+    pkgs = import nixpkgs {
       inherit system;
       config.allowUnfree = true;
     };
@@ -43,7 +42,7 @@
     nixosConfigurations.leonne = nixpkgs.lib.nixosSystem {
       inherit system;
       specialArgs = {
-        inherit pkgs-unstable inputs;
+        inherit inputs;
       };
       modules = [
         # Configuration
@@ -62,8 +61,8 @@
             ];
           };
           home-manager.extraSpecialArgs = {
-            inherit inputs pkgs-unstable;
-            firefox-addons-allowUnfree = pkgs-unstable.callPackage firefox-addons {};
+            inherit inputs;
+            firefox-addons-allowUnfree = pkgs.callPackage firefox-addons {};
           };
         }
         # Hardware Configuration (Dell Latitude 5520)

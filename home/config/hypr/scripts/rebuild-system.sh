@@ -5,6 +5,9 @@ set -e
 # cd to your config dir
 pushd ~/Config/
 
+# Remove log if exist
+rm -rf nixos-switch.log
+
 # Early return if no changes were detected (thanks @singiamtel!)
 if git diff --quiet '*'; then
 	echo "No changes detected, exiting."
@@ -22,7 +25,7 @@ git diff -U0 '*'
 
 # Add all potentialy untracked files
 git add .
-git add -A -N # Just in case (not sure what it does thought ...)
+#git add -A -N # Just in case (not sure what it does thought ...)
 
 echo "NixOS Rebuilding..."
 

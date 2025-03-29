@@ -48,7 +48,6 @@
 
     thermald.enable = true;
     tlp.enable = true;
-    auto-cpufreq.enable = true;
 
     #========================================#
     # Virtulisation
@@ -224,15 +223,6 @@
           "Tracker URL remover"
         ];
       };
-    };
-
-    #========================================#
-    # Fingerprint scanner
-    #========================================#
-    fprintd = {
-      enable = true;
-      tod.enable = true;
-      tod.driver = pkgs.libfprint-2-tod1-broadcom;
     };
 
     xserver = {

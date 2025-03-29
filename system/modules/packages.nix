@@ -19,7 +19,6 @@
     helix-gpt # Code completion LSP for Helix with support for Copilot + OpenAI
     devenv # Fast, Declarative, Reproducible, and Composable Developer Environments
     direnv # Shell extension that manages your environment
-    mkcert # Simple tool for making locally-trusted development certificates
     pari # Computer algebra system for high-performance number theory computations
     devbox # Instant, easy, predictable shells and containers
 
@@ -162,6 +161,7 @@
     ardour
     brave # A chromium based browser as an alternative if needed
     insomnia
+    cryptpad
 
     ###################################################
     # Robotics
@@ -233,10 +233,5 @@
     ###################################################
     # TEST APPS
     ###################################################
-
-    jitsi
-    jitsi-meet-electron
-    jitsi-videobridge
-    jitsi-excalidraw
   ];
 }
