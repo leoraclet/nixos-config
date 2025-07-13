@@ -7,20 +7,27 @@
     # Developement
     ###################################################
 
+    # Tools
     micromamba # Reimplementation of the conda package manager
     gnumake # Tool to control the generation of non-source files from sources
     just # Handy way to save and run project-specific commands
+    mask # CLI task runner defined by a simple markdown file
     cmake # Cross-platform, open-source build system generator
     git # Distributed version control system
     lazygit # Simple terminal UI for git commands
     neovim # Vim text editor fork focused on extensibility and agility
     alejandra # Uncompromising Nix Code Formatter
-    helix # Post-modern modal text editor
-    helix-gpt # Code completion LSP for Helix with support for Copilot + OpenAI
+    evil-helix # Post-modern modal text editor, with vim keybindings
     devenv # Fast, Declarative, Reproducible, and Composable Developer Environments
     direnv # Shell extension that manages your environment
     pari # Computer algebra system for high-performance number theory computations
     devbox # Instant, easy, predictable shells and containers
+
+    # Languages
+    uv # Extremely fast Python package installer and resolver, written in Rust
+    go # Go programming language
+    lua # Powerful, fast, lightweight, embeddable scripting language
+    bun # Incredibly fast JavaScript runtime, bundler, transpiler and package manager
 
     ###################################################
     # AI
@@ -47,6 +54,7 @@
     # CLI
     ###################################################
 
+    zellij # Terminal workspace with batteries included
     tmux # Terminal multiplexer
     dust # Disk analyzer
     dua # Disk usage analyzer
@@ -95,6 +103,7 @@
     udiskie # Removable disk automounter for udisks
     imagemagickBig # Software suite to create, edit, compose, or convert bitmap images
     ghostscript # PostScript interpreter
+    pdftk # PDF toolbox
     chafa # Terminal graphics for the 21st century
     openssl # Cryptographic library that implements the SSL and TLS protocols
     topgrade # Upgrade all the things
@@ -103,6 +112,9 @@
     samba # Standard Windows interoperability suite of programs for Linux and Unix
     libqalculate # Advanced calculator library
     fish # Smart and user-friendly command line shell
+    mprocs # TUI tool to run multiple commands in parallel and show the output of each command separately
+    xh # Friendly and fast tool for sending HTTP requests
+    hyperfine # Command-line benchmarking tool
 
     ###################################################
     # Monitoring & Debugging
@@ -168,8 +180,6 @@
     ###################################################
 
     kicad # Open Source Electronics Design Automation suite
-    openscad # 3D parametric model compiler
-    turbocase # Generate an OpenSCAD case template from a KiCAD PCB
     freecad # CAD
 
     ###################################################

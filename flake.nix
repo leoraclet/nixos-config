@@ -1,9 +1,9 @@
 {
-  description = "A very basic flake";
+  description = "My Flake config";
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
-    #nixpkgs.url = "github:nixos/nixpkgs";
+    nixpkg-stable.url = "github:nixos/nixpkgs";
     nixos-hardware.url = "github:NixOS/nixos-hardware/master";
 
     nvf = {
@@ -52,17 +52,19 @@
         # Home Manager
         inputs.home-manager.nixosModules.home-manager
         {
-          home-manager.useGlobalPkgs = true;
-          home-manager.useUserPackages = true;
-          home-manager.backupFileExtension = "dotfiles_backup";
-          home-manager.users.leonne = {
-            imports = [
-              ./home
-            ];
-          };
-          home-manager.extraSpecialArgs = {
-            inherit inputs;
-            firefox-addons-allowUnfree = pkgs.callPackage firefox-addons {};
+          home-manager = {
+            useGlobalPkgs = true;
+            useUserPackages = true;
+            backupFileExtension = "dotfiles_backup";
+            users.leonne = {
+              imports = [
+                ./home
+              ];
+            };
+            extraSpecialArgs = {
+              inherit inputs;
+              firefox-addons-allowUnfree = pkgs.callPackage firefox-addons {};
+            };
           };
         }
         # Hardware Configuration (Dell Latitude 5520)

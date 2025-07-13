@@ -12,6 +12,8 @@
       "input"
       "video"
       "audio"
+      "scanner"
+      "lp"
     ];
     shell = pkgs.fish;
     useDefaultShell = true;

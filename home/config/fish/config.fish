@@ -5,12 +5,9 @@ end
 alias cl="clear"
 alias c="clear"
 alias cls="clear"
-alias lgit="lazygit"
-alias ldocker="lazydocker"
 alias conf="z ~/.config"
 alias nixos="z /etc/nixos"
 alias store="z /nix/store"
-alias nau="sudo nix-channel --add https://nixos.org/channels/nixos-unstable nixos"
 alias nsgc="sudo nix-store --gc"
 alias upp="sudo nix flake update"
 alias ungc="nix-collect-garbage -d"
@@ -24,9 +21,6 @@ alias clk="rsclock -c"
 alias vm="quickemu --vm ~/VM/windows-10.conf --display spice --width 1920 --height 1080"
 alias tre="tre -e"
 alias tree="tre -e"
-alias neo="neofetch"
-alias fast="fastfetch"
-alias conf="z ~/.config/"
 alias ls="eza --color=always --long --git --icons=always --group-directories-first"
 alias cd="z"
 alias ps="procs"
@@ -34,6 +28,7 @@ alias man="tldr"
 alias ll="ls -la"
 alias du="dust"
 alias mamba="micromamba"
+alias v="nvim"
 
 # Fzf
 alias f="fzf-file-preview-widget"
@@ -48,12 +43,6 @@ alias gl="git log --all --color --decorate --oneline --graph"
 
 alias mkdir="mkdir -p"
 alias home="cd ~"
-
-# Make
-alias mk="make"
-alias mc="make clean"
-alias mb="make build"
-alias mr="make run"
 
 alias open="xdg-open"
 alias cat="bat"
@@ -88,5 +77,5 @@ set -Ux FZF_DEFAULT_OPTS "\
 starship init fish | source
 zoxide init fish | source
 direnv hook fish | source
-atuin init fish | source
 fzf --fish | source
+atuin init fish | source

@@ -18,7 +18,6 @@
   "terminal.sourceControlRepositoriesKind": "both",
   "telemetry.telemetryLevel": "off",
   "workbench.activityBar.location": "top",
-  "window.customTitleBarVisibility": "never",
   "workbench.sideBar.location": "left",
   "[python]": {
     "editor.defaultFormatter": "ms-python.black-formatter"
@@ -61,5 +60,14 @@
     "editor.defaultFormatter": "redhat.vscode-yaml"
   },
   "terminal.integrated.fontFamily": "JetBrainsMono Nerd Font",
-  "terminal.integrated.fontLigatures.enabled": true
+  "terminal.integrated.fontLigatures.enabled": true,
+  "workbench.startupEditor": "none",
+  "explorer.confirmDragAndDrop": false,
+  "[nix]": {
+    "editor.defaultFormatter": "kamadorueda.alejandra",
+    "editor.formatOnPaste": true,
+    "editor.formatOnSave": true,
+    "editor.formatOnType": false
+  },
+  "alejandra.program": "alejandra"
 }

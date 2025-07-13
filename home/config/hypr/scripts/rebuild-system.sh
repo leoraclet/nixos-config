@@ -8,6 +8,8 @@ pushd ~/Config/
 # Remove log if exist
 rm -rf nixos-switch.log
 
+echo "Detech changes ..."
+
 # Early return if no changes were detected (thanks @singiamtel!)
 if git diff --quiet '*'; then
 	echo "No changes detected, exiting."
@@ -15,8 +17,10 @@ if git diff --quiet '*'; then
 	exit 0
 fi
 
+echo "Formatting ..."
+
 # Autoformat your nix files
-alejandra . &>/dev/null
+alejandra .
 
 echo "Config formatted !"
 
@@ -25,7 +29,7 @@ git diff -U0 '*'
 
 # Add all potentialy untracked files
 git add .
-#git add -A -N # Just in case (not sure what it does thought ...)
+git add -A -N # Just in case (not sure what it does thought ...)
 
 echo "NixOS Rebuilding..."
 
@@ -33,9 +37,9 @@ echo "NixOS Rebuilding..."
 sudo nixos-rebuild build --flake ./#leonne &>nixos-switch.log || (cat nixos-switch.log | grep --color error && exit 1)
 
 # Remove all symlinks of home-manager
-sudo find ~/.config -type l -delete
-sudo find ~/.config -name "*.bkp" -delete
-sudo find ~/ -name "*.dotfiles_backup" -delete
+sudo find ~/.config -type l -exec rm -rf "{}" \; &>/dev/null
+sudo find ~/.config -name "*.bkp" -exec rm -rf "{}" \; &>/dev/null
+sudo find ~/ -name "*.dotfiles_backup" -exec rm -rf "{}" \; &>/dev/null
 
 echo "Build successfull"
 echo "Switching to new configuration ..."
@@ -44,7 +48,7 @@ echo "Switching to new configuration ..."
 sudo nixos-rebuild switch --flake ./#leonne &>nixos-switch.log || (cat nixos-switch.log | grep --color error && exit 1)
 
 # Get current generation metadata
-current=$(nixos-rebuild list-generations | grep current)
+current=$(nixos-rebuild list-generations | grep "True")
 
 echo "Done !"
 

@@ -22,4 +22,6 @@ function fish_user_key_bindings
     bind \e\cy yazi_cd_quit -M insert
 
     bind \ea aichat_fish -M insert
+
+    bind down _atuin_search -M insert
 end

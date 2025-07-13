@@ -8,17 +8,17 @@
         isDefault = true;
         search = {
           force = true;
-          default = "DuckDuckGo";
-          privateDefault = "DuckDuckGo";
-          order = ["SearXNG" "DuckDuckGo" "Google"];
+          default = "ddg";
+          privateDefault = "ddg";
+          order = ["SearXNG" "ddg" "google"];
           engines = {
             "SearXNG" = {
               urls = [{template = "https://redacted/search?q={searchTerms}";}];
-              iconUpdateURL = "https://redacted/static/themes/simple/img/favicon.png";
+              icon = "https://redacted/static/themes/simple/img/favicon.png";
             };
           };
         };
-        extensions = with firefox-addons-allowUnfree; [
+        extensions.packages = with firefox-addons-allowUnfree; [
           ublock-origin
           bitwarden
           darkreader
@@ -29,6 +29,7 @@
           localcdn
           feedbroreader
           clearurls
+          downthemall
         ];
         settings = {
           # Disable telemetry

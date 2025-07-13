@@ -19,11 +19,14 @@
       openocd # required by paltformio, see https://github.com/NixOS/nixpkgs/issues/224895
       android-udev-rules # required by adb
       openfpgaloader
+      # https://wiki.nixos.org/wiki/Scanners
+      sane-airscan
     ];
 
     #========================================#
     # Printing
     #========================================#
+    ipp-usb.enable = true;
     printing.enable = true;
 
     # Network discovery, mDNS
@@ -68,6 +71,9 @@
     #========================================#
     open-webui.enable = true;
 
+    #========================================#
+    # Searx configuration
+    #========================================#
     searx = {
       enable = true;
       package = pkgs.searxng;
@@ -88,10 +94,6 @@
           };
         };
       };
-
-      #========================================#
-      # Searx configuration
-      #========================================#
       settings = {
         # Instance settings
         general = {
