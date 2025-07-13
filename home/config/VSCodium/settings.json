@@ -69,5 +69,6 @@
     "editor.formatOnSave": true,
     "editor.formatOnType": false
   },
-  "alejandra.program": "alejandra"
+  "alejandra.program": "alejandra",
+  "svelte.enable-ts-plugin": true
 }

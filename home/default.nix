@@ -2,6 +2,7 @@
   imports = [
     ./user
     inputs.spicetify-nix.homeManagerModules.default
+    inputs.zen-browser.homeModules.beta
   ];
 
   home = {
