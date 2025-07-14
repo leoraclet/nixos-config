@@ -182,13 +182,14 @@
     brave # A chromium based browser as an alternative if needed
     insomnia
     cryptpad
+    freerdp
 
     ###################################################
     # Robotics
     ###################################################
 
     kicad # Open Source Electronics Design Automation suite
-    freecad # CAD
+    freecad # General purpose Open Source 3D CAD/MCAD/CAx/CAE/PLM modeler
 
     ###################################################
     # Backup
@@ -196,6 +197,7 @@
 
     rclone # Sync files and directories to and from major cloud storage
     rclone-browser # Graphical Frontend to Rclone written in Qt
+    megacmd # MEGA Command Line Interactive and Scriptable Application
 
     ###################################################
     # Hyprland

@@ -62,10 +62,10 @@ notify-send -e "NixOS Rebuilt OK" -t 2000
 
 echo "Removing unnecessary files and folders ..."
 
-# Remove log and build files
+# Remove log, build and backup files
+sudo find ~/ -name "*.dotfiles_backup" | xargs rm -rf &>nixos-switch.log
 rm nixos-switch.log
 rm -rf result
-sudo find ~/ -name "*.dotfiles_backup" | xargs rm -rf &>nixos-switch.log
 
 # Back to where you were
 popd >/dev/null
