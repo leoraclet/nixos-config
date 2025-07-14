@@ -15,7 +15,7 @@
     ./users.nix
     ./virtualisation.nix
     ./swap.nix
-    #./system.nix
+    ./system.nix
     ./theme.nix
     ./dns.nix
     ./upgrade.nix
