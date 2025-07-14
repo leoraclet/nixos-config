@@ -185,14 +185,14 @@
     freerdp
 
     ###################################################
-    # Robotics
+    # Robotics (not used now)
     ###################################################
 
     kicad # Open Source Electronics Design Automation suite
     freecad # General purpose Open Source 3D CAD/MCAD/CAx/CAE/PLM modeler
 
     ###################################################
-    # Backup
+    # Backup (not used now)
     ###################################################
 
     rclone # Sync files and directories to and from major cloud storage

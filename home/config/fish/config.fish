@@ -18,7 +18,7 @@ alias npw="sudo nix profile wipe-history --older-than 7d --profile /nix/var/nix/
 
 alias c="clear"
 alias clk="rsclock -c"
-alias vm="quickemu --vm ~/VM/windows-10.conf --display spice --width 1920 --height 1080"
+#alias vm="quickemu --vm ~/VM/windows-10.conf --display spice --width 1920 --height 1080"
 alias tre="tre -e"
 alias tree="tre -e"
 alias ls="eza --color=always --long --git --icons=always --group-directories-first"
