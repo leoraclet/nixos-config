@@ -8,11 +8,9 @@
     ###################################################
 
     # Tools
-    micromamba # Reimplementation of the conda package manager
     gnumake # Tool to control the generation of non-source files from sources
     just # Handy way to save and run project-specific commands
     mask # CLI task runner defined by a simple markdown file
-    cmake # Cross-platform, open-source build system generator
     git # Distributed version control system
     lazygit # Simple terminal UI for git commands
     neovim # Vim text editor fork focused on extensibility and agility
@@ -26,7 +24,6 @@
     terraform # Tool for building, changing, and versioning infrastructure
     license-generator # Command-line tool for generating license files
     git-ignore # Quickly and easily fetch .gitignore templates from gitignore.io
-    dotenvx # Better dotenv–from the creator of `dotenv
 
     # Languages
     uv # Extremely fast Python package installer and resolver, written in Rust
@@ -125,16 +122,6 @@
     hyperfine # Command-line benchmarking tool
 
     ###################################################
-    # Monitoring & Debugging
-    ###################################################
-
-    iotop
-    iftop
-    strace
-    ltrace
-    lsof
-
-    ###################################################
     # NixOS utils
     ###################################################
 
@@ -147,7 +134,6 @@
     ###################################################
 
     onefetch # Git repository summary on your terminal
-    starfetch # CLI star constellations displayer
     neofetch # System information
     fastfetch # Faster ... :)
 
@@ -155,7 +141,6 @@
     # GUI apps
     ###################################################
 
-    octaveFull
     thunderbird
     qbittorrent
     obsidian
@@ -172,13 +157,11 @@
     nemo
     signal-desktop
     orca-slicer
-    onionshare-gui
     inkscape
     gimp
     obs-studio
     libreoffice-fresh
     qalculate-gtk
-    ardour
     brave # A chromium based browser as an alternative if needed
     insomnia
     cryptpad
