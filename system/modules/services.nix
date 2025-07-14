@@ -24,6 +24,17 @@
     ];
 
     #========================================#
+    # Fingerprint reader
+    #========================================#
+    fprintd = {
+      enable = false; # Disabled it because it cause problems with SDDM (login, unlocked)
+      package = pkgs.fprintd-tod;
+      tod.enable = true;
+      # Search for "libfprint" in packages to find other drivers
+      tod.driver = pkgs.libfprint-2-tod1-broadcom;
+    };
+
+    #========================================#
     # Printing
     #========================================#
     ipp-usb.enable = true;

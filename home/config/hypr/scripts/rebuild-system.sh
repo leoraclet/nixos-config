@@ -31,15 +31,18 @@ git diff -U0 '*'
 git add .
 git add -A -N # Just in case (not sure what it does thought ...)
 
+echo "Deleting old config ..."
+
+sudo find ~/ -name "*.dotfiles_backup" -exec rm -rf "{}" \; &>nixos-switch.log
+
 echo "NixOS Rebuilding..."
 
 # Rebuild, output simplified errors, log trackebacks
 sudo nixos-rebuild build --flake ./#leonne &>nixos-switch.log || (cat nixos-switch.log | grep --color error && exit 1)
 
 # Remove all symlinks of home-manager
-sudo find ~/.config -type l -exec rm -rf "{}" \; &>/dev/null
-sudo find ~/.config -name "*.bkp" -exec rm -rf "{}" \; &>/dev/null
-sudo find ~/ -name "*.dotfiles_backup" -exec rm -rf "{}" \; &>/dev/null
+sudo find ~/.config -type l -exec rm -rf "{}" \; &>nixos-switch.log
+sudo find ~/.config -name "*.bkp" -exec rm -rf "{}" \; &>nixos-switch.log
 
 echo "Build successfull"
 echo "Switching to new configuration ..."

@@ -22,6 +22,11 @@
     direnv # Shell extension that manages your environment
     pari # Computer algebra system for high-performance number theory computations
     devbox # Instant, easy, predictable shells and containers
+    ansible # Radically simple IT automation
+    terraform # Tool for building, changing, and versioning infrastructure
+    license-generator # Command-line tool for generating license files
+    git-ignore # Quickly and easily fetch .gitignore templates from gitignore.io
+    dotenvx # Better dotenv–from the creator of `dotenv
 
     # Languages
     uv # Extremely fast Python package installer and resolver, written in Rust
@@ -36,6 +41,9 @@
     ollama # Get up and running with large language models locally
     aichat # Use GPT-4(V), Gemini, LocalAI, Ollama and other LLMs in the terminal
     searxng # Fork of Searx, a privacy-respecting, hackable metasearch engine
+    aider-chat # Code assistant/chat directly in the terminal
+    oterm # TUI LLM client with markdown support
+    alpaca # GUI LLM client with markdown support
 
     ###################################################
     # GAMING
