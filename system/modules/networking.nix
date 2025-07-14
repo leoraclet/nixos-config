@@ -6,7 +6,6 @@
       wifi.powersave = true;
     };
     enableIPv6 = false;
-    firewall.enable = false;
     wireless.iwd.enable = true;
   };
 

@@ -20,5 +20,6 @@
     ./dns.nix
     ./upgrade.nix
     ./fhs.nix
+    ./firewall.nix
   ];
 }

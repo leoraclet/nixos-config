@@ -8,7 +8,7 @@ pushd ~/Config/
 # Remove log if exist
 rm -rf nixos-switch.log
 
-echo "Detech changes ..."
+echo "Detect changes ..."
 
 # Early return if no changes were detected (thanks @singiamtel!)
 if git diff --quiet '*'; then
@@ -31,9 +31,9 @@ git diff -U0 '*'
 git add .
 git add -A -N # Just in case (not sure what it does thought ...)
 
-echo "Deleting old config ..."
+echo "Deleting old config files and folders ..."
 
-sudo find ~/ -name "*.dotfiles_backup" -exec rm -rf "{}" \; &>nixos-switch.log
+sudo find ~/ -name "*.dotfiles_backup" | xargs rm -rf &>nixos-switch.log
 
 echo "NixOS Rebuilding..."
 
@@ -41,8 +41,7 @@ echo "NixOS Rebuilding..."
 sudo nixos-rebuild build --flake ./#leonne &>nixos-switch.log || (cat nixos-switch.log | grep --color error && exit 1)
 
 # Remove all symlinks of home-manager
-sudo find ~/.config -type l -exec rm -rf "{}" \; &>nixos-switch.log
-sudo find ~/.config -name "*.bkp" -exec rm -rf "{}" \; &>nixos-switch.log
+sudo find ~/.config -type l -delete &>nixos-switch.log
 
 echo "Build successfull"
 echo "Switching to new configuration ..."
@@ -61,9 +60,12 @@ git commit -am "$current"
 # Notify all OK!
 notify-send -e "NixOS Rebuilt OK" -t 2000
 
+echo "Removing unnecessary files and folders ..."
+
 # Remove log and build files
 rm nixos-switch.log
 rm -rf result
+sudo find ~/ -name "*.dotfiles_backup" | xargs rm -rf &>nixos-switch.log
 
 # Back to where you were
 popd >/dev/null
