@@ -118,6 +118,11 @@
               mode = "x";
             }
             {
+              key = "<leader>p";
+              action = "\"_dP";
+              mode = "n";
+            }
+            {
               key = "<leader>d";
               action = "\"_d";
               mode = ["n" "v"];

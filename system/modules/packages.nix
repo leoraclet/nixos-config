@@ -10,7 +10,6 @@
     # Tools
     gnumake # Tool to control the generation of non-source files from sources
     just # Handy way to save and run project-specific commands
-    mask # CLI task runner defined by a simple markdown file
     git # Distributed version control system
     lazygit # Simple terminal UI for git commands
     neovim # Vim text editor fork focused on extensibility and agility
@@ -111,13 +110,11 @@
     pdftk # PDF toolbox
     chafa # Terminal graphics for the 21st century
     openssl # Cryptographic library that implements the SSL and TLS protocols
-    topgrade # Upgrade all the things
     tre-command # Tree command, improved
     ouch # Command-line utility for easily compressing and decompressing files and directories
     samba # Standard Windows interoperability suite of programs for Linux and Unix
     libqalculate # Advanced calculator library
     fish # Smart and user-friendly command line shell
-    mprocs # TUI tool to run multiple commands in parallel and show the output of each command separately
     xh # Friendly and fast tool for sending HTTP requests
     hyperfine # Command-line benchmarking tool
 
@@ -127,7 +124,6 @@
 
     nh # Nix helper
     nvd # Nix/NixOS package version diff tool
-    nix-output-monitor # Processes output of Nix commands to show helpful pretty information
 
     ###################################################
     # Fetch everything

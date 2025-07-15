@@ -5,15 +5,7 @@ end
 alias cl="clear"
 alias c="clear"
 alias cls="clear"
-alias conf="z ~/.config"
-alias nixos="z /etc/nixos"
-alias store="z /nix/store"
-alias nsgc="sudo nix-store --gc"
-alias upp="sudo nix flake update"
-alias ungc="nix-collect-garbage -d"
 alias ngc="sudo nix-collect-garbage -d"
-alias ngc7="sudo nix-collect-garbage --delete-older-than 7d"
-alias ngc14="sudo nix-collect-garbage --delete-older-than 14d"
 alias npw="sudo nix profile wipe-history --older-than 7d --profile /nix/var/nix/profiles/system"
 
 alias c="clear"
@@ -54,7 +46,7 @@ alias dua="dua i"
 alias vc="codium ."
 alias code="codium ."
 
-alias fixsd="lspci -knn | grep -iA2 card && modprobe rtsx_pci"
+#alias fixsd="lspci -knn | grep -iA2 card && modprobe rtsx_pci"
 alias rebuild="~/.config/hypr/scripts/rebuild-system.sh"
 
 function multicd

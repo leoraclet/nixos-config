@@ -16,6 +16,16 @@
           "key" = "ctrl+numpad_add";
           "command" = "editor.action.fontZoomIn";
         }
+        {
+          "key" = "ctrl+[Period]";
+          "command" = "editor.action.commentLine";
+          "when" = "editorTextFocus && !editorReadonly";
+        }
+        {
+          "key" = "ctrl+shift+[Period]";
+          "command" = "editor.action.blockComment";
+          "when" = "editorTextFocus && !editorReadonly";
+        }
       ];
       extensions = with pkgs.vscode-extensions; [
         catppuccin.catppuccin-vsc
