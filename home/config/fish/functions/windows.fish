@@ -1,6 +1,6 @@
 function windows
     set current_dir "$(pwd)"
-    set dir "$(find ~/VM/ -name "docker-windows" -type d)"
+    set dir "$(find ~/Data/VM/ -name "docker-windows" -type d)"
     cd "$dir"
     docker compose up -d
     sleep 5

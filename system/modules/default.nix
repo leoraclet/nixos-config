@@ -21,5 +21,6 @@
     ./upgrade.nix
     ./fhs.nix
     ./firewall.nix
+    ./lsp.nix
   ];
 }

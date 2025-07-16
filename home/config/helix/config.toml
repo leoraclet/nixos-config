@@ -5,10 +5,15 @@ shell = ["fish", "-c"]
 line-number = "relative"
 cursorline = true
 color-modes = true
-auto-save = false
 idle-timeout = 0
 bufferline = "multiple"
 popup-border = "popup"
+end-of-line-diagnostics = "hint"
+trim-trailing-whitespace = true
+completion-replace = true
+
+[editor.auto-save]
+after-delay.enable = true
 
 [editor.cursor-shape]
 insert = "bar"
@@ -27,8 +32,8 @@ separator = "│"
 display-messages = true
 display-inlay-hints = true
 
-# [editor.file-picker]
-# max-depth = 10
+[editor.inline-diagnostics]
+cursor-line = "error"
 
 [editor.soft-wrap]
 enable = true

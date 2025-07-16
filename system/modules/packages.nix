@@ -29,6 +29,12 @@
     go # Go programming language
     lua # Powerful, fast, lightweight, embeddable scripting language
     bun # Incredibly fast JavaScript runtime, bundler, transpiler and package manager
+    jdk # Open-source Java Developement Kit
+    gcc
+    clang
+    lld
+    lldb
+    musl
 
     ###################################################
     # AI
@@ -117,6 +123,12 @@
     fish # Smart and user-friendly command line shell
     xh # Friendly and fast tool for sending HTTP requests
     hyperfine # Command-line benchmarking tool
+    rich-cli
+    aria2
+
+    # Monitoring
+    iotop
+    iftop
 
     ###################################################
     # NixOS utils
@@ -162,6 +174,7 @@
     insomnia
     cryptpad
     freerdp
+    telegram-desktop # Telegram Desktop messaging app
 
     ###################################################
     # Robotics (not used now)
