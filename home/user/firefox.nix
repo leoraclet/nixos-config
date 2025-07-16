@@ -131,7 +131,9 @@
     };
   };
 
-  ############## Zen Brower
+  # ============================================================
+  # Zen Browser Configuration
+  # ============================================================
   programs.zen-browser = {
     enable = true;
     policies = {
@@ -157,6 +159,56 @@
           "Status" = "locked";
         };
         # and so on...
+      };
+      ExtensionSettings = {
+        "ublock0_raymondhill_net@firefox-addon" = {
+          "installation_mode" = "force_installed";
+          "installation_url" = "https://addons.mozilla.org/firefox/downloads/latest/ublock-origin/latest.xpi";
+        };
+        "bitwarden@firefox-addon" = {
+          "installation_mode" = "force_installed";
+          "installation_url" = "https://addons.mozilla.org/firefox/downloads/latest/bitwarden-password-manager/latest.xpi";
+        };
+        "darkreader@firefox-addon" = {
+          "installation_mode" = "force_installed";
+          "installation_url" = "https://addons.mozilla.org/firefox/downloads/latest/darkreader/latest.xpi";
+        };
+        "istilldontcareaboutcookies@firefox-addon" = {
+          "installation_mode" = "force_installed";
+          "installation_url" = "https://addons.mozilla.org/firefox/downloads/latest/i-still-dont-care-about-cookies/latest.xpi";
+        };
+        "tampermonkey@firefox-addon" = {
+          "installation_mode" = "force_installed";
+          "installation_url" = "https://addons.mozilla.org/firefox/downloads/latest/tampermonkey/latest.xpi";
+        };
+        "onetab@firefox-addon" = {
+          "installation_mode" = "force_installed";
+          "installation_url" = "https://addons.mozilla.org/firefox/downloads/latest/onetab/latest.xpi";
+        };
+        "languagetool@firefox-addon" = {
+          "installation_mode" = "force_installed";
+          "installation_url" = "https://addons.mozilla.org/firefox/downloads/latest/language-tool/latest.xpi";
+        };
+        "localcdn@firefox-addon" = {
+          "installation_mode" = "force_installed";
+          "installation_url" = "https://addons.mozilla.org/firefox/downloads/latest/local-cdn/latest.xpi";
+        };
+        "feedbro@firefox-addon" = {
+          "installation_mode" = "force_installed";
+          "installation_url" = "https://addons.mozilla.org/firefox/downloads/latest/feedbro-reader/latest.xpi";
+        };
+        "clearurls@firefox-addon" = {
+          "installation_mode" = "force_installed";
+          "installation_url" = "https://addons.mozilla.org/firefox/downloads/latest/clearurls/latest.xpi";
+        };
+        "downthemall@firefox-addon" = {
+          "installation_mode" = "force_installed";
+          "installation_url" = "https://addons.mozilla.org/firefox/downloads/latest/downloadthemall/latest.xpi";
+        };
+        "fireshort@firefox-addon" = {
+          "installation_mode" = "force_installed";
+          "installation_url" = "https://addons.mozilla.org/firefox/downloads/latest/fireshot/latest.xpi";
+        };
       };
     };
   };
