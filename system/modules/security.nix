@@ -29,7 +29,7 @@
   */
 
   programs.firejail = {
-    enable = true;
+    enable = false;
     wrappedBinaries = {
       mpv = {
         executable = "${lib.getBin pkgs.mpv}/bin/mpv";

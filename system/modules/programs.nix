@@ -180,6 +180,26 @@
               enable = true;
               crates.enable = true;
             };
+
+            # Language modules that are not as common.
+            assembly.enable = false;
+            astro.enable = true;
+            nu.enable = false;
+            csharp.enable = false;
+            julia.enable = false;
+            vala.enable = false;
+            scala.enable = false;
+            r.enable = false;
+            gleam.enable = false;
+            dart.enable = false;
+            ocaml.enable = false;
+            elixir.enable = false;
+            haskell.enable = false;
+            ruby.enable = false;
+            fsharp.enable = false;
+
+            tailwind.enable = true;
+            svelte.enable = true;
           };
 
           visuals = {
