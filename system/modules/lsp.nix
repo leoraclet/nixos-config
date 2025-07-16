@@ -18,6 +18,8 @@
     marksman
     markdown-oxide
     nil
+    ruff
+    yapf
     zls
     gopls
     delve

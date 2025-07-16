@@ -8,6 +8,11 @@
     graphics = {
       enable = true;
       enable32Bit = true;
+      extraPackages = with pkgs; [
+        intel-ocl
+        intel-media-driver
+        vpl-gpu-rt
+      ];
     };
 
     sane = {
@@ -18,7 +23,11 @@
     opengl = {
       enable = true;
       driSupport32Bit = true;
-      extraPackages = with pkgs; [intel-ocl];
+      extraPackages = with pkgs; [
+        intel-ocl
+        intel-media-driver
+        vpl-gpu-rt
+      ];
     };
   };
 }
