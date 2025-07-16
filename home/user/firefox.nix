@@ -163,47 +163,47 @@
       };
       ExtensionSettings = {
         "uBlock0@raymondhill.net" = {
-          installation_mode = "force_installed";
+          install_url = "force_installed";
           installation_url = "https://addons.mozilla.org/firefox/downloads/latest/ublock-origin/latest.xpi";
         };
         "{446900e4-71c2-419f-a6a7-df9c091e268b}" = {
-          installation_mode = "force_installed";
+          install_url = "force_installed";
           installation_url = "https://addons.mozilla.org/firefox/downloads/latest/bitwarden-password-manager/latest.xpi";
         };
         "addon@darkreader.org" = {
-          installation_mode = "force_installed";
+          install_url = "force_installed";
           installation_url = "https://addons.mozilla.org/firefox/downloads/latest/darkreader/latest.xpi";
         };
         "idcac-pub@guus.ninja" = {
-          installation_mode = "force_installed";
+          install_url = "force_installed";
           installation_url = "https://addons.mozilla.org/firefox/downloads/latest/i-still-dont-care-about-cookies/latest.xpi";
         };
         "firefox@tampermonkey.net" = {
-          installation_mode = "force_installed";
+          install_url = "force_installed";
           installation_url = "https://addons.mozilla.org/firefox/downloads/latest/tampermonkey/latest.xpi";
         };
         "extension@one-tab.com" = {
-          installation_mode = "force_installed";
+          install_url = "force_installed";
           installation_url = "https://addons.mozilla.org/firefox/downloads/latest/onetab/latest.xpi";
         };
         "languagetool-webextension@languagetool.org" = {
-          installation_mode = "force_installed";
+          install_url = "force_installed";
           installation_url = "https://addons.mozilla.org/firefox/downloads/latest/language-tool/latest.xpi";
         };
         "{b86e4813-687a-43e6-ab65-0bde4ab75758}" = {
-          installation_mode = "force_installed";
+          install_url = "force_installed";
           installation_url = "https://addons.mozilla.org/firefox/downloads/latest/local-cdn/latest.xpi";
         };
         "{74145f27-f039-47ce-a470-a662b129930a}" = {
-          installation_mode = "force_installed";
+          install_url = "force_installed";
           installation_url = "https://addons.mozilla.org/firefox/downloads/latest/clearurls/latest.xpi";
         };
         "{DDC359D1-844A-42a7-9AA1-88A850A938A8}" = {
-          installation_mode = "force_installed";
+          install_url = "force_installed";
           installation_url = "https://addons.mozilla.org/firefox/downloads/latest/downloadthemall/latest.xpi";
         };
         "{0b457cAA-602d-484a-8fe7-c1d894a011ba}" = {
-          installation_mode = "force_installed";
+          install_url = "force_installed";
           installation_url = "https://addons.mozilla.org/firefox/downloads/latest/fireshot/latest.xpi";
         };
       };
