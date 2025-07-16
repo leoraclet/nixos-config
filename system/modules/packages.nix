@@ -124,12 +124,12 @@
     fish # Smart and user-friendly command line shell
     xh # Friendly and fast tool for sending HTTP requests
     hyperfine # Command-line benchmarking tool
-    rich-cli
-    aria2
+    rich-cli # Rich CLI is a collection of tools for building rich command line interfaces
+    aria2 # Lightweight multi-protocol & multi-source command-line download utility
 
     # Monitoring
-    iotop
-    iftop
+    iotop # Display I/O usage by processes
+    iftop # Display bandwidth usage on an interface
 
     ###################################################
     # NixOS utils

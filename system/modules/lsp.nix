@@ -39,5 +39,12 @@
     hyprls
     helix-gpt
     texlab
+
+    # ======================================== #
+    # Formatter and Linter Packages
+    # ======================================== #
+    gofumpt
+    nixfmt-rfc-style
+    prettier
   ];
 }
