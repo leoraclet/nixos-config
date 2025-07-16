@@ -1,6 +1,8 @@
 {pkgs, ...}: {
   environment.systemPackages = with pkgs; [
     python312Packages.python-lsp-server
+    python312Packages.python-lsp-ruff
+    python312Packages.python-lsp-black
     nodePackages_latest.nodemon
     nodePackages_latest.typescript
     nodePackages_latest.typescript-language-server
@@ -11,6 +13,8 @@
     nodePackages_latest.graphql-language-service-cli
     vue-language-server
     sumneko-lua-language-server
+    rust-analyzer
+    clang-tools
     marksman
     markdown-oxide
     nil

@@ -9,8 +9,9 @@ idle-timeout = 0
 bufferline = "multiple"
 popup-border = "popup"
 end-of-line-diagnostics = "hint"
-trim-trailing-whitespace = true
 completion-replace = true
+completion-timeout = 5
+completion-trigger-len = 1
 
 [editor.auto-save]
 after-delay.enable = true
@@ -33,7 +34,7 @@ display-messages = true
 display-inlay-hints = true
 
 [editor.inline-diagnostics]
-cursor-line = "error"
+cursor-line = "warning"
 
 [editor.soft-wrap]
 enable = true
@@ -44,4 +45,4 @@ S-l = ":bn"
 S-h = ":bp"
 S-right = ":bn"
 S-left = ":bp"
-A-w = ":w"
+C-s = ":w"
