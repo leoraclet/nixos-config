@@ -12,13 +12,12 @@ function fish_user_key_bindings
     bind \cT '' -M insert
     bind \cR '' -M insert
 
-    bind \e\cr fzf-history-widget -M insert
+    bind \e\ch fzf-history-widget -M insert
     bind \e\cf fzf-file-preview-widget -M insert
     bind \e\cd fzf-cd-preview-widget -M insert
     bind \e\cp fzf-ps-widget -M insert
     bind \e\ce fzf-path-preview-widget -M insert
-
-    bind \e\co recent_directories -M insert
+    bind \e\cr recent_directories -M insert
     bind \e\cy yazi_cd_quit -M insert
 
     bind \ea aichat_fish -M insert
