@@ -13,6 +13,11 @@
     nodePackages_latest.graphql-language-service-cli
     vue-language-server
     sumneko-lua-language-server
+    vhdl-ls
+    svls
+    svlint
+    intelephense
+    openscad-lsp
     rust-analyzer
     clang-tools
     marksman

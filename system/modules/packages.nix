@@ -46,6 +46,7 @@
     aider-chat # Code assistant/chat directly in the terminal
     oterm # TUI LLM client with markdown support
     alpaca # GUI LLM client with markdown support
+    fabric-ai # AI agent framework for building autonomous agents
 
     ###################################################
     # GAMING
@@ -182,6 +183,7 @@
 
     kicad # Open Source Electronics Design Automation suite
     freecad # General purpose Open Source 3D CAD/MCAD/CAx/CAE/PLM modeler
+    openscad # OpenSCAD is a software for creating solid 3D CAD objects
 
     ###################################################
     # Backup (not used now)

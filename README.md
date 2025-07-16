@@ -38,6 +38,18 @@ Show information
 upower -i (upower --enumerate | grep battery)
 ```
 
+## Reset OpenWebUI password
+
+Here is the [link](https://docs.openwebui.com/troubleshooting/password-reset/) for explanations.
+
+The database is located in `/var/lib/open-webui`
+
+Best option for me was just to **nuke** the database :)
+
+```bash
+sudo rm -rf /var/lib/open-webui/webui.db
+```
+
 ## Author
 
 Me :)
