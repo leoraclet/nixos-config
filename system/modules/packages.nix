@@ -126,6 +126,7 @@
     hyperfine # Command-line benchmarking tool
     rich-cli # Rich CLI is a collection of tools for building rich command line interfaces
     aria2 # Lightweight multi-protocol & multi-source command-line download utility
+    mosh # Mobile shell that allows roaming, supports intermittent connectivity, and provides intelligent local echo
 
     # Monitoring
     iotop # Display I/O usage by processes
@@ -136,7 +137,6 @@
     ###################################################
 
     nh # Nix helper
-    nvd # Nix/NixOS package version diff tool
 
     ###################################################
     # Fetch everything
@@ -169,7 +169,7 @@
     inkscape
     gimp
     obs-studio
-    libreoffice-fresh
+    onlyoffice-desktopeditors
     qalculate-gtk
     brave # A chromium based browser as an alternative if needed
     cryptpad

@@ -32,6 +32,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
+
   outputs = {
     nixpkgs,
     home-manager,

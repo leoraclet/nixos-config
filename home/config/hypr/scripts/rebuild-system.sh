@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# TODO: Reimplement this script as a fish function
 
 set -e
 
@@ -40,17 +41,19 @@ echo "NixOS Rebuilding..."
 # Rebuild, output simplified errors, log trackebacks
 sudo nixos-rebuild build --flake ./#leonne &>nixos-switch.log || (cat nixos-switch.log | grep --color error && exit 1)
 
-# Remove all symlinks of home-manager
+echo "Build successfull"
+
+# Remove all symlinks of home-manager from previous generation
+# This is needed to avoid issues with home-manager regenerating symlinks
 sudo find ~/.config -type l -delete &>nixos-switch.log
 
-echo "Build successfull"
 echo "Switching to new configuration ..."
 
-# If it built successfully
+# If it built successfully, swith to new configuration
 sudo nixos-rebuild switch --flake ./#leonne &>nixos-switch.log || (cat nixos-switch.log | grep --color error && exit 1)
 
 # Get current generation metadata
-current=$(nixos-rebuild list-generations | grep "True")
+current=$(nixos-rebuild list-generations --json | jq -r '.[0].date')
 
 echo "Done !"
 

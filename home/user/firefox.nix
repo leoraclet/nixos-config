@@ -11,12 +11,6 @@
           default = "ddg";
           privateDefault = "ddg";
           order = ["SearXNG" "ddg" "google"];
-          engines = {
-            "SearXNG" = {
-              urls = [{template = "https://redacted/search?q={searchTerms}";}];
-              icon = "https://redacted/static/themes/simple/img/favicon.png";
-            };
-          };
         };
         extensions.packages = with firefox-addons-allowUnfree; [
           ublock-origin
@@ -30,6 +24,8 @@
           feedbroreader
           clearurls
           downthemall
+          search-by-image
+          auto-tab-discard
         ];
         settings = {
           # Disable telemetry
@@ -205,6 +201,14 @@
         "{0b457cAA-602d-484a-8fe7-c1d894a011ba}" = {
           installation_mode = "force_installed";
           install_url = "https://addons.mozilla.org/firefox/downloads/latest/fireshot/latest.xpi";
+        };
+        "{2e5ff8c8-32fe-46d0-9fc8-6b8986621f3c}" = {
+          installation_mode = "force_installed";
+          install_url = "https://addons.mozilla.org/firefox/downloads/latest/search-by-image/latest.xpi";
+        };
+        "{c2c003ee-bd69-42a2-b0e9-6f34222cb046}" = {
+          installation_mode = "force_installed";
+          install_url = "https://addons.mozilla.org/firefox/downloads/latest/auto-tab-discard/latest.xpi";
         };
       };
     };
