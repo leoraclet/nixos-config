@@ -204,7 +204,7 @@
         };
         "{2e5ff8c8-32fe-46d0-9fc8-6b8986621f3c}" = {
           installation_mode = "force_installed";
-          install_url = "https://addons.mozilla.org/firefox/downloads/latest/search-by-image/latest.xpi";
+          install_url = "https://addons.mozilla.org/firefox/downloads/latest/search_by_image/latest.xpi";
         };
         "{c2c003ee-bd69-42a2-b0e9-6f34222cb046}" = {
           installation_mode = "force_installed";
