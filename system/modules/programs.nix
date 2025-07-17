@@ -182,7 +182,7 @@
             };
 
             # Language modules that are not as common.
-            assembly.enable = false;
+            assembly.enable = true;
             astro.enable = true;
             nu.enable = false;
             csharp.enable = false;
@@ -217,7 +217,7 @@
 
           filetree = {
             neo-tree = {
-              enable = true;
+              enable = false;
             };
           };
 

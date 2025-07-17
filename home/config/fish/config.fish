@@ -2,45 +2,40 @@ if status is-interactive
     # Commands to run in interactive sessions can go here
 end
 
-alias cl="clear"
-alias c="clear"
-alias cls="clear"
+# System aliases
 alias ngc="sudo nix-collect-garbage -d"
 alias npw="sudo nix profile wipe-history --older-than 7d --profile /nix/var/nix/profiles/system"
 
+# Terminal utils aliases
+alias cl="clear"
 alias c="clear"
+alias cls="clear"
 alias clk="rsclock -c"
 alias tre="tre -e"
 alias tree="tre -e"
 alias ls="eza --color=always --long --git --icons=always --group-directories-first"
+alias ll="ls -la"
 alias cd="z"
 alias ps="procs"
 alias man="tldr"
-alias ll="ls -la"
 alias du="dust"
-alias mamba="micromamba"
-alias v="nvim"
-
-# Fzf
-alias f="fzf-file-preview-widget"
-
-# Git
-alias ga="git add"
-alias gs="git status"
-alias gl="git log --all --color --decorate --oneline --graph"
-
 alias mkdir="mkdir -p"
 alias home="cd ~"
-
-alias open="xdg-open"
+alias v="nvim ."
+alias vi="nvim ."
 alias cat="bat"
 alias df="duf"
 alias lgit="lazygit"
 alias ldock="lazydocker"
 alias hex="hexyl"
 alias dua="dua i"
+alias open="xdg-open"
 alias vc="codium ."
 alias code="codium ."
+alias f="fzf-file-preview-widget"
+alias ga="git add"
+alias gs="git status"
+alias gl="git log --all --color --decorate --oneline --graph"
 
 #alias fixsd="lspci -knn | grep -iA2 card && modprobe rtsx_pci"
 alias rebuild="~/.config/hypr/scripts/rebuild-system.sh"

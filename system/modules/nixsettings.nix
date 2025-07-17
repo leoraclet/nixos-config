@@ -22,6 +22,9 @@
       max-jobs = "auto";
       cores = 0; # 0 means all cores
 
+      # continue building derivations if one fails
+      keep-going = true;
+
       # Add extra caches
       substituters = [
         "https://cache.nixos.org"

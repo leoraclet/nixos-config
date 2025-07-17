@@ -19,11 +19,20 @@ args = [
 [[language]]
 name = "python"
 language-servers = [ { name = "pylsp", except-features = [ "format" ] }, "ruff"]
+formatter = { command = "ruff", args = ["format", "--line-length", "88", "-"] }
 auto-format = true
 
 [language-server.pylsp.config.pylsp]
 plugins.ruff.enabled = true
 plugins.black.enabled = true
+
+[language-server.gopls.config]
+gofumpt = true
+
+[[language]]
+auto-format = true
+name = "nix"
+formatter = { command = "alejandra" }
 
 [language-server.lsp-ai]
 command = "lsp-ai"
@@ -39,26 +48,39 @@ checkOnSave = { command = "clippy" }
 [[language]]
 name = "html"
 language-servers = [ "emmet-lsp", "vscode-html-language-server" ]
+formatter = { command = 'prettier', args = ["--parser", "html"] }
+
+[[language]]
+name = "css"
+formatter = { command = 'prettier', args = ["--parser", "css"] }
 
 [[language]]
 name = "javascript"
 auto-format = true
 indent = { tab-width = 4, unit = "    " }
+formatter = { command = 'prettier', args = ["--parser", "typescript"] }
 
 [[language]]
 name = "jsx"
 auto-format = true
 indent = { tab-width = 4, unit = "    " }
+formatter = { command = 'prettier', args = ["--parser", "typescript"] }
 
 [[language]]
 name = "typescript"
 auto-format = true
 indent = { tab-width = 4, unit = "    " }
+formatter = { command = 'prettier', args = ["--parser", "typescript"] }
 
 [[language]]
 name = "tsx"
 auto-format = true
 indent = { tab-width = 4, unit = "   " }
+formatter = { command = 'prettier', args = ["--parser", "typescript"] }
+
+[[language]]
+name = "json"
+formatter = { command = 'prettier', args = ["--parser", "json"] }
 
 [[language]]
 name = "config"
@@ -67,3 +89,26 @@ file-types = [ "conf" ]
 comment-token = "#"
 roots = []
 indent = { tab-width = 4, unit = "    " }
+
+[[language]]
+name = "markdown"
+formatter = { command = 'prettier', args = ["--parser", "markdown"] }
+
+[[language]]
+name = "yaml"
+formatter = { command = 'prettier', args = ["--parser", "yaml"] }
+auto-format = true
+
+[[language]]
+name = "toml"
+formatter = { command = "taplo", args = ["format", "-"] }
+auto-format = true
+
+[[language]]
+name = "typst"
+formatter = { command = "typstfmt", args = ["--output", "-"] }
+auto-format = true
+
+[[language]]
+name = "lua"
+formatter = { command = "stylua", args = [ "-" ] }

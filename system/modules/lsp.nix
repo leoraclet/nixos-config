@@ -46,5 +46,6 @@
     gofumpt
     nixfmt-rfc-style
     prettier
+    bibtex-tidy
   ];
 }

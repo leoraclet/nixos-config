@@ -172,7 +172,6 @@
     libreoffice-fresh
     qalculate-gtk
     brave # A chromium based browser as an alternative if needed
-    insomnia
     cryptpad
     freerdp
     telegram-desktop # Telegram Desktop messaging app

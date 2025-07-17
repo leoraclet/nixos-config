@@ -4,15 +4,19 @@
   ...
 }: {
   services = {
-    openssh = {
-      enable = true;
-      settings = {
-        PasswordAuthentication = false;
-        KbdInteractiveAuthentication = false;
-        PermitRootLogin = "no";
-        AllowUsers = ["leonne"];
-      };
-    };
+    #========================================#
+    # System services
+    #========================================#
+
+    # openssh = {
+    #   enable = true;
+    #   settings = {
+    #     PasswordAuthentication = false;
+    #     KbdInteractiveAuthentication = false;
+    #     PermitRootLogin = "no";
+    #     AllowUsers = ["leonne"];
+    #   };
+    # };
 
     udev.packages = with pkgs; [
       platformio # udev rules for platformio
@@ -29,11 +33,16 @@
       loadModels = ["llama3.2:3b" "deepseek-r1:1.5b" "dolphin3:8b" "nomic-embed-text"];
     };
 
+    # Disabled because it takes too much RAM and it's not used often enough to justify the resource usage.
+    open-webui.enable = false;
+
     #========================================#
     # Fingerprint reader
     #========================================#
+
+    # Disabled it because it cause problems with SDDM (login, unlock, ...)
     fprintd = {
-      enable = false; # Disabled it because it cause problems with SDDM (login, unlocked)
+      enable = false;
       package = pkgs.fprintd-tod;
       tod.enable = true;
       # Search for "libfprint" in packages to find other drivers
@@ -63,11 +72,11 @@
     #========================================#
     # Power and Bluetooth
     #========================================#
-    blueman.enable = true;
-    upower.enable = true;
+    blueman.enable = true; # Bluetooth manager, provides a GUI to manage Bluetooth devices
+    upower.enable = true; # Power management daemon, required for battery and power management
 
-    thermald.enable = true;
-    tlp.enable = true;
+    thermald.enable = true; # Thermal management daemon, useful for laptops to prevent overheating
+    tlp.enable = true; # TLP is a power management tool for Linux, useful for laptops to extend battery life
 
     #========================================#
     # Virtulisation
@@ -79,14 +88,13 @@
     #========================================#
     gvfs.enable = true; # Mount, trash, and other functionalities
     tumbler.enable = true; # Thumbnail support for images
-    devmon.enable = true;
-    udisks2.enable = true;
-    fwupd.enable = true;
+    devmon.enable = true; # Automatically mount removable devices
+    udisks2.enable = true; # Disk management daemon, required for mounting and unmounting disks
+    fwupd.enable = true; # Firmware update daemon, useful for updating firmware of devices like SSDs, GPUs, etc.
 
     #========================================#
-    # AI
+    # Others
     #========================================#
-    open-webui.enable = true;
 
     xserver = {
       enable = true;
