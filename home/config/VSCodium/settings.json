@@ -64,12 +64,15 @@
   "workbench.startupEditor": "none",
   "explorer.confirmDragAndDrop": false,
   "[nix]": {
-    "editor.defaultFormatter": "kamadorueda.alejandra",
+    "editor.defaultFormatter": "jnoortheen.nix-ide",
     "editor.formatOnPaste": true,
     "editor.formatOnSave": true,
     "editor.formatOnType": false
   },
-  "alejandra.program": "alejandra",
   "svelte.enable-ts-plugin": true,
-  "C_Cpp.intelliSenseEngine": "disabled"
+  "C_Cpp.intelliSenseEngine": "disabled",
+  "[markdown]": {
+    "editor.defaultFormatter": "yzhang.markdown-all-in-one"
+  },
+  "explorer.confirmPasteNative": false
 }

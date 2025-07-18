@@ -4,6 +4,7 @@ command = "hyprls"
 [[language]]
 name = "hyprlang"
 language-servers = [ "hyprls" ]
+auto-format = true
 
 [language-server.emmet-lsp]
 command = "emmet-language-server"
@@ -39,8 +40,16 @@ command = "lsp-ai"
 args = ["--stdio"]
 
 [[language]]
+name = "go"
+language-servers = [ "gopls" ]
+formatter = { command = "gofumpt", args = ["-w", "-"] }
+auto-format = true
+
+[[language]]
 name = "rust"
 language-servers = [ "rust-analyzer" ]
+formatter = { command = "rustfmt", args = ["--emit", "stdout"] }
+auto-format = true
 
 [language-server.rust-analyzer.config]
 checkOnSave = { command = "clippy" }
@@ -81,6 +90,7 @@ formatter = { command = 'prettier', args = ["--parser", "typescript"] }
 [[language]]
 name = "json"
 formatter = { command = 'prettier', args = ["--parser", "json"] }
+auto-format = true
 
 [[language]]
 name = "config"
@@ -112,3 +122,4 @@ auto-format = true
 [[language]]
 name = "lua"
 formatter = { command = "stylua", args = [ "-" ] }
+auto-format = true

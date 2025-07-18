@@ -44,8 +44,10 @@
     # Formatter and Linter Packages
     # ======================================== #
     gofumpt
+    golangci-lint-langserver
     nixfmt-rfc-style
     prettier
     bibtex-tidy
+    taplo
   ];
 }

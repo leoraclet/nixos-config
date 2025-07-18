@@ -1,7 +1,11 @@
 {
   programs.git = {
     enable = true;
-    userName = "leonne";
-    userEmail = "leonne@email.com";
+    userName = "Léo Raclet";
+    userEmail = "leo.raclet@gmail.com";
+    extraConfig = {
+      gpg.format = "ssh";
+      init.defaultBranch = "main";
+    }
   };
 }
