@@ -26,6 +26,11 @@
           "command" = "editor.action.blockComment";
           "when" = "editorTextFocus && !editorReadonly";
         }
+        {
+          "key" = "ctrl+i";
+          "command" = "inlineChat.startWithCurrentLine";
+          "when" = "editorFocus && inlineChatHasProvider && !editorReadonly && !inlineChatVisible";
+        }
       ];
       extensions = with pkgs.vscode-extensions; [
         catppuccin.catppuccin-vsc

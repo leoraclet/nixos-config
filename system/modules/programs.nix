@@ -194,7 +194,7 @@
             dart.enable = false;
             ocaml.enable = false;
             elixir.enable = false;
-            haskell.enable = false;
+            haskell.enable = true;
             ruby.enable = false;
             fsharp.enable = false;
 

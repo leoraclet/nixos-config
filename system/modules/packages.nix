@@ -30,11 +30,11 @@
     lua # Powerful, fast, lightweight, embeddable scripting language
     bun # Incredibly fast JavaScript runtime, bundler, transpiler and package manager
     jdk # Open-source Java Developement Kit
-    gcc
-    clang
-    lld
-    lldb
-    musl
+    gcc # GNU Compiler Collection, a set of compilers for various programming languages
+    clang # C, C++, and Objective-C compiler
+    lld # LLVM linker, a drop-in replacement for GNU ld
+    lldb # LLVM debugger, a drop-in replacement for GNU gdb
+    musl # Lightweight, fast, and simple C standard library implementation
 
     ###################################################
     # AI

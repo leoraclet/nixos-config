@@ -4,20 +4,6 @@
   ...
 }: {
   services = {
-    #========================================#
-    # System services
-    #========================================#
-
-    # openssh = {
-    #   enable = true;
-    #   settings = {
-    #     PasswordAuthentication = false;
-    #     KbdInteractiveAuthentication = false;
-    #     PermitRootLogin = "no";
-    #     AllowUsers = ["leonne"];
-    #   };
-    # };
-
     udev.packages = with pkgs; [
       platformio # udev rules for platformio
       openocd # required by paltformio, see https://github.com/NixOS/nixpkgs/issues/224895
