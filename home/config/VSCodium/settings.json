@@ -81,5 +81,12 @@
     "editor.defaultFormatter": "yzhang.markdown-all-in-one"
   },
   "explorer.confirmPasteNative": false,
-  "latex-workshop.formatting.latex": "tex-fmt"
+  "latex-workshop.formatting.latex": "tex-fmt",
+  "[latex]": {
+    "editor.formatOnPaste": false,
+    "editor.suggestSelection": "recentlyUsedByPrefix",
+    "editor.defaultFormatter": "James-Yu.latex-workshop"
+  },
+  "latex-workshop.bibtex-format.sort.enabled": true,
+  "latex-workshop.latex.autoClean.run": "onSucceeded"
 }

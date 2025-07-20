@@ -50,5 +50,7 @@
     bibtex-tidy
     taplo
     tex-fmt
+    rustfmt
+    sql-formatter
   ];
 }
