@@ -108,7 +108,7 @@
     pamixer # PulseAudio command line mixer
     bluez-tools # Set of tools to manage bluetooth devices
     texliveFull # TeX Live environment
-    wlsunset # Day/night gamma adjustments for Wayland
+    gammastep # Screen color temperature manager
     gh # GitHub CLI tool
     killall # Like pkill but better
     udiskie # Removable disk automounter for udisks
