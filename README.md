@@ -8,8 +8,8 @@
 ![hyprland](https://img.shields.io/badge/hyprland-stable-informational.svg?style=flat&logo=wayland&logoColor=eed49f&colorA=24273A&colorB=91d7e3)
 <br>
 ![Language](https://img.shields.io/badge/Language-Nix-1d50de)
-![Size](https://img.shields.io/badge/Size-70Mo-f12222) ![Open
-Source](https://badges.frapsoft.com/os/v2/open-source.svg?v=103)
+![Size](https://img.shields.io/badge/Size-23Mo-f12222)
+![OSS](https://badges.frapsoft.com/os/v2/open-source.svg?v=103)
 
 </div>
 
