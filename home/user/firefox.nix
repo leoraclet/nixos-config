@@ -26,6 +26,7 @@
           downthemall
           search-by-image
           auto-tab-discard
+          unpaywall
         ];
         settings = {
           # Disable telemetry
@@ -209,6 +210,10 @@
         "{c2c003ee-bd69-42a2-b0e9-6f34222cb046}" = {
           installation_mode = "force_installed";
           install_url = "https://addons.mozilla.org/firefox/downloads/latest/auto-tab-discard/latest.xpi";
+        };
+        "{f209234a-76f0-4735-9920-eb62507a54cd}" = {
+          installation_mode = "force_installed";
+          install_url = "https://addons.mozilla.org/firefox/downloads/latest/unpaywall/latest.xpi";
         };
       };
     };

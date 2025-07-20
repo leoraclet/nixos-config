@@ -49,5 +49,6 @@
     prettier
     bibtex-tidy
     taplo
+    tex-fmt
   ];
 }

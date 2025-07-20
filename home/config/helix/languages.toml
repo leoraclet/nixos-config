@@ -3,7 +3,7 @@ command = "hyprls"
 
 [[language]]
 name = "hyprlang"
-language-servers = [ "hyprls" ]
+language-servers = ["hyprls"]
 auto-format = true
 
 [language-server.emmet-lsp]
@@ -13,13 +13,15 @@ args = ["--stdio"]
 [language-server.copilot]
 command = "helix-gpt"
 args = [
-    "--handler", "copilot",
-    "--copilotApiKey", "your_api_key", # FIXME
-  ]
+  "--handler",
+  "copilot",
+  "--copilotApiKey",
+  "your_api_key",    # FIXME
+]
 
 [[language]]
 name = "python"
-language-servers = [ { name = "pylsp", except-features = [ "format" ] }, "ruff"]
+language-servers = [{ name = "pylsp", except-features = ["format"] }, "ruff"]
 formatter = { command = "ruff", args = ["format", "--line-length", "88", "-"] }
 auto-format = true
 
@@ -33,7 +35,12 @@ gofumpt = true
 [[language]]
 auto-format = true
 name = "nix"
-formatter = { command = "alejandra" }
+formatter = { command = "alejandra", args = ["-"] }
+
+[[language]]
+auto-format = true
+name = "latex"
+formatter = { command = "tex-fmt", args = ["-"] }
 
 [language-server.lsp-ai]
 command = "lsp-ai"
@@ -41,13 +48,13 @@ args = ["--stdio"]
 
 [[language]]
 name = "go"
-language-servers = [ "gopls" ]
+language-servers = ["gopls"]
 formatter = { command = "gofumpt", args = ["-w", "-"] }
 auto-format = true
 
 [[language]]
 name = "rust"
-language-servers = [ "rust-analyzer" ]
+language-servers = ["rust-analyzer"]
 formatter = { command = "rustfmt", args = ["--emit", "stdout"] }
 auto-format = true
 
@@ -56,7 +63,7 @@ checkOnSave = { command = "clippy" }
 
 [[language]]
 name = "html"
-language-servers = [ "emmet-lsp", "vscode-html-language-server" ]
+language-servers = ["emmet-lsp", "vscode-html-language-server"]
 formatter = { command = 'prettier', args = ["--parser", "html"] }
 
 [[language]]
@@ -95,7 +102,7 @@ auto-format = true
 [[language]]
 name = "config"
 scope = "source.conf"
-file-types = [ "conf" ]
+file-types = ["conf"]
 comment-token = "#"
 roots = []
 indent = { tab-width = 4, unit = "    " }
@@ -121,5 +128,5 @@ auto-format = true
 
 [[language]]
 name = "lua"
-formatter = { command = "stylua", args = [ "-" ] }
+formatter = { command = "stylua", args = ["-"] }
 auto-format = true
