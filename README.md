@@ -1,12 +1,15 @@
 <div align="center"><img style="width: 400px" src="./assets/nixos-logo.png"></div>
 <h1 align="center">NixOS & Hyprland Config</h1>
 
-<br>
 <div align="center">
 
 ![nixos](https://img.shields.io/badge/NixOS-24273A.svg?style=flat&logo=nixos&logoColor=CAD3F5)
 ![nixpkgs](https://img.shields.io/badge/nixpkgs-unstable-informational.svg?style=flat&logo=nixos&logoColor=CAD3F5&colorA=24273A&colorB=8aadf4)
 ![hyprland](https://img.shields.io/badge/hyprland-stable-informational.svg?style=flat&logo=wayland&logoColor=eed49f&colorA=24273A&colorB=91d7e3)
+<br>
+![Language](https://img.shields.io/badge/Language-Nix-1d50de)
+![Size](https://img.shields.io/badge/Size-70Mo-f12222) ![Open
+Source](https://badges.frapsoft.com/os/v2/open-source.svg?v=103)
 
 </div>
 
@@ -34,7 +37,9 @@
 
 > [!NOTE]
 >
-> Comming soon ...
+> More comming soon (or not) ...
+
+![Desktop](./assets/desktop.png)
 
 ## ❤️ Thanks
 
@@ -169,16 +174,16 @@ experimentation:
 > [!NOTE]
 >
 > I mainly code in Python, C / C++, Typescript / Javascript and some basic HTML, CSS, but I would
-> like to leanr and use Go
+> like to learn and use Go.
 >
-> I also mainly use Markdown and Latex for documents editing
+> I also regularly use Markdown and Latex for documents editing.
 
 To set up my different developement environments, I use `flake.nix` with those great
 [templates](https://github.com/the-nix-way/dev-templates/) as a starting point, that I then extend
 to my needs.
 
-It provides a local, consistent and reproducible environment for each project in every
-programming / scripting language, and I find it the most practical way to get things done.
+It provides a local, consistent and reproducible environment for each project in every programming /
+scripting language, and I find it the most practical way to get things done.
 
 > [!IMPORTANT]
 >
@@ -194,6 +199,9 @@ shell when I'm in the directory (do `direnv allow` in the project directory to m
 > projects that are even simplier to work with and configure when beginning.
 
 ## 🔧 Components
+
+Here is a list of every components that I use on my system to perform the various tasks of a modern
+OS.
 
 | Component        | Name                                   |
 | ---------------- | -------------------------------------- |
@@ -231,6 +239,7 @@ shell when I'm in the directory (do `direnv allow` in the project directory to m
 
 ## ⌨️ Keybindings
 
+Here you'll find all my Hyprland specific keyboard shortcuts.
 
 > [!NOTE]
 >
@@ -282,8 +291,8 @@ system fish scripts are located at `/home/config/fish/functions` directory.
 
 > [!NOTE]
 >
-> This section mostly contains fixes and tips related to issues to situtations I have encountered
-> while configuring NixOS
+> This section mostly contains fixes and tips related to issues that I have encountered while
+> configuring NixOS
 
 ### Discord
 
@@ -297,7 +306,7 @@ nix run --impure nixpkgs\#discord
 
 ### Home Manager
 
-If problems arise when switching to new configuration, you see home-manager specific detailed errors
+If problems arise when switching to new configuration, you can see home-manager's related errors
 with the following command
 
 ```bash

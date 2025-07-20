@@ -32,9 +32,6 @@
   "[cpp]": {
     "editor.defaultFormatter": "xaver.clang-format"
   },
-  "[html]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
   "[css]": {
     "editor.defaultFormatter": "stylelint.vscode-stylelint"
   },
@@ -42,7 +39,6 @@
     "editor.defaultFormatter": "vscode.typescript-language-features"
   },
   "breadcrumbs.enabled": false,
-  "editor.titleBar.enabled": false,
   "editor.formatOnSave": true,
   "gopls": {
     "ui.semanticTokens": true
@@ -56,8 +52,21 @@
   "todo-tree.highlights.enabled": false,
   "todo-tree.filtering.ignoreGitSubmodules": true,
   "explorer.confirmDelete": false,
-  "[yaml, yml]": {
-    "editor.defaultFormatter": "redhat.vscode-yaml"
+  "[yaml]": {
+    "editor.defaultFormatter": "redhat.vscode-yaml",
+    "editor.autoIndent": "advanced"
+  },
+  "[yml]": {
+    "editor.defaultFormatter": "redhat.vscode-yaml",
+    "editor.autoIndent": "advanced"
+  },
+  "[dockercompose]": {
+    "editor.defaultFormatter": "redhat.vscode-yaml",
+    "editor.autoIndent": "advanced"
+  },
+  "[github-actions-workflow]": {
+    "editor.defaultFormatter": "redhat.vscode-yaml",
+    "editor.autoIndent": "advanced"
   },
   "terminal.integrated.fontFamily": "JetBrainsMono Nerd Font",
   "terminal.integrated.fontLigatures.enabled": true,
