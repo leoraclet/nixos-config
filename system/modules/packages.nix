@@ -106,7 +106,6 @@
     pamixer # PulseAudio command line mixer
     bluez-tools # Set of tools to manage bluetooth devices
     texliveFull # TeX Live environment
-    gammastep # Screen color temperature manager
     gh # GitHub CLI tool
     killall # Like pkill but better
     udiskie # Removable disk automounter for udisks
@@ -200,6 +199,7 @@
     hypridle
     hyprlock
     hyprpicker
+    hyprsunset
     hyprpaper
     pyprland
     pavucontrol

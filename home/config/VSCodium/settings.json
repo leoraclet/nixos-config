@@ -38,7 +38,6 @@
   "[javascript]": {
     "editor.defaultFormatter": "vscode.typescript-language-features"
   },
-  "breadcrumbs.enabled": false,
   "editor.formatOnSave": true,
   "gopls": {
     "ui.semanticTokens": true
