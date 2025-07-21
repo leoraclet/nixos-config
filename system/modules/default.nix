@@ -18,7 +18,7 @@
     ./system.nix
     ./theme.nix
     ./dns.nix
-    ./upgrade.nix
+    #./upgrade.nix
     ./fhs.nix
     ./firewall.nix
     ./lsp.nix

@@ -88,5 +88,5 @@
     "editor.defaultFormatter": "James-Yu.latex-workshop"
   },
   "latex-workshop.bibtex-format.sort.enabled": true,
-  "latex-workshop.latex.autoClean.run": "onSucceeded"
+  "latex-workshop.latex.autoClean.run": "onSucceeded",
 }

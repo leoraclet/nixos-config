@@ -42,9 +42,7 @@
 
     ollama # Get up and running with large language models locally
     aichat # Use GPT-4(V), Gemini, LocalAI, Ollama and other LLMs in the terminal
-    searxng # Fork of Searx, a privacy-respecting, hackable metasearch engine
     aider-chat # Code assistant/chat directly in the terminal
-    oterm # TUI LLM client with markdown support
     alpaca # GUI LLM client with markdown support
     fabric-ai # AI agent framework for building autonomous agents
 
@@ -124,7 +122,6 @@
     fish # Smart and user-friendly command line shell
     xh # Friendly and fast tool for sending HTTP requests
     hyperfine # Command-line benchmarking tool
-    rich-cli # Rich CLI is a collection of tools for building rich command line interfaces
     aria2 # Lightweight multi-protocol & multi-source command-line download utility
     mosh # Mobile shell that allows roaming, supports intermittent connectivity, and provides intelligent local echo
 

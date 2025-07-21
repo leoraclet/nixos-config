@@ -39,10 +39,12 @@
     hyprls
     helix-gpt
     texlab
-
+    typst
     # ======================================== #
     # Formatter and Linter Packages
     # ======================================== #
+    typstfmt
+    typstyle
     gofumpt
     golangci-lint-langserver
     nixfmt-rfc-style
