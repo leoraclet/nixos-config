@@ -35,6 +35,9 @@
     lld # LLVM linker, a drop-in replacement for GNU ld
     lldb # LLVM debugger, a drop-in replacement for GNU gdb
     musl # Lightweight, fast, and simple C standard library implementation
+    zig # General-purpose programming language designed for robustness, optimality, and clarity
+    nim # Nim programming language, a statically typed compiled systems programming language
+    rustup # Toolchain installer for the Rust programming language
 
     ###################################################
     # AI

@@ -5,8 +5,8 @@
   "workbench.iconTheme": "material-icon-theme",
   "window.menuBarVisibility": "toggle",
   "editor.fontSize": 16,
-  "editor.scrollbar.vertical": "hidden",
-  "editor.scrollbar.verticalScrollbarSize": 0,
+  // "editor.scrollbar.vertical": "hidden",
+  "editor.scrollbar.verticalScrollbarSize": 10,
   "security.workspace.trust.untrustedFiles": "newWindow",
   "security.workspace.trust.startupPrompt": "never",
   "security.workspace.trust.enabled": false,
@@ -20,7 +20,12 @@
   "workbench.activityBar.location": "top",
   "workbench.sideBar.location": "left",
   "[python]": {
-    "editor.defaultFormatter": "ms-python.black-formatter"
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "charliermarsh.ruff",
+    "editor.codeActionsOnSave": {
+      "source.fixAll.ruff": "explicit",
+      "source.organizeImports.ruff": "explicit"
+    }
   },
   "[jsonc]": {
     "editor.defaultFormatter": "vscode.json-language-features"

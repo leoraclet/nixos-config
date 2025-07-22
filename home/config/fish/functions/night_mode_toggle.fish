@@ -1,9 +1,9 @@
 function night_mode_toggle
-    set target_process wlsunset
+    set target_process hyprsunset
 
     if pgrep $target_process >/dev/null
-        killall -s SIGINT wlsunset
+        killall -s SIGINT hyprsunset
     else
-        wlsunset -T 9000
+        hyprsunset --temperature 2500
     end
 end

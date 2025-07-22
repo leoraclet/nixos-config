@@ -31,6 +31,11 @@
           "command" = "inlineChat.startWithCurrentLine";
           "when" = "editorFocus && inlineChatHasProvider && !editorReadonly && !inlineChatVisible";
         }
+        {
+          "key" = "ctrl+c";
+          "command" = "workbench.action.terminal.copySelection";
+          "when" = "terminalTextSelectedInFocused || terminalFocus && terminalHasBeenCreated && terminalTextSelected || terminalFocus && terminalProcessSupported && terminalTextSelected || terminalFocus && terminalTextSelected && terminalTextSelectedInFocused || terminalHasBeenCreated && terminalTextSelected && terminalTextSelectedInFocused || terminalProcessSupported && terminalTextSelected && terminalTextSelectedInFocused";
+        }
       ];
       extensions = with pkgs.vscode-extensions; [
         catppuccin.catppuccin-vsc
