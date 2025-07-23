@@ -30,6 +30,8 @@
   - [Home Manager](#home-manager)
   - [Change MAC address](#change-mac-address)
   - [Show battery status](#show-battery-status)
+  - [How to Reset Your OpenWebUI Password](#how-to-reset-your-openwebui-password)
+  - [Night mode switch](#night-mode-switch)
 - [📜 License](#-license)
 
 
@@ -166,7 +168,6 @@ experimentation:
 - `aichat` - ChatGPT-like CLI and REPL with lot of features
 - `aider-chat` - Code assistant/chat directly in the terminal
 - `alpaca` - GUI LLM client with markdown support
-- `oterm` - TUI LLM client with markdown support
 - `fabric-ai` - An open-source framework for augmenting humans using AI
 
 ## 🛠️ Developement Environment
@@ -203,38 +204,48 @@ shell when I'm in the directory (do `direnv allow` in the project directory to m
 Here is a list of every components that I use on my system to perform the various tasks of a modern
 OS.
 
-| Component        | Name                                   |
-| ---------------- | -------------------------------------- |
-| Distro           | NixOS                                  |
-| Shell            | Fish                                   |
-| Display Server   | Wayland                                |
-| WM (Compositor)  | Hyprland                               |
-| Bar              | Waybar                                 |
-| Notification     | Dunst                                  |
-| Launcher         | Rofi-Wayland                           |
-| Editor           | Helix, Nvim (with `nvf`), VSCodium     |
-| Terminal         | Kitty + Starship                       |
-| OSD              | Avizo                                  |
-| Night Gamma      | Wlsunset                               |
-| Fetch Utility    | Neofetch, Fastfetch, Onefetch          |
-| Theme            | Catppuccin Macchiato                   |
-| Icons            | Numix-Circle                           |
-| Font             | JetBrains Mono + Nerd Font Patch       |
-| Player           | Spotify + Spicetify                    |
-| File Browser     | Nemo + Yazi                            |
-| Internet Browser | Firefox, Zen Browser, Brave (chronium) |
-| Mimetypes        | MPV, Imv, Zathura                      |
-| Image Editor     | Swappy                                 |
-| Screenshot       | Grim + Slurp                           |
-| Recorder         | OSB Studio                             |
-| Clipboard        | Wl-clipboard + Cliphist                |
-| Idle             | Hypridle                               |
-| Lock             | Hyprlock                               |
-| Logout menu      | Wlogout                                |
-| Wallpaper        | Hyprpaper                              |
-| Graphical Boot   | Plymouth + Catppuccin-plymouth         |
-| Display Manager  | SDDM                                   |
-| Containerization | Podman & Docker                        |
+| Component            | Name                                   |
+| -------------------- | -------------------------------------- |
+| Distro               | NixOS                                  |
+| Shell                | Fish                                   |
+| Display Server       | Wayland                                |
+| WM (Compositor)      | Hyprland                               |
+| Bar                  | Waybar                                 |
+| Notification         | Dunst                                  |
+| Launcher             | Rofi-Wayland                           |
+| Editor               | Helix, Nvim (with `nvf`), VSCodium     |
+| Terminal             | Kitty + Starship                       |
+| OSD                  | Avizo                                  |
+| Night Gamma          | Hyprsunset                             |
+| Fetch Utility        | Neofetch, Fastfetch, Onefetch          |
+| Theme                | Catppuccin Macchiato                   |
+| Icons                | Numix-Circle                           |
+| Font                 | JetBrains Mono + Nerd Font Patch       |
+| Player               | Spotify + Spicetify + VLC              |
+| File Browser         | Nemo + Yazi                            |
+| Internet Browser     | Firefox, Zen Browser, Brave (chronium) |
+| Private Browser      | Tor Browser                            |
+| Calculator           | qalculate-gtk (GUI) + libqalculate     |
+| Mimetypes            | MPV, Imv, Zathura                      |
+| Image Editor         | Swappy                                 |
+| Screenshot           | Grim + Slurp                           |
+| Recorder             | OSB Studio                             |
+| Clipboard            | Wl-clipboard + Cliphist                |
+| Idle                 | Hypridle                               |
+| Lock                 | Hyprlock                               |
+| Logout menu          | Wlogout                                |
+| Wallpaper            | Hyprpaper                              |
+| Graphical Boot       | Plymouth + Catppuccin-plymouth         |
+| Display Manager      | SDDM                                   |
+| Containerization     | Podman & Docker                        |
+| Terminal Multiplexer | Zellij                                 |
+| Office Suite         | OnlyOffice                             |
+| Email Client         | Thunderbird                            |
+| Notetaking           | Obsidian                               |
+| Messaging            | Discord + Signal + Telegram            |
+| Image Editing        | GIMP + Inkspace                        |
+| Backup               | Rclone                                 |
+| 3D Slicer            | Orca Slicer                            |
 
 
 ## ⌨️ Keybindings
@@ -333,6 +344,30 @@ Then to show unformation on the battery (for example)
 
 ```bash
 upower -i (upower --enumerate | grep battery)
+```
+
+### How to Reset Your OpenWebUI Password
+
+For detailed instructions, please refer to [this link](https://docs.openwebui.com/troubleshooting/password-reset/).
+
+The database is stored in the directory `/var/lib/open-webui`.
+
+In my experience, the most straightforward solution was to delete the database entirely:
+
+```bash
+sudo rm -rf /var/lib/open-webui/webui.db
+```
+
+### Night mode switch
+
+```bash
+hyprsunset --temperature 2500
+```
+
+or
+
+```bash
+hyprsunset --help  # To see all avaible commands
 ```
 
 ## 📜 License

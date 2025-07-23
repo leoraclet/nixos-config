@@ -3,40 +3,6 @@
     enable = true;
     package = pkgs.vscodium;
     profiles.default = {
-      keybindings = [
-        {
-          "key" = "ctrl+[Quote]";
-          "command" = "workbench.action.terminal.toggleTerminal";
-        }
-        {
-          "key" = "ctrl+numpad_subtract";
-          "command" = "editor.action.fontZoomOut";
-        }
-        {
-          "key" = "ctrl+numpad_add";
-          "command" = "editor.action.fontZoomIn";
-        }
-        {
-          "key" = "ctrl+[Period]";
-          "command" = "editor.action.commentLine";
-          "when" = "editorTextFocus && !editorReadonly";
-        }
-        {
-          "key" = "ctrl+shift+[Period]";
-          "command" = "editor.action.blockComment";
-          "when" = "editorTextFocus && !editorReadonly";
-        }
-        {
-          "key" = "ctrl+i";
-          "command" = "inlineChat.startWithCurrentLine";
-          "when" = "editorFocus && inlineChatHasProvider && !editorReadonly && !inlineChatVisible";
-        }
-        {
-          "key" = "ctrl+c";
-          "command" = "workbench.action.terminal.copySelection";
-          "when" = "terminalTextSelectedInFocused || terminalFocus && terminalHasBeenCreated && terminalTextSelected || terminalFocus && terminalProcessSupported && terminalTextSelected || terminalFocus && terminalTextSelected && terminalTextSelectedInFocused || terminalHasBeenCreated && terminalTextSelected && terminalTextSelectedInFocused || terminalProcessSupported && terminalTextSelected && terminalTextSelectedInFocused";
-        }
-      ];
       extensions = with pkgs.vscode-extensions; [
         catppuccin.catppuccin-vsc
         yzhang.markdown-all-in-one
@@ -58,7 +24,6 @@
         grapecity.gc-excelviewer
         esbenp.prettier-vscode
         charliermarsh.ruff
-        bungcip.better-toml
         bodil.file-browser
         alefragnani.project-manager
         aaron-bond.better-comments

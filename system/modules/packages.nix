@@ -11,6 +11,7 @@
     gnumake # Tool to control the generation of non-source files from sources
     just # Handy way to save and run project-specific commands
     git # Distributed version control system
+    git-credential-manager # Git credential manager for secure authentication
     lazygit # Simple terminal UI for git commands
     neovim # Vim text editor fork focused on extensibility and agility
     alejandra # Uncompromising Nix Code Formatter
