@@ -24,11 +24,16 @@
     {
         "command": "inlineChat.startWithCurrentLine",
         "key": "ctrl+i",
-        "when": "editorFocus && inlineChatHasProvider && !editorReadonly && !inlineChatVisible"
+        // "when": "editorFocus && inlineChatHasProvider && !editorReadonly && !inlineChatVisible"
     },
     {
         "command": "workbench.action.terminal.copySelection",
         "key": "ctrl+c",
         "when": "terminalTextSelectedInFocused || terminalFocus && terminalHasBeenCreated && terminalTextSelected || terminalFocus && terminalProcessSupported && terminalTextSelected || terminalFocus && terminalTextSelected && terminalTextSelectedInFocused || terminalHasBeenCreated && terminalTextSelected && terminalTextSelectedInFocused || terminalProcessSupported && terminalTextSelected && terminalTextSelectedInFocused"
+    },
+    {
+        "key": "ctrl+i",
+        "command": "-editor.action.triggerSuggest",
+        "when": "editorHasCompletionItemProvider && textInputFocus && !editorReadonly && !suggestWidgetVisible"
     }
 ]

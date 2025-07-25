@@ -93,4 +93,7 @@
   },
   "latex-workshop.bibtex-format.sort.enabled": true,
   "latex-workshop.latex.autoClean.run": "onSucceeded",
+  "[postcss]": {
+    "editor.defaultFormatter": "stylelint.vscode-stylelint"
+  },
 }
