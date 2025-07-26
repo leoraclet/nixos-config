@@ -16,10 +16,10 @@
   "MIN_HEIGHT": 500,
   "BACKGROUND_COLOR": "#2c2d32",
   "WINDOW_BOUNDS": {
-    "x": 76,
-    "y": 48,
-    "width": 1833,
-    "height": 987
+    "x": 75,
+    "y": 47,
+    "width": 1835,
+    "height": 993
   },
   "OPEN_ON_STARTUP": false,
   "MINIMIZE_TO_TRAY": false

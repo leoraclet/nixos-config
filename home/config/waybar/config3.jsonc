@@ -15,7 +15,35 @@
             "return-type": "json",
             "format": " ",
             "exec": "~/.config/waybar/scripts/bat-pp.sh bar"
-        }
+        },
+        "battery": {
+            "interval": 1,
+            "states": {
+                "high": 90,
+                "upper-medium": 70,
+                "medium": 50,
+                "lower-medium": 30,
+                "low": 10,
+            },
+            "format": "{icon} {capacity:2}%",
+            "format-charging": "󱐋 {capacity:2}%",
+            "format-plugged": "󰚥 {capacity:2}%",
+            "format-time": "{H} h {M} min",
+            "format-icons": [
+                "󱃍",
+                "󰁺",
+                "󰁻",
+                "󰁼",
+                "󰁽",
+                "󰁾",
+                "󰁿",
+                "󰂀",
+                "󰂁",
+                "󰂂",
+                "󰁹"
+            ],
+            "tooltip-format": "{timeTo}",
+        },
     },
     {
         // MAIN BAR //

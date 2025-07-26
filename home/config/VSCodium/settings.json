@@ -96,4 +96,9 @@
   "[postcss]": {
     "editor.defaultFormatter": "stylelint.vscode-stylelint"
   },
+  "direnv.restart.automatic": true,
+  "terminal.integrated.confirmOnKill": "never",
+  "terminal.integrated.defaultProfile.linux": "fish",
+  "terminal.integrated.gpuAcceleration": "on",
+  "terminal.integrated.hideOnStartup": "whenEmpty",
 }
