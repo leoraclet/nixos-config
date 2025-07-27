@@ -35,5 +35,13 @@
         "key": "ctrl+i",
         "command": "-editor.action.triggerSuggest",
         "when": "editorHasCompletionItemProvider && textInputFocus && !editorReadonly && !suggestWidgetVisible"
+    },
+    {
+        "key": "ctrl",
+        "command": "editor.action.peekDeclaration"
+    },
+    {
+        "key": "ctrl",
+        "command": "editor.action.revealDeclaration"
     }
 ]

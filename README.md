@@ -32,16 +32,29 @@
   - [Show battery status](#show-battery-status)
   - [How to Reset Your OpenWebUI Password](#how-to-reset-your-openwebui-password)
   - [Night mode switch](#night-mode-switch)
+  - [Install VSCode Extensions](#install-vscode-extensions)
+    - [Manual](#manual)
+    - [Automatic](#automatic)
+    - [With Extensions](#with-extensions)
 - [📜 License](#-license)
 
 
 ## 🌟 Showcase
 
+![Desktop](./assets/desktop.png)
+
+<details>
+<summary>More screenshots</summary>
+
+![Spicetify](./assets/spicetify.png)
+![Obsidian](./assets/obsidian.png)
+
+</details>
+<br>
+
 > [!NOTE]
 >
 > More comming soon (or not) ...
-
-![Desktop](./assets/desktop.png)
 
 ## ❤️ Thanks
 
@@ -294,6 +307,7 @@ Here you'll find all my Hyprland specific keyboard shortcuts.
 | CTRL + ALT + A            | Reloads `ags` config                          |
 | CTRL + ALT + W            | Reloads `waybar` config                       |
 | SUPER + Space             | Launch `zellij` inside `kitty`                |
+| SHIFT 1..4                | Change Waybar Theme (`waybar-theme`)  |
 
 You can find all other keybindings in `/home/config/hypr/hyprland.conf` in the bind section. All
 system fish scripts are located at `/home/config/fish/functions` directory.
@@ -369,6 +383,32 @@ or
 ```bash
 hyprsunset --help  # To see all avaible commands
 ```
+
+### Install VSCode Extensions
+
+#### Manual
+
+On machine A
+
+```bash
+code --list-extensions | xargs -L 1 echo code --install-extension > install-vscode-extensions.sh
+```
+
+On machine B
+
+```bash
+chmod +x install-vscode-extensions.sh
+./install-vscode-extensions.sh
+```
+
+#### Automatic
+
+Use the built-in [`Settings Sync`](https://aka.ms/vscode-settings-sync-help) functionality of VSCode.
+
+#### With Extensions
+
+- [**Syncing**](https://github.com/nonoroazoro/vscode-syncing/tree/master/src/core) (*works great*) - Sync all of your VSCode settings across multiple devices
+- [**local sync**](https://github.com/AnWeber/vscode-local-sync) - Sync your settings to a local directory
 
 ## 📜 License
 

@@ -32,7 +32,6 @@
         tamasfe.even-better-toml
         mshr-h.veriloghdl
         humao.rest-client
-        hediet.vscode-drawio
         golang.go
         christian-kohler.path-intellisense
         alefragnani.bookmarks
@@ -51,7 +50,6 @@
         stylelint.vscode-stylelint
         chrischinchilla.vscode-pandoc
         sumneko.lua
-        serayuzgur.crates
         wmaurer.change-case
         bmewburn.vscode-intelephense-client
         ziglang.vscode-zig
@@ -67,10 +65,8 @@
         ms-toolsai.jupyter
         ms-python.python
         ms-python.isort
-        ms-python.black-formatter
         ms-python.vscode-pylance
         ms-python.debugpy
-        ms-python.pylint
         mkhl.direnv
       ];
     };
