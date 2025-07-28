@@ -24,20 +24,25 @@
     }
   },
   "[jsonc]": {
-    "editor.defaultFormatter": "vscode.json-language-features"
+    "editor.defaultFormatter": "vscode.json-language-features",
+    "editor.formatOnSave": true,
   },
   "files.autoSave": "afterDelay",
   "[c]": {
-    "editor.defaultFormatter": "xaver.clang-format"
+    "editor.defaultFormatter": "xaver.clang-format",
+    "editor.formatOnSave": true,
   },
   "[cpp]": {
-    "editor.defaultFormatter": "xaver.clang-format"
+    "editor.defaultFormatter": "xaver.clang-format",
+    "editor.formatOnSave": true,
   },
   "[css]": {
-    "editor.defaultFormatter": "stylelint.vscode-stylelint"
+    "editor.defaultFormatter": "stylelint.vscode-stylelint",
+    "editor.formatOnSave": true,
   },
   "[javascript]": {
-    "editor.defaultFormatter": "vscode.typescript-language-features"
+    "editor.defaultFormatter": "vscode.typescript-language-features",
+    "editor.formatOnSave": true,
   },
   "editor.formatOnSave": true,
   "gopls": {
@@ -100,4 +105,6 @@
   "python.languageServer": "Jedi",
   "python.terminal.activateEnvInCurrentTerminal": true,
   "python.venvPath": "${workspaceFolder}/.venv",
+  "syncing.separateKeybindings": false,
+  "continue.telemetryEnabled": false,
 }

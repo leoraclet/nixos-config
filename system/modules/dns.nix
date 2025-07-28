@@ -28,7 +28,10 @@
   services.dnscrypt-proxy2 = {
     enable = true;
     settings = {
-      listen_addresses = ["127.0.0.1:53" "[::1]:53"];
+      listen_addresses = [
+        "127.0.0.1:53"
+        "[::1]:53"
+      ];
 
       ipv4_servers = true;
       ipv6_servers = false;
@@ -39,11 +42,14 @@
       require_nofilter = false; # quad9 has some nice security filters
       require_dnssec = true;
 
+      enable_hot_reload = true;
+
       # Add this to test if dnscrypt-proxy is actually used to resolve DNS requests
       query_log.file = "/var/log/dnscrypt-proxy/query.log";
 
       forwarding_rules = "${./rules/forwarding-rules.txt}";
       captive_portals.map_file = "${./rules/captive-portals.txt}";
+      blocked_names.blocked_names_file = "${./rules/blocked-names.txt}";
 
       sources.public-resolvers = {
         urls = [
@@ -72,6 +78,7 @@
         "cloudflare-ipv6"
         "cloudflare-security"
         "cloudflare-security-ipv6"
+        "adguard-dns"
         "adguard-dns-doh"
         "mullvad-adblock-doh"
         "mullvad-doh"

@@ -54,5 +54,6 @@
     tex-fmt
     rustfmt
     sql-formatter
+    luaformatter
   ];
 }
