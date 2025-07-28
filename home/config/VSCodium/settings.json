@@ -107,4 +107,5 @@
   "python.venvPath": "${workspaceFolder}/.venv",
   "syncing.separateKeybindings": false,
   "continue.telemetryEnabled": false,
+  "tabnine.experimentalAutoImports": true,
 }

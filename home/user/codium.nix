@@ -4,6 +4,7 @@
     package = pkgs.vscodium;
     profiles.default = {
       extensions = with pkgs.vscode-extensions; [
+        continue.continue
         catppuccin.catppuccin-vsc
         yzhang.markdown-all-in-one
         donjayamanne.githistory
