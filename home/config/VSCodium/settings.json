@@ -117,4 +117,11 @@
   "trailing-spaces.trimOnSave": true,
   "files.autoSaveDelay": 5000,
   "periscope.showPreviousResultsWhenNoMatches": true,
+  "nixEnvSelector.useFlakes": true,
+  "find-it-faster.advanced.disableStartupChecks": true,
+  "find-it-faster.general.showMaximizedTerminal": true,
+  "find-it-faster.general.useTerminalInEditor": true,
+  "find-it-faster.general.openFileInPreviewEditor": true,
+  "workbench.editor.enablePreviewFromQuickOpen": true,
+  "workbench.editor.enablePreviewFromCodeNavigation": true,
 }

@@ -39,6 +39,8 @@
     zig # General-purpose programming language designed for robustness, optimality, and clarity
     nim # Nim programming language, a statically typed compiled systems programming language
     rustup # Toolchain installer for the Rust programming language
+    nodejs_24 # JavaScript runtime built on Chrome's V8 JavaScript engine
+    python312 # Python programming language, version 3.12
 
     ###################################################
     # AI
