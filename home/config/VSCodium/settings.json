@@ -49,7 +49,6 @@
     "ui.semanticTokens": true
   },
   "material-icon-theme.hidesExplorerArrows": true,
-  "trailing-spaces.trimOnSave": true,
   "editor.formatOnPaste": true,
   "todo-tree.highlights.enabled": false,
   "todo-tree.filtering.ignoreGitSubmodules": true,
@@ -108,4 +107,14 @@
   "syncing.separateKeybindings": false,
   "continue.telemetryEnabled": false,
   "tabnine.experimentalAutoImports": true,
+  "yaml.schemas": {
+    "/home/leonne/.vscode-oss/extensions/continue.continue-1.0.19-linux-x64/config-yaml-schema.json": [
+      ".continue/**/*.yaml"
+    ]
+  },
+  "terminal.integrated.enablePersistentSessions": false,
+  "terminal.integrated.persistentSessionReviveProcess": "never",
+  "trailing-spaces.trimOnSave": true,
+  "files.autoSaveDelay": 5000,
+  "periscope.showPreviousResultsWhenNoMatches": true,
 }

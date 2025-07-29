@@ -43,5 +43,9 @@
     {
         "key": "ctrl",
         "command": "editor.action.revealDeclaration"
+    },
+    {
+        "key": "ctrl+m",
+        "command": "periscope.search"
     }
 ]

@@ -55,5 +55,6 @@
     rustfmt
     sql-formatter
     luaformatter
+    dockfmt
   ];
 }

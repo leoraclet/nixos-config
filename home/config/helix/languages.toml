@@ -134,7 +134,7 @@ auto-format = true
 
 [[language]]
 name = "lua"
-formatter = { command = "stylua", args = ["-"] }
+formatter = { command = "lua-format", args = ["-"] }
 auto-format = true
 
 [[language]]
@@ -151,5 +151,5 @@ auto-format = true
 
 [[language]]
 name = "sql"
-formatter = { command = "sqlformat", args = ["--reindent", "--indent_width", "2", "--keywords", "upper", "--identifiers", "lower", "-"] }
+formatter = { command = "sql-formatter", args = ["-"] }
 auto-format = true
