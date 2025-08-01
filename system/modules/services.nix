@@ -63,11 +63,16 @@
         ErrorPolicy retry-job
       '';
       browsedConf = ''
+        Browsing On
+        BrowseOrders allow,deny
+        BrowseAllow all
         BrowseDNSSDSubTypes _cups,_print
         BrowseLocalProtocols all
         BrowseRemoteProtocols all
         CreateIPPPrinterQueues All
         BrowseProtocols all
+        Allow 127.0.0.1
+        Allow localhost
       '';
       listenAddresses = ["*:631"];
       allowFrom = ["all"];

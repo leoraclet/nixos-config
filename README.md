@@ -14,6 +14,7 @@
 </div>
 
 ## Table of Contents
+
 - [Table of Contents](#table-of-contents)
 - [🌟 Showcase](#-showcase)
 - [❤️ Thanks](#️-thanks)
@@ -25,7 +26,8 @@
 - [🛠️ Developement Environment](#️-developement-environment)
 - [🔧 Components](#-components)
 - [⌨️ Keybindings](#️-keybindings)
-- [🚀 Tips \& Tricks](#-tips--tricks)
+- [🚀 Installation](#-installation)
+- [📝 Tips \& Tricks](#-tips--tricks)
   - [Discord](#discord)
   - [Home Manager](#home-manager)
   - [Change MAC address](#change-mac-address)
@@ -36,6 +38,9 @@
     - [Manual](#manual)
     - [Automatic](#automatic)
     - [With Extensions](#with-extensions)
+  - [Printing \& Scanning](#printing--scanning)
+    - [Printing](#printing)
+  - [Scanning](#scanning)
 - [📜 License](#-license)
 
 
@@ -134,11 +139,13 @@ Common commands:
 - `open`: open file with default programm (`open-xdg`)
 
 Git:
+
 - `ga`: alias for `git add . -A`
 - `gs`: alias for `git status`
 - `gl`: alias for `git log --all --color --decorate --oneline --graph`
 
 NixOS-specific commands:
+
 - `rebuild`: rebuild your system using the current flake
 - `ngc`: delete all old generations of user profiles (equivalent `sudo nix-collect-garbage -d`)
 - `npw`: wipe system history
@@ -260,7 +267,6 @@ OS.
 | Backup               | Rclone                                 |
 | 3D Slicer            | Orca Slicer                            |
 
-
 ## ⌨️ Keybindings
 
 Here you'll find all my Hyprland specific keyboard shortcuts.
@@ -307,12 +313,20 @@ Here you'll find all my Hyprland specific keyboard shortcuts.
 | CTRL + ALT + A            | Reloads `ags` config                          |
 | CTRL + ALT + W            | Reloads `waybar` config                       |
 | SUPER + Space             | Launch `zellij` inside `kitty`                |
-| SHIFT 1..4                | Change Waybar Theme (`waybar-theme`)  |
+| SHIFT 1..4                | Change Waybar Theme (`waybar-theme`)          |
 
 You can find all other keybindings in `/home/config/hypr/hyprland.conf` in the bind section. All
 system fish scripts are located at `/home/config/fish/functions` directory.
 
-## 🚀 Tips & Tricks
+## 🚀 Installation
+
+> [!NOTE]
+>
+> This section is mostly for my personal use, but feel free to use it if you want to.
+
+#TODO
+
+## 📝 Tips & Tricks
 
 > [!NOTE]
 >
@@ -409,6 +423,46 @@ Use the built-in [`Settings Sync`](https://aka.ms/vscode-settings-sync-help) fun
 
 - [**Syncing**](https://github.com/nonoroazoro/vscode-syncing/tree/master/src/core) (*works great*) - Sync all of your VSCode settings across multiple devices
 - [**local sync**](https://github.com/AnWeber/vscode-local-sync) - Sync your settings to a local directory
+
+### Printing & Scanning
+
+#### Printing
+
+> [!NOTE]
+> If you're connected to a printer via USB, you may first verify that the printer is detected by the system using the command `lsusb`.
+
+First, configure printing in NixOS following the [wiki](https://wiki.nixos.org/wiki/Printing).
+
+Then, to list all available printers, use the following command:
+
+```bash
+lpstat -a
+```
+
+> [!CAUTION]
+> If you don't see any printers, you may need to install the printer drivers. For example, for a Canon printer, you may need to install `cnijfilter2`.
+>
+> Then to add the printer, go to the CUPS web interface at `https://127.0.0.1:631` and add the printer manually.
+
+To print a document from the terminal, use the following command:
+
+```bash
+lp -P <printer-name> <file-name>
+```
+
+### Scanning
+
+First, configure scanning in NixOS following the [wiki](https://wiki.nixos.org/wiki/Scanners).
+
+To scan a document from the terminal, use the following command:
+
+```bash
+scanimage --device <your-device> --format=png > output.png
+```
+
+> [!TIP]
+>
+> You can use `scanimage -L` to list all available scanners.
 
 ## 📜 License
 
