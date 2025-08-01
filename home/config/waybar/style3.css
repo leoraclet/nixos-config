@@ -319,7 +319,7 @@ tooltip {
 
 /* Set defaults for indicator bar */
 #waybar.indicator {
-  font-size: 27px;
+  font-size: 20px;
   /* This makes indicator thicker */
   color: rgba(0, 0, 0, 0);
   background: rgba(0, 0, 0, 0);
@@ -330,7 +330,9 @@ tooltip {
   border: 2.5px solid @caution;
   background: @background;
   border-radius: 8pt;
-  padding-left: 2237.5px;
+  padding-right: 1904px;
+  padding-top: 0px;
+  padding-bottom: 0px;
   /* Use this for padding:  */
   /* (H_rez / scaling) - L_margin -R_margin - 2 * border - (font-size / 2)*/
   /* For example: (2880px / 1.25) - 24 - 24 - 2 * 2.5 - (27 / 2) = 2237.5px */

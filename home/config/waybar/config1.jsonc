@@ -33,14 +33,14 @@
          "warp-on-scroll": false,
          "format": "{icon}",
          "format-icons": {
-    //         "1": "",
-    //         "2": "",
-    //         "3": "",
-    //         "4": "",
+               "2": "",
+               "1": "",
+               "5": "",
+               "4": "",
     //         "5": "",
          "urgent": "",
-    //         "focused": "",
-    //         "default": ""
+               "focused": "",
+               "default": ""
          }
      },
     "bluetooth": {
@@ -160,7 +160,7 @@
         "format-disconnected": "Disconnected ⚠"
     },
     "custom/weather": {
-        "interval": 600,
+        "interval": 60,
         "exec": "wttrbar --date-format '%d-%m-%Y' --location Saint-Etienne --hide-conditions",
         "return-type": "json",
         "format": "{}",

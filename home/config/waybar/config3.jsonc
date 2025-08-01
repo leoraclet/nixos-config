@@ -4,18 +4,60 @@
         "layer": "top",
         "position": "top",
         "name": "indicator",
-        "margin-top": 24,
-        "margin-left": 24,
-        "margin-right": 24,
-        "modules-right": [
+        "margin-top": 0,
+        "margin-left": 0,
+        "modules-left": [
             "custom/batteryindicator"
         ],
         "custom/batteryindicator": {
-            "interval": 4,
+            "interval": 1,
             "return-type": "json",
             "format": " ",
-            "exec": "~/.config/waybar/scripts/bat-pp.sh bar"
+            "exec": "sh ~/.config/waybar/scripts/bat-pp.sh bar"
         },
+        "reload_style_on_change": true
+    },
+    {
+        // MAIN BAR //
+        "layer": "top",
+        "position": "top",
+        "name": "main",
+        "height": 10,
+        "margin-top": -35,
+        "margin-left": 0,
+        "reload_style_on_change": true,
+        "modules-left": [
+            "group/tray",
+            "custom/spacer3",
+            "custom/spacer2",
+            "hyprland/workspaces",
+            "custom/spacer2",
+            "custom/spacer3",
+            "hyprland/submap",
+            "hyprland/window"
+        ],
+        "modules-right": [
+            "custom/spacer1",
+            "cpu",
+            "temperature",
+            //"custom/nvidia",
+            // "memory#ram",
+            "group/storage",
+            // "memory#swap",
+            // "disk",
+            "network#info",
+            "custom/spacer1",
+            "pulseaudio#input",
+            "pulseaudio#output",
+            "custom/spacer1",
+            "hyprland/language",
+            "backlight",
+            //"custom/battery",
+            "battery",
+            "custom/spacer1",
+            "custom/weather",
+            "clock"
+        ],
         "battery": {
             "interval": 1,
             "states": {
@@ -44,46 +86,6 @@
             ],
             "tooltip-format": "{timeTo}",
         },
-    },
-    {
-        // MAIN BAR //
-        "layer": "top",
-        "position": "top",
-        "name": "main",
-        "margin-top": -30,
-        "margin-left": 24,
-        "margin-right": 24,
-        "modules-left": [
-            "group/tray",
-            "custom/spacer3",
-            "custom/spacer2",
-            "hyprland/workspaces",
-            "custom/spacer2",
-            "custom/spacer3",
-            "hyprland/submap",
-            "hyprland/window"
-        ],
-        "modules-right": [
-            "custom/spacer1",
-            "cpu",
-            "temperature",
-            //"custom/nvidia",
-            // "memory#ram",
-            "group/storage",
-            // "memory#swap",
-            // "disk",
-            "network#info",
-            "custom/spacer1",
-            "pulseaudio#input",
-            "pulseaudio#output",
-            "custom/spacer1",
-            "hyprland/language",
-            "backlight",
-            "custom/battery",
-            "custom/spacer1",
-            "custom/weather",
-            "clock"
-        ],
         // Modules
         "disk": {
             "interval": 16,
@@ -100,7 +102,7 @@
             "format": "{}°",
             "tooltip": true,
             "interval": 1800,
-            "exec": "wttrbar --nerd --location Inari",
+            "exec": "wttrbar --location Saguenay",
             "return-type": "json"
         },
         "group/tray": {
@@ -153,10 +155,10 @@
         "custom/battery": {
             "interval": 4,
             "return-type": "json",
-            "exec": "~/.config/waybar/scripts/bat-pp.sh refresh",
+            "exec": "sh ~/.config/waybar/scripts/bat-pp.sh refresh",
             "exec-on-event": true,
             "format": "{text}%",
-            "on-click": "~/.config/waybar/scripts/bat-pp.sh toggle & aplay ~/.config/sounds/interact.wav",
+            "on-click": "sh ~/.config/waybar/scripts/bat-pp.sh toggle & aplay ~/.config/sounds/interact.wav",
             "tooltip": "true",
             "tooltip-format": "{alt}W"
         },
@@ -180,7 +182,7 @@
             "on-click": "chromium --app=https://calendar.google.com & aplay ~/.config/sounds/interact.wav"
         },
         "cpu": {
-            "interval": 4,
+            "interval": 1,
             "format": " {usage}%",
             "states": {
                 "warning": 80,
@@ -197,7 +199,7 @@
             "class": "language"
         },
         "memory#ram": {
-            "interval": 4,
+            "interval": 1,
             "format": " {percentage}%",
             "states": {
                 "warning": 80,
@@ -207,13 +209,13 @@
             "tooltip-format": "{used}/{total} GiB"
         },
         "memory#swap": {
-            "interval": 16,
+            "interval": 4,
             "format": "󰾵 {swapPercentage}%",
             "tooltip": "{}",
             "tooltip-format": "{swapUsed}/{swapTotal}GiB"
         },
         "network#info": {
-            "interval": 2,
+            "interval": 1,
             "format": "󱘖  Offline",
             "format-wifi": "{icon} {bandwidthDownBits}",
             "format-ethernet": "󰈀 {bandwidthDownBits}",
@@ -234,7 +236,7 @@
             }
         },
         "network#up": {
-            "interval": 4,
+            "interval": 1,
             "format": " ",
             "format-wifi": "󰕒 {bandwidthUpBits}",
             "format-ethernet": "󰕒 {bandwidthUpBits}",
@@ -242,7 +244,7 @@
             "min-length": 11
         },
         "network#down": {
-            "interval": 4,
+            "interval": 1,
             "format": "󰇚 {bandwidthDownBits}",
             "format-wifi": "󰇚 {bandwidthDownBits}",
             "format-ethernet": "󰇚 {bandwidthDownBits}",
@@ -309,7 +311,7 @@
         },
         "temperature": {
             "critical-threshold": 90,
-            "interval": 4,
+            "interval": 1,
             "format": "{icon} {temperatureC}°",
             "format-icons": [
                 "",
