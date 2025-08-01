@@ -54,12 +54,20 @@
         cnijfilter2
         gutenprint
         gutenprintBin
+        hplip
         hplipWithPlugin
         splix
         brlaser
       ];
       extraConf = ''
         ErrorPolicy retry-job
+      '';
+      browsedConf = ''
+        BrowseDNSSDSubTypes _cups,_print
+        BrowseLocalProtocols all
+        BrowseRemoteProtocols all
+        CreateIPPPrinterQueues All
+        BrowseProtocols all
       '';
       listenAddresses = ["*:631"];
       allowFrom = ["all"];

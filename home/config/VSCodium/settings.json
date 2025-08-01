@@ -16,7 +16,6 @@
   "errorLens.scrollbarHackEnabled": true,
   "errorLens.fontStyleItalic": true,
   "terminal.integrated.hideOnStartup": "always",
-  "window.customTitleBarVisibility": "never",
   "terminal.integrated.gpuAcceleration": "on",
   "editor.cursorBlinking": "smooth",
   "editor.cursorSmoothCaretAnimation": "on",
