@@ -177,6 +177,8 @@
     cryptpad
     freerdp
     telegram-desktop # Telegram Desktop messaging app
+    blender
+    godot
 
     ###################################################
     # Robotics (not used now)

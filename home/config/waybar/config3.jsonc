@@ -343,8 +343,7 @@
             // "format": "Zäni",
             // "format": "󰣇",
             "format": "",
-            "tooltip": false,
-            "on-click": "aplay /home/jan-aarela/.config/sounds/pacman.wav> /dev/null 2>/dev/null & kitty --title Pacman fish -c '~/.config/fish/Pacman.sh & sudo pacman -Syu'"
+            "tooltip": false
         }
     }
 ]
