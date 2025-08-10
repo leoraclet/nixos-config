@@ -10,7 +10,11 @@
           force = true;
           default = "ddg";
           privateDefault = "ddg";
-          order = ["SearXNG" "ddg" "google"];
+          order = [
+            "SearXNG"
+            "ddg"
+            "google"
+          ];
         };
         extensions.packages = with firefox-addons-allowUnfree; [
           ublock-origin
@@ -27,6 +31,8 @@
           search-by-image
           auto-tab-discard
           unpaywall
+          mailvelope
+          simplelogin
         ];
         settings = {
           # Disable telemetry
@@ -214,6 +220,10 @@
         "{f209234a-76f0-4735-9920-eb62507a54cd}" = {
           installation_mode = "force_installed";
           install_url = "https://addons.mozilla.org/firefox/downloads/latest/unpaywall/latest.xpi";
+        };
+        "jid1-AQqSMBYb0a8ADg@jetpack" = {
+          installation_mode = "force_installed";
+          install_url = "https://addons.mozilla.org/firefox/downloads/latest/mailvelope/latest.xpi";
         };
       };
     };

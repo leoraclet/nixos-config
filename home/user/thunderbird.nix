@@ -35,7 +35,7 @@
 
   /*
     accounts.email = {
-      accounts.Posteo = {
+      accounts.Disroot = {
         realName = "Léo Raclet";
         address = "leo.raclet@disroot.org";
         userName = "leo.raclet@disroot.org";

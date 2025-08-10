@@ -179,6 +179,15 @@
     telegram-desktop # Telegram Desktop messaging app
     blender
     godot
+    davinci-resolve-studio
+    notepad-next
+    localsend
+    syncthing
+    qmmp
+    cryptomator
+    veracrypt
+    gnupg
+    jitsi-meet-electron
 
     ###################################################
     # Robotics (not used now)
@@ -249,7 +258,9 @@
     macchanger
 
     ###################################################
-    # TEST APPS
+    # UTILS
     ###################################################
+
+    wine
   ];
 }
