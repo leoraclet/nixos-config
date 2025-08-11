@@ -177,13 +177,10 @@
     cryptpad
     freerdp
     telegram-desktop # Telegram Desktop messaging app
-    blender
-    godot
     davinci-resolve-studio
     notepad-next
     localsend
     syncthing
-    qmmp
     cryptomator
     veracrypt
     gnupg
