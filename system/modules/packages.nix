@@ -177,7 +177,7 @@
     cryptpad
     freerdp
     telegram-desktop # Telegram Desktop messaging app
-    davinci-resolve-studio
+    libsForQt5.kdenlive
     notepad-next
     localsend
     syncthing
@@ -185,6 +185,8 @@
     veracrypt
     gnupg
     jitsi-meet-electron
+    element-desktop
+    rocketchat-desktop
 
     ###################################################
     # Robotics (not used now)
