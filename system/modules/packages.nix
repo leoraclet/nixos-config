@@ -161,6 +161,7 @@
       withTTS = true;
     })
     spotify
+    bloomeetunes
     tor-browser
     vlc
     vscodium
@@ -177,7 +178,6 @@
     cryptpad
     freerdp
     telegram-desktop # Telegram Desktop messaging app
-    libsForQt5.kdenlive
     notepad-next
     localsend
     syncthing
