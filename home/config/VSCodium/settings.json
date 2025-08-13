@@ -32,7 +32,6 @@
   "security.workspace.trust.enabled": false,
   "editor.minimap.enabled": false,
   "workbench.panel.opensMaximized": "always",
-  "breadcrumbs.enabled": false,
   "extensions.autoUpdate": false,
   "workbench.statusBar.visible": true,
   "telemetry.telemetryLevel": "off",

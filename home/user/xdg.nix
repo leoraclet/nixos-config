@@ -3,7 +3,7 @@
     enable = true;
     defaultApplications = {
       # PDF
-      "application/pdf" = "org.pwmt.zathura.desktop";
+      "application/pdf" = "firefox.desktop";
 
       # Web
       "x-scheme-handler/http" = "firefox.desktop";
@@ -42,5 +42,10 @@
     videos = "$HOME/Videos";
     music = "$HOME/Music";
     publicShare = "$HOME/Share";
+
+    # Specialized.
+    extraConfig = {
+      XDG_REPO_DIR = "$HOME/Repos"; # Git clones of various projects.
+    };
   };
 }

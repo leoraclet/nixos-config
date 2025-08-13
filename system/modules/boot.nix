@@ -21,7 +21,7 @@
         useOSProber = true;
         efiSupport = true;
         theme = pkgs.catppuccin-grub;
-        configurationLimit = 5;
+        configurationLimit = 3;
       };
     };
     plymouth = {
