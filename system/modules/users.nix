@@ -1,7 +1,11 @@
-{pkgs, ...}: {
+{ pkgs, ... }:
+{
   users.users.leonne = {
     isNormalUser = true;
     description = "leonne";
+    # To avoid being locked out after first install of the system
+    # Because by default a new user don't have a password if not set with Nix
+    initialPassword = "nixos";
     extraGroups = [
       "docker"
       "networkmanager"
@@ -20,6 +24,8 @@
   };
 
   users.defaultUserShell = pkgs.fish;
+  # Allows to change de initial password to a more robust one after firt login.
+  users.mutableUsers = true;
 
   xdg.mime = {
     enable = true;
