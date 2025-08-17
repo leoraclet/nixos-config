@@ -1,4 +1,13 @@
 {...}: {
+  fileSystems."/home/leonne/Data" = {
+    device = "/dev/disk/by-label/NIXOS_DATA";
+    fsType = "ext4";
+  };
+
+  ################################################
+  # EXAMPLES
+  ################################################
+
   # fileSystems."/home/leonne/Data" = {
   #   device = "/dev/disk/by-uuid/16ca9f76-8f57-45ca-9253-c158b837e7b0";
   #   options = ["defaults" "user" "rw" "nofail"];

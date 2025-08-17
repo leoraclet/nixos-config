@@ -10,7 +10,6 @@
   "window.zoomLevel": 0.0,
   "workbench.editor.labelFormat": "short",
   "terminal.integrated.hideOnStartup": "always",
-  "window.customTitleBarVisibility": "never",
   "terminal.integrated.gpuAcceleration": "on",
   "editor.cursorBlinking": "smooth",
   "editor.cursorSmoothCaretAnimation": "on",
@@ -47,7 +46,7 @@
     "editor.defaultFormatter": "vscode.json-language-features",
     "editor.formatOnSave": true,
   },
-  "files.autoSave": "onFocusChange",
+  "files.autoSave": "afterDelay",
   "[c]": {
     "editor.defaultFormatter": "xaver.clang-format",
     "editor.formatOnSave": true,
