@@ -2,6 +2,11 @@
   fileSystems."/home/leonne/Data" = {
     device = "/dev/disk/by-label/NIXOS_DATA";
     fsType = "ext4";
+    options = [
+      "users"
+      "nofail"
+      "rw"
+    ];
   };
 
   ################################################
