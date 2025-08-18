@@ -40,6 +40,7 @@
       config.allowUnfree = true;
     };
   in {
+    # FIXME
     nixosConfigurations.leonne = nixpkgs.lib.nixosSystem {
       inherit system;
       specialArgs = {

@@ -36,6 +36,7 @@
       ];
     };
 
+    # FIXME: Change to your username
     extraOptions = ''
       trusted-users = root leonne
     '';

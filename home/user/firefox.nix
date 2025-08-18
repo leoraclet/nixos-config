@@ -33,6 +33,7 @@
           unpaywall
           mailvelope
           simplelogin
+          consent-o-matic
         ];
         settings = {
           # Disable telemetry

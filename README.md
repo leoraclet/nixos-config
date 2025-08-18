@@ -27,6 +27,8 @@
 - [🔧 Components](#-components)
 - [⌨️ Keybindings](#️-keybindings)
 - [🚀 Installation](#-installation)
+  - [With Encryption](#with-encryption)
+  - [Without Encryption](#without-encryption)
 - [📝 Tips \& Tricks](#-tips--tricks)
   - [Discord](#discord)
   - [Home Manager](#home-manager)
@@ -40,9 +42,9 @@
     - [With Extensions](#with-extensions)
   - [Printing \& Scanning](#printing--scanning)
     - [Printing](#printing)
-  - [Scanning](#scanning)
+    - [Scanning](#scanning)
+  - [LUKS keyboard layout](#luks-keyboard-layout)
 - [📜 License](#-license)
-
 
 ## 🌟 Showcase
 
@@ -84,15 +86,14 @@ Other inspirations (*not exhaustive, but those I could remember and/or find back
 - JaKooLit - [NixOS-Hyprland](https://github.com/JaKooLit/NixOS-Hyprland)
 - ryan4in - [nix-config](https://github.com/ryan4yin/nix-config)
 - end-4 - [dots-hyprland](https://github.com/end-4/dots-hyprland)
-
-*and probably many others*
+- *and probably many others*
 
 **THANKS to all of them for there incredible configurations I took pleasure to admire, read and
 understand**
 
 ## 📖 About
 
-This repository houses my NixOS 🐧 Linux ❄️ flake configuration
+This repository houses my NixOS 🐧 Linux ❄️ flake configuration, using Hyprland and full-disk encryption with LUKS.
 
 > [!NOTE]
 >
@@ -104,7 +105,8 @@ and features. Notably, it utilizes:
 
 - **flake** (An experimental feature of the Nix package manager)
 - **nixpkgs**: unstable
-- **home-manager**: To setup user environment
+- **home-manager**: Used to setup user environment (dotfiles)
+- **LUKS**: Used for full-disk encryption
 
 ## ✨ Features
 
@@ -131,6 +133,7 @@ This system includes a fish shell configuration file ([`config.fish`](home/confi
 that provides various aliases to enhance my experience.
 
 Common commands:
+
 - `cl`: clear the terminal screen (shorthand for `clear`)
   - `c`: because I have no time to waste (*sure ...*)
   - `cls`: because I spent to much time using the devil (**Windows**)
@@ -149,7 +152,6 @@ NixOS-specific commands:
 - `rebuild`: rebuild your system using the current flake
 - `ngc`: delete all old generations of user profiles (equivalent `sudo nix-collect-garbage -d`)
 - `npw`: wipe system history
-
 
 And many others ...
 
@@ -172,19 +174,19 @@ And many others ...
 | `dua`   | Opens interactive disk usage analyzer. (`dua -i`)             |
 | `code`  | Opens current directory in VSCodium. (`codium .`)             |
 
-
 ## 🤖 AI Tools and Services
 
 This configuration includes several AI/LLM tools and services for local development and
 experimentation:
 
-
 **Ollama** - Local LLM server with pre-loaded models:
+
 - Accessible at `http://localhost:11434`
 - Models: `llama3.2:3b`, `deepseek-r1:1.5b`, `dolphin3:8b`,
 - Text embedding model: `nomic-embed-text`
 
 **AI Tools:**
+
 - `aichat` - ChatGPT-like CLI and REPL with lot of features
 - `aider-chat` - Code assistant/chat directly in the terminal
 - `alpaca` - GUI LLM client with markdown support
@@ -324,7 +326,41 @@ system fish scripts are located at `/home/config/fish/functions` directory.
 >
 > This section is mostly for my personal use, but feel free to use it if you want to.
 
-#TODO
+### With Encryption
+
+> [!IMPORTANT]
+>
+> This is how **MY** system is configured by default from now on
+
+You can refer to this [guide](https://github.com/Jadarma/nixfiles/blob/main/docs/src/getting_started/install.md) (which I used) to setup your system with LVM & LUKS full-disk encryption.
+
+> [!CAUTION]
+>
+> Refer to this [section](#luks-keyboard-layout) to avoid problems related to keyboard layout when entering LUKS password.
+>
+> It shouldn't be needed but I still recommend to it as it appear the best way to ensure everything will work as expected.
+
+### Without Encryption
+
+1. Download and Install NixOS from the [official site](https://nixos.org/download).
+2. Temporarily install ripgrep, fish and git using the command: `nix-shell -p ripgrep fish git --run fish`. You can also use classic bash and grep for the next step without installing fish and ripgrep.
+3. Run the command `rg --hidden FIXME` and change/add lines to match your device, swaps, partitions, peripherals, file systems, etc. in the configuration files.
+
+> [!IMPORTANT]
+>
+> I highly recommend you to go throught all the configurations files and ensure everything is configured to your needs.
+>
+> Don't forget to delete or change settings and configurations that are unique to you, like **git** settings, **username**, etc ...
+
+5. Enable `flake` support (more [here](https://nixos.wiki/wiki/Flakes#Enable_flakes_temporarily)) on your current system. Don't forget to run `sudo nixos-rebuild switch` after enabling `flake` in your `/etc/configuration.nix`.
+5. Clone this repository
+
+```sh
+git clone https://github.com/leoraclet/nixos-config
+```
+
+6. Then, `cd nixos-config`
+7. Run the command `sudo nix flake update --flake /etc/nixos && sudo nixos-rebuild switch --flake ./#your-hostname --upgrade`. Don't forget to replace `your-hostname` with your hostname before running the command; by default, hostname is set to `leonne`.
 
 ## 📝 Tips & Tricks
 
@@ -450,7 +486,7 @@ To print a document from the terminal, use the following command:
 lp -P <printer-name> <file-name>
 ```
 
-### Scanning
+#### Scanning
 
 First, configure scanning in NixOS following the [wiki](https://wiki.nixos.org/wiki/Scanners).
 
@@ -463,6 +499,12 @@ scanimage --device <your-device> --format=png > output.png
 > [!TIP]
 >
 > You can use `scanimage -L` to list all available scanners.
+
+### LUKS keyboard layout
+
+When using LUKS encryption, the default keymap used at the password prompt is US QWERTY.
+
+To avoid issues caused by mismatched keyboard layouts, you can follow this Stack Overflow answer to add an additional key for decrypting the LUKS device.
 
 ## 📜 License
 
