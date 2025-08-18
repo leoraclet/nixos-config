@@ -1,5 +1,6 @@
 {pkgs, ...}: {
-  users.users.leonne = { # FIXME
+  users.users.leonne = {
+    # FIXME
     isNormalUser = true;
     description = "leonne";
     # To avoid being locked out after first install of the system
