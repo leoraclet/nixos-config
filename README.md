@@ -483,7 +483,7 @@ lpstat -a
 To print a document from the terminal, use the following command:
 
 ```bash
-lp -P <printer-name> <file-name>
+lp -d <printer-name> <file-name>
 ```
 
 #### Scanning
