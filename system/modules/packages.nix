@@ -187,6 +187,9 @@
     jitsi-meet-electron
     element-desktop
     rocketchat-desktop
+    angryipscanner
+    rpi-imager
+    realvnc-vnc-viewer
 
     ###################################################
     # Robotics (not used now)
@@ -234,7 +237,7 @@
 
     #wireshark
     #burpsuite
-    #nmap
+    nmap
     #sqlmap
     #metasploit
     #sage
