@@ -126,7 +126,7 @@
   "syncing.separateKeybindings": false,
   "continue.telemetryEnabled": false,
   "yaml.schemas": {
-    "file:///home/leonne/.vscode-oss/extensions/Continue.continue-1.0.23/config-yaml-schema.json": [
+    "file:///home/leonne/.vscode-oss/extensions/continue.continue-1.0.24-linux-x64/config-yaml-schema.json": [
       ".continue/**/*.yaml"
     ]
   },
