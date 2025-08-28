@@ -69,15 +69,22 @@
           "browser.newtabpage.activity-stream.telemetry" = false;
           "toolkit.telemetry.reportingpolicy.firstRun" = false;
           "toolkit.telemetry.shutdownPingSender.enabledFirstsession" = false;
-          "browser.vpn_promo.enabled" = false;
 
           # integrated calculator
           "browser.urlbar.suggest.calculator" = true;
+          "browser.warnOnQuitShortcut" = false;
+          "browser.vpn_promo.enabled" = false;
 
           # HIDDEN PREF: disable recommendation pane in about:addons (uses Google Analytics)
           "extensions.getAddons.showPane" = false;
           # recommendations in about:addons' Extensions and Themes panes [FF68+]
           "extensions.htmlaboutaddons.recommendations.enabled" = false;
+          "extensions.formautofill.addresses.enabled" = false;
+          "extensions.formautofill.creditCards.enabled" = false;
+
+          "devtools.toolbox.host" = "right";
+          "browser.ctrlTab.sortByRecentlyUsed" = true;
+          "browser.aboutwelcome.didSeeFinalScreen" = true;
 
           # disable using the OS's geolocation service
           "geo.provider.use_gpsd" = false;

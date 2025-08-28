@@ -376,7 +376,7 @@ OpenASAR can't find the Discord config files. To fix this issue, just launch Dis
 a standalone program before running it the usual way.
 
 ```bash
-nix run --impure nixpkgs\#discord
+NIXPKGS_ALLOW_UNFREE=1 nix run --impure nixpkgs\#discord
 ```
 
 ### Home Manager
