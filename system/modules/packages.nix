@@ -235,21 +235,20 @@
     # Hacking
     ###################################################
 
-    #wireshark
-    #burpsuite
+    wireshark
+    burpsuite
+    autopsy
     nmap
-    #sqlmap
-    #metasploit
-    #sage
-    #aircrack-ng
+    sqlmap
+    sage
+    aircrack-ng
     #scalpel
     #hashcat
     #hashcat-utils
-    #john
+    john
     #radare2
     #cutter
-    #ghidra
-    #ida-free
+    ghidra
     #metasploit
     #nth
     #theharvester
