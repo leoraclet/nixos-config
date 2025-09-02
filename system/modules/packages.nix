@@ -238,18 +238,19 @@
     wireshark
     burpsuite
     autopsy
+    sleuthkit
     nmap
     sqlmap
     sage
     aircrack-ng
-    #scalpel
-    #hashcat
+    scalpel
+    hashcat
     #hashcat-utils
     john
-    #radare2
-    #cutter
+    radare2
+    cutter
     ghidra
-    #metasploit
+    metasploit
     #nth
     #theharvester
     #mitmproxy
