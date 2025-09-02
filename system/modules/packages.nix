@@ -240,7 +240,7 @@
     autopsy
     sleuthkit
     nmap
-    # maltego
+    maltego
     nikto
     sqlmap
     sage
