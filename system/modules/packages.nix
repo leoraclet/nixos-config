@@ -240,29 +240,37 @@
     autopsy
     sleuthkit
     nmap
+    # maltego
+    nikto
     sqlmap
     sage
     aircrack-ng
+    recon-ng
     scalpel
     hashcat
-    #hashcat-utils
+    bettercap
+    kismet
+    ettercap
+    tcpdump
     john
     radare2
     cutter
+    # social-engineer-toolkit
+    whatweb
+    masscan
     ghidra
     metasploit
-    #nth
-    #theharvester
-    #mitmproxy
+    nth
+    volatility3
+    binwalk
+    theharvester
+    mitmproxy
 
     # Utilities
     exiftool
     macchanger
 
     ###################################################
-    # UTILS
     ###################################################
-
-    wine
   ];
 }

@@ -19,15 +19,5 @@
       enable = true;
       extraBackends = [pkgs.sane-airscan];
     };
-
-    opengl = {
-      enable = true;
-      driSupport32Bit = true;
-      extraPackages = with pkgs; [
-        intel-ocl
-        intel-media-driver
-        vpl-gpu-rt
-      ];
-    };
   };
 }
