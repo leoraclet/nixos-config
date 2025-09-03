@@ -255,7 +255,6 @@
     john
     radare2
     cutter
-    # social-engineer-toolkit
     whatweb
     masscan
     ghidra
