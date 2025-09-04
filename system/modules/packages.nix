@@ -230,6 +230,7 @@
     rofi-wayland
     waybar
     wttrbar # Weather addon for waybar
+    flameshot
 
     ###################################################
     # Hacking

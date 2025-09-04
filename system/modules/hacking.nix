@@ -4,26 +4,22 @@
   pkgs,
   ...
 }:
-
-with lib;
-
-let
+with lib; let
   roles = {
-    blue = import ./roles/blue.nix { inherit pkgs; };
-    bugbounty = import ./roles/bugbounty.nix { inherit pkgs; };
-    cracker = import ./roles/cracker.nix { inherit pkgs; };
-    dos = import ./roles/dos.nix { inherit pkgs; };
-    forensic = import ./roles/forensic.nix { inherit pkgs; };
-    malware = import ./roles/malware.nix { inherit pkgs; };
-    mobile = import ./roles/mobile.nix { inherit pkgs; };
-    network = import ./roles/network.nix { inherit pkgs; };
-    osint = import ./roles/osint.nix { inherit pkgs; };
-    red = import ./roles/red.nix { inherit pkgs; };
-    student = import ./roles/student.nix { inherit pkgs; };
-    web = import ./roles/web.nix { inherit pkgs; };
+    blue = import ./roles/blue.nix {inherit pkgs;};
+    bugbounty = import ./roles/bugbounty.nix {inherit pkgs;};
+    cracker = import ./roles/cracker.nix {inherit pkgs;};
+    dos = import ./roles/dos.nix {inherit pkgs;};
+    forensic = import ./roles/forensic.nix {inherit pkgs;};
+    malware = import ./roles/malware.nix {inherit pkgs;};
+    mobile = import ./roles/mobile.nix {inherit pkgs;};
+    network = import ./roles/network.nix {inherit pkgs;};
+    osint = import ./roles/osint.nix {inherit pkgs;};
+    red = import ./roles/red.nix {inherit pkgs;};
+    student = import ./roles/student.nix {inherit pkgs;};
+    web = import ./roles/web.nix {inherit pkgs;};
   };
-in
-{
+in {
   options.cyber = {
     enable = mkOption {
       type = types.bool;
