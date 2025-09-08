@@ -329,7 +329,7 @@ tooltip {
 #waybar.indicator #custom-batteryindicator {
   border: 2.5px solid @caution;
   background: @background;
-  border-radius: 8pt;
+  border-radius: 4pt;
   padding-right: 1904px;
   padding-top: 0px;
   padding-bottom: 0px;

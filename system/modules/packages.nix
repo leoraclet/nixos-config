@@ -24,6 +24,7 @@
     terraform # Tool for building, changing, and versioning infrastructure
     license-generator # Command-line tool for generating license files
     git-ignore # Quickly and easily fetch .gitignore templates from gitignore.io
+    mpi # Open source MPI-3 implementation
 
     # Languages
     uv # Extremely fast Python package installer and resolver, written in Rust
@@ -129,16 +130,13 @@
     hyperfine # Command-line benchmarking tool
     aria2 # Lightweight multi-protocol & multi-source command-line download utility
     mosh # Mobile shell that allows roaming, supports intermittent connectivity, and provides intelligent local echo
+    openvpn3 # OpenVPN 3 Linux Client
+    openvpn # Robust and highly flexible tunneling application
+    inetutils # Collection of common network programs
 
     # Monitoring
     iotop # Display I/O usage by processes
     iftop # Display bandwidth usage on an interface
-
-    ###################################################
-    # NixOS utils
-    ###################################################
-
-    nh # Nix helper
 
     ###################################################
     # Fetch everything
