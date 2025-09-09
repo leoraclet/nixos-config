@@ -1,4 +1,8 @@
-{firefox-addons-allowUnfree, ...}: {
+{
+  firefox-addons-allowUnfree,
+  pkgs,
+  ...
+}: {
   programs.firefox = {
     enable = true;
     profiles = {
@@ -6,6 +10,10 @@
         id = 0;
         name = "default";
         isDefault = true;
+        bookmarks = {
+          force = true;
+          settings = import ./bookmarks.nix;
+        };
         search = {
           force = true;
           default = "ddg";
@@ -15,24 +23,56 @@
             "ddg"
             "startpage"
           ];
+          engines = {
+            "Nix Packages" = {
+              urls = [
+                {
+                  template = "https://search.nixos.org/packages";
+                  params = [
+                    {
+                      name = "type";
+                      value = "packages";
+                    }
+                    {
+                      name = "query";
+                      value = "{searchTerms}";
+                    }
+                  ];
+                }
+              ];
+              icon = "${pkgs.nixos-icons}/share/icons/hicolor/scalable/apps/nix-snowflake.svg";
+              definedAliases = ["@np"];
+            };
+
+            "NixOS Wiki" = {
+              urls = [{template = "https://wiki.nixos.org/index.php?search={searchTerms}";}];
+              icon = "https://wiki.nixos.org/favicon.png";
+              updateInterval = 24 * 60 * 60 * 1000;
+              definedAliases = ["@nw"];
+            };
+
+            "wikipedia".metaData.alias = "@wiki";
+            "google".metaData.hidden = true;
+            "amazondotcom-us".metaData.hidden = true;
+            "bing".metaData.hidden = true;
+            "ebay".metaData.hidden = true;
+          };
         };
         extensions.packages = with firefox-addons-allowUnfree; [
           ublock-origin
           bitwarden
           darkreader
           istilldontcareaboutcookies
-          tampermonkey
+          violentmonkey
+          foxyproxy-standard
           onetab
           languagetool
           localcdn
-          feedbroreader
           clearurls
           downthemall
           search-by-image
-          auto-tab-discard
           unpaywall
-          mailvelope
-          simplelogin
+          cookie-quick-manager
           consent-o-matic
         ];
         settings = {
@@ -114,18 +154,28 @@
       DisableFirefoxStudies = true;
       DisablePocket = true;
       DisableFirefoxScreenshots = true;
-      DisplayBookmarksToolbar = "never";
+      DisplayBookmarksToolbar = "newpage";
       DefaultDownloadDirectory = "\${HOME}/Downloads";
+      OfferToSaveLogins = false;
+      OfferToSaveLoginsDefault = false;
+      PasswordManagerEnabled = false;
       ShowHomeButton = true;
-      NoDefaultBookmarks = true;
+      # NoDefaultBookmarks = true;
+
       FirefoxSuggest = {
         WebSuggestions = false;
         SponsoredSuggestions = false;
         ImproveSuggest = false;
       };
 
+      UserMessaging = {
+        ExtensionRecommendations = false;
+        SkipOnboarding = true;
+      };
+
       EnableTrackingProtection = {
         Value = true;
+        Locked = true;
         Cryptomining = true;
         Fingerprinting = true;
       };

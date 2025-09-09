@@ -175,7 +175,6 @@
     brave # A chromium based browser as an alternative if needed
     cryptpad
     freerdp
-    telegram-desktop # Telegram Desktop messaging app
     notepad-next
     localsend
     syncthing
@@ -187,7 +186,8 @@
     rocketchat-desktop
     angryipscanner
     rpi-imager
-    realvnc-vnc-viewer
+    remmina
+    rustdesk
 
     ###################################################
     # Robotics (not used now)
