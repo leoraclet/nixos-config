@@ -11,6 +11,7 @@
     gnumake # Tool to control the generation of non-source files from sources
     just # Handy way to save and run project-specific commands
     git # Distributed version control system
+    gitleaks # Scan for secrets in GIT repositories
     git-credential-manager # Git credential manager for secure authentication
     lazygit # Simple terminal UI for git commands
     neovim # Vim text editor fork focused on extensibility and agility
@@ -98,6 +99,7 @@
     sd # Intuitive find and replace (sed alternative)
     file # File Command
     fzf # Fuzzy finder
+    skim # fzf, but in Rust
     ripgrep # Text search
     ffmpeg # FFMPEG utility
     wget # Tool for retrieving files using HTTP, HTTPS, and FTP
@@ -133,6 +135,10 @@
     openvpn3 # OpenVPN 3 Linux Client
     openvpn # Robust and highly flexible tunneling application
     inetutils # Collection of common network programs
+    moreutils
+    posting
+    tokei # Count your code, quickly
+    dogdns
 
     # Monitoring
     iotop # Display I/O usage by processes
@@ -145,6 +151,13 @@
     onefetch # Git repository summary on your terminal
     neofetch # System information
     fastfetch # Faster ... :)
+    ipfetch
+    cpufetch
+    ramfetch
+    starfetch
+    octofetch
+    kmon
+    dig
 
     ###################################################
     # GUI apps
@@ -188,6 +201,7 @@
     rpi-imager
     remmina
     rustdesk
+    insomnia
 
     ###################################################
     # Robotics (not used now)

@@ -133,7 +133,6 @@
   "terminal.integrated.enablePersistentSessions": false,
   "terminal.integrated.persistentSessionReviveProcess": "never",
   "trailing-spaces.trimOnSave": true,
-  "files.autoSaveDelay": 5000,
   "periscope.showPreviousResultsWhenNoMatches": true,
   "nixEnvSelector.useFlakes": true,
   "find-it-faster.advanced.disableStartupChecks": true,

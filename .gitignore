@@ -2,4 +2,5 @@
 /result
 /.vscode
 **/.venv
+.env.searxng
 

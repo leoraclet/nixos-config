@@ -33,6 +33,7 @@ if [[ $MODE == "refresh" ]]; then
         CLASS=$"charging"
     elif [[ $PERCENT -le 10 ]]; then
         CLASS=$"critical"
+        notify-send -u critical "BATTERY LOW !"
     elif [[ $PERCENT -le 20 ]]; then
         CLASS=$"warning"
         aplay ~/.config/sounds/alarm.wav

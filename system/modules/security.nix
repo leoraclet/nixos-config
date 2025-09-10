@@ -5,31 +5,36 @@
 }: {
   security.polkit.enable = true;
   security.pam.services.swaylock = {};
+  security.apparmor = {
+    enable = true;
+    killUnconfinedConfinables = true;
+    packages = with pkgs; [
+      apparmor-utils
+      apparmor-profiles
+    ];
+  };
 
   environment.systemPackages = with pkgs; [
     clamav
   ];
 
-  services.clamav.scanner = {
-    enable = true;
-    interval = "Sat *-*-* 04:00:00";
-  };
-
-  /*
   services.clamav = {
     daemon.enable = true;
     fangfrisch.enable = true;
     fangfrisch.interval = "daily";
     updater = {
       enable = true;
-      interval = "daily"; #man systemd.time
+      interval = "daily"; # man systemd.time
       frequency = 12;
     };
+    scanner = {
+      enable = false;
+      interval = "Sat *-*-* 04:00:00";
+    };
   };
-  */
 
   programs.firejail = {
-    enable = false;
+    enable = true;
     wrappedBinaries = {
       mpv = {
         executable = "${lib.getBin pkgs.mpv}/bin/mpv";
@@ -46,6 +51,10 @@
       discord = {
         executable = "${lib.getBin pkgs.discord}/bin/discord";
         profile = "${pkgs.firejail}/etc/firejail/discord.profile";
+      };
+      brave = {
+        executable = "${lib.getBin pkgs.brave}/bin/brave";
+        profile = "${pkgs.firejail}/etc/firejail/brave.profile";
       };
       nemo = {
         executable = "${lib.getBin pkgs.nemo}/bin/nemo";

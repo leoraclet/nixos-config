@@ -30,5 +30,6 @@
     quickemu
     docker-compose
     lazydocker
+    lima
   ];
 }

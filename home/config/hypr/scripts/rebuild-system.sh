@@ -25,9 +25,6 @@ alejandra .
 
 echo "Config formatted !"
 
-# Shows your changes
-git diff -U0 '*'
-
 # Add all potentialy untracked files
 git add .
 git add -A -N # Just in case (not sure what it does thought ...)
@@ -39,7 +36,7 @@ sudo find ~/ -name "*.dotfiles_backup" | xargs rm -rf &>nixos-switch.log
 echo "NixOS Rebuilding..."
 
 # Rebuild, output simplified errors, log trackebacks
-sudo nixos-rebuild build --flake ./#leonne &>nixos-switch.log || (cat nixos-switch.log | grep --color error && exit 1)
+sudo nixos-rebuild build --flake ./#leonne &>nixos-switch.log || (cat nixos-switch.log | grep --color error && notify-send -e "BUILD FAILED !!" -t 5000 && exit 1)
 
 echo "Build successfull"
 
@@ -50,7 +47,7 @@ sudo find ~/.config -type l -delete &>nixos-switch.log
 echo "Switching to new configuration ..."
 
 # If it built successfully, swith to new configuration
-sudo nixos-rebuild switch --flake ./#leonne &>nixos-switch.log || (cat nixos-switch.log | grep --color error && exit 1)
+sudo nixos-rebuild switch --flake ./#leonne &>nixos-switch.log || (cat nixos-switch.log | grep --color error && notify-send -e "SWITCH FAILED !!" -t 5000 && exit 1)
 
 # Get current generation metadata
 current=$(nixos-rebuild list-generations --json | jq -r '.[0].date')

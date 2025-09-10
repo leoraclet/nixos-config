@@ -1,13 +1,14 @@
 {
   pkgs,
   lib,
+  config,
   ...
 }: {
   services = {
     udev.packages = with pkgs; [
       platformio # udev rules for platformio
-      openocd # required by paltformio, see https://github.com/NixOS/nixpkgs/issues/224895
-      sane-airscan # https://wiki.nixos.org/wiki/Scanners
+      openocd # required by platformio, see https://github.com/NixOS/nixpkgs/issues/224895
+      sane-airscan # see https://wiki.nixos.org/wiki/Scanners
     ];
 
     envfs.enable = true;
@@ -28,6 +29,42 @@
 
     # Disabled because it takes too much RAM and it's not used often enough to justify the resource usage.
     open-webui.enable = false;
+    n8n.enable = false;
+
+    searx = {
+      enable = true;
+      settings = {
+        general = {
+          debug = false;
+          instance_name = "SearXNG Instance";
+          donation_url = false;
+          contact_url = false;
+          privacypolicy_url = false;
+          enable_metrics = false;
+        };
+        server = {
+          port = 7777;
+          bind_address = "127.0.0.1";
+          secret_key = "hjmY5geUV3bjW091TddQEZjlvo8gZPmxN0Deqwx3/D51NcXBoEMQpVkHV8OAYRMN";
+        };
+        search = {
+          formats = [
+            "html"
+            "json"
+          ];
+        };
+        # Enabled plugins
+        enabled_plugins = [
+          "Basic Calculator"
+          "Hash plugin"
+          "Tor check plugin"
+          "Open Access DOI rewrite"
+          "Hostnames plugin"
+          "Unit converter plugin"
+          "Tracker URL remover"
+        ];
+      };
+    };
 
     #========================================#
     # Fingerprint reader
