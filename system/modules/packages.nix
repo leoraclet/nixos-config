@@ -178,7 +178,6 @@
     vscodium
     firefox
     nemo
-    signal-desktop
     orca-slicer
     inkscape
     gimp
@@ -202,6 +201,7 @@
     remmina
     rustdesk
     insomnia
+    bitwarden-desktop
 
     ###################################################
     # Robotics (not used now)

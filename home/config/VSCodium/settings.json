@@ -142,4 +142,5 @@
   "find-it-faster.general.useTerminalInEditor": true,
   "files.autoSaveWorkspaceFilesOnly": true,
   "files.autoSaveWhenNoErrors": true,
+  "files.autoSaveDelay": 500,
 }

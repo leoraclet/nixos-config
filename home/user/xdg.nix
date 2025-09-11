@@ -41,7 +41,7 @@
     pictures = "$HOME/Pictures";
     videos = "$HOME/Videos";
     music = "$HOME/Music";
-    publicShare = "$HOME/Share";
+    publicShare = "$HOME/Public";
 
     # Specialized.
     extraConfig = {
