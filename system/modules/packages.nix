@@ -217,7 +217,6 @@
 
     rclone # Sync files and directories to and from major cloud storage
     rclone-browser # Graphical Frontend to Rclone written in Qt
-    megacmd # MEGA Command Line Interactive and Scriptable Application
 
     ###################################################
     # Hyprland

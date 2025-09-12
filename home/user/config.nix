@@ -39,6 +39,7 @@ in {
     ".config/ags".source = pathToFile "ags";
     ".config/aichat".source = pathToFile "aichat";
     ".config/fish".source = pathToFile "fish";
+    ".config/zellij".source = pathToFile "zellij";
     ".config/discord/settings.json".source = pathToFile "discord/settings.json";
     ".config/VSCodium/User/settings.json".source = pathToFile "VSCodium/settings.json";
     ".config/VSCodium/User/keybindings.json".source = pathToFile "VSCodium/keybindings.json";

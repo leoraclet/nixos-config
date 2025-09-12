@@ -1,6 +1,7 @@
 {
   programs.git = {
     enable = true;
+    lfs.enable = true;
     userName = "Léo Raclet";
     userEmail = "leo.raclet@gmail.com";
     extraConfig = {
@@ -9,6 +10,9 @@
       credential.helper = "manager";
       credential."https://github.com".username = "leoraclet";
       credential.credentialStore = "cache";
+      credential.cacheOptions = "--timeout 14400";
+      pull.rebase = true;
+      rerere.enabled = true;
     };
   };
 }

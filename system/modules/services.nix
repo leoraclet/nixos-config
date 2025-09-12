@@ -12,6 +12,7 @@
     ];
 
     envfs.enable = true;
+    flatpak.enable = true;
 
     #========================================#
     # AI
@@ -70,7 +71,7 @@
     # Fingerprint reader
     #========================================#
 
-    # Disabled it because it cause problems with SDDM (login, unlock, ...)
+    #! Disabled it because it cause problems with SDDM (login, unlock, ...)
     fprintd = {
       enable = false;
       package = pkgs.fprintd-tod;

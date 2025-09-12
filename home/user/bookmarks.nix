@@ -4,6 +4,11 @@
     toolbar = true;
     bookmarks = [
       {
+        name = "Perso";
+        bookmarks = [
+        ];
+      }
+      {
         name = "Athena OS";
         bookmarks = [
           {

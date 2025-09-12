@@ -23,7 +23,7 @@ function waybar-theme
     sleep 0.5
     disown
     # Notify the user about the theme change
-    notify-send "Waybar Theme Changed" "Theme N°$theme has been applied successfully."
+    notify-send "Waybar Theme Changed" "Theme N°$theme has been applied successfully." -t 2000
     # Clear the terminal to avoid clutter
     clear
 end

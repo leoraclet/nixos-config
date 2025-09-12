@@ -36,10 +36,6 @@
   programs.firejail = {
     enable = true;
     wrappedBinaries = {
-      discord = {
-        executable = "${lib.getBin pkgs.discord}/bin/discord";
-        profile = "${pkgs.firejail}/etc/firejail/discord.profile";
-      };
       brave = {
         executable = "${lib.getBin pkgs.brave}/bin/brave";
         profile = "${pkgs.firejail}/etc/firejail/brave.profile";
