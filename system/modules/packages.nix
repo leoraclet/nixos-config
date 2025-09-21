@@ -125,6 +125,9 @@
     openssl # Cryptographic library that implements the SSL and TLS protocols
     tre-command # Tree command, improved
     ouch # Command-line utility for easily compressing and decompressing files and directories
+    gzip
+    unrar
+    broot
     samba # Standard Windows interoperability suite of programs for Linux and Unix
     libqalculate # Advanced calculator library
     fish # Smart and user-friendly command line shell
@@ -272,10 +275,17 @@
     ghidra
     metasploit
     nth
+    rustscan
     volatility3
     binwalk
     theharvester
     mitmproxy
+    gobuster
+    proxychains
+    proxychains-ng
+    sherlock
+    photon
+    detect-it-easy
 
     # Utilities
     exiftool

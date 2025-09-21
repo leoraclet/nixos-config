@@ -5,5 +5,5 @@ function image-preview
     set term_width (math (tput cols) - 1)
     set term_height (math (tput lines) - 1)
 
-    chafa "$image" --size="$term_width"x"$term_height"
+    chafa "$image" --size="$term_width"x"$term_height" -f kitty
 end

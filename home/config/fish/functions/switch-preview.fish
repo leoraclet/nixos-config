@@ -1,5 +1,6 @@
 function switch-preview
     set path "$argv[1]"
+    kitten icat --clear --transfer-mode=memory --unicode-placeholder= --stdin=no
 
     if test -f "$path"
         if test ! -s "$path"

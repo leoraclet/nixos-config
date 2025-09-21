@@ -7,7 +7,7 @@
   "window.titleBarStyle": "custom",
   "editor.padding.top": 6,
   "window.menuStyle": "custom",
-  "window.zoomLevel": 0.0,
+  "window.zoomLevel": -0.1,
   "workbench.editor.labelFormat": "short",
   "terminal.integrated.hideOnStartup": "always",
   "terminal.integrated.gpuAcceleration": "on",
@@ -16,7 +16,7 @@
   "editor.multiCursorModifier": "ctrlCmd",
   "editor.scrollbar.horizontalScrollbarSize": 8,
   "editor.smoothScrolling": true,
-  "workbench.editor.showTabs": "none",
+  // "workbench.editor.showTabs": "none",
   "editor.fontSize": 15,
   "extensions.ignoreRecommendations": true,
   "redhat.telemetry.enabled": false,
@@ -27,7 +27,6 @@
   "security.workspace.trust.startupPrompt": "never",
   "security.workspace.trust.enabled": false,
   "editor.minimap.enabled": false,
-  "workbench.panel.opensMaximized": "always",
   "breadcrumbs.enabled": false,
   "extensions.autoUpdate": false,
   "workbench.statusBar.visible": true,
@@ -39,7 +38,8 @@
     "editor.defaultFormatter": "charliermarsh.ruff",
     "editor.codeActionsOnSave": {
       "source.fixAll.ruff": "explicit",
-      "source.organizeImports.ruff": "explicit"
+      "source.organizeImports.ruff": "explicit",
+      "source.fixAll.markdownlint": "explicit"
     }
   },
   "[jsonc]": {
@@ -101,6 +101,8 @@
   "svelte.enable-ts-plugin": true,
   "C_Cpp.intelliSenseEngine": "disabled",
   "[markdown]": {
+    "editor.formatOnSave": true,
+    "editor.formatOnPaste": true,
     "editor.defaultFormatter": "yzhang.markdown-all-in-one"
   },
   "explorer.confirmPasteNative": false,
@@ -116,9 +118,7 @@
     "editor.defaultFormatter": "stylelint.vscode-stylelint"
   },
   "debugpy.showPythonInlineValues": true,
-  "terminal.explorerKind": "external",
   "debug.terminal.clearBeforeReusing": true,
-  "terminal.sourceControlRepositoriesKind": "external",
   "ruff.nativeServer": true,
   "python.languageServer": "Jedi",
   "python.terminal.activateEnvInCurrentTerminal": true,
@@ -126,7 +126,7 @@
   "syncing.separateKeybindings": false,
   "continue.telemetryEnabled": false,
   "yaml.schemas": {
-    "file:///home/leonne/.vscode-oss/extensions/continue.continue-1.2.2-linux-x64/config-yaml-schema.json": [
+    "file:///home/leonne/.vscode-oss/extensions/continue.continue-1.2.4-linux-x64/config-yaml-schema.json": [
       ".continue/**/*.yaml"
     ]
   },
@@ -139,8 +139,22 @@
   "find-it-faster.general.openFileInPreviewEditor": true,
   "workbench.editor.enablePreviewFromQuickOpen": true,
   "workbench.editor.enablePreviewFromCodeNavigation": true,
-  "find-it-faster.general.useTerminalInEditor": true,
   "files.autoSaveWorkspaceFilesOnly": true,
   "files.autoSaveWhenNoErrors": true,
   "files.autoSaveDelay": 500,
+  "terminal.integrated.confirmOnKill": "never",
+  "terminal.integrated.middleClickBehavior": "paste",
+  "terminal.integrated.rightClickBehavior": "paste",
+  "terminal.integrated.shellIntegration.history": 1000,
+  "terminal.integrated.suggest.cdPath": "relative",
+  "gitlens.terminal.overrideGitEditor": false,
+  "workbench.editor.revealIfOpen": true,
+  "search.quickOpen.includeSymbols": true,
+  "workbench.editorAssociations": {
+    "{hexdiff}:/**/*.*": "hexEditor.hexedit",
+    "*.svg": "default"
+  },
+  "markdownlint.config": {
+    "MD033": false,
+  }
 }
