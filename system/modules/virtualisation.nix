@@ -21,6 +21,7 @@
       defaultNetwork.settings.dns_enabled = true;
     };
 
+    # Disable docker because with use Podman instead
     docker = {
       enable = false;
     };

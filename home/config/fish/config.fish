@@ -83,4 +83,4 @@ fzf --fish | source
 atuin init fish | source
 starship init fish --print-full-init | source
 
-fzf_configure_bindings --processes=\cp --history=\cr --directory=\cf --variables=
+fzf_configure_bindings --processes=\cp --history=\ch --directory=\cf --variables=

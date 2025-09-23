@@ -3,7 +3,7 @@
     enable = true;
     defaultApplications = {
       # PDF
-      "application/pdf" = "firefox.desktop";
+      "application/pdf" = "zathura.desktop";
 
       # Web
       "x-scheme-handler/http" = "firefox.desktop";

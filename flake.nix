@@ -25,6 +25,11 @@
       url = "github:Gerg-L/spicetify-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    winapps = {
+      url = "github:winapps-org/winapps";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = {
@@ -32,6 +37,7 @@
     home-manager,
     nvf,
     firefox-addons,
+    winapps,
     ...
   } @ inputs: let
     system = "x86_64-linux";
@@ -44,7 +50,7 @@
     nixosConfigurations.leonne = nixpkgs.lib.nixosSystem {
       inherit system;
       specialArgs = {
-        inherit inputs;
+        inherit inputs system;
       };
       modules = [
         # Configuration
@@ -71,6 +77,19 @@
         }
         # Hardware Configuration (Dell Latitude 5520)
         inputs.nixos-hardware.nixosModules.dell-latitude-5520
+        # https://github.com/winapps-org/winapps
+        (
+          {
+            pkgs,
+            system ? pkgs.system,
+            ...
+          }: {
+            environment.systemPackages = [
+              winapps.packages."${system}".winapps
+              winapps.packages."${system}".winapps-launcher # optional
+            ];
+          }
+        )
       ];
     };
   };
