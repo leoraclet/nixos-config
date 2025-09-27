@@ -3,7 +3,7 @@
     enable = true;
     defaultApplications = {
       # PDF
-      "application/pdf" = "zathura.desktop";
+      "application/pdf" = "org.pwmt.zathura-pdf-mupdf.desktop";
 
       # Web
       "x-scheme-handler/http" = "firefox.desktop";
@@ -18,12 +18,12 @@
       "application/x-extension-xht" = "firefox.desktop";
 
       # Images
-      "image/bmp" = "imv.desktop";
-      "image/gif" = "imv.desktop";
-      "image/jpeg" = "imv.desktop";
-      "image/jpg" = "imv.desktop";
-      "image/png" = "imv.desktop";
-      "image/webp" = "imv.desktop";
+      "image/bmp" = "imv-folder.desktop";
+      "image/gif" = "imv-folder.desktop";
+      "image/jpeg" = "imv-folder.desktop";
+      "image/jpg" = "imv-folder.desktop";
+      "image/png" = "imv-folder.desktop";
+      "image/webp" = "imv-folder.desktop";
 
       # Videos
       "video/mp4" = "umpv.desktop";

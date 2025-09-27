@@ -8,6 +8,7 @@
     udev.packages = with pkgs; [
       platformio # udev rules for platformio
       openocd # required by platformio, see https://github.com/NixOS/nixpkgs/issues/224895
+
       sane-airscan # see https://wiki.nixos.org/wiki/Scanners
     ];
 
@@ -72,13 +73,13 @@
     #========================================#
 
     #! Disabled it because it cause problems with SDDM (login, unlock, ...)
-    fprintd = {
-      enable = false;
-      package = pkgs.fprintd-tod;
-      tod.enable = true;
-      # Search for "libfprint" in packages to find other drivers
-      tod.driver = pkgs.libfprint-2-tod1-broadcom;
-    };
+    # fprintd = {
+    #   enable = false;
+    #   package = pkgs.fprintd-tod;
+    #   tod.enable = true;
+    #   # Search for "libfprint" in packages to find other drivers
+    #   tod.driver = pkgs.libfprint-2-tod1-broadcom;
+    # };
 
     #========================================#
     # Printing

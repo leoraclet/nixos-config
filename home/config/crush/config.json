@@ -1,0 +1,112 @@
+{
+    "$schema": "https://charm.land/crush.json",
+    "lsp": {
+        "typescript": {
+            "command": "typescript-language-server",
+            "args": [
+                "--stdio"
+            ]
+        },
+        "javascript": {
+            "command": "typescript-language-server",
+            "args": [
+                "--stdio"
+            ]
+        },
+        "rust": {
+            "command": "rust-analyzer"
+        },
+        "nix": {
+            "command": "nil"
+        }
+    },
+    "mcp": {
+        "context7": {
+            "type": "stdio",
+            "command": "npx",
+            "args": [
+                "-y",
+                "@upstash/context7-mcp"
+            ]
+        },
+        "playwright": {
+            "type": "stdio",
+            "command": "npx",
+            "args": [
+                "-y",
+                "@playwright/mcp"
+            ]
+        },
+        "shadcn": {
+            "type": "stdio",
+            "command": "npx",
+            "args": [
+                "@heilgar/shadcn-ui-mcp-server"
+            ]
+        },
+        "searxng": {
+            "type": "stdio",
+            "command": "npx",
+            "args": [
+                "-y",
+                "mcp-searxng"
+            ],
+            "env": {
+                "SEARXNG_URL": "http://127.0.0.1:7777"
+            }
+        },
+        "git": {
+            "type": "stdio",
+            "command": "uvx",
+            "args": [
+                "--python",
+                "/run/current-system/sw/bin/python",
+                "mcp-server-git"
+            ]
+        },
+        "docker": {
+            "type": "stdio",
+            "command": "uvx",
+            "args": [
+                "--python",
+                "/run/current-system/sw/bin/python",
+                "docker-mcp"
+            ]
+        },
+        "time": {
+            "type": "stdio",
+            "command": "uvx",
+            "args": [
+                "--python",
+                "/run/current-system/sw/bin/python",
+                "mcp-server-time"
+            ]
+        },
+        "sequential-thinking": {
+            "type": "stdio",
+            "command": "npx",
+            "args": [
+                "-y",
+                "@modelcontextprotocol/server-sequential-thinking"
+            ]
+        },
+        "nixos": {
+            "type": "stdio",
+            "command": "uvx",
+            "args": [
+                "--python",
+                "/run/current-system/sw/bin/python",
+                "mcp-nixos"
+            ]
+        },
+        "filesystem": {
+            "type": "stdio",
+            "command": "npx",
+            "args": [
+                "-y",
+                "@modelcontextprotocol/server-filesystem",
+                "/home/xnm"
+            ]
+        }
+    }
+}

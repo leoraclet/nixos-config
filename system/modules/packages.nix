@@ -72,6 +72,8 @@
     ###################################################
 
     zellij # Terminal workspace with batteries included
+    unzip # Extraction utility for archives compressed in .zip format
+    busybox # Tiny versions of common UNIX utilities in a single small executable
     tmux # Terminal multiplexer
     dust # Disk analyzer
     dua # Disk usage analyzer
@@ -138,8 +140,8 @@
     openvpn3 # OpenVPN 3 Linux Client
     openvpn # Robust and highly flexible tunneling application
     inetutils # Collection of common network programs
-    moreutils
-    posting
+    moreutils # Growing collection of the unix tools that nobody thought to write long ago when unix was young
+    posting # Modern API client that lives in your terminal
     tokei # Count your code, quickly
     dogdns
 

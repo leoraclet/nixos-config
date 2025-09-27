@@ -49,6 +49,8 @@
 
             "Brave" = {
               urls = [{template = "https://search.brave.com/search?q={searchTerms}";}];
+              icon = "https://cdn.search.brave.com/serp/v3/_app/immutable/assets/apple-touch-icon.Bqba6l0U.png";
+              definedAliases = ["@bv"];
             };
 
             "wikipedia".metaData.alias = "@wiki";
@@ -70,6 +72,7 @@
           unpaywall
           cookie-quick-manager
           consent-o-matic
+          privacy-badger
         ];
         settings = {
           # Disable telemetry
