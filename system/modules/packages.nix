@@ -124,12 +124,13 @@
     ghostscript # PostScript interpreter
     pdftk # PDF toolbox
     chafa # Terminal graphics for the 21st century
-    openssl # Cryptographic library that implements the SSL and TLS protocols
+    openssl # Crptographic library that implements the SSL and TLS protocols
     tre-command # Tree command, improved
     ouch # Command-line utility for easily compressing and decompressing files and directories
-    gzip
-    unrar
-    broot
+    gzip # GNU zip compression program
+    zip # Compressor/archiver for creating and modifying zipfiles
+    unrar # Utility for RAR archives
+    broot # Interactive tree view, a fuzzy search, a balanced BFS descent and customizable commands
     samba # Standard Windows interoperability suite of programs for Linux and Unix
     libqalculate # Advanced calculator library
     fish # Smart and user-friendly command line shell
@@ -143,7 +144,10 @@
     moreutils # Growing collection of the unix tools that nobody thought to write long ago when unix was young
     posting # Modern API client that lives in your terminal
     tokei # Count your code, quickly
-    dogdns
+    dogdns # Command-line DNS client
+    websocat # Command-line client for WebSockets (like netcat/socat)
+    fswatch # Cross-platform file change monitor with multiple backends
+    gnupg # Modern release of the GNU Privacy Guard, a GPL OpenPGP implementation
 
     # Monitoring
     iotop # Display I/O usage by processes
@@ -156,13 +160,13 @@
     onefetch # Git repository summary on your terminal
     neofetch # System information
     fastfetch # Faster ... :)
-    ipfetch
-    cpufetch
-    ramfetch
-    starfetch
-    octofetch
-    kmon
-    dig
+    ipfetch # Neofetch but for ip addresses
+    cpufetch # Simplistic yet fancy CPU architecture fetching tool
+    ramfetch # Tool which displays memory information
+    starfetch # CLI star constellations displayer
+    octofetch # Github user information on terminal
+    kmon # Linux Kernel Manager and Activity Monitor
+    dig # Domain name server
 
     ###################################################
     # GUI apps
@@ -197,11 +201,9 @@
     syncthing
     cryptomator
     veracrypt
-    gnupg
     jitsi-meet-electron
     element-desktop
     rocketchat-desktop
-    angryipscanner
     rpi-imager
     remmina
     rustdesk
