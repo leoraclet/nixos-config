@@ -211,6 +211,7 @@
     bitwarden-desktop
     libsForQt5.kdenlive
     rustic # Fast, encrypted, deduplicated backups powered by pure Rust
+    wezterm
 
     ###################################################
     # Robotics (not used now)
