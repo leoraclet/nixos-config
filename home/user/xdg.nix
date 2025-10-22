@@ -1,9 +1,9 @@
 {...}: {
   xdg.mimeApps = {
-    enable = true;
+    enable = false;
     defaultApplications = {
       # PDF
-      "application/pdf" = "org.pwmt.zathura-pdf-mupdf.desktop";
+      "application/pdf" = "firefox.desktop";
 
       # Web
       "x-scheme-handler/http" = "firefox.desktop";

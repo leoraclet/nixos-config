@@ -31,7 +31,7 @@
     enable = true;
     defaultApplications = {
       # PDF
-      "application/pdf" = "org.pwmt.zathura-pdf-mupdf.deskto";
+      "application/pdf" = "firefox.desktop";
 
       # Web
       "x-scheme-handler/http" = "firefox.desktop";

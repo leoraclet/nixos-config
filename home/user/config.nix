@@ -46,5 +46,6 @@ in {
     ".config/discord/settings.json".source = pathToFile "discord/settings.json";
     ".config/VSCodium/User/settings.json".source = pathToFile "VSCodium/settings.json";
     ".config/VSCodium/User/keybindings.json".source = pathToFile "VSCodium/keybindings.json";
+    ".config/mimeapps.list".source = pathToFile "mimeapps.list";
   };
 }
