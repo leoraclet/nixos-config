@@ -107,12 +107,6 @@
         },
         "group/tray": {
             "orientation": "horizontal",
-            "drawer": {
-                "transition-duration": "500",
-                "transition-left-to-right": "true",
-                "children-class": "drawer-child"
-                //"click-to-reveal": "false"
-            },
             "modules": [
                 "custom/trayicon",
                 "tray"
@@ -120,12 +114,6 @@
         },
         "group/storage": {
             "orientation": "horizontal",
-            "drawer": {
-                "transition-duration": "500",
-                "transition-left-to-right": "true",
-                "children-class": "drawer-child"
-                //"click-to-reveal": "false"
-            },
             "modules": [
                 "memory#ram",
                 "memory#swap",
@@ -260,7 +248,6 @@
         "hyprland/window": {
             "format": "{title}",
             "max-length": 48,
-            "tooltip": false,
             "icon": true,
             "icon-size": 18,
             "tooltip": true

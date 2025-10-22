@@ -5,7 +5,7 @@
   "workbench.iconTheme": "material-icon-theme",
   "window.menuBarVisibility": "toggle",
   "window.titleBarStyle": "custom",
-  "editor.padding.top": 6,
+  "editor.padding.top": 0,
   "window.menuStyle": "custom",
   "window.zoomLevel": -0.1,
   "workbench.editor.labelFormat": "short",
@@ -125,11 +125,6 @@
   "python.venvPath": "${workspaceFolder}/.venv",
   "syncing.separateKeybindings": false,
   "continue.telemetryEnabled": false,
-  "yaml.schemas": {
-    "file:///home/leonne/.vscode-oss/extensions/continue.continue-1.2.7-linux-x64/config-yaml-schema.json": [
-      ".continue/**/*.yaml"
-    ]
-  },
   "terminal.integrated.enablePersistentSessions": false,
   "terminal.integrated.persistentSessionReviveProcess": "never",
   "trailing-spaces.trimOnSave": true,
@@ -143,8 +138,6 @@
   "files.autoSaveWhenNoErrors": true,
   "files.autoSaveDelay": 500,
   "terminal.integrated.confirmOnKill": "never",
-  "terminal.integrated.middleClickBehavior": "paste",
-  "terminal.integrated.rightClickBehavior": "paste",
   "terminal.integrated.shellIntegration.history": 1000,
   "terminal.integrated.suggest.cdPath": "relative",
   "gitlens.terminal.overrideGitEditor": false,
@@ -175,5 +168,15 @@
     "*.db3": "${capture}.${extname}-*",
     "*.sdb": "${capture}.${extname}-*",
     "*.s3db": "${capture}.${extname}-*"
+  },
+  "terminal.integrated.mouseWheelZoom": true,
+  "terminal.integrated.tabs.showActions": "always",
+  "terminal.integrated.tabs.showActiveTerminal": "always",
+  "workbench.panel.defaultLocation": "right",
+  "editor.fontFamily": "JetBrainsMono Nerd Font",
+  "yaml.schemas": {
+    "file:///home/leonne/.vscode-oss/extensions/continue.continue-1.2.10-linux-x64/config-yaml-schema.json": [
+      ".continue/**/*.yaml"
+    ]
   }
 }
