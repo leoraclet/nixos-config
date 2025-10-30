@@ -1,4 +1,4 @@
-<div align="center"><img style="width: 400px" src="./assets/nixos-logo.png"></div>
+<div align="center"><img style="width: 300px" src="./assets/nixos-logo.png"></div>
 <h1 align="center">NixOS & Hyprland Config</h1>
 
 <div align="center">

@@ -5,5 +5,7 @@
     nerd-font-patcher
     noto-fonts-color-emoji
     nerd-fonts.jetbrains-mono
+    icomoon-feather
+    iosevka
   ];
 }
