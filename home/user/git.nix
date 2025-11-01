@@ -2,8 +2,8 @@
   programs.git = {
     enable = true;
     lfs.enable = true;
-    userName = "Léo Raclet";
-    userEmail = "leo.raclet@gmail.com";
+    userName = "N£utr0nys";
+    userEmail = "110538448+leoraclet@users.noreply.github.com ";
     extraConfig = {
       gpg.format = "ssh";
       init.defaultBranch = "main";
