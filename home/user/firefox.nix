@@ -60,19 +60,21 @@
           ublock-origin
           bitwarden
           darkreader
+          metamask
           istilldontcareaboutcookies
           violentmonkey
           foxyproxy-standard
           onetab
           languagetool
           localcdn
+          tree-style-tab
           clearurls
           downthemall
           search-by-image
-          unpaywall
           cookie-quick-manager
           consent-o-matic
           privacy-badger
+          wappalyzer
         ];
         settings = {
           # Disable telemetry

@@ -51,21 +51,21 @@
     ###################################################
 
     ollama # Get up and running with large language models locally
-    aichat # Use GPT-4(V), Gemini, LocalAI, Ollama and other LLMs in the terminal
-    aider-chat # Code assistant/chat directly in the terminal
-    alpaca # GUI LLM client with markdown support
-    fabric-ai # AI agent framework for building autonomous agents
+    # aichat # Use GPT-4(V), Gemini, LocalAI, Ollama and other LLMs in the terminal
+    # aider-chat # Code assistant/chat directly in the terminal
+    # alpaca # GUI LLM client with markdown support
+    # fabric-ai # AI agent framework for building autonomous agents
 
     ###################################################
     # GAMING & WINDOWS COMPATIBILITY
     ###################################################
 
-    mangohud # Vulkan and OpenGL overlay for monitoring
-    gamemode # Optimise Linux system performance on demand
-    protonup-ng # CLI program and API to automate the installation and update of Proton-GE
-    gamescope # SteamOS session compositing window manager
-    lutris # Open Source gaming platform for GNU/Linux
-    bottles # Easy-to-use wineprefix manager
+    # mangohud # Vulkan and OpenGL overlay for monitoring
+    # gamemode # Optimise Linux system performance on demand
+    # protonup-ng # CLI program and API to automate the installation and update of Proton-GE
+    # gamescope # SteamOS session compositing window manager
+    # lutris # Open Source gaming platform for GNU/Linux
+    # bottles # Easy-to-use wineprefix manager
     wine-wayland # Open Source implementation of the Windows API on top of X, OpenGL, and Unix
     winetricks # Script to install DLLs needed to work around problems in Wine
 
@@ -204,16 +204,12 @@
     cryptomator
     veracrypt
     jitsi-meet-electron
-    element-desktop
-    rocketchat-desktop
-    rpi-imager
     remmina
     rustdesk
     insomnia
     bitwarden-desktop
     libsForQt5.kdenlive
     rustic # Fast, encrypted, deduplicated backups powered by pure Rust
-    wezterm
 
     ###################################################
     # Robotics (not used now)
@@ -259,42 +255,42 @@
     # Hacking
     ###################################################
 
-    wireshark
-    burpsuite
-    autopsy
-    sleuthkit
-    nmap
-    maltego
-    nikto
-    sqlmap
-    sage
-    aircrack-ng
-    recon-ng
-    scalpel
-    hashcat
-    bettercap
-    kismet
-    ettercap
-    tcpdump
-    john
-    radare2
-    cutter
-    whatweb
-    masscan
-    ghidra
-    metasploit
-    nth
-    rustscan
-    volatility3
-    binwalk
-    theharvester
-    mitmproxy
-    gobuster
-    proxychains
-    proxychains-ng
-    sherlock
-    photon
-    detect-it-easy
+    # wireshark
+    # burpsuite
+    # autopsy
+    # sleuthkit
+    # nmap
+    # maltego
+    # nikto
+    # sqlmap
+    # sage
+    # aircrack-ng
+    # recon-ng
+    # scalpel
+    # hashcat
+    # bettercap
+    # kismet
+    # ettercap
+    # tcpdump
+    # john
+    # radare2
+    # cutter
+    # whatweb
+    # masscan
+    # ghidra
+    # metasploit
+    # nth
+    # rustscan
+    # volatility3
+    # binwalk
+    # theharvester
+    # mitmproxy
+    # gobuster
+    # proxychains
+    # proxychains-ng
+    # sherlock
+    # photon
+    # detect-it-easy
 
     # Utilities
     exiftool
