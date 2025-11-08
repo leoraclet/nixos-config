@@ -178,5 +178,6 @@
     "file:///home/leonne/.vscode-oss/extensions/continue.continue-1.2.10-linux-x64/config-yaml-schema.json": [
       ".continue/**/*.yaml"
     ]
-  }
+  },
+  "continue.pauseTabAutocompleteOnBattery": true
 }

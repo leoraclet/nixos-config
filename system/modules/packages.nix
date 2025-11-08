@@ -44,7 +44,6 @@
     nodejs_24 # JavaScript runtime built on Chrome's V8 JavaScript engine
     python312 # Python programming language, version 3.12
     mamba-cpp
-    conda
 
     ###################################################
     # AI

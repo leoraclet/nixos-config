@@ -43,6 +43,7 @@ in {
     ".config/clipse".source = pathToFile "clipse";
     ".config/crush".source = pathToFile "crush";
     ".config/posting".source = pathToFile "posting";
+    ".config/winapps".source = pathToFile "winapps";
     ".config/discord/settings.json".source = pathToFile "discord/settings.json";
     ".config/VSCodium/User/settings.json".source = pathToFile "VSCodium/settings.json";
     ".config/VSCodium/User/keybindings.json".source = pathToFile "VSCodium/keybindings.json";

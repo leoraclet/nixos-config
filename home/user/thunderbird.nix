@@ -38,39 +38,4 @@
       };
     };
   };
-
-  accounts.email = {
-    accounts.Disroot = {
-      realName = "Disroot";
-      address = "leo.raclet@disroot.org";
-      userName = "leo.raclet@disroot.org";
-      primary = true;
-      imap = {
-        host = "disroot.org";
-        port = 993;
-      };
-      thunderbird = {
-        enable = true;
-        profiles = ["${config.home.username}"];
-      };
-    };
-    accounts.Gmail = {
-      realName = "Gmail";
-      address = "leo.raclet@gmail.com";
-      userName = "leo.raclet@gmail.com";
-      flavor = "gmail.com";
-      imap = {
-        host = "imap.gmail.com";
-        port = 993;
-      };
-      thunderbird = {
-        enable = true;
-        profiles = ["${config.home.username}"];
-        settings = id: {
-          "mail.server.server_${id}.authMethod" = 10;
-          "mail.smtpserver.smtp_${id}.authMethod" = 10;
-        };
-      };
-    };
-  };
 }
