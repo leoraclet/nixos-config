@@ -136,7 +136,7 @@
   "workbench.editor.enablePreviewFromCodeNavigation": true,
   "files.autoSaveWorkspaceFilesOnly": true,
   "files.autoSaveWhenNoErrors": true,
-  "files.autoSaveDelay": 500,
+  "files.autoSaveDelay": 1500,
   "terminal.integrated.confirmOnKill": "never",
   "terminal.integrated.shellIntegration.history": 1000,
   "terminal.integrated.suggest.cdPath": "relative",
