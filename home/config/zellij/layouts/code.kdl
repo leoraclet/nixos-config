@@ -5,7 +5,7 @@ layout cwd="/home/leonne" {
       plugin location="mainbar"
     }
     pane name="nvim" borderless=true {
-      cwd "code"
+      cwd "Documents/code"
     }
   }
 

@@ -19,7 +19,7 @@
     # AI
     #========================================#
     ollama = {
-      enable = true;
+      enable = false;
       # Optional: preload models, see https://ollama.com/library
       loadModels = [
         "llama3.2:3b"
@@ -34,7 +34,7 @@
     n8n.enable = false;
 
     searx = {
-      enable = true;
+      enable = false;
       settings = {
         general = {
           debug = false;

@@ -149,6 +149,7 @@
     websocat # Command-line client for WebSockets (like netcat/socat)
     fswatch # Cross-platform file change monitor with multiple backends
     gnupg # Modern release of the GNU Privacy Guard, a GPL OpenPGP implementation
+    gum # Tasty Bubble Gum for your shell
 
     # Monitoring
     iotop # Display I/O usage by processes
@@ -209,6 +210,8 @@
     bitwarden-desktop
     libsForQt5.kdenlive
     rustic # Fast, encrypted, deduplicated backups powered by pure Rust
+    motrix # Full-featured download manager
+    xarchiver # Archive Manager with GTK frontend
 
     ###################################################
     # Robotics (not used now)

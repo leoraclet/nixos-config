@@ -10,6 +10,6 @@ function kalilinux
     set current_dir "$(pwd)"
     set dir "$(find ~/VM -name "kalilinux" -type d)"
     cd "$dir"
-    quickemu --vm kali-kali-weekly.conf --fullscreen --keyboard_layout fr-fr --public-dir ~/Public/ --display spice
+    quickemu --vm kali-kali-weekly.conf --fullscreen --keyboard_layout fr-fr --public-dir ~/ --display spice
     cd "$current_dir"
 end

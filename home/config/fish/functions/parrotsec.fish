@@ -10,6 +10,6 @@ function parrotsec
     set current_dir "$(pwd)"
     set dir "$(find ~/VM -name "parrotsec" -type d)"
     cd "$dir"
-    quickemu --vm parrotsec-6.4-security.conf --fullscreen --keyboard_layout fr-fr --public-dir ~/Public/ --display spice
+    quickemu --vm parrotsec-6.4-security.conf --fullscreen --keyboard_layout fr-fr --public-dir ~/ --display spice
     cd "$current_dir"
 end

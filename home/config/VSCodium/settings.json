@@ -1,183 +1,225 @@
 {
-  "editor.semanticHighlighting.enabled": true,
-  "editor.mouseWheelZoom": true,
-  "workbench.colorTheme": "Catppuccin Mocha",
-  "workbench.iconTheme": "material-icon-theme",
-  "window.menuBarVisibility": "toggle",
-  "window.titleBarStyle": "custom",
-  "editor.padding.top": 0,
-  "window.menuStyle": "custom",
-  "window.zoomLevel": -0.1,
-  "workbench.editor.labelFormat": "short",
-  "terminal.integrated.hideOnStartup": "always",
-  "terminal.integrated.gpuAcceleration": "on",
-  "editor.cursorBlinking": "smooth",
-  "editor.cursorSmoothCaretAnimation": "on",
-  "editor.multiCursorModifier": "ctrlCmd",
-  "editor.scrollbar.horizontalScrollbarSize": 8,
-  "editor.smoothScrolling": true,
-  // "workbench.editor.showTabs": "none",
-  "editor.fontSize": 15,
-  "extensions.ignoreRecommendations": true,
-  "redhat.telemetry.enabled": false,
-  "editor.suggest.preview": true,
-  // "editor.scrollbar.vertical": "hidden",
-  "editor.scrollbar.verticalScrollbarSize": 8,
-  "security.workspace.trust.untrustedFiles": "open",
-  "security.workspace.trust.startupPrompt": "never",
-  "security.workspace.trust.enabled": false,
-  "editor.minimap.enabled": false,
-  "breadcrumbs.enabled": false,
-  "extensions.autoUpdate": false,
-  "workbench.statusBar.visible": true,
-  "telemetry.telemetryLevel": "off",
-  "workbench.activityBar.location": "top",
-  "workbench.sideBar.location": "left",
-  "[python]": {
+    "editor.semanticHighlighting.enabled": true,
+    "editor.mouseWheelZoom": true,
+    "workbench.colorTheme": "Catppuccin Mocha",
+    "workbench.iconTheme": "material-icon-theme",
+    "window.menuBarVisibility": "toggle",
+    "window.titleBarStyle": "custom",
+    "editor.padding.top": 0,
+    "window.menuStyle": "custom",
+    "window.zoomLevel": -0.1,
+    "workbench.editor.labelFormat": "short",
+    "terminal.integrated.hideOnStartup": "always",
+    "terminal.integrated.gpuAcceleration": "on",
+    "editor.cursorBlinking": "smooth",
+    "editor.cursorSmoothCaretAnimation": "on",
+    "editor.multiCursorModifier": "ctrlCmd",
+    "editor.scrollbar.horizontalScrollbarSize": 8,
+    "editor.smoothScrolling": true,
+    "workbench.editor.showTabs": "none",
+    "editor.fontSize": 15,
+    "extensions.ignoreRecommendations": true,
+    "redhat.telemetry.enabled": false,
+    "editor.suggest.preview": true,
+    // "editor.scrollbar.vertical": "hidden",
+    "editor.scrollbar.verticalScrollbarSize": 8,
+    "security.workspace.trust.untrustedFiles": "open",
+    "security.workspace.trust.startupPrompt": "never",
+    "security.workspace.trust.enabled": false,
+    "editor.minimap.enabled": false,
+    "breadcrumbs.enabled": false,
+    "extensions.autoUpdate": false,
+    "workbench.statusBar.visible": true,
+    "telemetry.telemetryLevel": "off",
+    "workbench.activityBar.location": "top",
+    "workbench.sideBar.location": "left",
+    "[python]": {
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "charliermarsh.ruff",
+        "editor.codeActionsOnSave": {
+            "source.fixAll.ruff": "always",
+            "source.organizeImports.ruff": "always",
+            "source.fixAll.markdownlint": "always",
+            "source.fixAll": "always",
+        }
+    },
+    "[jsonc]": {
+        "editor.defaultFormatter": "vscode.json-language-features",
+        "editor.formatOnSave": true,
+    },
+    "files.autoSave": "afterDelay",
+    "[c]": {
+        "editor.defaultFormatter": "xaver.clang-format",
+        "editor.formatOnSave": true,
+    },
+    "[cpp]": {
+        "editor.defaultFormatter": "xaver.clang-format",
+        "editor.formatOnSave": true,
+    },
+    "[css]": {
+        "editor.defaultFormatter": "stylelint.vscode-stylelint",
+        "editor.formatOnSave": true,
+    },
+    "[javascript]": {
+        "editor.defaultFormatter": "vscode.typescript-language-features",
+        "editor.formatOnSave": true,
+    },
     "editor.formatOnSave": true,
-    "editor.defaultFormatter": "charliermarsh.ruff",
-    "editor.codeActionsOnSave": {
-      "source.fixAll.ruff": "explicit",
-      "source.organizeImports.ruff": "explicit",
-      "source.fixAll.markdownlint": "explicit"
-    }
-  },
-  "[jsonc]": {
-    "editor.defaultFormatter": "vscode.json-language-features",
-    "editor.formatOnSave": true,
-  },
-  "files.autoSave": "afterDelay",
-  "[c]": {
-    "editor.defaultFormatter": "xaver.clang-format",
-    "editor.formatOnSave": true,
-  },
-  "[cpp]": {
-    "editor.defaultFormatter": "xaver.clang-format",
-    "editor.formatOnSave": true,
-  },
-  "[css]": {
-    "editor.defaultFormatter": "stylelint.vscode-stylelint",
-    "editor.formatOnSave": true,
-  },
-  "[javascript]": {
-    "editor.defaultFormatter": "vscode.typescript-language-features",
-    "editor.formatOnSave": true,
-  },
-  "editor.formatOnSave": true,
-  "gopls": {
-    "ui.semanticTokens": true
-  },
-  "material-icon-theme.hidesExplorerArrows": true,
-  "editor.formatOnPaste": true,
-  "todo-tree.highlights.enabled": false,
-  "todo-tree.filtering.ignoreGitSubmodules": true,
-  "explorer.confirmDelete": false,
-  "[yaml]": {
-    "editor.defaultFormatter": "redhat.vscode-yaml",
-    "editor.autoIndent": "advanced"
-  },
-  "[yml]": {
-    "editor.defaultFormatter": "redhat.vscode-yaml",
-    "editor.autoIndent": "advanced"
-  },
-  "[dockercompose]": {
-    "editor.defaultFormatter": "redhat.vscode-yaml",
-    "editor.autoIndent": "advanced"
-  },
-  "[github-actions-workflow]": {
-    "editor.defaultFormatter": "redhat.vscode-yaml",
-    "editor.autoIndent": "advanced"
-  },
-  "terminal.integrated.fontFamily": "JetBrainsMono Nerd Font",
-  "terminal.integrated.fontLigatures.enabled": true,
-  "workbench.startupEditor": "none",
-  "explorer.confirmDragAndDrop": false,
-  "[nix]": {
-    "editor.defaultFormatter": "jnoortheen.nix-ide",
+    "gopls": {
+        "ui.semanticTokens": true
+    },
+    "material-icon-theme.hidesExplorerArrows": true,
     "editor.formatOnPaste": true,
-    "editor.formatOnSave": true,
-    "editor.formatOnType": false
-  },
-  "svelte.enable-ts-plugin": true,
-  "C_Cpp.intelliSenseEngine": "disabled",
-  "[markdown]": {
-    "editor.formatOnSave": true,
-    "editor.formatOnPaste": true,
-    "editor.defaultFormatter": "yzhang.markdown-all-in-one"
-  },
-  "explorer.confirmPasteNative": false,
-  "latex-workshop.formatting.latex": "tex-fmt",
-  "[latex]": {
-    "editor.formatOnPaste": false,
-    "editor.suggestSelection": "recentlyUsedByPrefix",
-    "editor.defaultFormatter": "James-Yu.latex-workshop"
-  },
-  "latex-workshop.bibtex-format.sort.enabled": true,
-  "latex-workshop.latex.autoClean.run": "onSucceeded",
-  "[postcss]": {
-    "editor.defaultFormatter": "stylelint.vscode-stylelint"
-  },
-  "debugpy.showPythonInlineValues": true,
-  "debug.terminal.clearBeforeReusing": true,
-  "ruff.nativeServer": true,
-  "python.languageServer": "Jedi",
-  "python.terminal.activateEnvInCurrentTerminal": true,
-  "python.venvPath": "${workspaceFolder}/.venv",
-  "syncing.separateKeybindings": false,
-  "continue.telemetryEnabled": false,
-  "terminal.integrated.enablePersistentSessions": false,
-  "terminal.integrated.persistentSessionReviveProcess": "never",
-  "trailing-spaces.trimOnSave": true,
-  "periscope.showPreviousResultsWhenNoMatches": true,
-  "nixEnvSelector.useFlakes": true,
-  "find-it-faster.advanced.disableStartupChecks": true,
-  "find-it-faster.general.openFileInPreviewEditor": true,
-  "workbench.editor.enablePreviewFromQuickOpen": true,
-  "workbench.editor.enablePreviewFromCodeNavigation": true,
-  "files.autoSaveWorkspaceFilesOnly": true,
-  "files.autoSaveWhenNoErrors": true,
-  "files.autoSaveDelay": 1500,
-  "terminal.integrated.confirmOnKill": "never",
-  "terminal.integrated.shellIntegration.history": 1000,
-  "terminal.integrated.suggest.cdPath": "relative",
-  "gitlens.terminal.overrideGitEditor": false,
-  "workbench.editor.revealIfOpen": true,
-  "search.quickOpen.includeSymbols": true,
-  "workbench.editorAssociations": {
-    "{hexdiff}:/**/*.*": "hexEditor.hexedit",
-    "*.svg": "default"
-  },
-  "markdownlint.config": {
-    "MD033": false,
-  },
-  "[json]": {
-    "editor.defaultFormatter": "vscode.json-language-features"
-  },
-  "explorer.fileNesting.patterns": {
-    "*.ts": "${capture}.js",
-    "*.js": "${capture}.js.map, ${capture}.min.js, ${capture}.d.ts",
-    "*.jsx": "${capture}.js",
-    "*.tsx": "${capture}.ts",
-    "tsconfig.json": "tsconfig.*.json",
-    "package.json": "package-lock.json, yarn.lock, pnpm-lock.yaml, bun.lockb, bun.lock",
-    "flake.nix": "flake.lock",
-    "Cargo.toml": "Cargo.lock",
-    "*.sqlite": "${capture}.${extname}-*",
-    "*.db": "${capture}.${extname}-*",
-    "*.sqlite3": "${capture}.${extname}-*",
-    "*.db3": "${capture}.${extname}-*",
-    "*.sdb": "${capture}.${extname}-*",
-    "*.s3db": "${capture}.${extname}-*"
-  },
-  "terminal.integrated.mouseWheelZoom": true,
-  "terminal.integrated.tabs.showActions": "always",
-  "terminal.integrated.tabs.showActiveTerminal": "always",
-  "workbench.panel.defaultLocation": "right",
-  "editor.fontFamily": "JetBrainsMono Nerd Font",
-  "yaml.schemas": {
-    "file:///home/leonne/.vscode-oss/extensions/continue.continue-1.2.10-linux-x64/config-yaml-schema.json": [
-      ".continue/**/*.yaml"
-    ]
-  },
-  "continue.pauseTabAutocompleteOnBattery": true
+    "todo-tree.highlights.enabled": false,
+    "todo-tree.filtering.ignoreGitSubmodules": true,
+    "explorer.confirmDelete": false,
+    "[yaml]": {
+        "editor.defaultFormatter": "redhat.vscode-yaml",
+        "editor.autoIndent": "advanced"
+    },
+    "[yml]": {
+        "editor.defaultFormatter": "redhat.vscode-yaml",
+        "editor.autoIndent": "advanced"
+    },
+    "[dockercompose]": {
+        "editor.defaultFormatter": "redhat.vscode-yaml",
+        "editor.autoIndent": "advanced"
+    },
+    "[github-actions-workflow]": {
+        "editor.defaultFormatter": "redhat.vscode-yaml",
+        "editor.autoIndent": "advanced"
+    },
+    "terminal.integrated.fontFamily": "JetBrainsMono Nerd Font",
+    "terminal.integrated.fontLigatures.enabled": true,
+    "workbench.startupEditor": "none",
+    "explorer.confirmDragAndDrop": false,
+    "[nix]": {
+        "editor.defaultFormatter": "jnoortheen.nix-ide",
+        "editor.formatOnPaste": false,
+        "editor.formatOnSave": true,
+        "editor.formatOnType": false
+    },
+    "svelte.enable-ts-plugin": true,
+    "C_Cpp.intelliSenseEngine": "disabled",
+    "[markdown]": {
+        "editor.tabSize": 4,
+        "editor.formatOnSave": true,
+        "editor.formatOnPaste": true,
+        "editor.defaultFormatter": "yzhang.markdown-all-in-one"
+    },
+    "explorer.confirmPasteNative": false,
+    "latex-workshop.formatting.latex": "tex-fmt",
+    "[latex]": {
+        "editor.formatOnPaste": false,
+        "editor.suggestSelection": "recentlyUsedByPrefix",
+        "editor.defaultFormatter": "James-Yu.latex-workshop"
+    },
+    "latex-workshop.bibtex-format.sort.enabled": true,
+    "latex-workshop.latex.autoClean.run": "onSucceeded",
+    "[postcss]": {
+        "editor.defaultFormatter": "stylelint.vscode-stylelint"
+    },
+    "debugpy.showPythonInlineValues": true,
+    "debug.terminal.clearBeforeReusing": true,
+    "ruff.nativeServer": true,
+    "python.languageServer": "Jedi",
+    "python.terminal.activateEnvInCurrentTerminal": true,
+    "python.venvPath": "${workspaceFolder}/.venv",
+    "syncing.separateKeybindings": false,
+    "continue.telemetryEnabled": false,
+    "terminal.integrated.enablePersistentSessions": false,
+    "terminal.integrated.persistentSessionReviveProcess": "never",
+    "trailing-spaces.trimOnSave": true,
+    "periscope.showPreviousResultsWhenNoMatches": true,
+    "nixEnvSelector.useFlakes": true,
+    "find-it-faster.advanced.disableStartupChecks": true,
+    "find-it-faster.general.openFileInPreviewEditor": true,
+    "workbench.editor.enablePreviewFromQuickOpen": true,
+    "workbench.editor.enablePreviewFromCodeNavigation": true,
+    "files.autoSaveWorkspaceFilesOnly": true,
+    "files.autoSaveWhenNoErrors": true,
+    "files.autoSaveDelay": 1500,
+    "terminal.integrated.confirmOnKill": "never",
+    "terminal.integrated.shellIntegration.history": 1000,
+    "terminal.integrated.suggest.cdPath": "relative",
+    "gitlens.terminal.overrideGitEditor": false,
+    "workbench.editor.revealIfOpen": true,
+    "search.quickOpen.includeSymbols": true,
+    "workbench.editorAssociations": {
+        "{hexdiff}:/**/*.*": "hexEditor.hexedit",
+        "*.svg": "default"
+    },
+    "markdownlint.config": {
+        "MD033": false,
+        "MD007": {
+            "indent": 4
+        },
+        "MD045": false
+    },
+    "[json]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "explorer.fileNesting.patterns": {
+        "*.ts": "${capture}.js",
+        "*.js": "${capture}.js.map, ${capture}.min.js, ${capture}.d.ts",
+        "*.jsx": "${capture}.js",
+        "*.tsx": "${capture}.ts",
+        "tsconfig.json": "tsconfig.*.json",
+        "package.json": "package-lock.json, yarn.lock, pnpm-lock.yaml, bun.lockb, bun.lock",
+        "flake.nix": "flake.lock",
+        "Cargo.toml": "Cargo.lock",
+        "*.sqlite": "${capture}.${extname}-*",
+        "*.db": "${capture}.${extname}-*",
+        "*.sqlite3": "${capture}.${extname}-*",
+        "*.db3": "${capture}.${extname}-*",
+        "*.sdb": "${capture}.${extname}-*",
+        "*.s3db": "${capture}.${extname}-*"
+    },
+    "terminal.integrated.mouseWheelZoom": true,
+    "terminal.integrated.tabs.showActions": "always",
+    "terminal.integrated.tabs.showActiveTerminal": "always",
+    "workbench.panel.defaultLocation": "right",
+    "editor.fontFamily": "JetBrainsMono Nerd Font",
+    "yaml.schemas": {
+        "file:///home/leonne/.vscode-oss/extensions/continue.continue-1.2.11-linux-x64/config-yaml-schema.json": [
+            ".continue/**/*.yaml"
+        ]
+    },
+    "continue.pauseTabAutocompleteOnBattery": true,
+    "editor.tabSize": 4,
+    "editor.insertSpaces": true,
+    "editor.detectIndentation": false,
+    "markdown.extension.list.indentationSize": "inherit",
+    "files.associations": {
+        "*.sty": "latex",
+        "*.cls": "latex"
+    },
+    // Hide the following file types from the VS Code folder list.
+    "files.exclude": {
+        "**/*.4ct": true,
+        "**/*.4tc": true,
+        "**/*.fdb_latexmk": true,
+        "**/*.idv": true,
+        "**/*.lg": true,
+        "**/*.lof": true,
+        "**/*.synctex.gz": true,
+        "**/*.synctex(busy)": true,
+        "**/*.tmp": true,
+        "**/*.xref": true,
+        "**/*.fls": true,
+        "**/*.loc": true,
+        "**/*.run.xml": true,
+        "**/*.soc": true,
+        "**/*.snm": true,
+        "**/*.blg": true,
+        "**/*-SAVE-ERROR": true
+    },
+    "latex-workshop.latex.autoBuild.cleanAndRetry.enabled": false,
+    "latex-workshop.latex.outDir": "%DIR%/out_dir",
+    "latex-workshop.latex.clean.subfolder.enabled": true,
+    "latex-workshop.view.pdf.viewer": "tab",
+    "latex-workshop.view.pdf.internal.synctex.keybinding": "double-click",
+    "latex-workshop.intellisense.update.aggressive.enabled": true,
+    "editor.wordWrap": "on",
+    "editor.wrappingIndent": "indent"
 }
