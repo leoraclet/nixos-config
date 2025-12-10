@@ -18,7 +18,10 @@
           force = true;
           default = "ddg";
           privateDefault = "ddg";
-          order = ["ddg" "Brave"];
+          order = [
+            "ddg"
+            "Brave"
+          ];
           engines = {
             "Nix Packages" = {
               urls = [
@@ -60,23 +63,23 @@
           ublock-origin
           bitwarden
           darkreader
-          metamask
           istilldontcareaboutcookies
           violentmonkey
           foxyproxy-standard
           onetab
           languagetool
           localcdn
-          tree-style-tab
           clearurls
-          downthemall
-          search-by-image
           cookie-quick-manager
           consent-o-matic
           privacy-badger
           wappalyzer
         ];
         settings = {
+          # Style settings to makr it better (more compact)
+          "browser.uidensity" = 1;
+          "browser.compactmode.show" = true;
+
           # Disable telemetry
           "browser.newtabpage.activity-stream.feeds.telemetry" = false;
           "browser.ping-centre.telemetry" = false;

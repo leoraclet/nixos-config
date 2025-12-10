@@ -1,0 +1,30 @@
+layout cwd="/home/leonne/Documents/code" {
+    default_tab_template {
+        pane size=1 borderless=true {
+            plugin location="zellij:tab-bar"
+        }
+        children
+        pane size=1 borderless=true {
+            plugin location="zellij:status-bar"
+        }
+    }
+
+    tab name="code" focus=true {
+        pane {
+            command "nvim"
+            args "."
+        }
+    }
+
+    tab name="exec" {
+        pane split_direction="vertical" {
+            pane {
+                name "main"
+            }
+            pane {
+                name "secondary"
+                size "30%"
+            }
+        }
+    }
+}

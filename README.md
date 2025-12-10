@@ -17,33 +17,31 @@
 
 - [Table of Contents](#table-of-contents)
 - [🌟 Showcase](#-showcase)
-- [❤️ Thanks](#️-thanks)
+- [🙏 Acknowledgement](#-acknowledgement)
 - [📖 About](#-about)
-- [✨ Features](#-features)
 - [📦 Content](#-content)
 - [🐟 Useful aliases in Fish Shell](#-useful-aliases-in-fish-shell)
-- [🤖 AI Tools and Services](#-ai-tools-and-services)
 - [🛠️ Developement Environment](#️-developement-environment)
 - [🔧 Components](#-components)
 - [⌨️ Keybindings](#️-keybindings)
 - [🚀 Installation](#-installation)
-  - [With Encryption](#with-encryption)
-  - [Without Encryption](#without-encryption)
+    - [With Encryption](#with-encryption)
+    - [Without Encryption](#without-encryption)
 - [📝 Tips \& Tricks](#-tips--tricks)
-  - [Discord](#discord)
-  - [Home Manager](#home-manager)
-  - [Change MAC address](#change-mac-address)
-  - [Show battery status](#show-battery-status)
-  - [How to Reset Your OpenWebUI Password](#how-to-reset-your-openwebui-password)
-  - [Night mode switch](#night-mode-switch)
-  - [Install VSCode Extensions](#install-vscode-extensions)
-    - [Manual](#manual)
-    - [Automatic](#automatic)
-    - [With Extensions](#with-extensions)
-  - [Printing \& Scanning](#printing--scanning)
-    - [Printing](#printing)
-    - [Scanning](#scanning)
-  - [LUKS keyboard layout](#luks-keyboard-layout)
+    - [Discord](#discord)
+    - [Home Manager](#home-manager)
+    - [Change MAC address](#change-mac-address)
+    - [Show battery status](#show-battery-status)
+    - [How to Reset Your OpenWebUI Password](#how-to-reset-your-openwebui-password)
+    - [Night mode switch](#night-mode-switch)
+    - [Install VSCode Extensions](#install-vscode-extensions)
+        - [Manual](#manual)
+        - [Automatic](#automatic)
+        - [With Extensions](#with-extensions)
+    - [Printing \& Scanning](#printing--scanning)
+        - [Printing](#printing)
+        - [Scanning](#scanning)
+    - [LUKS keyboard layout](#luks-keyboard-layout)
 - [📜 License](#-license)
 
 ## 🌟 Showcase
@@ -63,7 +61,7 @@
 >
 > More comming soon (or not) ...
 
-## ❤️ Thanks
+## 🙏 Acknowledgement
 
 First of all, a big Thank to [**XNM1**](https://github.com/XNM1) for his incredible [NixOS
 Configuration](https://github.com/XNM1/linux-nixos-hyprland-config-dotfiles), which was a
@@ -108,17 +106,6 @@ and features. Notably, it utilizes:
 - **home-manager**: Used to setup user environment (dotfiles)
 - **LUKS**: Used for full-disk encryption
 
-## ✨ Features
-
-- 🔄 **Reproducible**: Built on NixOS, this configuration can be effortlessly reproduced on other
-  machines, ensuring a consistent setup.
-
-- ✅ **Complete**: This system is equipped with a wide range of components and utilities, akin to the
-  completeness of operating systems like MacOS or Windows.
-
-- 📖 **Documented**: Most of the parts of my configuration files are commented and documented with
-  links and explanations if necessary
-
 ## 📦 Content
 
 In this repository, you'll find my :
@@ -135,8 +122,8 @@ that provides various aliases to enhance my experience.
 Common commands:
 
 - `cl`: clear the terminal screen (shorthand for `clear`)
-  - `c`: because I have no time to waste (*sure ...*)
-  - `cls`: because I spent to much time using the devil (**Windows**)
+    - `c`: because I have no time to waste (*sure ...*)
+    - `cls`: because I spent to much time using the devil (**Windows**)
 - `lgit`: launch the `lazygit` command-line Git client
 - `ldocker`: launch the `lazydocker` command-line Docker client
 - `open`: open file with default programm (`open-xdg`)
@@ -173,24 +160,6 @@ And many others ...
 | `hex`   | Displays binary files in hexadecimal format. (`hexyl`)        |
 | `dua`   | Opens interactive disk usage analyzer. (`dua -i`)             |
 | `code`  | Opens current directory in VSCodium. (`codium .`)             |
-
-## 🤖 AI Tools and Services
-
-This configuration includes several AI/LLM tools and services for local development and
-experimentation:
-
-**Ollama** - Local LLM server with pre-loaded models:
-
-- Accessible at `http://localhost:11434`
-- Models: `llama3.2:3b`, `deepseek-r1:1.5b`, `dolphin3:8b`,
-- Text embedding model: `nomic-embed-text`
-
-**AI Tools:**
-
-- `aichat` - ChatGPT-like CLI and REPL with lot of features
-- `aider-chat` - Code assistant/chat directly in the terminal
-- `alpaca` - GUI LLM client with markdown support
-- `fabric-ai` - An open-source framework for augmenting humans using AI
 
 ## 🛠️ Developement Environment
 
@@ -346,18 +315,18 @@ You can refer to this [guide](https://github.com/Jadarma/nixfiles/blob/main/docs
 2. Temporarily install ripgrep, fish and git using the command: `nix-shell -p ripgrep fish git --run fish`. You can also use classic bash and grep for the next step without installing fish and ripgrep.
 3. Run the command `rg --hidden FIXME` and change/add lines to match your device, swaps, partitions, peripherals, file systems, etc. in the configuration files.
 
-> [!IMPORTANT]
->
-> I highly recommend you to go throught all the configurations files and ensure everything is configured to your needs.
->
-> Don't forget to delete or change settings and configurations that are unique to you, like **git** settings, **username**, etc ...
+    > [!IMPORTANT]
+    >
+    > I highly recommend you to go throught all the configurations files and ensure everything is configured to your needs.
+    >
+    > Don't forget to delete or change settings and configurations that are unique to you, like **git** settings, **username**, etc ...
 
-5. Enable `flake` support (more [here](https://nixos.wiki/wiki/Flakes#Enable_flakes_temporarily)) on your current system. Don't forget to run `sudo nixos-rebuild switch` after enabling `flake` in your `/etc/configuration.nix`.
+4. Enable `flake` support (more [right here](https://nixos.wiki/wiki/Flakes#Enable_flakes_temporarily)) on your current system. Don't forget to run `sudo nixos-rebuild switch` after enabling `flake` in your `/etc/configuration.nix`.
 5. Clone this repository
 
-```sh
-git clone https://github.com/leoraclet/nixos-config
-```
+    ```sh
+    git clone https://github.com/leoraclet/nixos-config
+    ```
 
 6. Then, `cd nixos-config`
 7. Run the command `sudo nix flake update --flake /etc/nixos && sudo nixos-rebuild switch --flake ./#your-hostname --upgrade`. Don't forget to replace `your-hostname` with your hostname before running the command; by default, hostname is set to `leonne`.

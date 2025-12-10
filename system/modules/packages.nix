@@ -147,9 +147,11 @@
     tokei # Count your code, quickly
     dogdns # Command-line DNS client
     websocat # Command-line client for WebSockets (like netcat/socat)
+    socat # Utility for bidirectional data transfer between two independent data channels
     fswatch # Cross-platform file change monitor with multiple backends
     gnupg # Modern release of the GNU Privacy Guard, a GPL OpenPGP implementation
     gum # Tasty Bubble Gum for your shell
+    mprocs # TUI tool to run multiple commands in parallel and show the output of each command separately
 
     # Monitoring
     iotop # Display I/O usage by processes
@@ -295,8 +297,8 @@
     # detect-it-easy
 
     # Utilities
-    exiftool
-    macchanger
+    # exiftool
+    # macchanger
 
     ###################################################
     ###################################################

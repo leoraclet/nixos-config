@@ -84,3 +84,14 @@ atuin init fish | source
 starship init fish --print-full-init | source
 
 fzf_configure_bindings --processes=\cp --history=\ch --directory=\cf --variables=
+
+enable_transience
+
+##########################
+# STARTUP COMMANDS
+##########################
+
+zoz
+
+##########################
+##########################

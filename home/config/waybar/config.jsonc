@@ -22,7 +22,7 @@
         "layer": "top",
         "position": "top",
         "name": "main",
-        "height": 10,
+        "height": 5,
         "margin-top": -35,
         "margin-left": 0,
         "reload_style_on_change": true,
@@ -88,11 +88,11 @@
         },
         // Modules
         "disk": {
-            "interval": 16,
+            "interval": 1,
             "format": " {percentage_used}%",
-            "tooltip": "{}",
+            //"tooltip": "{}",
             "tooltip-format": "Free {free}",
-            "on-click": "qdirstat & aplay ~/.config/sounds/interact.wav",
+            "on-click": "qdirstat",
             "states": {
                 "warning": 85,
                 "critical": 95
@@ -141,12 +141,12 @@
             "tooltip-format": "{alt}"
         },
         "custom/battery": {
-            "interval": 4,
+            "interval": 1,
             "return-type": "json",
             "exec": "sh ~/.config/waybar/scripts/bat-pp.sh refresh",
             "exec-on-event": true,
             "format": "{text}%",
-            "on-click": "sh ~/.config/waybar/scripts/bat-pp.sh toggle & aplay ~/.config/sounds/interact.wav",
+            "on-click": "sh ~/.config/waybar/scripts/bat-pp.sh toggle",
             "tooltip": "true",
             "tooltip-format": "{alt}W"
         },
@@ -167,7 +167,7 @@
                     "today": "<span color='#f5e0dc'><b><u>{}</u></b></span>"
                 }
             },
-            "on-click": "chromium --app=https://calendar.google.com & aplay ~/.config/sounds/interact.wav"
+            "on-click": "chromium --app=https://calendar.google.com"
         },
         "cpu": {
             "interval": 1,
@@ -178,28 +178,28 @@
             }
         },
         "hyprland/language": {
-            "format": " {}",
+            "interval": 1,
+            "format": "  {}",
             "format-fi": "Vittu",
             "format-ru": "Блять",
-            "min-length": 7,
-            "on-click": "hyprctl switchxkblayout current next & aplay ~/.config/sounds/interact.wav",
-            "tooltip": false,
+            "min-length": 12,
+            "on-click": "hyprctl switchxkblayout current next",
             "class": "language"
         },
         "memory#ram": {
             "interval": 1,
-            "format": " {percentage}%",
+            "format": "  {percentage}%",
             "states": {
                 "warning": 80,
                 "critical": 95
             },
-            "tooltip": "{}",
+            //"tooltip": "{}",
             "tooltip-format": "{used}/{total} GiB"
         },
         "memory#swap": {
             "interval": 4,
             "format": "󰾵 {swapPercentage}%",
-            "tooltip": "{}",
+            //"tooltip": "{}",
             "tooltip-format": "{swapUsed}/{swapTotal}GiB"
         },
         "network#info": {
@@ -208,7 +208,7 @@
             "format-wifi": "{icon} {bandwidthDownBits}",
             "format-ethernet": "󰈀 {bandwidthDownBits}",
             "min-length": 11,
-            "tooltip": "{}",
+            //"tooltip": "{}",
             "tooltip-format-wifi": "{ifname}\n{essid}\n{signalStrength}% \n{frequency} GHz\n󰇚 {bandwidthDownBits}\n󰕒 {bandwidthUpBits}",
             "tooltip-format-ethernet": "{ifname}\n󰇚 {bandwidthDownBits} \n󰕒 {bandwidthUpBits}",
             "on-click": "iwgtk& aplay ~/.config/sounds/interact.wav",
@@ -281,7 +281,7 @@
                 ]
             },
             "on-click-right": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
-            "on-click": "pwvucontrol & aplay ~/.config/sounds/interact.wav",
+            "on-click": "pwvucontrol",
             "tooltip": true,
             "scroll-step": 5
         },
@@ -293,7 +293,7 @@
             "on-scroll-down": "pactl set-source-volume @DEFAULT_SOURCE@ -5%",
             "max-volume": "100",
             "on-click-right": "pactl set-source-mute @DEFAULT_SOURCE@ toggle",
-            "on-click": "pwvucontrol & aplay ~/.config/sounds/interact.wav",
+            "on-click": "pwvucontrol",
             "tooltip-format": "{source_desc}"
         },
         "temperature": {
@@ -306,11 +306,10 @@
                 "",
                 "",
                 ""
-            ],
-            "tooltip": false
+            ]
         },
         "tray": {
-            "icon-size": 17,
+            "icon-size": 13,
             "spacing": 8
         },
         "custom/spacer1": {

@@ -110,7 +110,10 @@
             {
               key = "<leader>y";
               action = "\"+y";
-              mode = ["n" "v"];
+              mode = [
+                "n"
+                "v"
+              ];
             }
             {
               key = "<leader>p";
@@ -125,7 +128,10 @@
             {
               key = "<leader>d";
               action = "\"_d";
-              mode = ["n" "v"];
+              mode = [
+                "n"
+                "v"
+              ];
             }
             {
               key = "<leader>zig";
@@ -185,7 +191,7 @@
             assembly.enable = true;
             astro.enable = true;
             nu.enable = false;
-            csharp.enable = false;
+            csharp.enable = true;
             julia.enable = false;
             vala.enable = false;
             scala.enable = false;
@@ -208,23 +214,29 @@
             indent-blankline.enable = true;
           };
 
+          tabline.nvimBufferline.enable = true;
           statusline = {
             lualine = {
               enable = true;
-              theme = "gruvbox";
+              theme = "catppuccin";
             };
           };
 
           filetree = {
             neo-tree = {
-              enable = false;
+              enable = true;
             };
           };
 
           theme = {
             enable = true;
-            name = "gruvbox";
-            style = "dark";
+            name = "catppuccin";
+            style = "mocha";
+          };
+
+          utility = {
+            undotree.enable = true;
+            yazi-nvim.enable = true;
           };
 
           autopairs.nvim-autopairs.enable = true;
@@ -240,6 +252,8 @@
           telescope.enable = true;
 
           notes = {
+            neorg.enable = true;
+            orgmode.enable = true;
             todo-comments.enable = true;
           };
 
@@ -248,6 +262,8 @@
             gitsigns.enable = true;
             gitsigns.codeActions.enable = false; # throws an annoying debug message
           };
+
+          dashboard.dashboard-nvim.enable = true;
 
           comments = {
             comment-nvim.enable = true;
@@ -260,7 +276,10 @@
                 nix = "110";
                 ruby = "120";
                 java = "130";
-                go = ["90" "130"];
+                go = [
+                  "90"
+                  "130"
+                ];
               };
             };
           };

@@ -8,14 +8,15 @@ function zoz
 
     # checks whether a directory has been selected
     if test -z "$ZOXIDE_RESULT"
-        exit 0
+        commandline -f repaint
+        return
     end
 
     # extracts the directory name from the absolute path
     set SESSION_TITLE (basename "$ZOXIDE_RESULT")
 
     # get the list of sessions
-    set SESSION_LIST (zellij list-sessions -n ^/dev/null | awk '{print $1}')
+    set SESSION_LIST (zellij list-sessions -n 2>/dev/null | awk '{print $1}')
 
     # Check if session already exists
     if echo "$SESSION_LIST" | grep -q "^$SESSION_TITLE\$"
@@ -26,11 +27,12 @@ function zoz
 
     # If session doesn't exist, ask for layout
     if test "$SESSION_EXISTS" = "no"
-        set LAYOUT (gum choose "default" "dev" "dev-simple" --header "Choose a layout for new session:")
+        set LAYOUT (gum choose "dev" "default" "explorer" --header "Choose a layout for new session:")
 
         if test -z "$LAYOUT"
             echo "No layout selected, aborting"
-            exit 0
+            commandline -f repaint
+            return
         end
     end
 
@@ -63,4 +65,6 @@ function zoz
             zellij --layout "$LAYOUT" attach -c "$SESSION_TITLE"
         end
     end
+
+    commandline -f repaint
 end
