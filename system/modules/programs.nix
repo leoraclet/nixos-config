@@ -9,9 +9,22 @@
     ];
   };
 
+  environment.systemPackages = [
+    pkgs.astal.mpris
+    pkgs.swappy
+    pkgs.loupe
+    pkgs.baobab
+    pkgs.gnome-calendar
+    pkgs.gnome-system-monitor
+    pkgs.gnome-weather
+    pkgs.gnome-clocks
+    pkgs.gnome-software # for flatpak
+  ];
+
   programs = {
     mtr.enable = true;
     fish.enable = true;
+    kdeconnect.enable = true;
 
     hyprland = {
       enable = true;

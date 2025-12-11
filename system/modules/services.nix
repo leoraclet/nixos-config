@@ -156,6 +156,7 @@
     devmon.enable = true; # Automatically mount removable devices
     udisks2.enable = true; # Disk management daemon, required for mounting and unmounting disks
     fwupd.enable = true; # Firmware update daemon, useful for updating firmware of devices like SSDs, GPUs, etc.
+    accounts-daemon.enable = true;
 
     #========================================#
     # Others
