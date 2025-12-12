@@ -1,6 +1,5 @@
 {pkgs, ...}: {
   boot = {
-    tmp.cleanOnBoot = true;
     consoleLogLevel = 0;
     initrd.verbose = false;
     kernelParams = [
