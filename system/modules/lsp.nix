@@ -12,7 +12,7 @@
     nodePackages_latest.bash-language-server
     nodePackages_latest.graphql-language-service-cli
     vue-language-server
-    sumneko-lua-language-server
+    lua-language-server # FIXME
     vhdl-ls
     svls
     svlint
@@ -35,7 +35,6 @@
     vscode-extensions.vadimcn.vscode-lldb
     slint-lsp
     terraform-ls
-    ansible-language-server
     hyprls
     helix-gpt
     texlab
@@ -43,7 +42,6 @@
     # ======================================== #
     # Formatter and Linter Packages
     # ======================================== #
-    typstfmt
     typstyle
     gofumpt
     golangci-lint-langserver

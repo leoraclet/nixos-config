@@ -53,6 +53,8 @@ alias gs="git status"
 alias gl="git log --all --color --decorate --oneline --graph"
 alias extract="ouch decompress"
 alias rm="trash"
+alias restore="restore_trash"
+alias empty="empty_selected_trash"
 
 alias fixsdcard="lspci -knn | grep -iA2 card && modprobe rtsx_pci"
 alias rebuild="~/.config/hypr/scripts/rebuild-system.sh"

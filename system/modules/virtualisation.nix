@@ -1,17 +1,21 @@
 {pkgs, ...}: {
   virtualisation = {
     spiceUSBRedirection.enable = true;
+    containers.enable = true;
+    containers.storage.settings = {
+    };
 
     libvirtd = {
       enable = true;
 
       qemu = {
         swtpm.enable = true;
-        ovmf.enable = true;
-        ovmf.packages = [pkgs.OVMFFull.fd];
+        # ovmf.enable = true; # FIXME
+        # ovmf.packages = [pkgs.OVMFFull.fd]; # FIXME:
       };
     };
 
+    oci-containers.backend = "podman";
     podman = {
       enable = true;
 

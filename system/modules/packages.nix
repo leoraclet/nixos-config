@@ -242,7 +242,7 @@
     dunst
     wlogout
     wl-clipboard
-    rofi-wayland
+    rofi
     waybar
     wttrbar # Weather addon for waybar
     flameshot
