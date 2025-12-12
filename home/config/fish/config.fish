@@ -22,9 +22,10 @@ alias ngc="sudo nix-collect-garbage -d"
 alias npw="sudo nix profile wipe-history --older-than 7d --profile /nix/var/nix/profiles/system"
 
 # Terminal utils aliases
-alias cl="clear"
-alias c="clear"
-alias cls="clear"
+alias clear="printf '\033[2J\033[3J\033[1;1H'"
+alias cl="printf '\033[2J\033[3J\033[1;1H'"
+alias c="printf '\033[2J\033[3J\033[1;1H'"
+alias cls="printf '\033[2J\033[3J\033[1;1H'"
 alias clk="rsclock -c"
 alias tree="tre -e"
 alias treee="eza --tree --icons=always --color=always"
@@ -34,7 +35,7 @@ alias cd="z"
 alias ps="procs"
 alias man="tldr"
 alias du="dust"
-alias mkdir="mkdir -p"
+alias mkdir="mkdir -pv"
 alias home="cd ~"
 alias h="cd ~"
 alias vi="nvim"
@@ -50,12 +51,13 @@ alias f="fzf-file-preview-widget"
 alias ga="git add . -A"
 alias gs="git status"
 alias gl="git log --all --color --decorate --oneline --graph"
+alias extract="ouch decompress"
 
-#alias fixsd="lspci -knn | grep -iA2 card && modprobe rtsx_pci"
+alias fixsdcard="lspci -knn | grep -iA2 card && modprobe rtsx_pci"
 alias rebuild="~/.config/hypr/scripts/rebuild-system.sh"
 
 function multicd
-    echo cd (string repeat -n (math (string length -- $argv[1]) - 1) ../)
+    cd (string repeat -n (math (string length -- $argv[1]) - 1) ../)
     commandline -f repaint
 end
 abbr --add dotdot --regex '^\.\.+$' --function multicd

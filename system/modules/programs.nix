@@ -7,6 +7,12 @@
       pkgs.xdg-desktop-portal-hyprland
       pkgs.xdg-desktop-portal-gtk
     ];
+    config = {
+      common.default = [
+        "hyprland"
+        "gtk"
+      ];
+    };
   };
 
   environment.systemPackages = [
@@ -19,6 +25,9 @@
     pkgs.gnome-weather
     pkgs.gnome-clocks
     pkgs.gnome-software # for flatpak
+
+    pkgs.xdg-desktop-portal-hyprland
+    pkgs.xdg-desktop-portal-gtk
   ];
 
   programs = {
@@ -202,7 +211,7 @@
 
             # Language modules that are not as common.
             assembly.enable = true;
-            astro.enable = true;
+            astro.enable = false;
             nu.enable = false;
             csharp.enable = true;
             julia.enable = false;
@@ -213,7 +222,7 @@
             dart.enable = false;
             ocaml.enable = false;
             elixir.enable = false;
-            haskell.enable = true;
+            haskell.enable = false;
             ruby.enable = false;
             fsharp.enable = false;
 

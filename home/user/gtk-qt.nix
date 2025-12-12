@@ -17,6 +17,10 @@ in {
   home.packages = with pkgs; [
     papirus-folders # Icons
     catppuccinKvantum
+
+    # I don't know If I need these
+    libsForQt5.qt5ct
+    kdePackages.qt6ct
   ];
 
   # Mouse cursor - Only non-blue Catppuccin
@@ -62,7 +66,9 @@ in {
   qt = {
     enable = true;
     platformTheme.name = "kvantum";
-    style.name = "kvantum";
+    style = {
+      name = "kvantum";
+    };
   };
 
   xdg.configFile = {

@@ -23,5 +23,6 @@
     ./fhs.nix
     ./firewall.nix
     ./lsp.nix
+    ./env.nix
   ];
 }

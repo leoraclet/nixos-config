@@ -3,6 +3,7 @@
   pkgs,
   ...
 }: {
+  # https://gerg-l.github.io/spicetify-nix/themes.html
   programs.spicetify = let
     spicePkgs = inputs.spicetify-nix.legacyPackages.${pkgs.system};
   in {

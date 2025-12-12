@@ -73,7 +73,6 @@
           cookie-quick-manager
           consent-o-matic
           privacy-badger
-          wappalyzer
         ];
         settings = {
           # Style settings to makr it better (more compact)

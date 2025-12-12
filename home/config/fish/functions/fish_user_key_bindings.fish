@@ -19,6 +19,7 @@ function fish_user_key_bindings
     bind \e\cy yazi_cd_quit -M insert
     bind \e\cv "nvim ." -M insert
     bind \e\cz zoz -M insert
+    bind \e\cc clear -M insert
 
     bind \ea aichat_fish -M insert
 

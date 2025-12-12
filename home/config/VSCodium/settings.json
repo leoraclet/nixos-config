@@ -52,7 +52,7 @@
     "diffEditor.ignoreTrimWhitespace": false,
     "diffEditor.wordWrap": "on",
     "editor.stickyScroll.enabled": false,
-    "editor.wordWrap": "wordWrapColumn",
+    // "editor.wordWrap": "wordWrapColumn",
     // =====================================
     // 🎨 Themes, Icons & UI Layout
     // =====================================

@@ -8,7 +8,7 @@ function quickvm -d "Start a QuickEMU VM from anywhere"
     set user YOUR_USER_HERE
   end
 
-  cd ~/VM/quickvm/
+  cd ~/Data/VM/quickvm/
 
   quickemu --vm $vm_name.conf --display none; ssh-keygen -R [localhost]:22220; ssh $user@localhost -p 22220; cat $vm_name/$vm_name.pid | xargs kill
 

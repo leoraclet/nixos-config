@@ -25,7 +25,6 @@
     terraform # Tool for building, changing, and versioning infrastructure
     license-generator # Command-line tool for generating license files
     git-ignore # Quickly and easily fetch .gitignore templates from gitignore.io
-    mpi # Open source MPI-3 implementation
 
     # Languages
     uv # Extremely fast Python package installer and resolver, written in Rust
@@ -35,21 +34,17 @@
     jdk # Open-source Java Developement Kit
     gcc # GNU Compiler Collection, a set of compilers for various programming languages
     clang # C, C++, and Objective-C compiler
-    lld # LLVM linker, a drop-in replacement for GNU ld
-    lldb # LLVM debugger, a drop-in replacement for GNU gdb
-    musl # Lightweight, fast, and simple C standard library implementation
     zig # General-purpose programming language designed for robustness, optimality, and clarity
     nim # Nim programming language, a statically typed compiled systems programming language
     rustup # Toolchain installer for the Rust programming language
     nodejs_24 # JavaScript runtime built on Chrome's V8 JavaScript engine
     python312 # Python programming language, version 3.12
-    mamba-cpp
 
     ###################################################
     # AI
     ###################################################
 
-    ollama # Get up and running with large language models locally
+    # ollama # Get up and running with large language models locally
     # aichat # Use GPT-4(V), Gemini, LocalAI, Ollama and other LLMs in the terminal
     # aider-chat # Code assistant/chat directly in the terminal
     # alpaca # GUI LLM client with markdown support
@@ -65,8 +60,8 @@
     # gamescope # SteamOS session compositing window manager
     # lutris # Open Source gaming platform for GNU/Linux
     # bottles # Easy-to-use wineprefix manager
-    wine-wayland # Open Source implementation of the Windows API on top of X, OpenGL, and Unix
-    winetricks # Script to install DLLs needed to work around problems in Wine
+    # wine-wayland # Open Source implementation of the Windows API on top of X, OpenGL, and Unix
+    # winetricks # Script to install DLLs needed to work around problems in Wine
 
     ###################################################
     # CLI
@@ -74,8 +69,6 @@
 
     zellij # Terminal workspace with batteries included
     unzip # Extraction utility for archives compressed in .zip format
-    busybox # Tiny versions of common UNIX utilities in a single small executable
-    tmux # Terminal multiplexer
     dust # Disk analyzer
     dua # Disk usage analyzer
     yazi # Terminal file manager
@@ -185,50 +178,48 @@
       withTTS = true;
     })
     spotify
-    bloomeetunes
-    tor-browser
     vlc
     vscodium
     firefox
     nemo
     orca-slicer
-    inkscape
-    gimp
-    obs-studio
     onlyoffice-desktopeditors
     qalculate-gtk
     brave # A chromium based browser as an alternative if needed
-    cryptpad
     freerdp
     notepad-next
     localsend
-    syncthing
-    cryptomator
-    veracrypt
-    jitsi-meet-electron
-    remmina
-    rustdesk
-    insomnia
-    bitwarden-desktop
-    libsForQt5.kdenlive
-    rustic # Fast, encrypted, deduplicated backups powered by pure Rust
     motrix # Full-featured download manager
     xarchiver # Archive Manager with GTK frontend
+
+    # tor-browser
+    # obs-studio
+    # inkscape
+    # gimp
+    # syncthing
+    # cryptomator
+    # veracrypt
+    # cryptpad
+    # jitsi-meet-electron
+    # remmina
+    # rustdesk
+    # insomnia
+    # libsForQt5.kdenlive
 
     ###################################################
     # Robotics (not used now)
     ###################################################
 
-    kicad # Open Source Electronics Design Automation suite
-    freecad # General purpose Open Source 3D CAD/MCAD/CAx/CAE/PLM modeler
-    openscad # OpenSCAD is a software for creating solid 3D CAD objects
+    # kicad # Open Source Electronics Design Automation suite
+    # freecad # General purpose Open Source 3D CAD/MCAD/CAx/CAE/PLM modeler
+    # openscad # OpenSCAD is a software for creating solid 3D CAD objects
 
     ###################################################
     # Backup (not used now)
     ###################################################
 
-    rclone # Sync files and directories to and from major cloud storage
-    rclone-browser # Graphical Frontend to Rclone written in Qt
+    # rclone # Sync files and directories to and from major cloud storage
+    # rclone-browser # Graphical Frontend to Rclone written in Qt
 
     ###################################################
     # Hyprland

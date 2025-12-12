@@ -4,7 +4,7 @@ show_startup_tips false
 show_release_notes false
 copy_on_select true
 pane_frames false
-simplified_ui true
+simplified_ui false
 
 themes {
     catppuccin-frappe {
@@ -85,6 +85,8 @@ keybinds {
         bind "L" { Resize "Decrease Right"; }
         bind "=" "+" { Resize "Increase"; }
         bind "-" { Resize "Decrease"; }
+
+        bind "Enter" { SwitchToMode "Normal"; }
     }
 
     pane clear-defaults=true {
@@ -104,6 +106,8 @@ keybinds {
         bind "w" { ToggleFloatingPanes; SwitchToMode "Normal"; }
         bind "e" { TogglePaneEmbedOrFloating; SwitchToMode "Normal"; }
         bind "c" { SwitchToMode "RenamePane"; PaneNameInput 0;}
+
+        bind "Enter" { SwitchToMode "Normal"; }
     }
 
     move clear-defaults=true {
@@ -115,6 +119,8 @@ keybinds {
         bind "j" "Down" { MovePane "Down"; }
         bind "k" "Up" { MovePane "Up"; }
         bind "l" "Right" { MovePane "Right"; }
+
+        bind "Enter" { SwitchToMode "Normal"; }
     }
 
     tab clear-defaults=true {
@@ -136,6 +142,7 @@ keybinds {
         bind "8" { GoToTab 8; SwitchToMode "Normal"; }
         bind "9" { GoToTab 9; SwitchToMode "Normal"; }
         bind "Tab" { ToggleTab; }
+
         bind "Enter" { SwitchToMode "Normal"; }
     }
 
@@ -200,6 +207,14 @@ keybinds {
         bind "Alt -" { Resize "Decrease"; }
         bind "Alt [" { PreviousSwapLayout; }
         bind "Alt ]" { NextSwapLayout; }
+
+        bind "Ctrl y" {
+            LaunchOrFocusPlugin "file:~/.config/zellij/plugins/room.wasm" {
+                floating true
+                ignore_case true
+                quick_jump true
+            }
+        }
     }
 
 
