@@ -122,6 +122,7 @@
     "latex-workshop.view.pdf.viewer": "tab",
     "latex-workshop.view.pdf.internal.synctex.keybinding": "double-click",
     "latex-workshop.intellisense.update.aggressive.enabled": true,
+    "direnv.restart.automatic": true,
     // =====================================
     // 🧪 Python, Go, Language Servers
     // =====================================
@@ -342,4 +343,5 @@
     "redhat.telemetry.enabled": false,
     "periscope.showPreviousResultsWhenNoMatches": true,
     "trailing-spaces.trimOnSave": true,
+    "nixEnvSelector.suggestion": false,
 }

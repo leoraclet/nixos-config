@@ -21,8 +21,6 @@
     direnv # Shell extension that manages your environment
     pari # Computer algebra system for high-performance number theory computations
     devbox # Instant, easy, predictable shells and containers
-    ansible # Radically simple IT automation
-    terraform # Tool for building, changing, and versioning infrastructure
     license-generator # Command-line tool for generating license files
     git-ignore # Quickly and easily fetch .gitignore templates from gitignore.io
 
@@ -33,12 +31,10 @@
     bun # Incredibly fast JavaScript runtime, bundler, transpiler and package manager
     jdk # Open-source Java Developement Kit
     gcc # GNU Compiler Collection, a set of compilers for various programming languages
-    clang # C, C++, and Objective-C compiler
     zig # General-purpose programming language designed for robustness, optimality, and clarity
     nim # Nim programming language, a statically typed compiled systems programming language
     rustup # Toolchain installer for the Rust programming language
     nodejs_24 # JavaScript runtime built on Chrome's V8 JavaScript engine
-    python312 # Python programming language, version 3.12
 
     ###################################################
     # AI
@@ -146,6 +142,8 @@
     gum # Tasty Bubble Gum for your shell
     mprocs # TUI tool to run multiple commands in parallel and show the output of each command separately
     trashy # Simple, fast, and featureful alternative to rm and trash-cli
+    kmon # Linux Kernel Manager and Activity Monitor
+    dig # Domain name server
 
     # Monitoring
     iotop # Display I/O usage by processes
@@ -163,8 +161,6 @@
     ramfetch # Tool which displays memory information
     starfetch # CLI star constellations displayer
     octofetch # Github user information on terminal
-    kmon # Linux Kernel Manager and Activity Monitor
-    dig # Domain name server
 
     ###################################################
     # GUI apps
