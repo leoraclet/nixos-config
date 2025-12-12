@@ -145,6 +145,7 @@
     gnupg # Modern release of the GNU Privacy Guard, a GPL OpenPGP implementation
     gum # Tasty Bubble Gum for your shell
     mprocs # TUI tool to run multiple commands in parallel and show the output of each command separately
+    trashy # Simple, fast, and featureful alternative to rm and trash-cli
 
     # Monitoring
     iotop # Display I/O usage by processes
