@@ -18,7 +18,7 @@ for file in $fisher_path/conf.d/*.fish
 end
 
 # System aliases
-alias ngc="sudo nix-collect-garbage -d"
+alias ngc="sudo nix-collect-garbage --delete-older-than 1d"
 alias npw="sudo nix profile wipe-history --older-than 7d --profile /nix/var/nix/profiles/system"
 
 # Terminal utils aliases

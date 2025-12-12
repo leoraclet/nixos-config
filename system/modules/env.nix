@@ -12,9 +12,6 @@
     CLUTTER_BACKEND = "wayland";
     ELECTRON_OZONE_PLATFORM_HINT = "wayland";
     NIXOS_XDG_OPEN_USE_PORTAL = "1";
-    XDG_CACHE_HOME = "\${HOME}/.local/state";
-    XDG_CONFIG_HOME = "\${HOME}/.config";
-    XDG_DATA_HOME = "\${HOME}/.local/share";
 
     # Application Specific
     MOZ_ENABLE_WAYLAND = "1";
