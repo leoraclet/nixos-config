@@ -34,7 +34,7 @@
     - [Show battery status](#show-battery-status)
     - [How to Reset Your OpenWebUI Password](#how-to-reset-your-openwebui-password)
     - [Night mode switch](#night-mode-switch)
-    - [Install VSCode Extensions](#install-vscode-extensions)
+    - [Install VSCodium Extensions](#install-vscodium-extensions)
         - [Manual](#manual)
         - [Automatic](#automatic)
         - [With Extensions](#with-extensions)
@@ -195,48 +195,48 @@ shell when I'm in the directory (do `direnv allow` in the project directory to m
 Here is a list of every components that I use on my system to perform the various tasks of a modern
 OS.
 
-| Component            | Name                                   |
-| -------------------- | -------------------------------------- |
-| Distro               | NixOS                                  |
-| Shell                | Fish                                   |
-| Display Server       | Wayland                                |
-| WM (Compositor)      | Hyprland                               |
-| Bar                  | Waybar                                 |
-| Notification         | Dunst                                  |
-| Launcher             | Rofi-Wayland                           |
-| Editor               | Helix, Nvim (with `nvf`), VSCodium     |
-| Terminal             | Kitty + Starship                       |
-| OSD                  | Avizo                                  |
-| Night Gamma          | Hyprsunset                             |
-| Fetch Utility        | Neofetch, Fastfetch, Onefetch          |
-| Theme                | Catppuccin Macchiato                   |
-| Icons                | Numix-Circle                           |
-| Font                 | JetBrains Mono + Nerd Font Patch       |
-| Player               | Spotify + Spicetify + VLC              |
-| File Browser         | Nemo + Yazi                            |
-| Internet Browser     | Firefox, Zen Browser, Brave (chronium) |
-| Private Browser      | Tor Browser                            |
-| Calculator           | qalculate-gtk (GUI) + libqalculate     |
-| Mimetypes            | MPV, Imv, Zathura                      |
-| Image Editor         | Swappy                                 |
-| Screenshot           | Grim + Slurp                           |
-| Recorder             | OSB Studio                             |
-| Clipboard            | Wl-clipboard + Cliphist                |
-| Idle                 | Hypridle                               |
-| Lock                 | Hyprlock                               |
-| Logout menu          | Wlogout                                |
-| Wallpaper            | Hyprpaper                              |
-| Graphical Boot       | Plymouth + Catppuccin-plymouth         |
-| Display Manager      | SDDM                                   |
-| Containerization     | Podman & Docker                        |
-| Terminal Multiplexer | Zellij                                 |
-| Office Suite         | OnlyOffice                             |
-| Email Client         | Thunderbird                            |
-| Notetaking           | Obsidian                               |
-| Messaging            | Discord + Signal + Telegram            |
-| Image Editing        | GIMP + Inkspace                        |
-| Backup               | Rclone                                 |
-| 3D Slicer            | Orca Slicer                            |
+| Component            | Name                               |
+| -------------------- | ---------------------------------- |
+| Distro               | NixOS                              |
+| Shell                | Fish                               |
+| Display Server       | Wayland                            |
+| WM (Compositor)      | Hyprland                           |
+| Bar                  | Waybar                             |
+| Notification         | Dunst                              |
+| Launcher             | Rofi                               |
+| Editor               | Helix, Nvim, Zed, VSCodium |
+| Terminal             | Kitty + Starship                   |
+| OSD                  | Avizo                              |
+| Night Gamma          | Hyprsunset                         |
+| Fetch Utility        | Neofetch, Fastfetch, Onefetch      |
+| Theme                | Catppuccin Macchiato               |
+| Icons                | Numix-Circle                       |
+| Font                 | JetBrains Mono + Nerd Font Patch   |
+| Player               | Spotify + Spicetify + VLC          |
+| File Browser         | Nemo + Yazi                        |
+| Internet Browser     | Firefox, Brave (chronium)          |
+| Private Browser      | Tor Browser                        |
+| Calculator           | qalculate-gtk (GUI) + libqalculate |
+| Mimetypes            | MPV, Imv, Zathura                  |
+| Image Editor         | Swappy                             |
+| Screenshot           | Grim + Slurp & Flameshot           |
+| Recorder             | OSB Studio                         |
+| Clipboard            | Wl-clipboard + Cliphist            |
+| Idle                 | Hypridle                           |
+| Lock                 | Hyprlock                           |
+| Logout menu          | Wlogout                            |
+| Wallpaper            | Hyprpaper                          |
+| Graphical Boot       | Plymouth + Catppuccin-plymouth     |
+| Display Manager      | SDDM                               |
+| Containerization     | Podman                             |
+| Terminal Multiplexer | Zellij                             |
+| Office Suite         | OnlyOffice                         |
+| Email Client         | Thunderbird                        |
+| Notetaking           | Obsidian                           |
+| Messaging            | Discord + Signal + Telegram        |
+| Image Editing        | GIMP + Inkspace                    |
+| Backup               | Rclone                             |
+| 3D Slicer            | Orca Slicer                        |
 
 ## ⌨️ Keybindings
 
@@ -307,7 +307,7 @@ You can refer to this [guide](https://github.com/Jadarma/nixfiles/blob/main/docs
 >
 > Refer to this [section](#luks-keyboard-layout) to avoid problems related to keyboard layout when entering LUKS password.
 >
-> It shouldn't be needed but I still recommend to it as it appear the best way to ensure everything will work as expected.
+> It shouldn't be needed, but I still recommend to it as it appear the best way to ensure everything will work as expected.
 
 ### Without Encryption
 
@@ -373,7 +373,7 @@ To enumerate all power devices, execute
 upower --enumerate
 ```
 
-Then to show unformation on the battery (for example)
+Then to show information on the battery (for example)
 
 ```bash
 upower -i (upower --enumerate | grep battery)
@@ -403,7 +403,7 @@ or
 hyprsunset --help  # To see all avaible commands
 ```
 
-### Install VSCode Extensions
+### Install VSCodium Extensions
 
 #### Manual
 
@@ -471,7 +471,7 @@ scanimage --device <your-device> --format=png > output.png
 
 ### LUKS keyboard layout
 
-When using LUKS encryption, the default keymap used at the password prompt is US QWERTY.
+When using LUKS encryption, the default key map used at the password prompt is US QWERTY.
 
 To avoid issues caused by mismatched keyboard layouts, you can follow [this Stack Overflow answer](https://unix.stackexchange.com/questions/174572/unable-to-open-luks-encrypted-device-wrong-password/174657#174657) to add an additional key for decrypting the LUKS device.
 
