@@ -13,7 +13,7 @@
     ];
 
     supportedFilesystems = ["ntfs"];
-    tmp.cleanOnBoot = true;
+    # tmp.cleanOnBoot = true;
     loader = {
       efi.canTouchEfiVariables = true;
       grub = {
