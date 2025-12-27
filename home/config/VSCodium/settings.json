@@ -62,7 +62,7 @@
     "workbench.editor.labelFormat": "short",
     "workbench.editor.showTabs": "none",
     "workbench.sideBar.location": "left",
-    "workbench.statusBar.visible": false,
+    "workbench.statusBar.visible": true,
     "workbench.activityBar.location": "bottom",
     "workbench.panel.defaultLocation": "right",
     "workbench.startupEditor": "none",
@@ -73,10 +73,6 @@
     "workbench.tree.enableStickyScroll": false,
     "workbench.tree.renderIndentGuides": "none",
     "workbench.tree.indent": 10,
-    // =====================================
-    // 🪟 Window & Title Bar
-    // =====================================
-    "window.menuBarVisibility": "toggle",
     "window.titleBarStyle": "custom",
     "window.menuStyle": "custom",
     "window.zoomLevel": -0.1,

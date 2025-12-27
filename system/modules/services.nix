@@ -164,7 +164,7 @@
 
     xserver = {
       enable = true;
-
+      videoDrivers = ["modesetting"];
       xkb = {
         layout = "fr";
         variant = "azerty";
@@ -177,6 +177,7 @@
         autoNumlock = true;
         theme = "catppuccin-mocha";
         package = pkgs.kdePackages.sddm;
+        wayland.enable = false;
       };
     };
   };
