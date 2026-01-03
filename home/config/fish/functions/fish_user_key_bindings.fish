@@ -24,4 +24,7 @@ function fish_user_key_bindings
     bind \ea aichat_fish -M insert
 
     bind down _atuin_search -M insert
+
+    bind -M insert ! bind_bang
+    bind -M insert '$' bind_dollar
 end

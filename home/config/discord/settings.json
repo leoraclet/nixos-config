@@ -24,5 +24,6 @@
   "OPEN_ON_STARTUP": false,
   "MINIMIZE_TO_TRAY": false,
   "offloadAdmControls": true,
-  "enableHardwareAcceleration": true
+  "enableHardwareAcceleration": true,
+  "asyncVideoInputDeviceInit": false
 }

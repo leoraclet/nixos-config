@@ -106,9 +106,9 @@
     // "continue.telemetryEnabled": false,
     // "continue.pauseTabAutocompleteOnBattery": true,
     "nixEnvSelector.useFlakes": true,
-    "find-it-faster.advanced.disableStartupChecks": true,
-    "find-it-faster.general.openFileInPreviewEditor": true,
+    "nixEnvSelector.suggestion": false,
     "gitlens.terminal.overrideGitEditor": false,
+    // LATEX
     "latex-workshop.formatting.latex": "tex-fmt",
     "latex-workshop.bibtex-format.sort.enabled": true,
     "latex-workshop.latex.autoClean.run": "onSucceeded",
@@ -119,6 +119,25 @@
     "latex-workshop.view.pdf.internal.synctex.keybinding": "double-click",
     "latex-workshop.intellisense.update.aggressive.enabled": true,
     "direnv.restart.automatic": true,
+    // VHDL
+    "vhdl-by-hgb.vhdl-formatter.case.keyword": "UpperCase",
+    "vhdl-by-hgb.vhdl-formatter.case.typename": "UpperCase",
+    "vhdl-by-hgb.vhdl-formatter.indentation": "  ",
+    "vhdl-by-hgb.vhdl-formatter.insertFinalNewline": true,
+    "vhdl-by-hgb.vhdl-formatter.align.procedure": true,
+    "vhdl-by-hgb.vhdl-formatter.align.port": true,
+    "vhdl-by-hgb.vhdl-formatter.align.generic": true,
+    "vhdl-by-hgb.vhdl-formatter.align.function": true,
+    "vhdl-by-hgb.vhdl-formatter.align.all": true,
+    "vhdl-by-hgb.vhdl-formatter.align.comments": true,
+    // MARKDOWN
+    "markdown.extension.showActionButtons": true,
+    "markdown.extension.toc.levels": "2..6",
+    "markdown.extension.toc.omittedFromToc": {
+        "README.md": [
+            "## Table of contents"
+        ]
+    },
     // =====================================
     // 🧪 Python, Go, Language Servers
     // =====================================
@@ -215,6 +234,9 @@
     },
     "[json]": {
         "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "[vhdl]": {
+        "editor.defaultFormatter": "p2l2.vhdl-by-hgb"
     },
     // =====================================
     // 📁 File Management & Associations
@@ -339,5 +361,7 @@
     "redhat.telemetry.enabled": false,
     "periscope.showPreviousResultsWhenNoMatches": true,
     "trailing-spaces.trimOnSave": true,
-    "nixEnvSelector.suggestion": false,
+    "vhdl-by-hgb.vhdlls.toml.generation": "manual",
+    "autoOpenPreviewPanel.openPreviewToSide": true,
+    "autoOpenPreviewPanel.languages": "markdown",
 }
