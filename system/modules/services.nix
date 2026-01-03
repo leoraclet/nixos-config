@@ -175,7 +175,7 @@
       sddm = {
         enable = true;
         autoNumlock = true;
-        theme = "catppuccin-mocha";
+        theme = "catppuccin-mocha-mauve";
         package = pkgs.kdePackages.sddm;
         wayland.enable = true;
       };
