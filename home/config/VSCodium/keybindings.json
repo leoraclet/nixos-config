@@ -30,16 +30,16 @@
         "command": "editor.action.revealDeclaration"
     },
     {
-        "key": "ctrl+j",
+        "key": "ctrl+m",
         "command": "periscope.search"
     },
     {
-        "key": "ctrl+m",
-        "command": "find-it-faster.findFiles"
+        "key": "ctrl+o",
+        "command": "fzf-picker.findFiles"
     },
     {
         "key": "ctrl+shift+j",
-        "command": "-find-it-faster.findFiles"
+        "command": "-fzf-picker.findFiles"
     },
     {
         "key": "alt+left",

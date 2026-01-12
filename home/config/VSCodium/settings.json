@@ -64,7 +64,6 @@
     "workbench.sideBar.location": "left",
     "workbench.statusBar.visible": true,
     "workbench.activityBar.location": "bottom",
-    "workbench.panel.defaultLocation": "right",
     "workbench.startupEditor": "none",
     "workbench.editor.enablePreviewFromQuickOpen": true,
     "workbench.editor.enablePreviewFromCodeNavigation": true,
@@ -138,6 +137,18 @@
             "## Table of contents"
         ]
     },
+    // FZF PICKER
+    // Setup fzf-picker extension
+    "fzf-picker.customTasks": [
+        // Choose folder to open on new window
+        {
+            "name": "zoxide",
+            "command": "cursor $(zoxide query --interactive)"
+        }
+    ],
+    // Allow top open a file with line number
+    "fzf-picker.general.openCommand": "codium -g",
+    "fzf-picker.cache.directory": "/home/user/.cache/fzf-picker",
     // =====================================
     // 🧪 Python, Go, Language Servers
     // =====================================
@@ -364,4 +375,8 @@
     "vhdl-by-hgb.vhdlls.toml.generation": "manual",
     "autoOpenPreviewPanel.openPreviewToSide": true,
     "autoOpenPreviewPanel.languages": "markdown",
+    "terminal.integrated.enableImages": true,
+    "license.default": "MIT",
+    "license.author": "N£utr0nys",
+    "editor.wordWrap": "on",
 }
