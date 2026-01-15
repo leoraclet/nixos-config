@@ -187,7 +187,6 @@
     notepad-next
     localsend
     motrix # Full-featured download manager
-    xarchiver # Archive Manager with GTK frontend
     zed-editor-fhs
 
     # tor-browser

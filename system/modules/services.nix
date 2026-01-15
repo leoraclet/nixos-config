@@ -1,9 +1,4 @@
-{
-  pkgs,
-  lib,
-  config,
-  ...
-}: {
+{pkgs, ...}: {
   services = {
     udev.packages = with pkgs; [
       platformio # udev rules for platformio
@@ -14,6 +9,10 @@
 
     envfs.enable = true;
     flatpak.enable = true;
+
+    udev.extraRules = ''
+      KERNEL=="uinput", MODE="0660", GROUP="uinput", OPTIONS+="static_node=uinput"
+    '';
 
     #========================================#
     # AI
