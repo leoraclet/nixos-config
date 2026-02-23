@@ -368,7 +368,7 @@
     // =====================================
     // ⚙️ Misc System Settings
     // =====================================
-    "telemetry.telemetryLevel": "off",
+    "telemetry.telemetryLevel": "crash",
     "redhat.telemetry.enabled": false,
     "periscope.showPreviousResultsWhenNoMatches": true,
     "trailing-spaces.trimOnSave": true,
@@ -402,4 +402,9 @@
     "manim-sideview.defaultManimPath": "/nix/store/c4x12q6rxmw4x2yg3lzc71rg7l6cnn1g-python3.13-manim-0.19.1/bin/manim",
     "ltex.additionalRules.motherTongue": "fr",
     "ltex.language": "fr",
+    "windsurfPyright.disableLanguageServices": true,
+    "shfmt.executablePath": "",
+    "[php]": {
+        "editor.defaultFormatter": "bmewburn.vscode-intelephense-client"
+    },
 }

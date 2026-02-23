@@ -19,7 +19,7 @@
   ];
 
   services.clamav = {
-    daemon.enable = true;
+    daemon.enable = false;
     fangfrisch.enable = true;
     fangfrisch.interval = "daily";
     updater = {

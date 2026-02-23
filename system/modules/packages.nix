@@ -35,6 +35,7 @@
     nim # Nim programming language, a statically typed compiled systems programming language
     rustup # Toolchain installer for the Rust programming language
     nodejs_24 # JavaScript runtime built on Chrome's V8 JavaScript engine
+    php # HTML-embedded scripting language
 
     ###################################################
     # AI

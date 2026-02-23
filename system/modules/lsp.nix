@@ -39,6 +39,7 @@
     helix-gpt
     texlab
     typst
+    nixd
     # ======================================== #
     # Formatter and Linter Packages
     # ======================================== #
