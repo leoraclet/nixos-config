@@ -63,16 +63,12 @@
           ublock-origin
           bitwarden
           darkreader
-          istilldontcareaboutcookies
           violentmonkey
           foxyproxy-standard
           onetab
           languagetool
-          localcdn
-          clearurls
           cookie-quick-manager
           consent-o-matic
-          privacy-badger
         ];
         settings = {
           # Style settings to makr it better (more compact)
