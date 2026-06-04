@@ -2,6 +2,10 @@
   xdg.mimeApps = {
     enable = false;
     defaultApplications = {
+      # Default
+      "application/octet-stream" = "Helix.desktop";
+      "text/plain" = "Helix.desktop";
+
       # PDF
       "application/pdf" = "firefox.desktop";
 
@@ -45,7 +49,7 @@
 
     # Specialized.
     extraConfig = {
-      XDG_REPO_DIR = "$HOME/Repos"; # Git clones of various projects.
+      REPO = "$HOME/Repos"; # Git clones of various projects.
     };
   };
 }

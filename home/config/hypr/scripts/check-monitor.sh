@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# TODO: Maybe not disable main monitor but jsut change something
+# TODO: Maybe not disable main monitor but just change something
 # TODO: Execute it at Hyprland start
 
 displays() {

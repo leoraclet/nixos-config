@@ -154,7 +154,6 @@ And many others ...
 | `du`    | Uses `dust` for better disk usage display.                    |
 | `mkdir` | Creates parent directories as needed. (`mkdir -p`)            |
 | `home`  | Goes to home directory. (`cd ~`)                              |
-| `vi`    | Opens current directory in `nvim`. (`nvim .`)                 |
 | `cat`   | Uses `bat` for syntax-highlighted file viewing.               |
 | `df`    | Uses `duf` for modern disk usage info.                        |
 | `hex`   | Displays binary files in hexadecimal format. (`hexyl`)        |
@@ -204,7 +203,7 @@ OS.
 | Bar                  | Waybar                             |
 | Notification         | Dunst                              |
 | Launcher             | Rofi                               |
-| Editor               | Helix, Nvim, Zed, VSCodium |
+| Editor               | Helix, Zed, VSCodium |
 | Terminal             | Kitty + Starship                   |
 | OSD                  | Avizo                              |
 | Night Gamma          | Hyprsunset                         |

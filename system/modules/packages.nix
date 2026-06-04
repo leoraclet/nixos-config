@@ -2,6 +2,10 @@
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
+  nixpkgs.config.permittedInsecurePackages = [
+    "openssl-1.1.1w"
+  ];
+
   environment.systemPackages = with pkgs; [
     ###################################################
     # Developement
@@ -11,15 +15,12 @@
     gnumake # Tool to control the generation of non-source files from sources
     just # Handy way to save and run project-specific commands
     git # Distributed version control system
-    gitleaks # Scan for secrets in GIT repositories
     git-credential-manager # Git credential manager for secure authentication
     lazygit # Simple terminal UI for git commands
-    neovim # Vim text editor fork focused on extensibility and agility
     alejandra # Uncompromising Nix Code Formatter
     evil-helix # Post-modern modal text editor, with vim keybindings
     devenv # Fast, Declarative, Reproducible, and Composable Developer Environments
     direnv # Shell extension that manages your environment
-    pari # Computer algebra system for high-performance number theory computations
     devbox # Instant, easy, predictable shells and containers
     license-generator # Command-line tool for generating license files
     git-ignore # Quickly and easily fetch .gitignore templates from gitignore.io
@@ -31,21 +32,6 @@
     bun # Incredibly fast JavaScript runtime, bundler, transpiler and package manager
     jdk # Open-source Java Developement Kit
     gcc # GNU Compiler Collection, a set of compilers for various programming languages
-    zig # General-purpose programming language designed for robustness, optimality, and clarity
-    nim # Nim programming language, a statically typed compiled systems programming language
-    rustup # Toolchain installer for the Rust programming language
-    nodejs_24 # JavaScript runtime built on Chrome's V8 JavaScript engine
-    php # HTML-embedded scripting language
-
-    ###################################################
-    # AI
-    ###################################################
-
-    # ollama # Get up and running with large language models locally
-    # aichat # Use GPT-4(V), Gemini, LocalAI, Ollama and other LLMs in the terminal
-    # aider-chat # Code assistant/chat directly in the terminal
-    # alpaca # GUI LLM client with markdown support
-    # fabric-ai # AI agent framework for building autonomous agents
 
     ###################################################
     # GAMING & WINDOWS COMPATIBILITY
@@ -124,9 +110,9 @@
     broot # Interactive tree view, a fuzzy search, a balanced BFS descent and customizable commands
     samba # Standard Windows interoperability suite of programs for Linux and Unix
     libqalculate # Advanced calculator library
+    calc # C-style arbitrary precision calculator
     fish # Smart and user-friendly command line shell
     xh # Friendly and fast tool for sending HTTP requests
-    hyperfine # Command-line benchmarking tool
     aria2 # Lightweight multi-protocol & multi-source command-line download utility
     mosh # Mobile shell that allows roaming, supports intermittent connectivity, and provides intelligent local echo
     openvpn3 # OpenVPN 3 Linux Client
@@ -134,8 +120,6 @@
     inetutils # Collection of common network programs
     moreutils # Growing collection of the unix tools that nobody thought to write long ago when unix was young
     posting # Modern API client that lives in your terminal
-    tokei # Count your code, quickly
-    dogdns # Command-line DNS client
     websocat # Command-line client for WebSockets (like netcat/socat)
     socat # Utility for bidirectional data transfer between two independent data channels
     fswatch # Cross-platform file change monitor with multiple backends
@@ -146,31 +130,13 @@
     kmon # Linux Kernel Manager and Activity Monitor
     dig # Domain name server
 
-    # Monitoring
-    iotop # Display I/O usage by processes
-    iftop # Display bandwidth usage on an interface
-
-    ###################################################
-    # Fetch everything
-    ###################################################
-
-    onefetch # Git repository summary on your terminal
-    neofetch # System information
-    fastfetch # Faster ... :)
-    ipfetch # Neofetch but for ip addresses
-    cpufetch # Simplistic yet fancy CPU architecture fetching tool
-    ramfetch # Tool which displays memory information
-    starfetch # CLI star constellations displayer
-    octofetch # Github user information on terminal
-
     ###################################################
     # GUI apps
     ###################################################
 
     thunderbird
-    qbittorrent
     obsidian
-    (discord.override {
+    (discord-canary.override {
       withOpenASAR = true;
       withVencord = true;
       withTTS = true;
@@ -180,14 +146,12 @@
     vscodium
     firefox
     nemo
-    orca-slicer
     onlyoffice-desktopeditors
     qalculate-gtk
     brave # A chromium based browser as an alternative if needed
     freerdp
-    notepad-next
+    sublime4
     localsend
-    motrix # Full-featured download manager
     zed-editor-fhs
 
     # tor-browser
@@ -205,14 +169,6 @@
     # libsForQt5.kdenlive
 
     ###################################################
-    # Robotics (not used now)
-    ###################################################
-
-    # kicad # Open Source Electronics Design Automation suite
-    # freecad # General purpose Open Source 3D CAD/MCAD/CAx/CAE/PLM modeler
-    # openscad # OpenSCAD is a software for creating solid 3D CAD objects
-
-    ###################################################
     # Backup (not used now)
     ###################################################
 
@@ -223,7 +179,6 @@
     # Hyprland
     ###################################################
 
-    ags_1
     clipse
     networkmanagerapplet
     hyprpolkitagent
@@ -243,51 +198,6 @@
     waybar
     wttrbar # Weather addon for waybar
     flameshot
-
-    ###################################################
-    # Hacking
-    ###################################################
-
-    # wireshark
-    # burpsuite
-    # autopsy
-    # sleuthkit
-    # nmap
-    # maltego
-    # nikto
-    # sqlmap
-    # sage
-    # aircrack-ng
-    # recon-ng
-    # scalpel
-    # hashcat
-    # bettercap
-    # kismet
-    # ettercap
-    # tcpdump
-    # john
-    # radare2
-    # cutter
-    # whatweb
-    # masscan
-    # ghidra
-    # metasploit
-    # nth
-    # rustscan
-    # volatility3
-    # binwalk
-    # theharvester
-    # mitmproxy
-    # gobuster
-    # proxychains
-    # proxychains-ng
-    # sherlock
-    # photon
-    # detect-it-easy
-
-    # Utilities
-    # exiftool
-    # macchanger
 
     ###################################################
     ###################################################

@@ -11,8 +11,7 @@
 in {
   home.file = {
     ".config/starship.toml".source = pathToFile "starship.toml";
-    ".config/background.png".source = pathToFile "background";
-    ".config/open-webui-config.json".source = pathToFile "open-webui-config.json";
+    ".config/background.png".source = pathToFile "background.png";
     ".config/hypr".source = pathToFile "hypr";
     ".config/scripts".source = pathToFile "scripts";
     ".config/waybar".source = pathToFile "waybar";
@@ -32,17 +31,13 @@ in {
     ".config/tmux".source = pathToFile "tmux";
     ".config/gh".source = pathToFile "gh";
     ".config/helix".source = pathToFile "helix";
-    ".config/neofetch".source = pathToFile "neofetch";
     ".config/cava".source = pathToFile "cava";
     ".config/tealdeer".source = pathToFile "tealdeer";
-    ".config/fastfetch".source = pathToFile "fastfetch";
     ".config/ags".source = pathToFile "ags";
     ".config/aichat".source = pathToFile "aichat";
     ".config/fish".source = pathToFile "fish";
     ".config/zellij".source = pathToFile "zellij";
     ".config/clipse".source = pathToFile "clipse";
-    ".config/crush".source = pathToFile "crush";
-    ".config/posting".source = pathToFile "posting";
     ".config/winapps".source = pathToFile "winapps";
     ".config/discord/settings.json".source = pathToFile "discord/settings.json";
     ".config/VSCodium/User/settings.json".source = pathToFile "VSCodium/settings.json";

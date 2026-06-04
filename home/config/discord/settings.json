@@ -2,7 +2,7 @@
   "SKIP_HOST_UPDATE": true,
   "openasar": {
     "setup": true,
-    "cmdPreset": "balanced",
+    "cmdPreset": "perf",
     "noTyping": true,
     "quickstart": true,
     "css": "@import url(\"https://catppuccin.github.io/discord/dist/catppuccin-macchiato-teal.theme.css\");"

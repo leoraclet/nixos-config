@@ -11,7 +11,7 @@ layout {
 
     tab name="code" focus=true {
         pane {
-            command "nvim"
+            command "hx"
             args "."
         }
     }

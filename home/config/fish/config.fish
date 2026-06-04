@@ -1,27 +1,8 @@
-if set -q XDG_CONFIG_HOME
-  set -gx fisher_path $XDG_CONFIG_HOME/fish/fisher
-else
-  set -gx fisher_path $HOME/.config/fish/fisher
-end
-
-# Automatic things only in interactive mode
-if status is-interactive
-  if not functions -q fisher
-    echo "Fisher not found, installing..."
-    curl -sL https://git.io/fisher | source && fisher update || fisher install "jorgebucaran/fisher"
-  end
-end
-
-
-for file in $fisher_path/conf.d/*.fish
-  source $file
-end
-
 # System aliases
 alias ngc="sudo nix-collect-garbage --delete-older-than 1d"
 alias npw="sudo nix profile wipe-history --older-than 7d --profile /nix/var/nix/profiles/system"
 
-# Terminal utils aliases
+# Terminal aliases
 alias clear="printf '\033[2J\033[3J\033[1;1H'"
 alias cl="printf '\033[2J\033[3J\033[1;1H'"
 alias c="printf '\033[2J\033[3J\033[1;1H'"
@@ -30,7 +11,7 @@ alias clk="rsclock -c"
 alias tree="tre -e"
 alias treee="eza --tree --icons=always --color=always"
 alias ls="eza --color=always --long --git --icons=always --group-directories-first"
-alias ll="printf '\033[2J\033[3J\033[1;1H'; ls -la"
+alias ll="clear; ls -la"
 alias cd="z"
 alias ps="procs"
 alias man="tldr"
@@ -38,7 +19,6 @@ alias du="dust"
 alias mkdir="mkdir -pv"
 alias home="cd ~"
 alias h="cd ~"
-alias vi="nvim"
 alias cat="bat"
 alias df="duf"
 alias lgit="lazygit"
@@ -48,6 +28,7 @@ alias dua="dua i"
 alias open="xdg-open"
 alias code="codium --enable-features=UseOzonePlatform --ozone-platform=wayland . 1>/dev/null 2>/dev/null"
 alias f="fzf-file-preview-widget"
+alias ff="sk"
 alias ga="git add . -A"
 alias gs="git status"
 alias gc="git add .; git commit -m"
@@ -58,6 +39,9 @@ alias restore="restore_trash"
 alias delete="empty_selected_trash"
 alias empty="trash empty --all"
 alias zed="zeditor ."
+alias shell="nix-shell --command 'fish' --packages"
+alias nix-shell="nix-shell --command 'fish'"
+# alias grep="rg"
 
 alias fixsdcard="lspci -knn | grep -iA2 card && modprobe rtsx_pci"
 alias rebuild="~/.config/hypr/scripts/rebuild-system.sh"
@@ -68,7 +52,7 @@ function multicd
 end
 abbr --add dotdot --regex '^\.\.+$' --function multicd
 
-set -gx EDITOR nvim
+set -gx EDITOR hx
 
 set fish_vi_force_cursor
 set fish_cursor_default block
@@ -80,7 +64,7 @@ set -Ux FZF_DEFAULT_OPTS "\
 --color=fg:#cad3f5,header:#ed8796,info:#c6a0f6,pointer:#f4dbd6 \
 --color=marker:#f4dbd6,fg+:#cad3f5,prompt:#c6a0f6,hl+:#ed8796"
 
-set -Ux fifc_editor nvim
+set -Ux fifc_editor hx
 set -U fifc_fd_opts --hidden
 set -U fifc_bat_opts --style=numbers
 set -U fifc_exa_opts --icons --tree
@@ -99,7 +83,7 @@ enable_transience
 # STARTUP COMMANDS
 ##########################
 
-cd ~/Downloads
+# cd ~/Downloads
 
 ##########################
 ##########################

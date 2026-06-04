@@ -30,6 +30,10 @@
   xdg.mime = {
     enable = true;
     defaultApplications = {
+      # Default
+      "application/octet-stream" = "Helix.desktop";
+      "text/plain" = "Helix.desktop";
+
       # PDF
       "application/pdf" = "firefox.desktop";
 

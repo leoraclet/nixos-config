@@ -53,12 +53,11 @@ sudo nixos-rebuild switch --flake ./#leonne &>nixos-switch.log || (cat nixos-swi
 current=$(nixos-rebuild list-generations --json | jq -r '.[0].date')
 
 echo "Done !"
-
-# Commit all changes witih the generation metadata
-git commit -am "$current"
-
 # Notify all OK!
 notify-send -e "NixOS Rebuilt OK" -t 2000
+
+# Commit all changes witih the generation metadata
+# git commit -am "$current"
 
 echo "Removing unnecessary files and folders ..."
 

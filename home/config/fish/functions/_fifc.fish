@@ -28,7 +28,7 @@ function _fifc
     set fifc_fzf_query (string trim --chars '\'' -- "$fifc_fzf_query")
 
     set -l fzf_cmd "
-        _fifc_launched_by_fzf=1 SHELL=fish fzf \
+        _fifc_launched_by_fzf=1 SHELL=fish find . -type f -not -path \"./tmp/*\" | fzf \
             -d \t \
             --exact \
             --tiebreak=length \
@@ -79,7 +79,9 @@ function _fifc
 
     commandline --function repaint
 
-    rm $_fifc_complist_path
+    set rm_bin (which rm)
+    $rm_bin $_fifc_complist_path
+
     # Clean state
     set -e _fifc_extract_regex
     set -e _fifc_custom_fzf_opts

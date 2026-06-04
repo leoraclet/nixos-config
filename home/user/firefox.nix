@@ -1,8 +1,4 @@
-{
-  firefox-addons-allowUnfree,
-  pkgs,
-  ...
-}: {
+{pkgs, ...}: {
   programs.firefox = {
     enable = true;
     profiles = {
@@ -59,17 +55,6 @@
             "wikipedia".metaData.alias = "@wiki";
           };
         };
-        extensions.packages = with firefox-addons-allowUnfree; [
-          ublock-origin
-          bitwarden
-          darkreader
-          violentmonkey
-          foxyproxy-standard
-          onetab
-          languagetool
-          cookie-quick-manager
-          consent-o-matic
-        ];
         settings = {
           # Style settings to makr it better (more compact)
           "browser.uidensity" = 1;

@@ -325,9 +325,6 @@
             "tooltip": false
         },
         "custom/trayicon": {
-            // "format": "",
-            // "format": "Zäni",
-            // "format": "󰣇",
             "format": "",
             "tooltip": false
         }

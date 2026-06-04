@@ -3,14 +3,14 @@
     python312Packages.python-lsp-server
     python312Packages.python-lsp-ruff
     python312Packages.python-lsp-black
-    nodePackages_latest.nodemon
-    nodePackages_latest.typescript
-    nodePackages_latest.typescript-language-server
-    nodePackages_latest.vscode-langservers-extracted
-    nodePackages_latest.yaml-language-server
-    nodePackages_latest.dockerfile-language-server-nodejs
-    nodePackages_latest.bash-language-server
-    nodePackages_latest.graphql-language-service-cli
+    nodemon
+    typescript
+    typescript-language-server
+    vscode-langservers-extracted
+    yaml-language-server
+    dockerfile-language-server-nodejs
+    bash-language-server
+    graphql-language-service-cli
     vue-language-server
     lua-language-server # FIXME
     vhdl-ls
@@ -36,7 +36,6 @@
     slint-lsp
     terraform-ls
     hyprls
-    helix-gpt
     texlab
     typst
     nixd

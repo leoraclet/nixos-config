@@ -4,7 +4,6 @@ plugins = [
   "fetch_client_menu",
   "magnify",
   "expose",
-  "shortcuts_menu",
   "toggle_special",
 ]
 

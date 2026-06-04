@@ -10,15 +10,6 @@ auto-format = true
 command = "emmet-language-server"
 args = ["--stdio"]
 
-[language-server.copilot]
-command = "helix-gpt"
-args = [
-  "--handler",
-  "copilot",
-  "--copilotApiKey",
-  "your_api_key",    # FIXME
-]
-
 [[language]]
 name = "python"
 language-servers = [{ name = "pylsp", except-features = ["format"] }, "ruff"]

@@ -6,40 +6,17 @@
     nixpkg-stable.url = "github:nixos/nixpkgs";
     nixos-hardware.url = "github:NixOS/nixos-hardware/master";
 
-    nvf = {
-      url = "github:notashelf/nvf";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-
-    firefox-addons = {
-      url = "gitlab:rycee/nur-expressions?dir=pkgs/firefox-addons";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
     spicetify-nix = {
       url = "github:Gerg-L/spicetify-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-
-    winapps = {
-      url = "github:winapps-org/winapps";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
   };
 
-  outputs = {
-    nixpkgs,
-    home-manager,
-    nvf,
-    firefox-addons,
-    winapps,
-    ...
-  } @ inputs: let
+  outputs = {nixpkgs, ...} @ inputs: let
     system = "x86_64-linux";
     pkgs = import nixpkgs {
       inherit system;
@@ -55,8 +32,6 @@
       modules = [
         # Configuration
         ./system/configuration.nix
-        # NVF
-        nvf.nixosModules.default
         # Home Manager
         inputs.home-manager.nixosModules.home-manager
         {
@@ -71,25 +46,11 @@
             };
             extraSpecialArgs = {
               inherit inputs;
-              firefox-addons-allowUnfree = pkgs.callPackage firefox-addons {};
             };
           };
         }
         # Hardware Configuration (Dell Latitude 5520)
         inputs.nixos-hardware.nixosModules.dell-latitude-5520
-        # https://github.com/winapps-org/winapps
-        (
-          {
-            pkgs,
-            system ? pkgs.system,
-            ...
-          }: {
-            environment.systemPackages = [
-              winapps.packages."${system}".winapps
-              winapps.packages."${system}".winapps-launcher # optional
-            ];
-          }
-        )
       ];
     };
   };
