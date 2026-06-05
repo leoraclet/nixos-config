@@ -23,5 +23,7 @@
     ./firewall.nix
     ./lsp.nix
     ./env.nix
+    ./noctalia.nix
+    ./winapps.nix
   ];
 }

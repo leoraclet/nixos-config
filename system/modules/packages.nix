@@ -179,24 +179,14 @@
     # Hyprland
     ###################################################
 
-    clipse
     networkmanagerapplet
     hyprpolkitagent
-    hypridle
-    hyprlock
     hyprpicker
-    hyprsunset
-    hyprpaper
-    pyprland
+    cliphist
+    wlsunset
     pavucontrol
     kitty
     libnotify
-    dunst
-    wlogout
-    wl-clipboard
-    rofi
-    waybar
-    wttrbar # Weather addon for waybar
     flameshot
 
     ###################################################

@@ -15,3 +15,4 @@ SETUVAR fifc_exa_opts:\x2d\x2dicons\x1e\x2d\x2dtree
 SETUVAR fifc_fd_opts:\x2d\x2dhidden
 SETUVAR fifc_keybinding:\x09
 SETUVAR fifc_open_keybinding:ctrl\x2do
+SETUVAR fish_greeting:\x1d
