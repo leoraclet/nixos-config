@@ -51,6 +51,8 @@
     ###################################################
 
     zellij # Terminal workspace with batteries included
+    tesseract
+    zbar
     unzip # Extraction utility for archives compressed in .zip format
     dust # Disk analyzer
     dua # Disk usage analyzer
@@ -136,12 +138,13 @@
 
     thunderbird
     obsidian
-    (discord-canary.override {
-      withOpenASAR = true;
-      withVencord = true;
-      withTTS = true;
-    })
+    # (discord.override {
+    #   withOpenASAR = true;
+    #   withVencord = true;
+    #   withTTS = true;
+    # })
     spotify
+    vesktop
     vlc
     vscodium
     firefox
@@ -184,6 +187,9 @@
     hyprpicker
     cliphist
     wlsunset
+    wl-clipboard
+    wl-screenrec
+    wl-mirror
     pavucontrol
     kitty
     libnotify

@@ -46,10 +46,5 @@
     videos = "$HOME/Videos";
     music = "$HOME/Music";
     publicShare = "$HOME/Public";
-
-    # Specialized.
-    extraConfig = {
-      REPO = "$HOME/Repos"; # Git clones of various projects.
-    };
   };
 }

@@ -5,6 +5,6 @@ function screenshot_to_clipboard
 
     if [ -e $screenshot_filename ]
         cat $screenshot_filename | wl-copy --type image/png
-        dunstify -i $screenshot_filename -r (cd ~/Pictures/Screenshots/ && ls -1 | wc -l) "Screenshots" "Screenshot was taken" -t 2000
+        notify-send "Screenshot was taken" -t 2000
     end
 end

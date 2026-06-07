@@ -1,4 +1,4 @@
-theme = "catppuccin_macchiato_transparent"
+theme = "noctalia"
 
 [editor]
 shell = ["fish", "-c"]

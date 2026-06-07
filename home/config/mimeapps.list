@@ -19,6 +19,7 @@ application/pdf=firefox.desktop
 image/svg+xml=imv-folder.desktop
 x-scheme-handler/tg=org.telegram.desktop.desktop
 text/plain=Helix.desktop
+x-scheme-handler/discord=vesktop.desktop
 
 [Added Associations]
 image/bmp=imv-folder.desktop;
