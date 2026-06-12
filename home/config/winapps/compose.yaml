@@ -39,3 +39,7 @@ services:
     devices:
       - /dev/kvm # Enable KVM.
       - /dev/net/tun # Enable tuntap
+
+networks:
+  vlan:
+    external: true

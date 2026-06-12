@@ -1,4 +1,7 @@
 {pkgs, ...}: {
+  # Virt Manager
+  programs.virt-manager.enable = true;
+
   virtualisation = {
     spiceUSBRedirection.enable = true;
     containers.enable = true;
@@ -17,6 +20,7 @@
 
       qemu = {
         swtpm.enable = true;
+        vhostUserPackages = with pkgs; [virtiofsd];
         # ovmf.enable = true; # FIXME
         # ovmf.packages = [pkgs.OVMFFull.fd]; # FIXME:
       };
@@ -35,19 +39,26 @@
     # Disable docker because with use Podman instead
     docker = {
       enable = false;
+      rootless = {
+        enable = true;
+        setSocketVariable = true;
+      };
+      daemon.settings = {
+        pruning = {
+          enabled = true;
+          interval = "24h";
+        };
+      };
     };
   };
 
   environment.systemPackages = with pkgs; [
-    dive
-    podman-tui
     podman-compose
     qemu
     qemu_kvm
     quickemu
     docker-compose
-    lazydocker
-    lima
+    dnsmasq
   ];
 
   environment.extraInit = ''

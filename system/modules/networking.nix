@@ -1,8 +1,4 @@
-{
-  lib,
-  pkgs,
-  ...
-}: {
+{...}: {
   networking = {
     hostName = "nixos";
     networkmanager = {
@@ -17,7 +13,7 @@
       hostsFile = builtins.fetchurl {
         url = hostsPath;
         # nix-prefetch-url --type sha256 "https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts"
-        sha256 = "12bh7s9v4hcd71hv133sknxc7pvch7sl516mlch6s9jbhk4gyk11";
+        sha256 = "1va5k0b9h8z6pkybb2d9pfb30vly8abvjphsz538ksrbm65cjxag";
       };
     in
       builtins.readFile "${hostsFile}";

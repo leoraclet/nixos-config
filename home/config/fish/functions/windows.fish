@@ -24,7 +24,7 @@ function windows
             quickemu --vm windows-10.conf --fullscreen --keyboard_layout fr-fr --public-dir ~/ --display spice --extra_args "-enable-kvm"
         end
     else
-        if test ! -z (ps | grep windows-10)
+        if test -n "$(pgrep windows-10)"
             xfreerdp /f /v:127.0.0.1:3389 /u:quickemu /p:quickemu /cert:tofu
             cd "$current_dir"
             commandline -f repaint

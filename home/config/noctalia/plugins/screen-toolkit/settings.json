@@ -1,5 +1,7 @@
 {
   "colorHistory": [
+    "#889556",
+    "#59A689",
     "#5C9510"
   ],
   "paletteColors": [],
@@ -149,8 +151,8 @@
   "colorCacheBust": 0,
   "ocrResult": "",
   "ocrCapturePath": "",
-  "qrResult": "examepl",
-  "qrCapturePath": "/tmp/screen-toolkit-qr.png",
+  "qrResult": "",
+  "qrCapturePath": "",
   "translateResult": "",
   "x02ApiKey": "",
   "x02Expiry": "7d",

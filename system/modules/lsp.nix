@@ -33,6 +33,7 @@
     cmake-language-server
     docker-compose-language-service
     vscode-extensions.vadimcn.vscode-lldb
+    kdePackages.qtdeclarative
     slint-lsp
     terraform-ls
     hyprls
