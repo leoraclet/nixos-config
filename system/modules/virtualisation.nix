@@ -1,4 +1,6 @@
 {pkgs, ...}: {
+  systemd.tmpfiles.rules = ["L+ /var/lib/qemu/firmware - - - - ${pkgs.qemu}/share/qemu/firmware"];
+
   # Virt Manager
   programs.virt-manager.enable = true;
 
@@ -15,12 +17,15 @@
       # };
     };
 
+    vmware.host.enable = true;
+
     libvirtd = {
       enable = true;
 
       qemu = {
         swtpm.enable = true;
         vhostUserPackages = with pkgs; [virtiofsd];
+        runAsRoot = true;
         # ovmf.enable = true; # FIXME
         # ovmf.packages = [pkgs.OVMFFull.fd]; # FIXME:
       };
@@ -53,6 +58,7 @@
   };
 
   environment.systemPackages = with pkgs; [
+    OVMF
     podman-compose
     qemu
     qemu_kvm

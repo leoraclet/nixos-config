@@ -46,11 +46,10 @@
     tmux # Terminal workspace with batteries included
     tesseract
     zbar
-    unzip # Extraction utility for archives compressed in .zip format
     dust # Disk analyzer
     dua # Disk usage analyzer
-    yazi # Terminal file manager
     duf # Disk Usage/Free Utility
+    yazi # Terminal file manager
     poppler # PDF rendering library
     atuin # Sqlite bash history
     tealdeer # Very fast implementation of tldr (aka man) in Rust
@@ -68,9 +67,9 @@
     sd # Intuitive find and replace (sed alternative)
     file # File Command
     fzf # Fuzzy finder
-    skim # fzf, but in Rust
     ripgrep # Text search
     ffmpeg # FFMPEG utility
+    grim
     wget # Tool for retrieving files using HTTP, HTTPS, and FTP
     btop # Monitor of resources
     hexyl # Command-line hex viewer
@@ -86,11 +85,9 @@
     pdftk # PDF toolbox
     chafa # Terminal graphics for the 21st century
     openssl # Crptographic library that implements the SSL and TLS protocols
-    tre-command # Tree command, improved
     ouch # Command-line utility for easily compressing and decompressing files and directories
     gzip # GNU zip compression program
     zip # Compressor/archiver for creating and modifying zipfiles
-    unrar # Utility for RAR archives
     broot # Interactive tree view, a fuzzy search, a balanced BFS descent and customizable commands
     samba # Standard Windows interoperability suite of programs for Linux and Unix
     libqalculate # Advanced calculator library
@@ -98,10 +95,12 @@
     fish # Smart and user-friendly command line shell
     inetutils # Collection of common network programs
     moreutils # Growing collection of the unix tools that nobody thought to write long ago when unix was young
-    websocat # Command-line client for WebSockets (like netcat/socat)
     socat # Utility for bidirectional data transfer between two independent data channels
     gnupg # Modern release of the GNU Privacy Guard, a GPL OpenPGP implementation
     trashy # Simple, fast, and featureful alternative to rm and trash-cli
+
+    # unrar
+    # unzip
 
     ###################################################
     # GUI apps

@@ -3,6 +3,14 @@
         {
             "action": "block",
             "pattern": "useGrimAdapter"
+        },
+        {
+            "action": "block",
+            "pattern": "Screenshot aborted"
+        },
+        {
+            "action": "block",
+            "pattern": "Disconnected"
         }
     ]
 }

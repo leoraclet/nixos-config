@@ -34,6 +34,10 @@
     mtr.enable = true;
     fish.enable = true;
     kdeconnect.enable = true;
+    direnv = {
+      enable = true;
+      silent = true;
+    };
 
     hyprland = {
       enable = true;
