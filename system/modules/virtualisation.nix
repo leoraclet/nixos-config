@@ -1,8 +1,11 @@
+# https://wiki.nixos.org/wiki/PCI_passthrough
+# https://pigs.dev/posts/2025-04-15-gaming-in-vm-with-nixos.html
 {pkgs, ...}: {
   systemd.tmpfiles.rules = ["L+ /var/lib/qemu/firmware - - - - ${pkgs.qemu}/share/qemu/firmware"];
 
   # Virt Manager
   programs.virt-manager.enable = true;
+  services.spice-vdagentd.enable = true;
 
   virtualisation = {
     spiceUSBRedirection.enable = true;

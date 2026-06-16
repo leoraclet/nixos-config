@@ -17,7 +17,6 @@ in {
     ".config/bat".source = pathToFile "bat";
     ".config/helix".source = pathToFile "helix";
     ".config/fish".source = pathToFile "fish";
-    ".config/winapps".source = pathToFile "winapps";
     ".config/noctalia".source = pathToFile "noctalia";
     ".config/VSCodium/User/settings.json".source = pathToFile "VSCodium/settings.json";
     ".config/VSCodium/User/keybindings.json".source = pathToFile "VSCodium/keybindings.json";

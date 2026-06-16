@@ -16,16 +16,6 @@
   };
 
   environment.systemPackages = [
-    # pkgs.astal.mpris
-    # pkgs.swappy
-    # pkgs.loupe
-    # pkgs.baobab
-    # pkgs.gnome-calendar
-    # pkgs.gnome-system-monitor
-    # pkgs.gnome-weather
-    # pkgs.gnome-clocks
-    # pkgs.gnome-software # for flatpak
-
     pkgs.xdg-desktop-portal-hyprland
     pkgs.xdg-desktop-portal-gtk
   ];

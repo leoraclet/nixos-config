@@ -10,6 +10,5 @@
       "-L" # print build logs
     ];
     dates = "weekly";
-    randomizedDelaySec = "45min";
   };
 }

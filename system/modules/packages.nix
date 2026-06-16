@@ -98,6 +98,7 @@
     socat # Utility for bidirectional data transfer between two independent data channels
     gnupg # Modern release of the GNU Privacy Guard, a GPL OpenPGP implementation
     trashy # Simple, fast, and featureful alternative to rm and trash-cli
+    appimage-run
 
     # unrar
     # unzip

@@ -1,8 +1,8 @@
 {pkgs, ...}: {
   services = {
     udev.packages = with pkgs; [
-      platformio # udev rules for platformio
-      openocd # required by platformio, see https://github.com/NixOS/nixpkgs/issues/224895
+      #platformio # udev rules for platformio
+      #openocd # required by platformio, see https://github.com/NixOS/nixpkgs/issues/224895
 
       sane-airscan # see https://wiki.nixos.org/wiki/Scanners
     ];
@@ -15,70 +15,19 @@
     '';
 
     #========================================#
-    # AI
-    #========================================#
-    ollama = {
-      enable = false;
-      # Optional: preload models, see https://ollama.com/library
-      loadModels = [
-        "llama3.2:3b"
-        "deepseek-r1:1.5b"
-        "dolphin3:8b"
-        "nomic-embed-text"
-      ];
-    };
-
-    # Disabled because it takes too much RAM and it's not used often enough to justify the resource usage.
-    open-webui.enable = false;
-    n8n.enable = false;
-
-    searx = {
-      enable = false;
-      settings = {
-        general = {
-          debug = false;
-          instance_name = "SearXNG Instance";
-          donation_url = false;
-          contact_url = false;
-          privacypolicy_url = false;
-          enable_metrics = false;
-        };
-        server = {
-          port = 7777;
-          bind_address = "127.0.0.1";
-          secret_key = "hjmY5geUV3bjW091TddQEZjlvo8gZPmxN0Deqwx3/D51NcXBoEMQpVkHV8OAYRMN";
-        };
-        search = {
-          formats = [
-            "html"
-            "json"
-          ];
-        };
-        # Enabled plugins
-        enabled_plugins = [
-          "Basic Calculator"
-          "Hash plugin"
-          "Tor check plugin"
-          "Open Access DOI rewrite"
-          "Hostnames plugin"
-          "Unit converter plugin"
-          "Tracker URL remover"
-        ];
-      };
-    };
-
-    #========================================#
     # Fingerprint reader
     #========================================#
 
     #! Disabled it because it cause problems with SDDM (login, unlock, ...)
-    # fprintd = {
-    #   enable = false;
-    #   package = pkgs.fprintd-tod;
-    #   tod.enable = true;
-    #   # Search for "libfprint" in packages to find other drivers
-    #   tod.driver = pkgs.libfprint-2-tod1-broadcom;
-    # };
+    # https://wiki.nixos.org/wiki/Fingerprint_scanner
+    # https://wiki.nixos.org/wiki/SDDM
+    fprintd = {
+      enable = false;
+      package = pkgs.fprintd-tod;
+      tod.enable = true;
+      # Search for "libfprint" in packages to find other drivers
+      tod.driver = pkgs.libfprint-2-tod1-broadcom;
+    };
 
     #========================================#
     # Printing
@@ -143,11 +92,6 @@
     tlp.enable = true; # TLP is a power management tool for Linux, useful for laptops to extend battery life
 
     #========================================#
-    # Virtulisation
-    #========================================#
-    spice-vdagentd.enable = true;
-
-    #========================================#
     # File manager
     #========================================#
     gvfs.enable = true; # Mount, trash, and other functionalities
@@ -167,16 +111,6 @@
       xkb = {
         layout = "fr";
         variant = "azerty";
-      };
-    };
-
-    displayManager = {
-      sddm = {
-        enable = true;
-        autoNumlock = true;
-        theme = "catppuccin-mocha-mauve";
-        package = pkgs.kdePackages.sddm;
-        wayland.enable = true;
       };
     };
   };

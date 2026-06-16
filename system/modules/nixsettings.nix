@@ -14,7 +14,10 @@
 
   nix = {
     settings = {
-      experimental-features = ["nix-command" "flakes"];
+      experimental-features = [
+        "nix-command"
+        "flakes"
+      ];
       auto-optimise-store = true;
       warn-dirty = false;
 
@@ -24,6 +27,11 @@
 
       # continue building derivations if one fails
       keep-going = true;
+
+      trusted-users = [
+        "root"
+        "leonne"
+      ];
 
       # Add extra caches
       substituters = [
@@ -45,7 +53,7 @@
 
     gc = {
       automatic = true;
-      dates = "weekly";
+      dates = "daily";
       options = "--delete-older-than 7d";
     };
   };

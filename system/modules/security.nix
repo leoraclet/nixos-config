@@ -5,6 +5,8 @@
 }: {
   security.polkit.enable = true;
   security.pam.services.swaylock = {};
+  security.pam.services.login.fprintAuth = false;
+
   security.apparmor = {
     enable = true;
     killUnconfinedConfinables = true;

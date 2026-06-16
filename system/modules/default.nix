@@ -24,6 +24,6 @@
     ./lsp.nix
     ./env.nix
     ./noctalia.nix
-    ./winapps.nix
+    ./sddm.nix
   ];
 }
