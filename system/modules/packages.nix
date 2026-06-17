@@ -114,6 +114,7 @@
     vlc
     vscodium
     firefox
+    # librewolf
     nemo
     onlyoffice-desktopeditors
     qalculate-gtk
@@ -157,6 +158,7 @@
     wl-screenrec
     wl-mirror
     pavucontrol
+    alsa-utils
     kitty
     libnotify
     flameshot

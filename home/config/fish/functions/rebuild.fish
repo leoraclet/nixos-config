@@ -56,10 +56,6 @@ function rebuild
     # Get current generation metadata
     set current (nixos-rebuild list-generations --json | jq -r '.[0].date')
 
-    echo "Done!"
-    # Notify all OK!
-    notify-send -e "NixOS Rebuilt OK" -t 2000
-
     # Commit all changes with the generation metadata
     git commit -am "$current"
 
@@ -70,6 +66,9 @@ function rebuild
 
     sudo rm nixos-switch.log
     sudo rm -rf result
+
+    # Notify all OK!
+    notify-send -e "NixOS Rebuilt OK" -t 2000
 
     # Back to where you were
     popd >/dev/null

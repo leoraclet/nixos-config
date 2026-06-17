@@ -7,6 +7,8 @@ function recent_directories
     )
     if test -n "$dir"
         cd "$dir"
+        clear
+        return
     end
 
     commandline -f repaint

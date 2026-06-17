@@ -36,21 +36,6 @@
         "type": "github"
       }
     },
-    "nixpkg-stable": {
-      "locked": {
-        "lastModified": 1779901591,
-        "narHash": "sha256-4EEU9whBFhSa0R6BYhhKh0rT+q0rzVwSCFK0agBFmn0=",
-        "owner": "nixos",
-        "repo": "nixpkgs",
-        "rev": "243d5b19efd17f8a698bbca705e22dc6b4b337f3",
-        "type": "github"
-      },
-      "original": {
-        "owner": "nixos",
-        "repo": "nixpkgs",
-        "type": "github"
-      }
-    },
     "nixpkgs": {
       "locked": {
         "lastModified": 1779560665,
@@ -115,7 +100,6 @@
       "inputs": {
         "home-manager": "home-manager",
         "nixos-hardware": "nixos-hardware",
-        "nixpkg-stable": "nixpkg-stable",
         "nixpkgs": "nixpkgs",
         "noctalia": "noctalia",
         "spicetify-nix": "spicetify-nix"

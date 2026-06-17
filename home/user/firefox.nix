@@ -1,6 +1,8 @@
+# https://nixos.wiki/wiki/Librewolf
 {pkgs, ...}: {
   programs.firefox = {
     enable = true;
+    # package = pkgs.librewolf; # FIXME: Use librewolf as default browser
     profiles = {
       default = {
         id = 0;

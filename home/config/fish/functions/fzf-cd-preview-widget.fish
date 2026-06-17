@@ -8,5 +8,6 @@ function fzf-cd-preview-widget
             cd "$selected"
         end
     end
-    commandline -f repaint
+
+    clear
 end

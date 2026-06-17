@@ -10,5 +10,6 @@ function restore_trash
     if test -n "$files"
         echo "$files" | xargs trash restore --match=exact --force
     end
+
     commandline -f repaint
 end

@@ -1,3 +1,4 @@
+# https://gvolpe.com/blog/home-manager-dotfiles-management/
 {config, ...}: let
   configDir = ../config;
   isMutable = true;

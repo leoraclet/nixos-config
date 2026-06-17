@@ -8,19 +8,19 @@ function fish_user_key_bindings
     # The argument specifies the initial mode (insert, "default" or visual).
     fish_vi_key_bindings --no-erase insert
 
+    # Configure fish fzf plugin
+    fzf_configure_bindings --git_status=\cg --git_log=\e\cl --processes=\cp --history=\ch --directory=\cd --variables=\e\cv
+
     # Nullify fzf default keybindings
     bind \cR '' -M insert
     bind \cT '' -M insert
 
-    bind \e\ch fzf-history-widget -M insert
     bind \e\cd fzf-cd-preview-widget -M insert
-    bind \e\cp fzf-ps-widget -M insert
     bind \e\cr recent_directories -M insert
     bind \e\cy yazi_cd_quit -M insert
     bind \cl clear -M insert
     bind \cf fzf-file-preview-widget -M insert
 
+    # Bind atuin behaviour to down arrow key
     bind down _atuin_search -M insert
-
-    fzf_configure_bindings --git_status=\cg --processes=\cp --history=\ch --directory=\cd --variables=
 end

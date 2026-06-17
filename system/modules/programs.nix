@@ -21,6 +21,7 @@
   ];
 
   programs = {
+    dconf.enable = true;
     mtr.enable = true;
     fish.enable = true;
     kdeconnect.enable = true;
