@@ -113,8 +113,6 @@
     vesktop
     vlc
     vscodium
-    firefox
-    # librewolf
     nemo
     onlyoffice-desktopeditors
     qalculate-gtk
