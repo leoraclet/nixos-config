@@ -2,9 +2,11 @@
   programs.git = {
     enable = true;
     lfs.enable = true;
-    userName = "N£utr0nys";
-    userEmail = "110538448+leoraclet@users.noreply.github.com";
-    extraConfig = {
+    settings = {
+      user = {
+        email = "110538448+leoraclet@users.noreply.github.com";
+        name = "N£utr0nys";
+      };
       gpg.format = "ssh";
       init.defaultBranch = "main";
       credential.helper = "manager";

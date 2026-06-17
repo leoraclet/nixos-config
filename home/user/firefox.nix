@@ -7,7 +7,7 @@
   programs.firefox = {
     enable = true;
     configPath = "${config.xdg.configHome}/mozilla/firefox";
-    # package = pkgs.librewolf; # FIXME: Use librewolf as default browser
+    package = pkgs.librewolf; # Use librewolf as default browser
     profiles = {
       default = {
         id = 0;
@@ -44,13 +44,6 @@
               ];
               icon = "${pkgs.nixos-icons}/share/icons/hicolor/scalable/apps/nix-snowflake.svg";
               definedAliases = ["@np"];
-            };
-
-            "NixOS Wiki" = {
-              urls = [{template = "https://wiki.nixos.org/index.php?search={searchTerms}";}];
-              icon = "https://wiki.nixos.org/favicon.png";
-              updateInterval = 24 * 60 * 60 * 1000;
-              definedAliases = ["@nw"];
             };
 
             "Brave" = {
