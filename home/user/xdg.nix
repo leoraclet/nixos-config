@@ -36,6 +36,7 @@
   # Default directories.
   xdg.userDirs = {
     enable = true;
+    setSessionVariables = true;
     createDirectories = true; # conflicts with impermanence
 
     # Make sure we're using the english ones.

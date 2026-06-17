@@ -1,7 +1,12 @@
 # https://nixos.wiki/wiki/Librewolf
-{pkgs, ...}: {
+{
+  pkgs,
+  config,
+  ...
+}: {
   programs.firefox = {
     enable = true;
+    configPath = "${config.xdg.configHome}/mozilla/firefox";
     # package = pkgs.librewolf; # FIXME: Use librewolf as default browser
     profiles = {
       default = {
