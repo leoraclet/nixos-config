@@ -24,6 +24,7 @@
     texlab
     typst
     nixd
+    nil
     # ======================================== #
     # Formatter and Linter Packages
     # ======================================== #

@@ -11,6 +11,8 @@
     else config.lib.file.mkOutOfStoreSymlink "${pathToDotfiles}/${path}";
 in {
   home.file = {
+    # Directory entries
+    # ----------------------------------------------------
     ".config/hypr".source = pathToFile "hypr";
     ".config/btop".source = pathToFile "btop";
     ".config/kitty".source = pathToFile "kitty";
@@ -19,6 +21,9 @@ in {
     ".config/helix".source = pathToFile "helix";
     ".config/fish".source = pathToFile "fish";
     ".config/noctalia".source = pathToFile "noctalia";
+    ".config/zed".source = pathToFile "zed";
+    # File entries
+    # ----------------------------------------------------
     ".config/VSCodium/User/settings.json".source = pathToFile "VSCodium/settings.json";
     ".config/VSCodium/User/keybindings.json".source = pathToFile "VSCodium/keybindings.json";
     ".config/mimeapps.list".source = pathToFile "mimeapps.list";
