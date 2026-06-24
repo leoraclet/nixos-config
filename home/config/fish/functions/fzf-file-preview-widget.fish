@@ -3,7 +3,7 @@ function fzf-file-preview-widget
 
     if test -n "$selected_file"
         cd "$(dirname $selected_file)"
-        hx "$(basename $selected_file)"
+        nvim "$(basename $selected_file)"
     end
 
     clear

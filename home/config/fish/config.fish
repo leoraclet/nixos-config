@@ -3,7 +3,7 @@
 #################################################
 
 set -U fish_greeting
-set -gx EDITOR hx
+set -gx EDITOR nvim
 set -gx ATUIN_NOBIND "true"
 
 #################################################

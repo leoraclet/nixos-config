@@ -1,7 +1,7 @@
 {...}: {
   environment.sessionVariables = {
-    BROWSER = "firefox";
-    EDITOR = "hx";
+    BROWSER = "brave";
+    EDITOR = "nvim";
     TERMINAL = "kitty";
     XDG_CURRENT_DESKTOP = "Hyprland";
     XDG_SESSION_DESKTOP = "Hyprland";
@@ -22,7 +22,7 @@
   };
 
   environment.variables = {
-    EDITOR = "hx";
-    VISUAL = "hx";
+    EDITOR = "nvim";
+    VISUAL = "nvim";
   };
 }

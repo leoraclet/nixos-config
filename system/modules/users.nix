@@ -1,6 +1,5 @@
 {pkgs, ...}: {
   users.users.leonne = {
-    # FIXME
     isNormalUser = true;
     description = "leonne";
     # To avoid being locked out after first install of the system
@@ -26,38 +25,4 @@
   users.defaultUserShell = pkgs.fish;
   # Allows to change the initial password to a more robust one after firt login.
   users.mutableUsers = true;
-
-  xdg.mime = {
-    enable = true;
-    defaultApplications = {
-      # Default
-      "application/octet-stream" = "Helix.desktop";
-      "text/plain" = "Helix.desktop";
-
-      # PDF
-      "application/pdf" = "firefox.desktop";
-
-      # Web
-      "x-scheme-handler/http" = "firefox.desktop";
-      "x-scheme-handler/https" = "firefox.desktop";
-      "x-scheme-handler/chrome" = "firefox.desktop";
-      "text/html" = "firefox.desktop";
-      "application/x-extension-htm" = "firefox.desktop";
-      "application/x-extension-html" = "firefox.desktop";
-      "application/x-extension-shtml" = "firefox.desktop";
-      "application/xhtml+xml" = "firefox.desktop";
-      "application/x-extension-xhtml" = "firefox.desktop";
-      "application/x-extension-xht" = "firefox.desktop";
-
-      # Images
-      "image/bmp" = "imv-folder.desktop";
-      "image/gif" = "imv-folder.desktop";
-      "image/jpeg" = "imv-folder.desktop";
-      "image/png" = "imv-folder.desktop";
-      "image/webp" = "imv-folder.desktop";
-
-      # Videos
-      "video/mp4" = "umpv.desktop";
-    };
-  };
 }

@@ -104,6 +104,7 @@
     ###################################################
 
     thunderbird
+    file-roller
     obsidian
     spotify
     vesktop

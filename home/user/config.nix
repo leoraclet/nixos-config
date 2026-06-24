@@ -28,7 +28,8 @@ in {
     # ----------------------------------------------------
     ".config/VSCodium/User/settings.json".source = pathToFile "VSCodium/settings.json";
     ".config/VSCodium/User/keybindings.json".source = pathToFile "VSCodium/keybindings.json";
-    ".config/mimeapps.list".source = pathToFile "mimeapps.list";
     ".config/starship.toml".source = pathToFile "starship.toml";
+
+    # ".config/mimeapps.list".source = pathToFile "mimeapps.list";
   };
 }
