@@ -98,11 +98,11 @@ You can refer to this [guide](https://github.com/Jadarma/nixfiles/blob/main/docs
 2. Temporarily install ripgrep, fish and git using the command: `nix-shell -p ripgrep fish git --run fish`. You can also use classic bash and grep for the next step without installing fish and ripgrep.
 3. Run the command `rg --hidden FIXME` and change/add lines to match your device, swaps, partitions, peripherals, file systems, etc. in the configuration files.
 
-    > [!IMPORTANT]
-    >
-    > I highly recommend you to go throught all the configurations files and ensure everything is configured to your needs.
-    >
-    > Don't forget to delete or change settings and configurations that are unique to you, like **git** settings, **username**, etc ...
+> [!IMPORTANT]
+>
+> I highly recommend you to go throught all the configurations files and ensure everything is configured to your needs.
+>
+> Don't forget to delete or change settings and configurations that are unique to you, like **git** settings, **username**, etc ...
 
 4. Enable `flake` support (more [right here](https://nixos.wiki/wiki/Flakes#Enable_flakes_temporarily)) on your current system. Don't forget to run `sudo nixos-rebuild switch` after enabling `flake` in your `/etc/configuration.nix`.
 5. Clone this repository
