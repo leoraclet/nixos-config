@@ -22,6 +22,8 @@ in {
     ".config/fish".source = pathToFile "fish";
     ".config/noctalia".source = pathToFile "noctalia";
     ".config/zed".source = pathToFile "zed";
+    ".config/foot".source = pathToFile "foot";
+    ".config/nvim".source = pathToFile "nvim";
     # File entries
     # ----------------------------------------------------
     ".config/VSCodium/User/settings.json".source = pathToFile "VSCodium/settings.json";

@@ -12,18 +12,16 @@
     ###################################################
 
     # Tools
-    gnumake # Tool to control the generation of non-source files from sources
-    just # Handy way to save and run project-specific commands
     git # Distributed version control system
     git-credential-manager # Git credential manager for secure authentication
     alejandra # Uncompromising Nix Code Formatter
+    neovim
     evil-helix # Post-modern modal text editor, with vim keybindings
     direnv # Shell extension that manages your environment
 
     # Languages
     uv # Extremely fast Python package installer and resolver, written in Rust
     bun # Incredibly fast JavaScript runtime, bundler, transpiler and package manager
-    jdk # Open-source Java Developement Kit
     gcc # GNU Compiler Collection, a set of compilers for various programming languages
 
     ###################################################
@@ -74,7 +72,6 @@
     btop # Monitor of resources
     hexyl # Command-line hex viewer
     pandoc # Conversion between documentation formats
-    zathura # PDF viewer
     procs # Like ps, but cooler
     starship # Cross-shell prompt
     texliveFull # TeX Live environment
@@ -88,7 +85,6 @@
     ouch # Command-line utility for easily compressing and decompressing files and directories
     gzip # GNU zip compression program
     zip # Compressor/archiver for creating and modifying zipfiles
-    broot # Interactive tree view, a fuzzy search, a balanced BFS descent and customizable commands
     samba # Standard Windows interoperability suite of programs for Linux and Unix
     libqalculate # Advanced calculator library
     calc # C-style arbitrary precision calculator
@@ -158,6 +154,7 @@
     pavucontrol
     alsa-utils
     kitty
+    foot
     libnotify
     flameshot
 

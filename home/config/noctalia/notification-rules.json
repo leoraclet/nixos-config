@@ -11,6 +11,10 @@
         {
             "action": "block",
             "pattern": "Disconnected"
+        },
+        {
+            "action": "block",
+            "pattern": "Flameshot"
         }
     ]
 }

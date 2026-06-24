@@ -16,7 +16,7 @@
         "enableWindowsSearch": true,
         "iconMode": "tabler",
         "ignoreMouseInput": false,
-        "overviewLayer": false,
+        "overviewLayer": true,
         "pinnedApps": [
         ],
         "position": "center",
@@ -60,6 +60,7 @@
         "middleClickCommand": "",
         "middleClickFollowMouse": false,
         "monitors": [
+            "eDP-1"
         ],
         "mouseWheelAction": "workspace",
         "mouseWheelWrap": true,
@@ -70,6 +71,10 @@
         "rightClickCommand": "",
         "rightClickFollowMouse": false,
         "screenOverrides": [
+            {
+                "enabled": false,
+                "name": "eDP-1"
+            }
         ],
         "showCapsule": true,
         "showOnWorkspaceSwitch": true,
@@ -489,7 +494,7 @@
         "allowPanelsOnScreenWithoutBar": true,
         "allowPasswordWithFprintd": false,
         "animationDisabled": false,
-        "animationSpeed": 1.2,
+        "animationSpeed": 1,
         "autoStartAuth": false,
         "avatarImage": "/home/leonne/.face",
         "boxRadiusRatio": 1,
@@ -577,15 +582,15 @@
         "suspendTimeout": 1800
     },
     "location": {
-        "analogClockInCalendar": false,
+        "analogClockInCalendar": true,
         "autoLocate": false,
-        "firstDayOfWeek": -1,
+        "firstDayOfWeek": 1,
         "hideWeatherCityName": false,
         "hideWeatherTimezone": false,
-        "name": "Louiseville",
+        "name": "saguenay",
         "showCalendarEvents": true,
         "showCalendarWeather": true,
-        "showWeekNumberInCalendar": false,
+        "showWeekNumberInCalendar": true,
         "use12hourFormat": false,
         "useFahrenheit": false,
         "weatherEnabled": true,
@@ -609,7 +614,7 @@
         "forced": false,
         "manualSunrise": "06:30",
         "manualSunset": "18:30",
-        "nightTemp": "2998"
+        "nightTemp": "1995"
     },
     "noctaliaPerformance": {
         "disableDesktopWidgets": true,
@@ -639,7 +644,7 @@
         },
         "sounds": {
             "criticalSoundFile": "",
-            "enabled": false,
+            "enabled": true,
             "excludedApps": "discord,firefox,chrome,chromium,edge",
             "lowSoundFile": "",
             "normalSoundFile": "",

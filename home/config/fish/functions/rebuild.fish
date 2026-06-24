@@ -57,7 +57,7 @@ function rebuild
     set current (nixos-rebuild list-generations --json | jq -r '.[0].date')
 
     # Commit all changes with the generation metadata
-    git commit -am "$current"
+    # git commit -am "$current"
 
     echo "Removing unnecessary files and folders..."
 
