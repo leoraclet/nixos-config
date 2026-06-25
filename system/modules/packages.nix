@@ -155,7 +155,6 @@
     pavucontrol
     alsa-utils
     kitty
-    foot
     libnotify
     flameshot
 

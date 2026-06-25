@@ -7,10 +7,6 @@
         }
     ],
     "states": {
-        "mimeapp-gui": {
-            "enabled": true,
-            "sourceUrl": "https://github.com/noctalia-dev/noctalia-plugins"
-        },
         "mirror-mirror": {
             "enabled": true,
             "sourceUrl": "https://github.com/noctalia-dev/noctalia-plugins"

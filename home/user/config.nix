@@ -11,6 +11,7 @@
     else config.lib.file.mkOutOfStoreSymlink "${pathToDotfiles}/${path}";
 in {
   home.file = {
+    # ----------------------------------------------------
     # Directory entries
     # ----------------------------------------------------
     ".config/hypr".source = pathToFile "hypr";
@@ -22,14 +23,13 @@ in {
     ".config/fish".source = pathToFile "fish";
     ".config/noctalia".source = pathToFile "noctalia";
     ".config/zed".source = pathToFile "zed";
-    ".config/foot".source = pathToFile "foot";
     ".config/nvim".source = pathToFile "nvim";
+    ".config/tmux".source = pathToFile "tmux";
+    # ----------------------------------------------------
     # File entries
     # ----------------------------------------------------
     ".config/VSCodium/User/settings.json".source = pathToFile "VSCodium/settings.json";
     ".config/VSCodium/User/keybindings.json".source = pathToFile "VSCodium/keybindings.json";
     ".config/starship.toml".source = pathToFile "starship.toml";
-
-    # ".config/mimeapps.list".source = pathToFile "mimeapps.list";
   };
 }

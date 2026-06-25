@@ -30,7 +30,7 @@
 
       trusted-users = [
         "root"
-        "leonne"
+        "leonne" # FIXME: Change to your username
       ];
 
       # Add extra caches
