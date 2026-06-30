@@ -1,0 +1,73 @@
+clear
+ll
+ls
+open README.pdf
+e
+clear
+ls
+clear
+..
+cd Downloads/hacking/404CTF/
+clear
+ls
+ls | sort-by siz
+ls | sort-by size
+clear
+ls | sort-by size
+ls | sort-by modified
+ls | sort-by modified | reverse 
+ls *.nix | sort-by modified | reverse 
+ls | sort-by modified | reverse | where type == dir
+ls | sort-by modified | reverse | where type == file
+clear
+ls
+clear
+<\n>
+clear
+cd ..
+clear
+cat .config/alacritty/alacritty.toml
+cd ..
+clear
+ls
+clear
+cd Downloads/
+ll
+ls
+clear
+ll
+ls
+clear
+pwd
+dir
+e
+clear
+ll
+ls
+clear
+ls
+ls -la
+ls -a
+ls -a | where modified > 3d 
+ls -a | where modified has "year" 
+ls -a | where modified has date(3d) 
+ls -a | where modified has date() 
+ls -a | where modified > date() 
+ll
+ls
+exit
+ls -a | where str(modified) not-has "2025"
+ls -a | where modified not-has "2025"
+ls -a | sort-by modified | reverse
+ls -a | sort-by modified
+ls -a | where modified > (date now)
+ls -a | where modified w (date now)
+ls -a | where modified < (date now)
+ls -a | where modified < ((date now) - 9m)
+ls -a | where modified < ((date now) - 9days)
+ls -a | where modified < ((date now)-7days)
+ls -a | where modified < ((date now)- 7)
+ls -a | where modified < ((date now) - 7)
+ls -a | where modified < ((date now) - 7d)
+clear
+exit

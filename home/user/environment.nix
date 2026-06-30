@@ -15,5 +15,7 @@
     ELECTRON_OZONE_PLATFORM_HINT = "wayland";
     NIXOS_XDG_OPEN_USE_PORTAL = "1";
     XDG_DATA_HOME = "$HOME/.local/share";
+    XCURSOR_THEME = "Bibata-Modern-Ice";
+    XCURSOR_SIZE = "24";
   };
 }

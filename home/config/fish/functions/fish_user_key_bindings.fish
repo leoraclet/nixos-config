@@ -11,9 +11,13 @@ function fish_user_key_bindings
     # Configure fish fzf plugin
     fzf_configure_bindings --git_status=\cg --git_log=\e\cl --processes=\cp --history=\ch --directory=\cd --variables=\e\cv
 
+    # Skim key bindings
+    skim_key_bindings
+
     # Nullify fzf default keybindings
-    bind \cR '' -M insert
-    bind \cT '' -M insert
+    bind \cr skim-file-widget -M insert
+    bind \ct skim-history-widget -M insert
+    bind \ec skim-cd-widget -M insert
 
     bind \e\cd fzf-cd-preview-widget -M insert
     bind \e\cr recent_directories -M insert

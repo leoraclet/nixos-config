@@ -1,0 +1,164 @@
+[2026-06-26 14:24:48.806]	List of discovered tpm plugins: tmux-plugins/tmux-resurrect tmux-plugins/tmux-continuum
+[2026-06-26 14:24:48.822]	Invoking /home/leonne/.config/tmux/plugins/tpm/bin/install_plugins
+[2026-06-26 14:24:48.929]	Installing "tmux-resurrect"
+[2026-06-26 14:24:48.949]	Installing "tmux-continuum"
+[2026-06-26 14:24:49.847]	  "tmux-continuum" download success
+[2026-06-26 14:24:50.329]	  "tmux-resurrect" download success
+[2026-06-26 14:24:50.444]	Done.
+
+[2026-06-26 14:45:07.153]	List of discovered tpm plugins: tmux-plugins/tmux-resurrect tmux-plugins/tmux-continuum b0o/tmux-autoreload
+[2026-06-26 14:45:07.178]	Invoking /home/leonne/.config/tmux/plugins/tpm/bin/install_plugins
+[2026-06-26 14:45:07.303]	Installing "tmux-autoreload"
+[2026-06-26 14:45:07.324]	Already installed "tmux-resurrect"
+[2026-06-26 14:45:07.338]	Already installed "tmux-continuum"
+[2026-06-26 14:45:08.052]	  "tmux-autoreload" download success
+[2026-06-26 14:45:08.070]	Invoking /home/leonne/.config/tmux/plugins/tpm/bin/update_plugins all
+[2026-06-26 14:45:08.130]	Updating all plugins!
+[2026-06-26 14:45:08.151]	
+[2026-06-26 14:45:08.827]	  "tmux-autoreload" update success
+[2026-06-26 14:45:08.841]	    | Already up to date.
+[2026-06-26 14:45:08.859]	  "tmux-continuum" update success
+[2026-06-26 14:45:08.878]	    | Already up to date.
+[2026-06-26 14:45:09.126]	  "tmux-resurrect" update success
+[2026-06-26 14:45:09.202]	    | Already up to date.
+[2026-06-26 14:45:09.224]	Invoking /home/leonne/.config/tmux/plugins/tpm/bin/clean_plugins all
+[2026-06-26 14:45:09.424]	Done.
+
+[2026-06-26 15:00:16.321]	List of discovered tpm plugins: tmux-plugins/tmux-resurrect tmux-plugins/tmux-continuum b0o/tmux-autoreload
+[2026-06-26 15:00:16.350]	Invoking /home/leonne/.config/tmux/plugins/tpm/bin/install_plugins
+[2026-06-26 15:00:16.483]	Already installed "tmux-continuum"
+[2026-06-26 15:00:16.502]	Already installed "tmux-autoreload"
+[2026-06-26 15:00:16.518]	Already installed "tmux-resurrect"
+[2026-06-26 15:00:16.547]	Invoking /home/leonne/.config/tmux/plugins/tpm/bin/update_plugins all
+[2026-06-26 15:00:16.636]	Updating all plugins!
+[2026-06-26 15:00:16.658]	
+[2026-06-26 15:00:17.351]	  "tmux-continuum" update success
+[2026-06-26 15:00:17.367]	  "tmux-resurrect" update success
+[2026-06-26 15:00:17.388]	    | Already up to date.
+[2026-06-26 15:00:17.414]	    | Already up to date.
+[2026-06-26 15:00:17.433]	  "tmux-autoreload" update success
+[2026-06-26 15:00:17.457]	    | Already up to date.
+[2026-06-26 15:00:17.491]	Invoking /home/leonne/.config/tmux/plugins/tpm/bin/clean_plugins all
+[2026-06-26 15:00:17.733]	Done.
+
+[2026-06-26 15:06:04.081]	List of discovered tpm plugins: tmux-plugins/tmux-resurrect tmux-plugins/tmux-continuum b0o/tmux-autoreload
+[2026-06-26 15:06:04.109]	Invoking /home/leonne/.config/tmux/plugins/tpm/bin/install_plugins
+[2026-06-26 15:06:04.229]	Already installed "tmux-resurrect"
+[2026-06-26 15:06:04.244]	Already installed "tmux-autoreload"
+[2026-06-26 15:06:04.259]	Already installed "tmux-continuum"
+[2026-06-26 15:06:04.276]	Invoking /home/leonne/.config/tmux/plugins/tpm/bin/update_plugins all
+[2026-06-26 15:06:04.352]	Updating all plugins!
+[2026-06-26 15:06:04.381]	
+[2026-06-26 15:06:04.933]	  "tmux-resurrect" update success
+[2026-06-26 15:06:04.948]	    | Already up to date.
+[2026-06-26 15:06:04.964]	  "tmux-continuum" update success
+[2026-06-26 15:06:04.995]	    | Already up to date.
+[2026-06-26 15:06:05.022]	  "tmux-autoreload" update success
+[2026-06-26 15:06:05.039]	    | Already up to date.
+[2026-06-26 15:06:05.063]	Invoking /home/leonne/.config/tmux/plugins/tpm/bin/clean_plugins all
+[2026-06-26 15:06:05.311]	Done.
+
+[2026-06-26 15:09:36.831]	List of discovered tpm plugins: tmux-plugins/tmux-resurrect tmux-plugins/tmux-continuum b0o/tmux-autoreload
+[2026-06-26 15:09:36.862]	Invoking /home/leonne/.config/tmux/plugins/tpm/bin/install_plugins
+[2026-06-26 15:09:36.996]	Already installed "tmux-continuum"
+[2026-06-26 15:09:37.020]	Already installed "tmux-autoreload"
+[2026-06-26 15:09:37.049]	Already installed "tmux-resurrect"
+[2026-06-26 15:09:37.083]	Invoking /home/leonne/.config/tmux/plugins/tpm/bin/update_plugins all
+[2026-06-26 15:09:37.150]	Updating all plugins!
+[2026-06-26 15:09:37.172]	
+[2026-06-26 15:09:37.826]	  "tmux-autoreload" update success
+[2026-06-26 15:09:37.842]	    | Already up to date.
+[2026-06-26 15:09:37.879]	  "tmux-continuum" update success
+[2026-06-26 15:09:37.895]	    | Already up to date.
+[2026-06-26 15:09:37.993]	  "tmux-resurrect" update success
+[2026-06-26 15:09:38.027]	    | Already up to date.
+[2026-06-26 15:09:38.056]	Invoking /home/leonne/.config/tmux/plugins/tpm/bin/clean_plugins all
+[2026-06-26 15:09:38.293]	Done.
+
+[2026-06-26 15:12:16.930]	List of discovered tpm plugins: tmux-plugins/tmux-resurrect tmux-plugins/tmux-continuum b0o/tmux-autoreload
+[2026-06-26 15:12:16.962]	Invoking /home/leonne/.config/tmux/plugins/tpm/bin/install_plugins
+[2026-06-26 15:12:17.085]	Already installed "tmux-autoreload"
+[2026-06-26 15:12:17.107]	Already installed "tmux-continuum"
+[2026-06-26 15:12:17.135]	Already installed "tmux-resurrect"
+[2026-06-26 15:12:17.168]	Invoking /home/leonne/.config/tmux/plugins/tpm/bin/update_plugins all
+[2026-06-26 15:12:17.256]	Updating all plugins!
+[2026-06-26 15:12:17.287]	
+[2026-06-26 15:12:17.895]	  "tmux-continuum" update success
+[2026-06-26 15:12:17.916]	    | Already up to date.
+[2026-06-26 15:12:17.937]	  "tmux-resurrect" update success
+[2026-06-26 15:12:17.952]	    | Already up to date.
+[2026-06-26 15:12:17.972]	  "tmux-autoreload" update success
+[2026-06-26 15:12:17.993]	    | Already up to date.
+[2026-06-26 15:12:18.027]	Invoking /home/leonne/.config/tmux/plugins/tpm/bin/clean_plugins all
+[2026-06-26 15:12:18.258]	Done.
+
+[2026-06-26 16:19:58.032]	List of discovered tpm plugins: tmux-plugins/tmux-resurrect tmux-plugins/tmux-continuum b0o/tmux-autoreload
+[2026-06-26 16:19:58.043]	Invoking /home/leonne/.config/tmux/plugins/tpm/bin/install_plugins
+[2026-06-26 16:19:58.095]	Already installed "tmux-continuum"
+[2026-06-26 16:19:58.107]	Already installed "tmux-resurrect"
+[2026-06-26 16:19:58.119]	Already installed "tmux-autoreload"
+[2026-06-26 16:19:58.130]	Invoking /home/leonne/.config/tmux/plugins/tpm/bin/update_plugins all
+[2026-06-26 16:19:58.164]	Updating all plugins!
+[2026-06-26 16:19:58.175]	
+[2026-06-26 16:19:58.669]	  "tmux-autoreload" update success
+[2026-06-26 16:19:58.680]	  "tmux-continuum" update success
+[2026-06-26 16:19:58.691]	    | Already up to date.
+[2026-06-26 16:19:58.703]	    | Already up to date.
+[2026-06-26 16:19:58.770]	  "tmux-resurrect" update success
+[2026-06-26 16:19:58.790]	    | Already up to date.
+[2026-06-26 16:19:58.809]	Invoking /home/leonne/.config/tmux/plugins/tpm/bin/clean_plugins all
+[2026-06-26 16:19:58.927]	Done.
+
+[2026-06-26 16:29:16.034]	List of discovered tpm plugins: tmux-plugins/tmux-resurrect tmux-plugins/tmux-continuum tmux-plugins/tmux-yank b0o/tmux-autoreload
+[2026-06-26 16:29:16.046]	Invoking /home/leonne/.config/tmux/plugins/tpm/bin/install_plugins
+[2026-06-26 16:29:16.096]	Installing "tmux-yank"
+[2026-06-26 16:29:16.108]	Already installed "tmux-autoreload"
+[2026-06-26 16:29:16.120]	Already installed "tmux-continuum"
+[2026-06-26 16:29:16.135]	Already installed "tmux-resurrect"
+[2026-06-26 16:29:16.645]	  "tmux-yank" download success
+[2026-06-26 16:29:16.656]	Invoking /home/leonne/.config/tmux/plugins/tpm/bin/update_plugins all
+[2026-06-26 16:29:16.690]	Updating all plugins!
+[2026-06-26 16:29:16.702]	
+[2026-06-26 16:29:17.195]	  "tmux-yank" update success
+[2026-06-26 16:29:17.210]	    | Already up to date.
+[2026-06-26 16:29:17.237]	  "tmux-continuum" update success
+[2026-06-26 16:29:17.253]	  "tmux-resurrect" update success
+[2026-06-26 16:29:17.267]	    | Already up to date.
+[2026-06-26 16:29:17.278]	    | Already up to date.
+[2026-06-26 16:29:17.289]	  "tmux-autoreload" update success
+[2026-06-26 16:29:17.299]	    | Already up to date.
+[2026-06-26 16:29:17.311]	Invoking /home/leonne/.config/tmux/plugins/tpm/bin/clean_plugins all
+[2026-06-26 16:29:17.434]	Done.
+
+[2026-06-26 16:33:39.322]	List of discovered tpm plugins: tmux-plugins/tmux-resurrect tmux-plugins/tmux-continuum
+[2026-06-26 16:33:39.333]	Invoking /home/leonne/.config/tmux/plugins/tpm/bin/install_plugins
+[2026-06-26 16:33:39.384]	Already installed "tmux-continuum"
+[2026-06-26 16:33:39.396]	Already installed "tmux-resurrect"
+[2026-06-26 16:33:39.408]	Invoking /home/leonne/.config/tmux/plugins/tpm/bin/update_plugins all
+[2026-06-26 16:33:39.446]	Updating all plugins!
+[2026-06-26 16:33:39.486]	
+[2026-06-26 16:33:39.921]	  "tmux-resurrect" update success
+[2026-06-26 16:33:39.933]	    | Already up to date.
+[2026-06-26 16:33:39.956]	  "tmux-continuum" update success
+[2026-06-26 16:33:39.967]	    | Already up to date.
+[2026-06-26 16:33:39.982]	Invoking /home/leonne/.config/tmux/plugins/tpm/bin/clean_plugins all
+[2026-06-26 16:33:40.034]	Removing "tmux-autoreload"
+[2026-06-26 16:33:40.046]	  "tmux-autoreload" clean success
+[2026-06-26 16:33:40.059]	Removing "tmux-yank"
+[2026-06-26 16:33:40.071]	  "tmux-yank" clean success
+[2026-06-26 16:33:40.139]	Done.
+
+[2026-06-26 16:36:45.024]	List of discovered tpm plugins: tmux-plugins/tmux-resurrect tmux-plugins/tmux-continuum
+[2026-06-26 16:36:45.036]	Invoking /home/leonne/.config/tmux/plugins/tpm/bin/install_plugins
+[2026-06-26 16:36:45.090]	Already installed "tmux-resurrect"
+[2026-06-26 16:36:45.105]	Already installed "tmux-continuum"
+[2026-06-26 16:36:45.118]	Invoking /home/leonne/.config/tmux/plugins/tpm/bin/update_plugins all
+[2026-06-26 16:36:45.153]	Updating all plugins!
+[2026-06-26 16:36:45.164]	
+[2026-06-26 16:36:45.572]	  "tmux-resurrect" update success
+[2026-06-26 16:36:45.584]	    | Already up to date.
+[2026-06-26 16:36:45.595]	  "tmux-continuum" update success
+[2026-06-26 16:36:45.606]	    | Already up to date.
+[2026-06-26 16:36:45.618]	Invoking /home/leonne/.config/tmux/plugins/tpm/bin/clean_plugins all
+[2026-06-26 16:36:45.720]	Done.
+

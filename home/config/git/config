@@ -1,0 +1,60 @@
+[credential]
+        cacheOptions = "--timeout 86400"
+        credentialStore = "cache"
+        helper = "manager"
+
+[credential "https://github.com"]
+        username = "leoraclet"
+
+[user]
+        email = "110538448+leoraclet@users.noreply.github.com"
+        name = "N£utr0nys"
+
+[init]
+        defaultBranch = "main"
+
+[pull]
+        rebase = true
+
+[help]
+        autocorrect = prompt
+[commit]
+        verbose = true
+[rerere]
+        enabled = true
+        autoupdate = true
+[core]
+        excludesfile = ~/.gitignore
+[rebase]
+        autoSquash = true
+        autoStash = true
+        updateRefs = true
+
+[column]
+        ui = auto
+[branch]
+        sort = -committerdate
+[tag]
+        sort = version:refname
+[diff]
+        algorithm = histogram
+        colorMoved = plain
+        mnemonicPrefix = true
+        renames = true
+[push]
+        default = simple
+        autoSetupRemote = true
+        followTags = true
+[fetch]
+        prune = true
+        pruneTags = true
+        all = true
+
+[core]
+        # fsmonitor = true
+        # untrackedCache = true
+[merge]
+        # (just 'diff3' if git version < 2.3)
+        # conflictstyle = zdiff3
+[pull]
+        # rebase = true

@@ -1,18 +1,20 @@
 {pkgs, ...}: {
   services = {
-    udev.packages = with pkgs; [
-      #platformio # udev rules for platformio
-      #openocd # required by platformio, see https://github.com/NixOS/nixpkgs/issues/224895
+    udev = {
+      enable = true;
+      packages = with pkgs; [
+        #platformio # udev rules for platformio
+        #openocd # required by platformio, see https://github.com/NixOS/nixpkgs/issues/224895
 
-      sane-airscan # see https://wiki.nixos.org/wiki/Scanners
-    ];
+        sane-airscan # see https://wiki.nixos.org/wiki/Scanners
+      ];
+      extraRules = ''
+        KERNEL=="uinput", MODE="0660", GROUP="uinput", OPTIONS+="static_node=uinput"
+      '';
+    };
 
     envfs.enable = true;
     flatpak.enable = true;
-
-    udev.extraRules = ''
-      KERNEL=="uinput", MODE="0660", GROUP="uinput", OPTIONS+="static_node=uinput"
-    '';
 
     #========================================#
     # Fingerprint reader
@@ -100,6 +102,9 @@
     udisks2.enable = true; # Disk management daemon, required for mounting and unmounting disks
     fwupd.enable = true; # Firmware update daemon, useful for updating firmware of devices like SSDs, GPUs, etc.
     accounts-daemon.enable = true;
+    dbus = {
+      enable = true;
+    };
 
     #========================================#
     # Others

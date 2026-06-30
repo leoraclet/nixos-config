@@ -1,12 +1,12 @@
 {
   imports = [
-    ./git.nix
+    # ./git.nix
+    # ./xdg.nix
     ./config.nix
     ./environment.nix
     ./firefox.nix
     ./gtk-qt.nix
     ./codium.nix
-    ./xdg.nix
     ./udiskie.nix
     ./spicetify.nix
   ];

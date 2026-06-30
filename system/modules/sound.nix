@@ -1,4 +1,4 @@
-{...}: {
+{pkgs, ...}: {
   security.rtkit.enable = true;
   services.pulseaudio.enable = false;
 
@@ -10,4 +10,10 @@
     jack.enable = true;
     wireplumber.enable = true;
   };
+
+  environment.systemPackages = with pkgs; [
+    alsa-utils
+    pwvucontrol
+    easyeffects
+  ];
 }

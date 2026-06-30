@@ -1,7 +1,13 @@
 {...}: {
   # Open ports in the firewall.
-  networking.firewall.enable = false;
-  #networking.firewall.allowedTCPPorts = [ 3000 ];
-  #networking.firewall.allowedUDPPorts = [ 3000 ];
-  networking.firewall.trustedInterfaces = ["virbr0"];
+  networking = {
+    nftables.enable = false;
+    firewall = {
+      enable = false;
+      allowPing = false;
+      allowedTCPPorts = [3000];
+      allowedUDPPorts = [3000];
+      trustedInterfaces = ["virbr0"];
+    };
+  };
 }

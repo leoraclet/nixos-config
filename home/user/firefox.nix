@@ -131,18 +131,6 @@
       };
     };
     policies = {
-      DisableTelemetry = true;
-      DisableFirefoxStudies = true;
-      DisablePocket = true;
-      DisableFirefoxScreenshots = true;
-      DisplayBookmarksToolbar = "newtab";
-      DefaultDownloadDirectory = "\${HOME}/Downloads";
-      OfferToSaveLogins = false;
-      OfferToSaveLoginsDefault = false;
-      PasswordManagerEnabled = false;
-      ShowHomeButton = true;
-      # NoDefaultBookmarks = true;
-
       Preferences = {
         "cookiebanners.service.mode.privateBrowsing" = 2; # Block cookie banners in private browsing
         "cookiebanners.service.mode" = 2; # Block cookie banners
@@ -155,6 +143,25 @@
         "privacy.trackingprotection.socialtracking.enabled" = true;
       };
 
+      # Feature Disabling
+      # NoDefaultBookmarks = true;
+      DisplayMenuBar = "never";
+      DontCheckDefaultBrowser = true;
+      DisableFirefoxStudies = true;
+      DisplayBookmarksToolbar = "newtab";
+      DefaultDownloadDirectory = "\${HOME}/Downloads";
+      OfferToSaveLogins = false;
+      OfferToSaveLoginsDefault = false;
+      PasswordManagerEnabled = false;
+      ShowHomeButton = true;
+      DisableFirefoxScreenshots = true;
+      DisableMasterPasswordCreation = false;
+      DisablePasswordReveal = true;
+      DisablePocket = true;
+      DisableSafeMode = false;
+      DisableSecurityBypass = false;
+      DisableTelemetry = true;
+      DNSOverHTTPS = true;
       FirefoxSuggest = {
         WebSuggestions = false;
         SponsoredSuggestions = false;
@@ -163,6 +170,7 @@
 
       UserMessaging = {
         ExtensionRecommendations = false;
+        UrlbarInterventions = false;
         SkipOnboarding = true;
       };
 
@@ -171,6 +179,7 @@
         Locked = true;
         Cryptomining = true;
         Fingerprinting = true;
+        EmailTracking = true;
       };
 
       FirefoxHome = {

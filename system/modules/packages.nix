@@ -18,6 +18,8 @@
     neovim
     evil-helix # Post-modern modal text editor, with vim keybindings
     direnv # Shell extension that manages your environment
+    devenv
+    just
 
     # Languages
     uv # Extremely fast Python package installer and resolver, written in Rust
@@ -41,13 +43,31 @@
     # CLI
     ###################################################
 
-    tmux # Terminal workspace with batteries included
+    # Terminal mulitplexer
+    tmux
+    zellij
+
+    xh
+    delta
+    nushell
     tesseract
     zbar
+
+    # Disk utilities
     dust # Disk analyzer
     dua # Disk usage analyzer
     duf # Disk Usage/Free Utility
+
+    # Terminal
+    kitty
+    alacritty
+    ghostty
+    wezterm
+
     yazi # Terminal file manager
+    superfile
+    broot
+
     poppler # PDF rendering library
     atuin # Sqlite bash history
     tealdeer # Very fast implementation of tldr (aka man) in Rust
@@ -65,20 +85,17 @@
     sd # Intuitive find and replace (sed alternative)
     file # File Command
     fzf # Fuzzy finder
+    skim
     ripgrep # Text search
     ffmpeg # FFMPEG utility
     grim
     wget # Tool for retrieving files using HTTP, HTTPS, and FTP
     btop # Monitor of resources
     hexyl # Command-line hex viewer
-    pandoc # Conversion between documentation formats
     procs # Like ps, but cooler
     starship # Cross-shell prompt
     texliveFull # TeX Live environment
-    killall # Like pkill but better
     udiskie # Removable disk automounter for udisks
-    imagemagickBig # Software suite to create, edit, compose, or convert bitmap images
-    ghostscript # PostScript interpreter
     pdftk # PDF toolbox
     chafa # Terminal graphics for the 21st century
     openssl # Crptographic library that implements the SSL and TLS protocols
@@ -123,6 +140,7 @@
     # obs-studio
     # inkscape
     # gimp
+    # pinta
     # syncthing
     # cryptomator
     # veracrypt
@@ -132,6 +150,8 @@
     # rustdesk
     # insomnia
     # libsForQt5.kdenlive
+    # davinci-resolve-studio
+    #
 
     ###################################################
     # Backup (not used now)
@@ -154,7 +174,6 @@
     wl-mirror
     pavucontrol
     alsa-utils
-    kitty
     libnotify
     flameshot
 

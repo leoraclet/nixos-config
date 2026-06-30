@@ -15,7 +15,7 @@
         "enableSettingsSearch": true,
         "enableWindowsSearch": true,
         "iconMode": "tabler",
-        "ignoreMouseInput": false,
+        "ignoreMouseInput": true,
         "overviewLayer": true,
         "pinnedApps": [
         ],
@@ -103,23 +103,48 @@
                     "showBadge": true,
                     "showLabelsOnlyWhenOccupied": true,
                     "unfocusedIconsOpacity": 1
+                },
+                {
+                    "defaultSettings": {
+                        "colorHistory": [
+                        ],
+                        "detectedRecorder": "",
+                        "filenameFormat": "",
+                        "gifMaxSeconds": 30,
+                        "installedLangs": [
+                            "eng"
+                        ],
+                        "paletteColors": [
+                        ],
+                        "recordCopyToClipboard": false,
+                        "recordSkipConfirmation": false,
+                        "screenshotPath": "",
+                        "selectedOcrLang": "eng",
+                        "transAvailable": false,
+                        "videoPath": ""
+                    },
+                    "id": "plugin:screen-toolkit"
                 }
             ],
             "left": [
                 {
-                    "colorizeSystemIcon": "none",
-                    "colorizeSystemText": "none",
-                    "customIconPath": "",
-                    "enableColorization": false,
-                    "icon": "rocket",
-                    "iconColor": "none",
-                    "id": "Launcher",
-                    "useDistroLogo": false
+                    "defaultSettings": {
+                    },
+                    "id": "plugin:mirror-mirror"
+                },
+                {
+                    "defaultSettings": {
+                        "compactMode": false,
+                        "defaultDuration": 0,
+                        "iconColor": "none",
+                        "textColor": "none"
+                    },
+                    "id": "plugin:timer"
                 },
                 {
                     "clockColor": "none",
-                    "customFont": "",
-                    "formatHorizontal": "dd / MM / yyyy, HH:mm:ss",
+                    "customFont": "JetBrainsMono Nerd Font",
+                    "formatHorizontal": "dd / MM / yyyy  -  HH:mm:ss",
                     "formatVertical": "HH mm - dd MM",
                     "id": "Clock",
                     "tooltipFormat": "HH:mm ddd, MMM dd",
@@ -151,11 +176,11 @@
                     "colorizeIcons": false,
                     "hideMode": "hidden",
                     "id": "ActiveWindow",
-                    "maxWidth": 200,
+                    "maxWidth": 250,
                     "scrollingMode": "always",
                     "showIcon": true,
                     "showText": true,
-                    "textColor": "none",
+                    "textColor": "tertiary",
                     "useFixedWidth": false
                 }
             ],
@@ -191,8 +216,14 @@
                     ]
                 },
                 {
+                    "displayMode": "onhover",
+                    "iconColor": "none",
+                    "id": "VPN",
+                    "textColor": "none"
+                },
+                {
                     "hideWhenZero": false,
-                    "hideWhenZeroUnread": true,
+                    "hideWhenZeroUnread": false,
                     "iconColor": "none",
                     "id": "NotificationHistory",
                     "showUnreadBadge": true,
@@ -239,49 +270,6 @@
                     "id": "Battery",
                     "showNoctaliaPerformance": true,
                     "showPowerProfiles": true
-                },
-                {
-                    "id": "Spacer",
-                    "width": 5
-                },
-                {
-                    "defaultSettings": {
-                    },
-                    "id": "plugin:mirror-mirror"
-                },
-                {
-                    "defaultSettings": {
-                        "compactMode": false,
-                        "defaultDuration": 0,
-                        "iconColor": "none",
-                        "textColor": "none"
-                    },
-                    "id": "plugin:timer"
-                },
-                {
-                    "defaultSettings": {
-                        "colorHistory": [
-                        ],
-                        "detectedRecorder": "",
-                        "filenameFormat": "",
-                        "gifMaxSeconds": 30,
-                        "installedLangs": [
-                            "eng"
-                        ],
-                        "paletteColors": [
-                        ],
-                        "recordCopyToClipboard": false,
-                        "recordSkipConfirmation": false,
-                        "screenshotPath": "",
-                        "selectedOcrLang": "eng",
-                        "transAvailable": false,
-                        "videoPath": ""
-                    },
-                    "id": "plugin:screen-toolkit"
-                },
-                {
-                    "id": "Spacer",
-                    "width": 5
                 },
                 {
                     "colorizeDistroLogo": false,
@@ -496,7 +484,7 @@
         "animationDisabled": false,
         "animationSpeed": 1,
         "autoStartAuth": false,
-        "avatarImage": "/home/leonne/.face",
+        "avatarImage": "/home/leonne/Documents/documents/pictures/great-avatar.jpg",
         "boxRadiusRatio": 1,
         "clockFormat": "hh\\nmm",
         "clockStyle": "custom",
@@ -598,7 +586,7 @@
         "weatherTaliaMascotAlways": false
     },
     "network": {
-        "bluetoothAutoConnect": true,
+        "bluetoothAutoConnect": false,
         "bluetoothDetailsViewMode": "grid",
         "bluetoothHideUnnamedDevices": false,
         "bluetoothRssiPollIntervalMs": 60000,
