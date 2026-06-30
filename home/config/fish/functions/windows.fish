@@ -12,7 +12,7 @@ function windows
         end
 
         if test "$argv[1]" = "spice"
-            quickemu --vm windows-10.conf --fullscreen --keyboard_layout fr-fr --public-dir ~/ --display spice --extra_args "-enable-kvm"
+            quickemu --vm windows-10.conf --fullscreen --keyboard_layout fr-fr --public-dir ~/Downloads --display spice --extra_args "-enable-kvm"
         end
     else
         if test -n "$(pgrep windows-10)"
@@ -23,7 +23,7 @@ function windows
         end
     end
 
-    quickemu --vm windows-10.conf --fullscreen --keyboard_layout fr-fr --public-dir ~/ --display none --extra_args "-enable-kvm"
+    quickemu --vm windows-10.conf --fullscreen --keyboard_layout fr-fr --public-dir ~/Downloads --display none --extra_args "-enable-kvm"
     cd "$current_dir"
     commandline -f repaint
 end

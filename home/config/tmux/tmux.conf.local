@@ -385,6 +385,10 @@ tmux_conf_urlscan_options="--compact --dedupe"
 
 # -- user customizations -------------------------------------------------------
 
+set -g allow-passthrough on
+set -ga update-environment TERM
+set -ga update-environment TERM_PROGRAM
+
 # this is the place to override or undo settings
 
 # increase history size

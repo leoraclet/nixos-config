@@ -19,6 +19,7 @@
     evil-helix # Post-modern modal text editor, with vim keybindings
     direnv # Shell extension that manages your environment
     devenv
+    hyperfine
     just
 
     # Languages
@@ -71,6 +72,7 @@
     poppler # PDF rendering library
     atuin # Sqlite bash history
     tealdeer # Very fast implementation of tldr (aka man) in Rust
+    navi
     imv # Image viewer
     mpv # Media player
     bat # Like cat, but WAY betters

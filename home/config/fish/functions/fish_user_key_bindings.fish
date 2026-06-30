@@ -14,6 +14,9 @@ function fish_user_key_bindings
     # Skim key bindings
     skim_key_bindings
 
+    bind \cs _navi_smart_replace
+    bind --mode insert \cs _navi_smart_replace
+
     # Nullify fzf default keybindings
     bind \cr skim-file-widget -M insert
     bind \ct skim-history-widget -M insert

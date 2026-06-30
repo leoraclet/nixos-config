@@ -62,7 +62,7 @@ alias gp="git push"
 alias gi="git init"
 alias gb="git branch"
 alias gu="git pull"
-alias gc="git diff"
+alias gd="git diff"
 
 # Fix commands
 alias fix_sd_card="modprobe rtsx_pci"
@@ -77,4 +77,5 @@ direnv hook fish | source
 atuin init fish --disable-up-arrow | source
 starship init fish --print-full-init | source
 sk --shell fish --shell-bindings | source
+
 enable_transience # For starship

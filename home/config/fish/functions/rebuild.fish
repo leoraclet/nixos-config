@@ -24,9 +24,8 @@ function rebuild
     # Add all potentially untracked files
     git add . -A -N
 
-    echo "Deleting old config files and folders..."
-
-    sudo find ~/ -name "*.dotfiles_backup" | xargs rm -rf > nixos-switch.log 2>&1
+    # echo "Deleting old config files and folders..."
+    # sudo find ~/ -name "*.dotfiles_backup" | xargs rm -rf > nixos-switch.log 2>&1
 
     echo "NixOS Rebuilding..."
 
@@ -41,7 +40,7 @@ function rebuild
     echo "Build successful"
 
     # Remove all symlinks of home-manager from previous generation
-    sudo find ~/.config -type l -delete > nixos-switch.log 2>&1
+    # sudo find ~/.config -type l -delete > nixos-switch.log 2>&1
 
     echo "Switching to new configuration..."
 
@@ -57,12 +56,11 @@ function rebuild
     set current (nixos-rebuild list-generations --json | jq -r '.[0].date')
 
     # Commit all changes with the generation metadata
-    # git commit -am "$current"
-
-    echo "Removing unnecessary files and folders..."
+    git commit -am "$current"
 
     # Remove log, build, and backup files
-    sudo find ~/ -name "*.dotfiles_backup" | xargs rm -rf > nixos-switch.log 2>&1
+    # echo "Removing unnecessary files and folders..."
+    # sudo find ~/ -name "*.dotfiles_backup" | xargs rm -rf > nixos-switch.log 2>&1
 
     sudo rm nixos-switch.log
     sudo rm -rf result
@@ -72,4 +70,5 @@ function rebuild
 
     # Back to where you were
     popd >/dev/null
+    commandline -f repaint
 end
