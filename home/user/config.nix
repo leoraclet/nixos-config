@@ -45,6 +45,7 @@
     "broot"
     "qalculate"
     "navi"
+    "snappy-switcher"
     "espanso"
     "vesktop/settings"
     "vesktop/themes"
