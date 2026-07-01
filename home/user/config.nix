@@ -45,6 +45,7 @@
     "broot"
     "qalculate"
     "navi"
+    "espanso"
     "vesktop/settings"
     "vesktop/themes"
     # ----------------------------------------------------

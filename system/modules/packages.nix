@@ -123,7 +123,8 @@
     ###################################################
 
     thunderbird
-    file-roller
+    espanso
+    overskride
     obsidian
     spotify
     vesktop

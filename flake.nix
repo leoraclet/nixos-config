@@ -18,6 +18,7 @@
       url = "github:noctalia-dev/noctalia-shell";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    snappy-switcher.url = "github:OpalAayan/snappy-switcher";
   };
 
   outputs = {nixpkgs, ...} @ inputs: let

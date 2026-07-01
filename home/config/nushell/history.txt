@@ -71,3 +71,10 @@ ls -a | where modified < ((date now) - 7)
 ls -a | where modified < ((date now) - 7d)
 clear
 exit
+clear
+exit
+clear
+ll
+cls
+clear
+ls
