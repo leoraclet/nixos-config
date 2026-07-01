@@ -123,7 +123,7 @@
     ###################################################
 
     thunderbird
-    espanso
+    espanso-wayland
     overskride
     obsidian
     spotify
