@@ -78,3 +78,39 @@ ll
 cls
 clear
 ls
+clear
+cd Downloads/
+ll
+cd 
+cd Downloads/hacking/404CTF/
+clear
+ll
+exit
+cd down
+cd Down
+cd 404CTF
+clear
+cls
+clear
+exit
+ll
+exit
+cd 404
+cd 404CTF
+atuin init nu
+clear
+ll
+exit
+ll /home/leonne/.local/share/nushell/vendor/autoload/
+ls /home/leonne/.local/share/nushell/vendor/autoload/
+exit
+source
+source -h
+source "ls"
+save
+save -h
+atuin init nu | save -f ($nu.data-dir | path join "vendor/autoload/atuin.nu")
+exit
+$nu.data-dir | path join "vendor/autoload/atuin.nu"
+($nu.data-dir | path join "vendor/autoload/atuin.nu")
+exit

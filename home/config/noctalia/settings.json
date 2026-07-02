@@ -486,7 +486,7 @@
         "autoStartAuth": false,
         "avatarImage": "/home/leonne/Documents/documents/pictures/great-avatar.jpg",
         "boxRadiusRatio": 1,
-        "clockFormat": "hh\\nmm",
+        "clockFormat": "HH:mm:ss ",
         "clockStyle": "custom",
         "compactLockScreen": false,
         "dimmerOpacity": 0.75,

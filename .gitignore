@@ -1,9 +1,2 @@
 # Where is stored the OS build files before switching (not need)
-/result
-/.vscode
-**/.venv
-.env.searxng
-
-**/clipboard_history.json
-**/clipse.log
-**/tmp_files
+**/*.log

@@ -1,14 +1,17 @@
 # https://gvolpe.com/blog/home-manager-dotfiles-management/
-{config, ...}: let
+{ config, ... }:
+let
   configDir = ../config;
   isMutable = true;
   pathToDotfiles = "${config.home.homeDirectory}/Config/home/config";
 
   # Creates bidirectional symlinks if mutable
-  pathToFile = path:
-    if !isMutable
-    then "${configDir}/${path}"
-    else config.lib.file.mkOutOfStoreSymlink "${pathToDotfiles}/${path}";
+  pathToFile =
+    path:
+    if !isMutable then
+      "${configDir}/${path}"
+    else
+      config.lib.file.mkOutOfStoreSymlink "${pathToDotfiles}/${path}";
 
   configLinks = [
     # ----------------------------------------------------
@@ -47,6 +50,7 @@
     "navi"
     "snappy-switcher"
     "espanso"
+    "tealdeer"
     "vesktop/settings"
     "vesktop/themes"
     # ----------------------------------------------------
@@ -60,12 +64,12 @@
     "mimeapps.list"
     "pavucontrol.ini"
   ];
-in {
+in
+{
   home.file = builtins.listToAttrs (
     map (n: {
       name = ".config/${n}";
       value.source = pathToFile n;
-    })
-    configLinks
+    }) configLinks
   );
 }

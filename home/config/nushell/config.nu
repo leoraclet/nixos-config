@@ -17,13 +17,17 @@
 # options using:
 #     config nu --doc | nu-highlight | less -R
 
-use std/config *
-
+# Create the vendor/autoload directory if it doesn't exist
 mkdir ($nu.data-dir | path join "vendor/autoload")
 
+# Source the files
 starship init nu | save -f ($nu.data-dir | path join "vendor/autoload/starship.nu")
-atuin init nu | save -f ~/.local/share/atuin/init.nu
-zoxide init nushell | save -f ~/.zoxide.nu
+atuin init nu | save -f ($nu.data-dir | path join "vendor/autoload/atuin.nu")
+zoxide init nushell | save -f ($nu.data-dir | path join "vendor/autoload/zoxide.nu")
+sk --shell nushell --shell-bindings | save -f ($nu.data-dir | path join "vendor/autoload/skim.nu")
+
+# Load the rest of your config
+use std/config *
 
 # Initialize the PWD hook as an empty list if it doesn't exist
 $env.config.hooks.env_change.PWD = $env.config.hooks.env_change.PWD? | default []
@@ -39,7 +43,17 @@ $env.config.hooks.env_change.PWD ++= [{||
   $env.PATH = do (env-conversions).path.from_string $env.PATH
 }]
 
+$env.config.buffer_editor = "nvim"
 $env.config.show_banner = false
+$env.config.rm.always_trash = true
+$env.COLORTERM = "truecolor"
+$env.config.history = {
+  file_format: sqlite
+  max_size: 5_000_000
+  sync_on_enter: true
+  isolation: true
+}
 
 alias nu-open = open
 alias open = ^open
+alias ll = ls -la

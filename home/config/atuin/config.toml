@@ -1,3 +1,5 @@
+# https://docs.atuin.sh/cli/configuration/config
+
 ## where to store your database, default is your system data directory
 ## linux/mac: ~/.local/share/atuin/history.db
 ## windows: %USERPROFILE%/.local/share/atuin/history.db
@@ -49,9 +51,9 @@
 ## in any directory within a git repository tree (default: false).
 ##
 ## To use workspace mode by default when available, set this to true and
-## set filter_mode to "workspace" or leave it unspecified and 
+## set filter_mode to "workspace" or leave it unspecified and
 ## set search.filters to include "workspace" before other filter modes.
-# workspaces = false
+workspaces = true
 
 ## which filter mode to use when atuin is invoked from a shell up-key binding
 ## the accepted values are identical to those of "filter_mode"
@@ -93,7 +95,7 @@
 
 ## use ctrl instead of alt as the shortcut modifier key for numerical UI shortcuts
 ## alt-0 .. alt-9
-# ctrl_n_shortcuts = false
+ctrl_n_shortcuts = true
 
 ## default history list format - can also be specified with the --format arg
 # history_format = "{time}\t{command}\t{duration}"
