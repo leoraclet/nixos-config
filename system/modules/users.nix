@@ -5,7 +5,10 @@
     createHome = true;
     # To avoid being locked out after first install of the system
     # Because by default a new user don't have a password if not set with Nix
-    initialPassword = "nixos"; # FIXME: Change user password after first login
+    # Also not that important because I have full disk encryption enbled on my system
+    # FIXME: Change user password after first login
+    initialPassword = "nixos";
+    hashedPassword = "$y$j9T$Cg6Kvq06E/wawPxDcXTec/$g3BBNrrsroyJlbmTEl.Ff6xxx.k/smAHxfK5gV8NEA3";
     extraGroups = [
       "wheel"
 

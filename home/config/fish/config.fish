@@ -50,6 +50,7 @@ alias e="exit"
 alias vi="nvim"
 alias vim="nvim"
 alias spf="superfile"
+alias qalc="qalc -s autocalc -s 'decimal comma off'"
 alias v="nvim"
 alias .="cd"
 

@@ -1,9 +1,7 @@
 {
-  description = "My Flake config";
-
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
     # nixpkg-stable.url = "github:nixos/nixpkgs";
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     nixos-hardware.url = "github:NixOS/nixos-hardware/master";
 
     home-manager = {
@@ -19,20 +17,19 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     snappy-switcher.url = "github:OpalAayan/snappy-switcher";
+    sops-nix.url = "github:Mic92/sops-nix";
   };
 
   outputs = {nixpkgs, ...} @ inputs: let
     system = "x86_64-linux";
-    pkgs = import nixpkgs {
-      inherit system;
-      config.allowUnfree = true;
-    };
+    # pkgs = import nixpkgs {
+    #   inherit system;
+    #   config.allowUnfree = true;
+    # };
   in {
     nixosConfigurations.leonne = nixpkgs.lib.nixosSystem {
-      inherit system;
-      specialArgs = {
-        inherit inputs system;
-      };
+      # inherit system;
+      specialArgs = {inherit inputs system;};
       modules = [
         # Configuration
         ./system/configuration.nix

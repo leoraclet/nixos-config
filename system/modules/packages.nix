@@ -13,6 +13,7 @@
 
     # Tools
     git # Distributed version control system
+    jj
     git-credential-manager # Git credential manager for secure authentication
     alejandra # Uncompromising Nix Code Formatter
     neovim
