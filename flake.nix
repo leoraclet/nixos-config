@@ -1,6 +1,5 @@
 {
   inputs = {
-    # nixpkg-stable.url = "github:nixos/nixpkgs";
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     nixos-hardware.url = "github:NixOS/nixos-hardware/master";
 
@@ -16,8 +15,8 @@
       url = "github:noctalia-dev/noctalia-shell";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
     snappy-switcher.url = "github:OpalAayan/snappy-switcher";
-    sops-nix.url = "github:Mic92/sops-nix";
   };
 
   outputs = {nixpkgs, ...} @ inputs: let
@@ -32,7 +31,7 @@
       specialArgs = {inherit inputs system;};
       modules = [
         # Configuration
-        ./system/configuration.nix
+        ./hosts/laptop/configuration.nix
         # Home Manager
         inputs.home-manager.nixosModules.home-manager
         {
@@ -40,7 +39,7 @@
             useGlobalPkgs = true;
             useUserPackages = true;
             overwriteBackup = true;
-            backupFileExtension = "dotfiles_backup";
+            backupFileExtension = "bak";
             users.leonne = {
               imports = [
                 ./home

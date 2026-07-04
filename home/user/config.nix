@@ -48,6 +48,8 @@
     "snappy-switcher"
     "espanso"
     "tealdeer"
+    "wlr-which-key"
+    "libvirt"
     "vesktop/settings"
     "vesktop/themes"
     # ----------------------------------------------------

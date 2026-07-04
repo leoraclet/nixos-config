@@ -1,0 +1,12 @@
+{...}: {
+  # https://search.nixos.org/options?channel=26.05&query=programs.direnv
+  programs = {
+    direnv = {
+      enable = true;
+      silent = true;
+    };
+  };
+
+  # https://github.com/nix-community/lorri
+  services.lorri.enable = false;
+}

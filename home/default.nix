@@ -10,11 +10,19 @@
   };
 
   programs.home-manager.enable = true;
+  services.mpris-proxy.enable = true;
 
-  dconf.settings = {
-    "org/virt-manager/virt-manager/connections" = {
-      autoconnect = ["qemu:///system"];
-      uris = ["qemu:///system"];
+  dconf = {
+    enable = true;
+    settings = {
+      "org/virt-manager/virt-manager/connections" = {
+        autoconnect = ["qemu:///system"];
+        uris = ["qemu:///system"];
+      };
+      "org/cinnamon/desktop/applications/terminal" = {
+        exec = "kitty";
+        # exec-arg = ""; # argument
+      };
     };
   };
 

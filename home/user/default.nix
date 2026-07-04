@@ -1,6 +1,5 @@
 {
   imports = [
-    # ./git.nix
     # ./xdg.nix
     ./config.nix
     ./environment.nix

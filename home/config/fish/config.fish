@@ -73,6 +73,7 @@ alias fix_sd_card="modprobe rtsx_pci"
 #################################################
 
 # fzf --fish | source
+# lorri hook fish | source
 zoxide init fish | source
 direnv hook fish | source
 atuin init fish --disable-up-arrow | source
