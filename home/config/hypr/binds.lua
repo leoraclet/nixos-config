@@ -33,7 +33,6 @@ local mainMod = "SUPER" -- Sets "Windows" key as main modifier
 local ipc = "noctalia-shell ipc call"
 
 hl.bind(mainMod .. " + Return", hl.dsp.exec_cmd("kitty ~/Downloads"))
-hl.bind(mainMod .. " + Space", hl.dsp.exec_cmd("kitty zellij"))
 hl.bind(mainMod .. " + Delete", hl.dsp.window.kill())
 hl.bind(mainMod .. " + Backspace", hl.dsp.window.kill())
 hl.bind(mainMod .. " + Escape", hl.dsp.exec_cmd(ipc .. " sessionMenu toggle"))
@@ -60,13 +59,15 @@ hl.bind("ALT + Return", hl.dsp.window.fullscreen({ mode = "fullscreen", action =
 hl.bind("ALT + F4", hl.dsp.window.kill())
 
 -------------------------------------------------------
--- Utils
+-- Utilities
 -------------------------------------------------------
 
 -- Zoom
 require("utils.zoom")
 -- Layout toggle
 require("utils.layout-toggle")
+-- Scratchpad
+require("utils.scratchpad")
 
 -------------------------------------------------------
 -- ALT+TAB behaviour

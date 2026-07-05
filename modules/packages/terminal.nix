@@ -82,6 +82,7 @@
     socat # Utility for bidirectional data transfer between two independent data channels
     trashy # Simple, fast, and featureful alternative to rm and trash-cli
     glow # CLI markdown renderer
+    fastfetch
 
     # gh-dash
     # cheat
