@@ -60,10 +60,13 @@ hl.bind("ALT + Return", hl.dsp.window.fullscreen({ mode = "fullscreen", action =
 hl.bind("ALT + F4", hl.dsp.window.kill())
 
 -------------------------------------------------------
--- Zoom
+-- Utils
 -------------------------------------------------------
 
+-- Zoom
 require("utils.zoom")
+-- Layout toggle
+require("utils.layout-toggle")
 
 -------------------------------------------------------
 -- ALT+TAB behaviour

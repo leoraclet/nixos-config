@@ -142,7 +142,7 @@
   "tabs": {
     "show_diagnostics": "errors",
     "close_position": "right",
-    "show_close_button": "hidden",
+    "show_close_button": "always",
     "file_icons": true,
     "git_status": true,
   },

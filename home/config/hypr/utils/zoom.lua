@@ -1,3 +1,7 @@
+-------------------------------------------------------
+-- Zoom
+-------------------------------------------------------
+
 local MAX_ZOOM = 3
 local MIN_ZOOM = 1
 local ZOOM_TOGGLE_FACTOR = 1.5
@@ -18,9 +22,5 @@ local function zoom(offset)
 end
 
 hl.bind("SUPER + Z", zoom)
-hl.bind("SUPER + KP_ADD", function()
-    zoom(0.5)
-end)
-hl.bind("SUPER + KP_SUBTRACT", function()
-    zoom(-0.5)
-end)
+hl.bind("SUPER + KP_ADD", function() zoom(0.5) end)
+hl.bind("SUPER + KP_SUBTRACT", function() zoom(-0.5) end)
