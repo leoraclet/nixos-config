@@ -7,5 +7,6 @@
     ./gpg.nix
     ./appimage.nix
     ./nh.nix
+    # ./niri.nix
   ];
 }

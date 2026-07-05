@@ -8,10 +8,13 @@
     portalPackage = pkgs.xdg-desktop-portal-hyprland;
   };
 
+  ###################################################
+  # Hyprland
+  ###################################################
+
+  # Dependencies for compositor and desktop shell
   environment.systemPackages = with pkgs; [
-    ###################################################
-    # Hyprland
-    ###################################################
+    nwg-displays
     networkmanagerapplet
     hyprpolkitagent
     hyprpicker
@@ -20,8 +23,8 @@
     wl-clipboard
     wl-screenrec
     wl-mirror
-    pavucontrol
-    alsa-utils
     libnotify
+    playerctl # Player control
+    brightnessctl # Screen control
   ];
 }

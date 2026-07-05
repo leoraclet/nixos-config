@@ -16,6 +16,9 @@
   "status_bar": {
     "line_endings_button": true
   },
+  "session": {
+    "trust_all_worktrees": true
+  },
   "cli_default_open_behavior": "existing_window",
   "outline_panel": {
     "dock": "left",
@@ -24,9 +27,10 @@
     "dock": "left",
   },
   "use_smartcase_search": true,
-  "minimum_contrast_for_highlights": 50.0,
+  "minimum_contrast_for_highlights": 10.0,
   "preferred_line_length": 100,
   "gutter": {
+    "min_line_number_digits": 0,
     "line_numbers": true,
   },
   "redact_private_values": false,
@@ -48,6 +52,13 @@
       "model": "codestral-latest",
     },
     "model_parameters": [],
+  },
+  "auto_install_extensions": {
+    "docker-compose": true,
+    "dockerfile": true,
+    "html": true,
+    "just": true,
+    "toml": true,
   },
   "lsp_highlight_debounce": 0,
   "diagnostics": {
@@ -117,7 +128,12 @@
     },
     "detect_venv": {
       "on": {
-        "directories": [".env", "env", ".venv", "venv"],
+        "directories": [
+          ".env",
+          "env",
+          ".venv",
+          "venv"
+        ],
         "activate_script": "fish",
       },
     },
@@ -126,7 +142,7 @@
   "tabs": {
     "show_diagnostics": "errors",
     "close_position": "right",
-    "show_close_button": "always",
+    "show_close_button": "hidden",
     "file_icons": true,
     "git_status": true,
   },
@@ -142,8 +158,8 @@
   },
   "toolbar": {
     "quick_actions": false,
-    "selections_menu": false,
-    "code_actions": false,
+    "selections_menu": true,
+    "code_actions": true,
     "breadcrumbs": false,
   },
   "minimap": {
@@ -154,14 +170,14 @@
   },
   // File scan exclusions, hide on the file explorer and search
   "file_scan_exclusions": [
-    // "**/.git",
-    // "**/.svn",
-    // "**/.hg",
-    // "**/CVS",
-    // "**/.DS_Store",
-    // "**/Thumbs.db",
-    // "**/.classpath",
-    // "**/.settings",
+    "**/.git",
+    "**/.svn",
+    "**/.hg",
+    "**/CVS",
+    "**/.DS_Store",
+    "**/Thumbs.db",
+    "**/.classpath",
+    "**/.settings",
     // above is default from Zed
     // "**/out",
     // "**/dist",
@@ -174,16 +190,17 @@
     // "**/.tap",
     // "**/.nyc_output",
     // "**/report",
-    // "**/node_modules"
+    "**/node_modules"
   ],
   "relative_line_numbers": "enabled",
   "buffer_font_family": "JetBrainsMono Nerd Font",
   "telemetry": {
+    "enable": false,
     "diagnostics": false,
     "metrics": false,
   },
   "icon_theme": "Catppuccin Latte",
-  "ui_font_size": 16.0,
+  "ui_font_size": 15.0,
   "buffer_font_size": 15,
   "theme": {
     "mode": "system",
@@ -194,8 +211,7 @@
     "Markdown": {
       // Wrap text according to the previously defined preferred line length.
       "colorize_brackets": true,
-      "soft_wrap": "prefer_line",
-
+      "soft_wrap": "editor_width",
       // do not remove any trailing whitespace since line breaks in
       // lists (without adding a new punctuation) rely on whitespaces.
       "remove_trailing_whitespace_on_save": true,
@@ -204,7 +220,6 @@
       // Same as in Markdown
       "soft_wrap": "prefer_line",
       // "soft_wrap": "editor_width"
-
       // Just a matter of linking. I like more compact fluent text-
       "preferred_line_length": 110,
     },
@@ -213,10 +228,26 @@
       "use_auto_surround": true,
       "use_autoclose": true,
       "show_completions_on_input": true,
-      "language_servers": ["pyright", "ruff"], // if I don't explicitly enable only one, I will see 2 tooltips (pyright and pylsp)
+      "language_servers": [
+        "pyright",
+        "ruff"
+      ], // if I don't explicitly enable only one, I will see 2 tooltips (pyright and pylsp)
       "extend_comment_on_newline": false,
       "ensure_final_newline_on_save": true,
       "enable_language_server": true,
     },
+    "Lua": {
+      "inlay_hints": {
+        "enabled": true,
+        "show_type_hints": true,
+        "show_parameter_hints": true,
+        "show_other_hints": true
+      },
+      "format_on_save": "on",
+      "formatter": "language_server"
+    },
+    "C++": {
+      "format_on_save": "on",
+    }
   },
 }

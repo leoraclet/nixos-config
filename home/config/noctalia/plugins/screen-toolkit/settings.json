@@ -1,5 +1,6 @@
 {
   "colorHistory": [
+    "#346CD6",
     "#889556",
     "#59A689",
     "#5C9510"
@@ -143,12 +144,12 @@
   "recordSkipConfirmation": false,
   "recordCopyToClipboard": false,
   "gifMaxSeconds": 30,
-  "resultHex": "",
-  "resultRgb": "",
-  "resultHsv": "",
-  "resultHsl": "",
-  "colorCapturePath": "",
-  "colorCacheBust": 0,
+  "resultHex": "#346CD6",
+  "resultRgb": "rgb(52, 108, 214)",
+  "resultHsv": "hsv(219, 76%, 84%)",
+  "resultHsl": "hsl(219, 66%, 52%)",
+  "colorCapturePath": "/tmp/screen-toolkit-colorpicker.png",
+  "colorCacheBust": 1783260835860,
   "ocrResult": "",
   "ocrCapturePath": "",
   "qrResult": "",

@@ -4,37 +4,81 @@
   ###################################################
 
   environment.systemPackages = with pkgs; [
-    thunderbird
-    espanso-wayland # Text Expander
-    obsidian
-    spotify
-    vesktop
-    vscodium
-    nemo
-    onlyoffice-desktopeditors
-    qalculate-gtk
-    brave # A chromium based browser as an alternative if needed
-    freerdp
-    sublime4
-    localsend
-    zed-editor-fhs
-    flameshot
-    file-roller
+    # --------------------------------------------------------- #
+    # Common
+    # --------------------------------------------------------- #
+    thunderbird # Email client
+    obsidian # Note app
+    spotify # Music player
+    vesktop # Discord alternative client
+    brave # Chronium-based web browser
+    onlyoffice-desktopeditors # Office suite
+    # libreoffice-fresh
 
-    # tor-browser
-    # obs-studio
-    # inkscape
-    # gimp
+    # --------------------------------------------------------- #
+    # Utilities
+    # --------------------------------------------------------- #
+    qalculate-gtk # GUI Calculator
+    flameshot # Screenshot tool
+    espanso-wayland # Text Expander
+
+    # --------------------------------------------------------- #
+    # Editors
+    # --------------------------------------------------------- #
+    zed-editor-fhs
+    sublime4
+    vscodium
+
+    # --------------------------------------------------------- #
+    # Files
+    # --------------------------------------------------------- #
+    localsend
+    file-roller
+    nemo
+
+    # --------------------------------------------------------- #
+    # Images
+    # --------------------------------------------------------- #
     # pinta
-    # syncthing
-    # cryptomator
-    # veracrypt
-    # cryptpad
-    # jitsi-meet-electron
-    # remmina
-    # rustdesk
-    # insomnia
+    # krita
+    # gimp
+    # inkscape
+
+    # --------------------------------------------------------- #
+    # Videos
+    # --------------------------------------------------------- #
     # libsForQt5.kdenlive
     # davinci-resolve-studio
+    # obs-studio
+
+    # --------------------------------------------------------- #
+    # Sync / Backups
+    # --------------------------------------------------------- #
+    # syncthing
+    # rclone
+    # rclone-browser
+    # restic
+    # borgbackup
+    # veracrypt
+    # cryptomator
+
+    # --------------------------------------------------------- #
+    # Remote
+    # --------------------------------------------------------- #
+    freerdp
+    # remmina
+    # rustdesk
+    # scrcpy
+    # qtscrcpy
+
+    # --------------------------------------------------------- #
+    # Engineering
+    # --------------------------------------------------------- #
+    # freecad
+    # kicad
+    # openscad
+    # cura-appimage
+    # orca-slicer
+    # arduino-ide
   ];
 }

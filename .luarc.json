@@ -1,0 +1,18 @@
+{
+  "$schema": "https://raw.githubusercontent.com/LuaLS/vscode-lua/master/setting/schema.json",
+  "runtime.version": "Lua 5.4",
+  "format.enable": true,
+  "hint.enable": true,
+  "workspace": {
+    "checkThirdParty": false,
+    "library": [
+      "usr/share/hypr/stubs"
+    ]
+  },
+  "diagnostics": {
+    "globals": [
+      "hl",
+      "vim"
+    ]
+  }
+}

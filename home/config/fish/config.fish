@@ -26,8 +26,6 @@ alias ls="eza --color=always --long --git --icons=always --group-directories-fir
 alias ll="clear; ls -la"
 alias untar="tar -xvf"
 alias s="kitten ssh"
-alias d="kitten diff"
-alias icat="kitten icat"
 alias cd="z"
 alias ps="procs"
 alias man="tldr"

@@ -50,6 +50,12 @@
     "tealdeer"
     "wlr-which-key"
     "libvirt"
+    "xsettingsd"
+    "cheat"
+    "glow"
+    "gh-dash"
+    "fastfetch"
+    "scripts"
     "vesktop/settings"
     "vesktop/themes"
     # ----------------------------------------------------

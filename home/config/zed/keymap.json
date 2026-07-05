@@ -9,7 +9,7 @@
   {
     "context": "Workspace",
     "bindings": {
-      // "shift shift": "file_finder::Toggle"
+      "shift shift": "file_finder::Toggle"
     }
   },
   {
@@ -141,6 +141,11 @@
   {
     "bindings": {
       "ctrl-f": "search::FocusSearch"
+    }
+  },
+  {
+    "bindings": {
+      "ctrl-enter": "pane::SplitVertical"
     }
   }
 ]

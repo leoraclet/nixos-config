@@ -4,7 +4,7 @@
     ./flatpak.nix
     ./apps.nix
     ./lsp.nix
-    ./gaming.nix
+    # ./gaming.nix
     ./terminal.nix
   ];
 

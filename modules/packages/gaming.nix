@@ -2,8 +2,17 @@
   ###################################################
   # GAMING & WINDOWS COMPATIBILITY
   ###################################################
+  #
+  programs = {
+    steam = {
+      enable = true;
+      gamescopeSession.enable = true;
+    };
+    gamemode.enable = true;
+  };
 
   environment.systemPackages = [
+    # heroic # Native GOG, Epic, and Amazon Games Launcher for Linux, Windows and Mac
     # mangohud # Vulkan and OpenGL overlay for monitoring
     # gamemode # Optimise Linux system performance on demand
     # protonup-ng # CLI program and API to automate the installation and update of Proton-GE
