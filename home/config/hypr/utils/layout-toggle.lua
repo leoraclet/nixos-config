@@ -29,5 +29,5 @@ hl.bind("SUPER + J", function()
         hl.workspace_rule({ workspace = tostring(workspace.id), layout = next_layout })
     end
 
-    hl.notification.create({ text = "Switched to " .. next_layout .. " layout", timeout = 5000, icon = "ok" })
+    hl.notification.create({ text = "Switched to " .. next_layout .. " layout", timeout = 1000, icon = "ok" })
 end)

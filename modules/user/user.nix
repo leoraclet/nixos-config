@@ -30,6 +30,9 @@
       # Printer
       "scanner"
       "lp"
+
+      # Android
+      "adbusers"
     ];
     shell = pkgs.fish;
     useDefaultShell = true;

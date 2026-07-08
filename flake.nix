@@ -26,6 +26,9 @@
     #   config.allowUnfree = true;
     # };
   in {
+    ##########################################################
+    # LAPTOP
+    ##########################################################
     nixosConfigurations.leonne = nixpkgs.lib.nixosSystem {
       # inherit system;
       specialArgs = {inherit inputs system;};
@@ -52,6 +55,18 @@
         }
         # Hardware Configuration (Dell Latitude 5520)
         inputs.nixos-hardware.nixosModules.dell-latitude-5520
+      ];
+    };
+
+    ##########################################################
+    # WORSTATION
+    ##########################################################
+    nixosConfigurations.leon = nixpkgs.lib.nixosSystem {
+      # inherit system;
+      specialArgs = {inherit inputs system;};
+      modules = [
+        # Configuration
+        ./hosts/workstation/configuration.nix
       ];
     };
   };

@@ -2,6 +2,9 @@
 -- Window rules
 -------------------------------------------------------
 
+-- Centering al floating windows
+hl.window_rule({ match = { float = true }, center = true })
+
 -- Disable blur for xwayland context menus
 hl.window_rule({ match = { class = "^()$", title = "^()$" }, no_blur = true })
 
@@ -50,7 +53,7 @@ hl.window_rule({ match = { class = "brave-browser" }, workspace = 2 })
 hl.window_rule({ match = { class = "codium" }, workspace = 3 })
 hl.window_rule({ match = { class = "dev.zed.Zed" }, workspace = 3 })
 hl.window_rule({ match = { class = "librewolf" }, workspace = 4 })
-hl.window_rule({ match = { class = "Spotify" }, workspace = 5 })
+hl.window_rule({ match = { class = "spotify" }, workspace = 5 })
 hl.window_rule({ match = { class = "vesktop" }, workspace = 6 })
 hl.window_rule({ match = { class = "sublime_text" }, workspace = 7 })
 hl.window_rule({ match = { class = "spicy" }, workspace = 7 })
@@ -64,6 +67,16 @@ hl.window_rule({ match = { title = "btop" }, workspace = "special:btop" })
 -- ######## Layer rules ########
 hl.layer_rule({ match = { namespace = "hyprpicker" }, no_anim = true })
 hl.layer_rule({ match = { namespace = "noctalia-background-.*$" }, ignore_alpha = 0.2, blur = true, blur_popups = true })
+hl.layer_rule({
+    name = "noctalia",
+    match = {
+        namespace = "^noctalia-(bar-.+|notification|dock|panel|attached-panel|osd)$",
+    },
+    no_anim = true,
+    ignore_alpha = 0.5,
+    blur = true,
+    blur_popups = true,
+})
 
 -------------------------------------------------------
 -- Workspace Rules

@@ -41,6 +41,7 @@ hl.env("XCURSOR_THEME", "Bibata-Modern-Ice")
 
 hl.env("TERMINAL", "kitty")
 hl.env("EDITOR", "nvim")
+hl.env("BROWSER", "brave")
 
 -- Nvidia
 -- hl.env("LIBVA_DRIVER_NAME", "nvidia")

@@ -63,9 +63,6 @@ alias gb="git branch"
 alias gu="git pull"
 alias gd="git diff"
 
-# Fix commands
-alias fix_sd_card="modprobe rtsx_pci"
-
 #################################################
 # MODULES
 #################################################

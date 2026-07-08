@@ -2,7 +2,7 @@
   i18n.defaultLocale = "en_US.UTF-8";
 
   i18n.extraLocaleSettings = {
-    LC_ALL = "fr_FR.UTF-8"; # This overrides all other LC_* settings.
+    # LC_ALL = "fr_FR.UTF-8"; # This overrides all other LC_* settings.
     LC_CTYPE = "fr_FR.UTF8";
     LC_ADDRESS = "fr_FR.UTF-8";
     LC_IDENTIFICATION = "fr_FR.UTF-8";

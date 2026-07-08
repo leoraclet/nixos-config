@@ -30,16 +30,15 @@ end
 -------------------------------------------------------
 
 local mainMod = "SUPER" -- Sets "Windows" key as main modifier
-local ipc = "noctalia-shell ipc call"
+local ipc = "noctalia msg"
 
 hl.bind(mainMod .. " + Return", hl.dsp.exec_cmd("kitty ~/Downloads"))
+hl.bind(mainMod .. " + Escape", hl.dsp.exec_cmd(ipc .. " panel-toggle session"))
+hl.bind(mainMod .. " + SUPER_L", hl.dsp.exec_cmd(ipc .. " panel-toggle launcher"))
 hl.bind(mainMod .. " + Delete", hl.dsp.window.kill())
 hl.bind(mainMod .. " + Backspace", hl.dsp.window.kill())
-hl.bind(mainMod .. " + Escape", hl.dsp.exec_cmd(ipc .. " sessionMenu toggle"))
-hl.bind(mainMod .. " + SUPER_L", hl.dsp.exec_cmd(ipc .. " launcher toggle"))
 hl.bind(mainMod .. " + Q", hl.dsp.window.close())
 hl.bind(mainMod .. " + F", hl.dsp.window.fullscreen({ mode = "maximized", action = "toggle" }))
-hl.bind(mainMod .. " + W", hl.dsp.window.float())
 hl.bind(mainMod .. " + P", hl.dsp.window.pin())
 hl.bind(mainMod .. " + P", hl.dsp.layout("promote"))
 hl.bind(mainMod .. " + E", hl.dsp.exec_cmd("pkill nemo || nemo"))
@@ -47,26 +46,25 @@ hl.bind(mainMod .. " + N", hl.dsp.exec_cmd("pkill subl || subl"))
 hl.bind(mainMod .. " + B", hl.dsp.exec_cmd("pkill btop || kitty btop"))
 hl.bind(mainMod .. " + C", hl.dsp.exec_cmd(ipc .. " plugin:screen-toolkit colorPicker"))
 hl.bind(mainMod .. " + X", hl.dsp.exec_cmd(ipc .. " launcher emoji"))
-hl.bind(mainMod .. " + D", hl.dsp.exec_cmd(ipc .. " darkMode toggle"))
-hl.bind(mainMod .. " + I", hl.dsp.exec_cmd(ipc .. " nightLight toggle"))
-hl.bind(mainMod .. " + V", hl.dsp.exec_cmd(ipc .. " launcher clipboard"))
-hl.bind(mainMod .. " + A", hl.dsp.exec_cmd(ipc .. " launcher windows"))
-hl.bind(mainMod .. " + R", hl.dsp.exec_cmd(ipc .. " launcher toggle"))
-hl.bind(mainMod .. " + L", hl.dsp.exec_cmd(ipc .. " lockScreen lock"))
+hl.bind(mainMod .. " + I", hl.dsp.exec_cmd(ipc .. " nightlight-force-toggle"))
+hl.bind(mainMod .. " + V", hl.dsp.exec_cmd(ipc .. " panel-toggle clipboard"))
+hl.bind(mainMod .. " + L", hl.dsp.exec_cmd(ipc .. " session lock"))
 
-hl.bind("ALT + L", hl.dsp.exec_cmd(ipc .. " lockScreen lock"))
+hl.bind("ALT + L", hl.dsp.exec_cmd(ipc .. " session lock"))
 hl.bind("ALT + Return", hl.dsp.window.fullscreen({ mode = "fullscreen", action = "toggle" }))
 hl.bind("ALT + F4", hl.dsp.window.kill())
+
+hl.bind(mainMod .. " + W", function()
+    hl.dispatch(hl.dsp.window.float({ action = "toggle" }))
+    hl.dispatch(hl.dsp.window.center())
+end) -- Toggle window floating state and center it.
 
 -------------------------------------------------------
 -- Utilities
 -------------------------------------------------------
 
--- Zoom
 require("utils.zoom")
--- Layout toggle
 require("utils.layout-toggle")
--- Scratchpad
 require("utils.scratchpad")
 
 -------------------------------------------------------
@@ -90,37 +88,52 @@ hl.bind("ALT + A", layout_bind({
 hl.bind("Print", hl.dsp.exec_cmd("flameshot gui -c"))
 hl.bind("ALT + Print", hl.dsp.exec_cmd("flameshot gui -c -s"))
 hl.bind(mainMod .. " + Print", hl.dsp.exec_cmd("flameshot screen -c"))
+hl.bind("SHIFT + Print", hl.dsp.exec_cmd(ipc .. " screenshot-region"))
 
 -------------------------------------------------------
 -- Media keys
 -------------------------------------------------------
 
--- Requires playerctl
-hl.bind("XF86AudioNext", hl.dsp.exec_cmd("playerctl next"), { locked = true })
-hl.bind("XF86AudioPause", hl.dsp.exec_cmd("playerctl play-pause"), { locked = true })
-hl.bind("XF86AudioPlay", hl.dsp.exec_cmd("playerctl play-pause"), { locked = true })
-hl.bind("XF86AudioPrev", hl.dsp.exec_cmd("playerctl previous"), { locked = true })
+-- Laptop multimedia keys for media actions
+hl.bind("XF86AudioNext", hl.dsp.exec_cmd(ipc .. " media next"), { locked = true })
+hl.bind("XF86AudioPause", hl.dsp.exec_cmd(ipc .. " media stop"), { locked = true })
+hl.bind("XF86AudioPlay", hl.dsp.exec_cmd(ipc .. " media play"), { locked = true })
+hl.bind("XF86AudioPrev", hl.dsp.exec_cmd(ipc .. " media previous"), { locked = true })
 
 -- Laptop multimedia keys for volume and LCD brightness
-hl.bind("XF86AudioRaiseVolume", hl.dsp.exec_cmd(ipc .. " volume increase"), { locked = true, repeating = true })
-hl.bind("XF86AudioLowerVolume", hl.dsp.exec_cmd(ipc .. " volume decrease"), { locked = true, repeating = true })
-hl.bind("XF86AudioMute", hl.dsp.exec_cmd(ipc .. " volume muteOutput"), { locked = true, repeating = true })
-hl.bind("XF86AudioMicMute", hl.dsp.exec_cmd(ipc .. " volume muteInput"), { locked = true, repeating = true })
-hl.bind("XF86MonBrightnessUp", hl.dsp.exec_cmd(ipc .. " brightness increase"), { locked = true, repeating = true })
-hl.bind("XF86MonBrightnessDown", hl.dsp.exec_cmd(ipc .. " brightness decrease"), { locked = true, repeating = true })
+hl.bind("XF86AudioRaiseVolume", hl.dsp.exec_cmd(ipc .. " volume-up"), { locked = true, repeating = true })
+hl.bind("XF86AudioLowerVolume", hl.dsp.exec_cmd(ipc .. " volume-down"), { locked = true, repeating = true })
+hl.bind("XF86AudioMute", hl.dsp.exec_cmd(ipc .. " volume-mute"), { locked = true, repeating = true })
+hl.bind("XF86AudioMicMute", hl.dsp.exec_cmd(ipc .. " mic-mute"), { locked = true, repeating = true })
+hl.bind("XF86MonBrightnessUp", hl.dsp.exec_cmd(ipc .. " brightness-up"), { locked = true, repeating = true })
+hl.bind("XF86MonBrightnessDown", hl.dsp.exec_cmd(ipc .. " brightness-down"), { locked = true, repeating = true })
 
-hl.bind("XF86PowerOff", hl.dsp.exec_cmd(ipc .. " sessionMenu toggle"), { locked = true })
-hl.bind("XF86Sleep", hl.dsp.exec_cmd(ipc .. " sessionMenu toggle"), { locked = true })
-hl.bind("XF86Standby", hl.dsp.exec_cmd(ipc .. " sessionMenu toggle"), { locked = true })
+hl.bind("XF86PowerOff", hl.dsp.exec_cmd(ipc .. " panel-toggle session"), { locked = true })
+hl.bind("XF86Sleep", hl.dsp.exec_cmd(ipc .. " panel-toggle session"), { locked = true })
+hl.bind("XF86Standby", hl.dsp.exec_cmd(ipc .. " panel-toggle session"), { locked = true })
 hl.bind("XF86Calculator", hl.dsp.exec_cmd("pkill qalculate-gtk || qalculate-gtk"), { locked = true })
-hl.bind("XF86Search", hl.dsp.exec_cmd(ipc .. " launcher toggle"), { locked = true })
+hl.bind("XF86Search", hl.dsp.exec_cmd(ipc .. " panel-toggle launcher"), { locked = true })
 
-hl.bind("switch:on:Lid Switch", hl.dsp.exec_cmd("hyprctl dispatch dpms off"), { locked = true })
-hl.bind("switch:off:Lid Switch", hl.dsp.exec_cmd("hyprctl dispatch dpms on"), { locked = true })
+hl.bind("switch:on:Lid Switch", hl.dsp.exec_cmd(ipc .. " dpms-off"), { locked = true })
+hl.bind("switch:off:Lid Switch", hl.dsp.exec_cmd(ipc .. " dpms-on"), { locked = true })
 
 -------------------------------------------------------
 -- Windows
 -------------------------------------------------------
+
+hl.bind(mainMod .. " + A", layout_bind({
+    scrolling = hl.dsp.layout("swapcol l"), -- Scrolling: swap column with left one
+    dwindle   = hl.dsp.layout("swapsplit"), -- Dwindle: swap window split
+    monocle   = hl.dsp.layout("cycleprev"), -- Monocle and master: cycle prev window
+    master    = hl.dsp.layout("cycleprev"),
+}))
+
+hl.bind(mainMod .. " + D", layout_bind({
+    scrolling = hl.dsp.layout("swapcol r"),   -- Scrolling: swap column with right one
+    dwindle   = hl.dsp.layout("togglesplit"), -- Dwindle: toggle window split
+    monocle   = hl.dsp.layout("cyclenext"),   -- Monocle and master: cycle next window
+    master    = hl.dsp.layout("cyclenext"),
+}))
 
 hl.bind("SUPER + S", function()
     if hl.get_workspace("special:minimized") then
@@ -220,12 +233,28 @@ hl.bind(mainMod .. " + SHIFT + M", hl.dsp.window.move({ workspace = "special:bto
 -- Move active window to a workspace with mainMod + SHIFT + [0-9]
 
 local keypad_keys = {
-    "KP_End", "KP_Down", "KP_Next", "KP_Left", "KP_Begin",
-    "KP_Right", "KP_Home", "KP_Up", "KP_Prior", "KP_Insert",
+    "KP_End",
+    "KP_Down",
+    "KP_Next",
+    "KP_Left",
+    "KP_Begin",
+    "KP_Right",
+    "KP_Home",
+    "KP_Up",
+    "KP_Prior",
+    "KP_Insert",
 }
 local number_keys = {
-    "ampersand", "eacute", "quotedbl", "apostrophe", "parenleft",
-    "minus", "egrave", "underscore", "ccedilla", "agrave",
+    "ampersand",
+    "eacute",
+    "quotedbl",
+    "apostrophe",
+    "parenleft",
+    "minus",
+    "egrave",
+    "underscore",
+    "ccedilla",
+    "agrave",
 }
 
 -- Using numpad keys

@@ -5,7 +5,7 @@
 
 local CONFIG = {
     class      = "kitty-scratchpad",
-    cmd        = "kitty --class kitty-scratchpad -e zellij attach --create scratchpad",
+    cmd        = "kitty --class kitty-scratchpad",
     width_pct  = 0.5,
     height_pct = 0.5,
     y_pct      = 0.05,

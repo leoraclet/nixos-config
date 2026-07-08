@@ -36,15 +36,16 @@ hl.config({
     },
 
     input = {
-        kb_layout          = "fr,us",
-        kb_variant         = "",
-        kb_options         = "grp:alt_shift_toggle,fkeys:basic_13-24",
-        follow_mouse       = 1,
-        focus_on_close     = 2,
-        numlock_by_default = true,
-        sensitivity        = 0,
+        kb_layout                   = "fr",
+        kb_variant                  = "",
+        kb_options                  = "grp:alt_shift_toggle,fkeys:basic_13-24",
+        follow_mouse                = 1,
+        float_switch_override_focus = 0,
+        focus_on_close              = 2,
+        numlock_by_default          = true,
+        sensitivity                 = 0,
 
-        touchpad           = {
+        touchpad                    = {
             clickfinger_behavior = true,
             natural_scroll       = true,
             disable_while_typing = false
@@ -93,8 +94,8 @@ hl.config({
     scrolling = {
         fullscreen_on_one_column = true,
         focus_fit_method         = 1,
-        column_width             = 1,
-        direction                = "down",
+        column_width             = 0.5,
+        direction                = "right",
         follow_min_visible       = 0.0,
         follow_focus             = true,
     },

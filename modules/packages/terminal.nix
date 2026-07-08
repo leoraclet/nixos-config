@@ -9,6 +9,7 @@
     # --------------------------------------------------------- #
     tmux
     zellij
+    herdr
 
     # --------------------------------------------------------- #
     # Shell
@@ -30,6 +31,7 @@
     alacritty
     ghostty
     wezterm
+    foot
 
     # --------------------------------------------------------- #
     # Terminal file managers
@@ -83,6 +85,9 @@
     trashy # Simple, fast, and featureful alternative to rm and trash-cli
     glow # CLI markdown renderer
     fastfetch
+
+    lazygit
+    lazydocker
 
     # gh-dash
     # cheat
