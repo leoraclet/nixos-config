@@ -56,6 +56,8 @@
     "gh-dash"
     "fastfetch"
     "scripts"
+    "foot"
+    "nwg-look"
     "vesktop/settings"
     "vesktop/themes"
     # ----------------------------------------------------
