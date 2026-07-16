@@ -12,7 +12,6 @@ hl.env("CLUTTER_BACKEND", "wayland")
 hl.env("GDK_SCALE", "1")
 hl.env("QT_SCALE_FACTOR", "1")
 
-
 -- XDG Specifications
 hl.env("XDG_CURRENT_DESKTOP", "Hyprland")
 hl.env("XDG_SESSION_TYPE", "wayland")
@@ -39,6 +38,7 @@ hl.env("QS_ICON_THEME", "Papirus-Dark")
 hl.env("XCURSOR_SIZE", "24")
 hl.env("XCURSOR_THEME", "Bibata-Modern-Ice")
 
+-- Default apps
 hl.env("TERMINAL", "kitty")
 hl.env("EDITOR", "nvim")
 hl.env("BROWSER", "brave")

@@ -32,7 +32,8 @@
     autoupdate = true
 
 [core]
-    excludesfile = ~/.gitignore
+    excludesfile = ~/.config/git/ignore
+    hookspath = ~/.config/git/hooks
 
 [rebase]
     autoSquash = true

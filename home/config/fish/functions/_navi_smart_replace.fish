@@ -1,6 +1,7 @@
 function _navi_smart_replace
     set --local query (commandline --current-process | string trim)
     set --local version_parts ""
+    set --local IFS
     if test -n "$version"
         set version_parts (string split '.' $version)
     else
@@ -26,8 +27,7 @@ function _navi_smart_replace
         if test -n "$best_match"
             # --replace without --current-process: --current-process treats newlines as process
             # boundaries and flattens multi-line snippets into a single line
-            echo "$best_match"
-            commandline --replace -- "$(string join \n $best_match)"
+            commandline --replace -- "$best_match"
             commandline --function end-of-line
         end
     end
@@ -35,13 +35,13 @@ function _navi_smart_replace
     if test -z "$best_match"
         set --local candidate (navi --print --query "$query")
         if test -n "$candidate"
-            commandline --replace -- "$(string join \n $candidate)"
+            commandline --replace -- "$candidate"
             commandline --function end-of-line
         end
     end
 
     # always repaint to restore the prompt after fzf clobbers the terminal
     if test "$force_repaint" = true
-        commandline --function repaint
+        # commandline --function repaint
     end
 end

@@ -15,8 +15,24 @@
       url = "github:noctalia-dev/noctalia-shell";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    nix-index-database = {
+      url = "github:nix-community/nix-index-database";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    # treefmt-nix = {
+    #   url = "github:numtide/treefmt-nix";
+    #   inputs.nixpkgs.follows = "nixpkgs";
+    # };
 
     snappy-switcher.url = "github:OpalAayan/snappy-switcher";
+
+    # Dendritic pattern
+    # - https://dendrix.denful.dev/
+    # - https://github.com/mightyiam/dendritic
+    # - https://github.com/Doc-Steve/dendritic-design-with-flake-parts/wiki
+
+    # flake-parts.url = "github:hercules-ci/flake-parts";
+    # import-tree.url = "github:vic/import-tree";
   };
 
   outputs = {nixpkgs, ...} @ inputs: let
@@ -35,6 +51,12 @@
       modules = [
         # Configuration
         ./hosts/laptop/configuration.nix
+        # Nix index database
+        # https://github.com/nix-community/nix-index-database
+        # https://github.com/nix-community/nix-index
+        inputs.nix-index-database.nixosModules.default
+        # optional to also wrap and install comma
+        {programs.nix-index-database.comma.enable = true;}
         # Home Manager
         inputs.home-manager.nixosModules.home-manager
         {

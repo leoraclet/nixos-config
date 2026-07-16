@@ -169,5 +169,6 @@
     videos = "$HOME/Videos";
     music = "$HOME/Music";
     publicShare = "$HOME/Public";
+    templates = "$HOME/Templates";
   };
 }

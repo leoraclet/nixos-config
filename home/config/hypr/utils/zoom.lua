@@ -22,5 +22,5 @@ local function zoom(offset)
 end
 
 hl.bind("SUPER + Z", zoom)
-hl.bind("SUPER + KP_ADD", function() zoom(0.5) end)
-hl.bind("SUPER + KP_SUBTRACT", function() zoom(-0.5) end)
+hl.bind("SUPER + KP_ADD", function() zoom(0.25) end)
+hl.bind("SUPER + KP_SUBTRACT", function() zoom(-0.25) end)

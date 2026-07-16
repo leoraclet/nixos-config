@@ -1,0 +1,26 @@
+// https://niri-wm.github.io/niri/Configuration%3A-Miscellaneous.html
+
+/////////////////////////////////////////
+//// INCLUDES
+/////////////////////////////////////////
+
+include "rules.kdl"
+include "inputs.kdl"
+include "outputs.kdl"
+include "misc.kdl"
+include "workspaces.kdl"
+include "animations.kdl"
+include "gestures.kdl"
+include "layout.kdl"
+include "binds.kdl"
+
+/////////////////////////////////////////
+//// GENERAL
+/////////////////////////////////////////
+
+spawn-at-startup "kitty"
+// spawn-sh-at-startup "qs -c ~/source/qs/MyAwesomeShell"
+
+prefer-no-csd
+
+screenshot-path "~/Pictures/Screenshots/Screenshot_ %Y-%m-%d_%H-%M-%S.png"

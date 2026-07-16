@@ -4,7 +4,8 @@
 
 hl.config({
     binds = {
-        allow_workspace_cycles = true
+        allow_workspace_cycles = true,
+        workspace_back_and_forth = true,
     },
 })
 
@@ -44,7 +45,7 @@ hl.bind(mainMod .. " + P", hl.dsp.layout("promote"))
 hl.bind(mainMod .. " + E", hl.dsp.exec_cmd("pkill nemo || nemo"))
 hl.bind(mainMod .. " + N", hl.dsp.exec_cmd("pkill subl || subl"))
 hl.bind(mainMod .. " + B", hl.dsp.exec_cmd("pkill btop || kitty btop"))
-hl.bind(mainMod .. " + C", hl.dsp.exec_cmd(ipc .. " plugin:screen-toolkit colorPicker"))
+hl.bind(mainMod .. " + C", hl.dsp.exec_cmd("pkill hyprpicker || hyprpicker -a"))
 hl.bind(mainMod .. " + X", hl.dsp.exec_cmd(ipc .. " launcher emoji"))
 hl.bind(mainMod .. " + I", hl.dsp.exec_cmd(ipc .. " nightlight-force-toggle"))
 hl.bind(mainMod .. " + V", hl.dsp.exec_cmd(ipc .. " panel-toggle clipboard"))
@@ -71,8 +72,8 @@ require("utils.scratchpad")
 -- ALT+TAB behaviour
 -------------------------------------------------------
 
-hl.bind(mainMod .. " + Tab", hl.dsp.exec_cmd("snappy-switcher next --mod super --workspace "))
-hl.bind("ALT + Tab", hl.dsp.exec_cmd("snappy-switcher next --mod alt"))
+hl.bind(mainMod .. " + Tab", hl.dsp.exec_cmd("snappy-switcher next --mod super --silent "))
+hl.bind("ALT + TAB", hl.dsp.exec_cmd("snappy-switcher next --mod alt"))
 
 -- To switch between windows in a floating workspace:
 hl.bind("ALT + A", hl.dsp.window.bring_to_top())
@@ -161,9 +162,6 @@ hl.bind("SHIFT + KP_SUBTRACT", hl.dsp.layout("colresize -conf"))
 -- Mouse
 -------------------------------------------------------
 
-hl.bind("ALT + mouse:272", hl.dsp.window.drag(), { mouse = true })   -- ALT + LMB: Move a window
-hl.bind("ALT + mouse:273", hl.dsp.window.resize(), { mouse = true }) -- ALT + RMB: Resize a window
-
 -- Move/resize windows with mainMod + LMB/RMB and dragging
 hl.bind(mainMod .. " + mouse:272", hl.dsp.window.drag(), { mouse = true })
 hl.bind(mainMod .. " + mouse:273", hl.dsp.window.resize(), { mouse = true })
@@ -203,11 +201,13 @@ hl.bind(mainMod .. " + down", layout_bind({
     monocle = hl.dsp.focus({ direction = "down" }),
 }))
 
+-- Move window around
 hl.bind(mainMod .. " + ALT + left", hl.dsp.window.move({ direction = "left" }))
 hl.bind(mainMod .. " + ALT + right", hl.dsp.window.move({ direction = "right" }))
 hl.bind(mainMod .. " + ALT + up", hl.dsp.window.move({ direction = "up" }))
 hl.bind(mainMod .. " + ALT + down", hl.dsp.window.move({ direction = "down" }))
 
+-- Resize window
 hl.bind(mainMod .. " + SHIFT + right", hl.dsp.window.resize({ x = 40, y = 0, relative = true }), { repeating = true })
 hl.bind(mainMod .. " + SHIFT + left", hl.dsp.window.resize({ x = -40, y = 0, relative = true }), { repeating = true })
 hl.bind(mainMod .. " + SHIFT + up", hl.dsp.window.resize({ x = 0, y = -40, relative = true }), { repeating = true })
@@ -221,11 +221,13 @@ hl.bind(mainMod .. " + SHIFT + down", hl.dsp.window.resize({ x = 0, y = 40, rela
 hl.bind(mainMod .. " + mouse_down", hl.dsp.focus({ workspace = "e+1" }))
 hl.bind(mainMod .. " + mouse_up", hl.dsp.focus({ workspace = "e-1" }))
 
+-- Switch to next/previous workspace
 hl.bind(mainMod .. " + CTRL + left", hl.dsp.focus({ workspace = "e-1" }))
 hl.bind(mainMod .. " + CTRL + right", hl.dsp.focus({ workspace = "e+1" }))
 hl.bind(mainMod .. " + CTRL + up", hl.dsp.focus({ workspace = "r+10" }))
 hl.bind(mainMod .. " + CTRL + down", hl.dsp.focus({ workspace = "r-10" }))
 
+-- Toogle special workspace
 hl.bind(mainMod .. " + M", hl.dsp.workspace.toggle_special("btop"))
 hl.bind(mainMod .. " + SHIFT + M", hl.dsp.window.move({ workspace = "special:btop" }))
 

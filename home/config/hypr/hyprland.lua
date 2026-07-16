@@ -10,6 +10,7 @@ require("env")
 require("monitors")
 require("rules")
 require("events")
+require("devices")
 
 hl.on("hyprland.start", function()
     hl.exec_cmd("noctalia -d")                            -- Noctalia shell (v5)

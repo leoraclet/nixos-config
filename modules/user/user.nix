@@ -9,7 +9,9 @@
     # initialPassword = "nixos"; # FIXME: Change user password after first login
     hashedPassword = "$y$j9T$Cg6Kvq06E/wawPxDcXTec/$g3BBNrrsroyJlbmTEl.Ff6xxx.k/smAHxfK5gV8NEA3";
     extraGroups = [
+      # System
       "wheel"
+      "systemd-journal"
 
       # Network management
       "networkmanager"
@@ -20,6 +22,7 @@
       "libvirtd"
       "docker"
       "podman"
+      "vboxusers"
 
       "video" # Display/GPU access
       "audio" # Audio access
@@ -31,8 +34,9 @@
       "scanner"
       "lp"
 
-      # Android
-      "adbusers"
+      # Misc
+      "adbusers" # ADB
+      "wireshark"
     ];
     shell = pkgs.fish;
     useDefaultShell = true;

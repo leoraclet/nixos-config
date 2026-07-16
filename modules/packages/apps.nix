@@ -13,7 +13,7 @@
     vesktop # Discord alternative client
     brave # Chronium-based web browser
     onlyoffice-desktopeditors # Office suite
-    # libreoffice-fresh
+    # libreoffice-qt
 
     # --------------------------------------------------------- #
     # Utilities
@@ -21,6 +21,8 @@
     qalculate-gtk # GUI Calculator
     flameshot # Screenshot tool
     espanso-wayland # Text Expander
+    hunspell
+    # xremap
 
     # --------------------------------------------------------- #
     # Editors

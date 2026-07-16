@@ -2,14 +2,14 @@
 -- Window rules
 -------------------------------------------------------
 
--- Centering al floating windows
+-- Centering all floating windows
 hl.window_rule({ match = { float = true }, center = true })
 
 -- Disable blur for xwayland context menus
 hl.window_rule({ match = { class = "^()$", title = "^()$" }, no_blur = true })
 
 -- Disable blur for every window
-hl.window_rule({ match = { class = ".*" }, no_blur = true })
+-- hl.window_rule({ match = { class = ".*" }, no_blur = true })
 
 -- Floating
 hl.window_rule({ match = { class = "^(qalculate-gtk)$" }, center = true, float = true, size = { "(monitor_w*0.45)", "(monitor_w*0.45)" } })

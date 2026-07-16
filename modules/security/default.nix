@@ -2,6 +2,7 @@
   imports = [
     ./sddm.nix
     ./clamav.nix
+    ./sudo.nix
   ];
 
   security = {

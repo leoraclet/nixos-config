@@ -4,8 +4,8 @@
 
 
 local CONFIG = {
-    class      = "kitty-scratchpad",
-    cmd        = "kitty --class kitty-scratchpad",
+    class      = "foot",
+    cmd        = "foot",
     width_pct  = 0.5,
     height_pct = 0.5,
     y_pct      = 0.05,

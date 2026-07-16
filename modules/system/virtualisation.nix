@@ -39,7 +39,10 @@
       enable = true;
       dockerCompat = true;
       dockerSocket.enable = true;
-      autoPrune.enable = true;
+      autoPrune = {
+        enable = true;
+        flags = ["--all"];
+      };
       defaultNetwork.settings.dns_enabled = true;
     };
 
@@ -64,7 +67,22 @@
       # Newer kernel versions may need
       package = pkgs.waydroid-nftables;
     };
+
+    # VirtualBox
+    # https://nixos.wiki/wiki/VirtualBox
+    virtualbox = {
+      host = {
+        enable = false;
+        enableExtensionPack = false;
+      };
+      guest = {
+        enable = false;
+        dragAndDrop = false;
+      };
+    };
   };
+
+  users.extraGroups.vboxusers.members = ["leonne"];
 
   environment.systemPackages = with pkgs; [
     OVMF
@@ -74,6 +92,7 @@
     quickemu
     docker-compose
     dnsmasq
+    # android-tools
   ];
 
   environment.extraInit = ''

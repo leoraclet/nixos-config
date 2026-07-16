@@ -16,6 +16,7 @@
       "splash"
       "boot.shell_on_fail"
       "loglevel=3"
+      "systemd.show_status=error"
       "rd.systemd.show_status=false"
       "rd.udev.log_level=3"
       "udev.log_priority=3"
@@ -28,7 +29,7 @@
     '';
 
     supportedFilesystems = ["ntfs"];
-    # tmp.cleanOnBoot = true;
+    tmp.cleanOnBoot = true;
 
     loader = {
       efi.canTouchEfiVariables = true;

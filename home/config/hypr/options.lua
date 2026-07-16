@@ -16,7 +16,10 @@ hl.config({
             active_border   = "rgb(b8c0e0)"
         },
 
-        snap   = { enabled = true },
+        snap   = {
+            enabled = true,
+            window_gap = 30,
+        },
         layout = "master"
     },
 
@@ -32,7 +35,15 @@ hl.config({
             size = 3,
             passes = 2,
             vibrancy = 0.1696,
-        }
+        },
+        glow = {
+            enabled = true,
+            range = 3,
+            render_power = 3,
+        },
+        -- motion_blur = {
+        --     enabled = true,
+        -- },
     },
 
     input = {
@@ -52,6 +63,13 @@ hl.config({
         }
     },
 
+    group = {
+        merge_floated_into_tiled_on_groupbar = true,
+        groupbar = {
+            gradients = true,
+        },
+    },
+
     -------------------------------------------------------
     -- Mics
     -------------------------------------------------------
@@ -64,7 +82,7 @@ hl.config({
         background_color                = "0x24273a",
         disable_splash_rendering        = true,
         disable_scale_notification      = true,
-        close_special_on_empty          = false,
+        close_special_on_empty          = true,
         middle_click_paste              = true,
         mouse_move_enables_dpms         = true,
         key_press_enables_dpms          = true,
@@ -73,18 +91,28 @@ hl.config({
     },
 
     xwayland = {
-        force_zero_scaling = true
+        force_zero_scaling  = true,
+        create_abstract_socket = true
     },
 
     cursor = {
         hide_on_key_press = true,
-        no_break_fs_vrr   = 1
+        hide_on_tablet = true,
+        no_break_fs_vrr   = 1,
+        no_warps          = true,
+        zoom_rigid        = true,
+        zoom_detached_camera = false,
+        zoom_disable_aa = false,
     },
 
     ecosystem = {
         no_update_news      = true,
         no_donation_nag     = true,
         enforce_permissions = false
+    },
+
+    render = {
+        new_render_scheduling = true,
     },
 
     -------------------------------------------------------

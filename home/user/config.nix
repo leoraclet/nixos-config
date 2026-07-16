@@ -57,7 +57,9 @@
     "fastfetch"
     "scripts"
     "foot"
+    "niri"
     "nwg-look"
+    "xremap"
     "vesktop/settings"
     "vesktop/themes"
     # ----------------------------------------------------
