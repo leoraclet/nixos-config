@@ -23,7 +23,7 @@ in {
           CursorSize = 24;
         };
         Wayland = {
-          CompositorCommand = "start-hyprland";
+          CompositorCommand = "start-hyprland -- -c /home/leonne/.config/hypr/sddm.lua";
         };
         X11 = {
           CursorTheme = "Bibata-Modern-Ice";
