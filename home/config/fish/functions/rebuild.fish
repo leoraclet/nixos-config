@@ -17,7 +17,7 @@ function rebuild
     echo "Formatting..."
 
     # Autoformat your nix files
-    alejandra .
+    alejandra . 2>/dev/null
 
     echo "Config formatted!"
 

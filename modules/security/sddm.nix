@@ -23,7 +23,7 @@ in {
           CursorSize = 24;
         };
         Wayland = {
-          CompositorCommand = "start-hyprland -- -c /home/leonne/.config/hypr/sddm.lua";
+          CompositorCommand = "cage";
         };
         X11 = {
           CursorTheme = "Bibata-Modern-Ice";
@@ -43,5 +43,6 @@ in {
   environment.systemPackages = [
     # SDDM Theme
     custom-sddm-astronaut
+    pkgs.cage
   ];
 }
