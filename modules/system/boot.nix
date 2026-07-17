@@ -38,6 +38,7 @@
         devices = ["nodev"];
         useOSProber = true;
         efiSupport = true;
+        efiInstallAsRemovable = false;
         theme = pkgs.catppuccin-grub;
         configurationLimit = 3;
       };

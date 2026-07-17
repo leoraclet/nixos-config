@@ -1,0 +1,19 @@
+{
+  "theme": "light",
+  "windowControlsIconColor": "#505050",
+  "backgroundColor": "#ffffff",
+  "windowState": {
+    "width": 1024,
+    "height": 700,
+    "x": 0,
+    "y": 0,
+    "isMaximized": true,
+    "isFullScreen": false,
+    "displayBounds": {
+      "x": 0,
+      "y": 0,
+      "width": 1920,
+      "height": 1080
+    }
+  }
+}

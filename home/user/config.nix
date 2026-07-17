@@ -60,6 +60,8 @@
     "niri"
     "nwg-look"
     "xremap"
+    "Notesnook"
+    "NotepadNext"
     "vesktop/settings"
     "vesktop/themes"
     # ----------------------------------------------------
@@ -72,6 +74,7 @@
     "starship.toml"
     "mimeapps.list"
     "pavucontrol.ini"
+    "electron-flags.conf"
   ];
 in {
   home.file = builtins.listToAttrs (

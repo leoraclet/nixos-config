@@ -40,7 +40,7 @@
     # accessible via `nvidia-settings`.
     nvidiaSettings = true;
 
-    # FIXME: nix shell nixpkgs#pciutils -c lspci | grep VGA
+    # FIXME: nix shell nixpkgs#pciutils -c lspci | grep 'VGA'
     # intelBusId = "PCI:00:02:0";
     # amdgpuBusId = "PCI:0:0:0";
     # nvidiaBusId = "PCI:01:00:0";

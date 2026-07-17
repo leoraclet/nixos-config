@@ -11,12 +11,19 @@ in {
       package = pkgs.kdePackages.sddm;
       wayland.enable = true;
       settings = {
+        General = {
+          Numlock = "on";
+          DisplayServer = "Wayland";
+        };
         Theme = {
           Current = "sddm-astronaut-theme";
           CursorTheme = "Bibata-Modern-Ice"; # the cursor name here matters
           # I would always go check the source nix file
           # to see how the maintainers built and named it
           CursorSize = 24;
+        };
+        Wayland = {
+          CompositorCommand = "start-hyprland";
         };
         X11 = {
           CursorTheme = "Bibata-Modern-Ice";

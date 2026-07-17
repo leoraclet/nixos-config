@@ -1,5 +1,0 @@
-[
-	{ "keys": ["ctrl+t"], "command": "new_file" },
-	{ "keys": ["ctrl+n"], "command": "new_file" },
-	{ "keys": [], "command": "transpose" },
-]
