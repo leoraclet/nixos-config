@@ -41,7 +41,7 @@
     # --------------------------------------------------------- #
     zed-editor-fhs
     notepad-next
-    joplin-desktop
+    trilium-desktop
     vscodium
     lapce
 
