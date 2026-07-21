@@ -90,6 +90,22 @@
         "url": "https://channels.nixos.org/nixos-unstable/nixexprs.tar.xz"
       }
     },
+    "nixpkgs-stable": {
+      "locked": {
+        "lastModified": 1784559152,
+        "narHash": "sha256-HiciiJCMadgYK4u4oA0U04EkrWekzSVKTakJahDjzKY=",
+        "owner": "nixos",
+        "repo": "nixpkgs",
+        "rev": "d035ba30f4497b5f4a6300403305a57d7fb1d556",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nixos",
+        "ref": "nixos-26.05-small",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
     "nixpkgs_2": {
       "locked": {
         "lastModified": 1783224372,
@@ -148,6 +164,7 @@
         "nix-index-database": "nix-index-database",
         "nixos-hardware": "nixos-hardware",
         "nixpkgs": "nixpkgs_2",
+        "nixpkgs-stable": "nixpkgs-stable",
         "noctalia": "noctalia",
         "snappy-switcher": "snappy-switcher",
         "spicetify-nix": "spicetify-nix"
