@@ -1,4 +1,4 @@
-function archive-preview
+function archive_preview
     set archive "$argv[1]"
     set supported_archive_formats tar.gz tar.bz2 tar.xz zip rar 7z
 

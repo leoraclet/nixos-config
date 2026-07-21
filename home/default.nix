@@ -1,6 +1,7 @@
 {inputs, ...}: {
   imports = [
     ./user
+    # Spicetify
     inputs.spicetify-nix.homeManagerModules.default
   ];
 

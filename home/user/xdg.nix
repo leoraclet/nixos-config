@@ -1,6 +1,6 @@
 {...}: {
   xdg.mimeApps = {
-    enable = true;
+    enable = false;
     # https://mimetype.io/all-types
     defaultApplications = {
       # ===== Images (imv.desktop) =====

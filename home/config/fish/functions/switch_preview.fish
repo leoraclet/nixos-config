@@ -1,4 +1,4 @@
-function switch-preview
+function switch_preview
     set path "$argv[1]"
     kitten icat --clear --transfer-mode=memory --unicode-placeholder= --stdin=no
 
@@ -6,15 +6,15 @@ function switch-preview
         if test ! -s "$path"
             echo "File is empty"
         else
-            archive-preview "$path"
+            archive_preview "$path"
             if string match -q "image/*" (file -b --mime-type "$path")
-                image-preview "$path"
+                image_preview "$path"
             else
-                file-preview "$path"
+                file_preview "$path"
             end
         end
     else if test -d "$path"
-        dir-preview "$path"
+        dir_preview "$path"
     else
         echo "Preview unavailable"
     end

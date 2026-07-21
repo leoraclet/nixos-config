@@ -1,5 +1,5 @@
 {config, ...}: {
-  thunderbird = {
+  programs.thunderbird = {
     enable = true;
     profiles.${config.home.username} = {
       isDefault = true;

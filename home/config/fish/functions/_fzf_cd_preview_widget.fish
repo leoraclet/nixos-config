@@ -1,0 +1,13 @@
+function _fzf_cd_preview_widget
+    set selected (fd . --hidden --no-ignore --exclude .git --exclude .direnv | fzf --height 60% --reverse --preview='dir_preview {}' --preview-window=right:60%)
+
+    if test -n "$selected"
+        if [ -f "$selected" ]
+            cd "$(dirname $selected)"
+        else
+            cd "$selected"
+        end
+    end
+
+    clear
+end

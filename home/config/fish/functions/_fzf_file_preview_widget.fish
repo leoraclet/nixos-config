@@ -1,0 +1,10 @@
+function _fzf_file_preview_widget
+    set selected_file (fd . --hidden --no-ignore --exclude .git --exclude .direnv | fzf --height 60% --preview-window=right:60% --reverse --preview 'switch_preview {}')
+
+    if test -n "$selected_file"
+        cd "$(dirname $selected_file)"
+        nvim "$(basename $selected_file)"
+    end
+
+    clear
+end

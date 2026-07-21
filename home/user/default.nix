@@ -1,12 +1,11 @@
-{
+{...}: {
   imports = [
-    # ./xdg.nix
-    ./config.nix
-    ./environment.nix
-    ./firefox.nix
-    ./gtk-qt.nix
-    ./codium.nix
-    ./udiskie.nix
-    ./spicetify.nix
+    ./xdg.nix
+    ./dotfiles.nix
+    ./env.nix
+
+    ./firefox
+    ./apps
+    ./email
   ];
 }

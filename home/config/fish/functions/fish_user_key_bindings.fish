@@ -22,11 +22,11 @@ function fish_user_key_bindings
     bind \ct skim-history-widget -M insert
     bind \ec skim-cd-widget -M insert
 
-    bind \e\cd fzf-cd-preview-widget -M insert
+    bind \e\cd _fzf_cd_preview_widget -M insert
     bind \e\cr recent_directories -M insert
     bind \e\cy yazi_cd_quit -M insert
     bind \cl clear -M insert
-    bind \cf fzf-file-preview-widget -M insert
+    bind \cf _fzf_file_preview_widget -M insert
 
     # Bind atuin behaviour to down arrow key
     bind down _atuin_search -M insert

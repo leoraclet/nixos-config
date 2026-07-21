@@ -12,8 +12,9 @@
     spotify # Music player
     vesktop # Discord alternative client
     brave # Chronium-based web browser
-    onlyoffice-desktopeditors # Office suite
-    # libreoffice-qt
+    # qbittorrent
+    # motrix
+    # persepolis
 
     # --------------------------------------------------------- #
     # Utilities
@@ -22,15 +23,27 @@
     flameshot # Screenshot tool
     espanso-wayland # Text Expander
     hunspell
+    # blanket
     # xremap
+    # pdfsam-basic
+
+    # --------------------------------------------------------- #
+    # Office
+    # --------------------------------------------------------- #
+    onlyoffice-desktopeditors # Office suite
+    # libreoffice-qt
+    # zotero
+    # foliate
+    # jitsi-meet
 
     # --------------------------------------------------------- #
     # Editors
     # --------------------------------------------------------- #
     zed-editor-fhs
     notepad-next
-    notesnook
+    joplin
     vscodium
+    # lapce
 
     # --------------------------------------------------------- #
     # Files
@@ -46,13 +59,22 @@
     # krita
     # gimp
     # inkscape
+    # rawtherapee
+    # darktable
+    # digikam
 
     # --------------------------------------------------------- #
-    # Videos
+    # Videos & Audio
     # --------------------------------------------------------- #
     # libsForQt5.kdenlive
+    # shotcut
     # davinci-resolve-studio
     # obs-studio
+    # losslesscut-bin
+    # audacity
+    # lmms
+    # ardour
+    # handbrake
 
     # --------------------------------------------------------- #
     # Sync / Backups

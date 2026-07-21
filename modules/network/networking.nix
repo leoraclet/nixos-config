@@ -18,7 +18,7 @@
       hostsFile = builtins.fetchurl {
         url = hostsPath;
         # nix-prefetch-url --type sha256 "https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts"
-        sha256 = "0wxay523xmbimnck7mswx0217v6dydkfhkwz3kpg7qp92rgqf1r7";
+        sha256 = "16madzy4ac62s9ldk4lpcw3gi53a44phkdsdxrwa430c2f8gjphf";
       };
     in
       builtins.readFile "${hostsFile}";

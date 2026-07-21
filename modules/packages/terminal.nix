@@ -97,8 +97,22 @@
     lazygit
     lazydocker
 
+    # fuzzel
     # gh-dash
     # cheat
     # albert
+
+    # --------------------------------------------------------- #
+    # For fun
+    # --------------------------------------------------------- #
+    # cmatrix
+    # cava
+    # rsclock
+    # pipes
+    # asciiquarium
+    # sl
+    # nyancat
+    # bastet
+    # nsnake
   ];
 }

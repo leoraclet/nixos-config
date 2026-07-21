@@ -9,6 +9,7 @@
     ./swap.nix
     ./firmware.nix
     ./usb.nix
+    ./logind.nix
     # ./nvidia.nix
     # ./amd.nix
   ];
