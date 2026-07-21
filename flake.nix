@@ -1,4 +1,6 @@
 {
+  description = "My NixOS/home-manager configuration.";
+
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     nixos-hardware.url = "github:NixOS/nixos-hardware/master";
@@ -35,61 +37,64 @@
     # import-tree.url = "github:vic/import-tree";
   };
 
-  outputs = {nixpkgs, ...} @ inputs: let
-    system = "x86_64-linux";
-    # pkgs = import nixpkgs {
-    #   inherit system;
-    #   config.allowUnfree = true;
-    # };
-  in {
-    ##########################################################
-    # LAPTOP
-    ##########################################################
-    nixosConfigurations.leonne = nixpkgs.lib.nixosSystem {
-      # inherit system;
-      specialArgs = {inherit inputs system;};
-      modules = [
-        # Configuration
-        ./hosts/laptop/configuration.nix
-        # Nix index database
-        # https://github.com/nix-community/nix-index-database
-        # https://github.com/nix-community/nix-index
-        inputs.nix-index-database.nixosModules.default
-        # optional to also wrap and install comma
-        {programs.nix-index-database.comma.enable = true;}
-        # Home Manager
-        inputs.home-manager.nixosModules.home-manager
-        {
-          home-manager = {
-            useGlobalPkgs = true;
-            useUserPackages = true;
-            overwriteBackup = true;
-            backupFileExtension = "bak";
-            users.leonne = {
-              imports = [
-                ./home
-              ];
+  outputs =
+    { nixpkgs, ... }@inputs:
+    let
+      system = "x86_64-linux";
+      # pkgs = import nixpkgs {
+      #   inherit system;
+      #   config.allowUnfree = true;
+      # };
+    in
+    {
+      ##########################################################
+      # LAPTOP
+      ##########################################################
+      nixosConfigurations.leonne = nixpkgs.lib.nixosSystem {
+        # inherit system;
+        specialArgs = { inherit inputs system; };
+        modules = [
+          # Configuration
+          ./hosts/laptop/configuration.nix
+          # Nix index database
+          # https://github.com/nix-community/nix-index-database
+          # https://github.com/nix-community/nix-index
+          inputs.nix-index-database.nixosModules.default
+          # optional to also wrap and install comma
+          { programs.nix-index-database.comma.enable = true; }
+          # Home Manager
+          inputs.home-manager.nixosModules.home-manager
+          {
+            home-manager = {
+              useGlobalPkgs = true;
+              useUserPackages = true;
+              overwriteBackup = true;
+              backupFileExtension = "bak";
+              users.leonne = {
+                imports = [
+                  ./home
+                ];
+              };
+              extraSpecialArgs = {
+                inherit inputs;
+              };
             };
-            extraSpecialArgs = {
-              inherit inputs;
-            };
-          };
-        }
-        # Hardware Configuration (Dell Latitude 5520)
-        inputs.nixos-hardware.nixosModules.dell-latitude-5520
-      ];
-    };
+          }
+          # Hardware Configuration (Dell Latitude 5520)
+          inputs.nixos-hardware.nixosModules.dell-latitude-5520
+        ];
+      };
 
-    ##########################################################
-    # WORSTATION
-    ##########################################################
-    nixosConfigurations.leon = nixpkgs.lib.nixosSystem {
-      # inherit system;
-      specialArgs = {inherit inputs system;};
-      modules = [
-        # Configuration
-        ./hosts/workstation/configuration.nix
-      ];
+      ##########################################################
+      # WORSTATION
+      ##########################################################
+      nixosConfigurations.leon = nixpkgs.lib.nixosSystem {
+        # inherit system;
+        specialArgs = { inherit inputs system; };
+        modules = [
+          # Configuration
+          ./hosts/workstation/configuration.nix
+        ];
+      };
     };
-  };
 }

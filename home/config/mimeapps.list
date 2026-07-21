@@ -1,4 +1,18 @@
 [Added Associations]
+x-scheme-handler/mailto=userapp-Thunderbird-L0XOS3.desktop;
+x-scheme-handler/mid=userapp-Thunderbird-L0XOS3.desktop;
+message/rfc822=userapp-Thunderbird-L0XOS3.desktop;
+x-scheme-handler/news=userapp-Thunderbird-1Z4MS3.desktop;
+x-scheme-handler/snews=userapp-Thunderbird-1Z4MS3.desktop;
+x-scheme-handler/nntp=userapp-Thunderbird-1Z4MS3.desktop;
+x-scheme-handler/feed=userapp-Thunderbird-6MEOS3.desktop;
+application/rss+xml=userapp-Thunderbird-6MEOS3.desktop;
+application/x-extension-rss=userapp-Thunderbird-6MEOS3.desktop;
+x-scheme-handler/webcal=userapp-Thunderbird-72LMS3.desktop;
+x-scheme-handler/webcals=userapp-Thunderbird-72LMS3.desktop;
+text/calendar=userapp-Thunderbird-72LMS3.desktop;
+application/x-extension-ics=userapp-Thunderbird-72LMS3.desktop;
+x-scheme-handler/net.thunderbird=userapp-Thunderbird-J2KKS3.desktop;
 
 [Default Applications]
 application/json=sublime_text.desktop
@@ -94,7 +108,7 @@ image/x-sony-sr2=imv.desktop
 image/x-sony-srf=imv.desktop
 image/x-tga=imv.desktop
 image/x-xbitmap=imv.desktop
-text/calendar=sublime_text.desktop
+text/calendar=userapp-Thunderbird-72LMS3.desktop
 text/css=sublime_text.desktop
 text/csv=onlyoffice-desktopeditors.desktop
 text/html=sublime_text.desktop
@@ -138,5 +152,18 @@ x-scheme-handler/discord=vesktop.desktop
 x-scheme-handler/http=brave-browser.dekstop
 x-scheme-handler/https=brave-browser.dekstop
 x-scheme-handler/tg=org.telegram.desktop.desktop
+x-scheme-handler/mailto=userapp-Thunderbird-L0XOS3.desktop
+x-scheme-handler/mid=userapp-Thunderbird-L0XOS3.desktop
+message/rfc822=userapp-Thunderbird-L0XOS3.desktop
+x-scheme-handler/news=userapp-Thunderbird-1Z4MS3.desktop
+x-scheme-handler/snews=userapp-Thunderbird-1Z4MS3.desktop
+x-scheme-handler/nntp=userapp-Thunderbird-1Z4MS3.desktop
+x-scheme-handler/feed=userapp-Thunderbird-6MEOS3.desktop
+application/rss+xml=userapp-Thunderbird-6MEOS3.desktop
+application/x-extension-rss=userapp-Thunderbird-6MEOS3.desktop
+x-scheme-handler/webcal=userapp-Thunderbird-72LMS3.desktop
+x-scheme-handler/webcals=userapp-Thunderbird-72LMS3.desktop
+application/x-extension-ics=userapp-Thunderbird-72LMS3.desktop
+x-scheme-handler/net.thunderbird=userapp-Thunderbird-J2KKS3.desktop
 
 [Removed Associations]

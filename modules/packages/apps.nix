@@ -41,9 +41,9 @@
     # --------------------------------------------------------- #
     zed-editor-fhs
     notepad-next
-    joplin
+    joplin-desktop
     vscodium
-    # lapce
+    lapce
 
     # --------------------------------------------------------- #
     # Files
@@ -105,5 +105,8 @@
     # cura-appimage
     # orca-slicer
     # arduino-ide
+    # stm32flash
+    # stm32loader
+    # stm32cubemx
   ];
 }
