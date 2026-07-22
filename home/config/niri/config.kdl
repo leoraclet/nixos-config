@@ -24,3 +24,5 @@ spawn-at-startup "kitty"
 prefer-no-csd
 
 screenshot-path "~/Pictures/Screenshots/Screenshot_ %Y-%m-%d_%H-%M-%S.png"
+
+include "noctalia.kdl"

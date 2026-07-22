@@ -68,7 +68,10 @@
     "secretspec"
     "ipython"
     "nix-init"
+    "cava"
     "aria2"
+    "lazygit"
+    "vlc"
     "vesktop/settings"
     "vesktop/themes"
     # ----------------------------------------------------
@@ -84,7 +87,8 @@
     "mimeapps.list"
     "pavucontrol.ini"
     "electron-flags.conf"
-    "chronium-flags"
+    "chronium-flags.conf"
+    "kdeglobals"
     ".curlrc"
   ];
 in {

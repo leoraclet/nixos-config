@@ -46,7 +46,9 @@ hl.bind(mainMod .. " + E", hl.dsp.exec_cmd("pkill nemo || nemo"))
 hl.bind(mainMod .. " + N", hl.dsp.exec_cmd("pkill subl || subl"))
 hl.bind(mainMod .. " + B", hl.dsp.exec_cmd("pkill btop || kitty btop"))
 hl.bind(mainMod .. " + C", hl.dsp.exec_cmd("pkill hyprpicker || hyprpicker -a"))
-hl.bind(mainMod .. " + X", hl.dsp.exec_cmd(ipc .. " launcher emoji"))
+hl.bind(mainMod .. " + A", hl.dsp.exec_cmd(ipc .. " panel-toggle launcher /win"))
+hl.bind(mainMod .. " + O", hl.dsp.exec_cmd(ipc .. " panel-toggle launcher /fs"))
+hl.bind(mainMod .. " + X", hl.dsp.exec_cmd(ipc .. " panel-toggle launcher /emo"))
 hl.bind(mainMod .. " + I", hl.dsp.exec_cmd(ipc .. " nightlight-force-toggle"))
 hl.bind(mainMod .. " + V", hl.dsp.exec_cmd(ipc .. " panel-toggle clipboard"))
 hl.bind(mainMod .. " + L", hl.dsp.exec_cmd(ipc .. " session lock"))
@@ -73,7 +75,8 @@ require("utils.scratchpad")
 -------------------------------------------------------
 
 hl.bind(mainMod .. " + Tab", hl.dsp.exec_cmd("snappy-switcher next --mod super --silent "))
-hl.bind("ALT + TAB", hl.dsp.exec_cmd("snappy-switcher next --mod alt"))
+-- hl.bind("ALT + TAB", hl.dsp.exec_cmd("snappy-switcher next --mod alt"))
+hl.bind("ALT + TAB", hl.dsp.exec_cmd(ipc .. " window-switcher"))
 
 -- To switch between windows in a floating workspace:
 hl.bind("ALT + A", hl.dsp.window.bring_to_top())
