@@ -7,7 +7,7 @@
     ./dotfiles.nix
     ./env.nix
 
-    ./firefox
+    ./librewolf
     ./apps
     ./email
   ];
@@ -15,6 +15,9 @@
   home = {
     username = "leonne";
     homeDirectory = "/home/leonne";
+
+    # Make programs use XDG directories whenever supported
+    preferXdgDirectories = true;
   };
 
   programs.home-manager.enable = true;

@@ -6,7 +6,7 @@
   "workspace": {
     "checkThirdParty": false,
     "library": [
-      "usr/share/hypr/stubs"
+      "/nix/store/49y72pb810ngjprh0bgn446f706rhkjc-hyprland-0.55.4/share/hypr/stubs/hl.meta.lua"
     ]
   },
   "diagnostics": {

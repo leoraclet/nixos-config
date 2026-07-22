@@ -36,9 +36,9 @@ hl.config({
             passes = 2,
             vibrancy = 0.1696,
         },
-        glow = {
+        glow               = {
             enabled = true,
-            range = 3,
+            range = 1,
             render_power = 3,
         },
         -- motion_blur = {
@@ -55,12 +55,17 @@ hl.config({
         focus_on_close              = 2,
         numlock_by_default          = true,
         sensitivity                 = 0,
+        force_no_accel              = false,
 
         touchpad                    = {
             clickfinger_behavior = true,
             natural_scroll       = true,
-            disable_while_typing = false
-        }
+            disable_while_typing = true,
+        },
+
+        tablet                      = {
+            output = "current"
+        },
     },
 
     group = {
@@ -91,18 +96,22 @@ hl.config({
     },
 
     xwayland = {
-        force_zero_scaling  = true,
+        force_zero_scaling     = true,
         create_abstract_socket = true
     },
 
     cursor = {
-        hide_on_key_press = true,
-        hide_on_tablet = true,
-        no_break_fs_vrr   = 1,
-        no_warps          = true,
-        zoom_rigid        = true,
-        zoom_detached_camera = false,
-        zoom_disable_aa = false,
+        hide_on_key_press        = true,
+        hide_on_tablet           = true,
+        no_break_fs_vrr          = 1,
+        no_warps                 = true,
+        zoom_rigid               = true,
+        zoom_detached_camera     = false,
+        zoom_disable_aa          = false,
+        inactive_timeout         = 2,
+        warp_on_change_workspace = 1,
+        warp_on_toggle_special   = 1,
+        persistent_warps         = true,
     },
 
     ecosystem = {

@@ -23,6 +23,7 @@
     flameshot # Screenshot tool
     espanso-wayland # Text Expander
     hunspell
+    # bitwarden-desktop
     # blanket
     # xremap
     # pdfsam-basic
@@ -66,6 +67,7 @@
     # --------------------------------------------------------- #
     # Videos & Audio
     # --------------------------------------------------------- #
+    vlc
     # libsForQt5.kdenlive
     # shotcut
     # davinci-resolve-studio

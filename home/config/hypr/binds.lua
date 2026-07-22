@@ -39,7 +39,7 @@ hl.bind(mainMod .. " + SUPER_L", hl.dsp.exec_cmd(ipc .. " panel-toggle launcher"
 hl.bind(mainMod .. " + Delete", hl.dsp.window.kill())
 hl.bind(mainMod .. " + Backspace", hl.dsp.window.kill())
 hl.bind(mainMod .. " + Q", hl.dsp.window.close())
-hl.bind(mainMod .. " + F", hl.dsp.window.fullscreen({ mode = "maximized", action = "toggle" }))
+hl.bind(mainMod .. " + F", hl.dsp.window.fullscreen({ mode = "maximized", action = "toggle", layout_aware = true }))
 hl.bind(mainMod .. " + P", hl.dsp.window.pin())
 hl.bind(mainMod .. " + P", hl.dsp.layout("promote"))
 hl.bind(mainMod .. " + E", hl.dsp.exec_cmd("pkill nemo || nemo"))
@@ -52,7 +52,7 @@ hl.bind(mainMod .. " + V", hl.dsp.exec_cmd(ipc .. " panel-toggle clipboard"))
 hl.bind(mainMod .. " + L", hl.dsp.exec_cmd(ipc .. " session lock"))
 
 hl.bind("ALT + L", hl.dsp.exec_cmd(ipc .. " session lock"))
-hl.bind("ALT + Return", hl.dsp.window.fullscreen({ mode = "fullscreen", action = "toggle" }))
+hl.bind("ALT + Return", hl.dsp.window.fullscreen({ mode = "fullscreen", action = "toggle", layout_aware = true }))
 hl.bind("ALT + F4", hl.dsp.window.kill())
 
 hl.bind(mainMod .. " + W", function()
@@ -166,10 +166,7 @@ hl.bind("SHIFT + KP_SUBTRACT", hl.dsp.layout("colresize -conf"))
 hl.bind(mainMod .. " + mouse:272", hl.dsp.window.drag(), { mouse = true })
 hl.bind(mainMod .. " + mouse:273", hl.dsp.window.resize(), { mouse = true })
 
-hl.bind("SUPER + mouse:272", hl.dsp.window.drag(), { mouse = true })
-hl.bind("SUPER + CTRL", hl.dsp.window.drag(), { mouse = true })
-hl.bind("SUPER + mouse:273", hl.dsp.window.resize(), { mouse = true })
-hl.bind("SUPER + ALT_L", hl.dsp.window.resize(), { mouse = true })
+hl.bind(mainMod .. " + SHIFT + mouse:272", hl.dsp.window.resize(), { mouse = true })
 
 -------------------------------------------------------
 -- Focus

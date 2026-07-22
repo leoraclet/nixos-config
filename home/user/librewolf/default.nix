@@ -4,6 +4,11 @@
     enable = true;
     profiles = {
       default = {
+        # extensions.packages = with inputs.nur.repos.rycee.firefox-addons; [
+        #   bitwarden
+        #   consent-o-matic
+        #   ublock-origin
+        # ];
         id = 0;
         name = "default";
         isDefault = true;

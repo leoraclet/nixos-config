@@ -6,6 +6,10 @@
     nixpkgs-stable.url = "github:nixos/nixpkgs/nixos-26.05-small";
     nixos-hardware.url = "github:NixOS/nixos-hardware/master";
 
+    nur = {
+      url = "github:nix-community/NUR";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -22,6 +26,12 @@
       url = "github:nix-community/nix-index-database";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    # nix-gaming.url = "github:fufexan/nix-gaming";
+    # direnv-instant = {
+    #   url = "github:Mic92/direnv-instant";
+    #   inputs.nixpkgs.follows = "nixpkgs";
+    # };
     # treefmt-nix = {
     #   url = "github:numtide/treefmt-nix";
     #   inputs.nixpkgs.follows = "nixpkgs";
@@ -40,10 +50,6 @@
 
   outputs = {nixpkgs, ...} @ inputs: let
     system = "x86_64-linux";
-    # pkgs = import nixpkgs {
-    #   inherit system;
-    #   config.allowUnfree = true;
-    # };
   in {
     ##########################################################
     # LAPTOP

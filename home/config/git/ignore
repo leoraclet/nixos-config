@@ -80,3 +80,6 @@ yarn.lock
 
 # Misc
 .z_lua
+
+# direnv
+.direnv

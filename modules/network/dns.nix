@@ -9,6 +9,7 @@
       "[::1]"
       "1.1.1.1"
       "1.0.0.1"
+      "8.8.8.8"
     ];
 
     # These options are unnecessary when managing DNS ourselves

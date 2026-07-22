@@ -1,0 +1,7 @@
+# maintainers that will get added to the package meta
+maintainers = ["leoraclet"]
+
+nixpkgs = 'builtins.getFlake "nixpkgs"' # use the nixpkgs from the flake registry
+
+[format]
+command = ["alejandra"]

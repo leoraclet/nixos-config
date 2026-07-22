@@ -84,9 +84,9 @@ hl.layer_rule({
 -- Workspace Rules
 -------------------------------------------------------
 
-hl.workspace_rule({ workspace = 20, monitor = "HDMI-A-1", default = true, })
-hl.workspace_rule({ workspace = 20, monitor = "HDMI-A-2", default = true, })
-hl.workspace_rule({ workspace = 20, monitor = "DP-2", default = true, })
+hl.workspace_rule({ workspace = "20", monitor = "HDMI-A-1", default = true, })
+hl.workspace_rule({ workspace = "20", monitor = "HDMI-A-2", default = true, })
+hl.workspace_rule({ workspace = "20", monitor = "DP-2", default = true, })
 
 -------------------------------------------------------
 -- Default workspaces
@@ -99,12 +99,12 @@ local apps = {
 }
 
 hl.workspace_rule({ workspace = "special:btop", layout = "scrolling", on_created_empty = "kitty btop", gaps_out = 30 })
-hl.workspace_rule({ workspace = 20, monitor = "" })
+hl.workspace_rule({ workspace = "20", monitor = "" })
 
 for i = 1, 9 do
-    hl.workspace_rule({ workspace = i, layout = "scrolling", on_created_empty = apps[i] })
+    hl.workspace_rule({ workspace = tostring(i), layout = "scrolling", on_created_empty = apps[i] })
 end
 
 for i = 10, 19 do
-    hl.workspace_rule({ workspace = i, layout = "dwindle", })
+    hl.workspace_rule({ workspace = tostring(i), layout = "dwindle", })
 end

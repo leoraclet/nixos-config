@@ -1,7 +1,18 @@
-{...}: {
-  hardware.amdgpu = {
-    legacySupport.enable = true;
-    opencl.enable = true;
+{pkgs, ...}: {
+  hardware = {
+    graphics = {
+      enable = true;
+      enable32Bit = true;
+      extraPackages = with pkgs; [
+        libva-vdpau-driver
+        libvdpau-va-gl
+      ];
+    };
+    amdgpu = {
+      legacySupport.enable = true;
+      opencl.enable = true;
+      initrd.enable = true;
+    };
   };
 
   environment.variables = {

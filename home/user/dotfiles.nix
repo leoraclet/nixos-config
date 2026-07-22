@@ -63,6 +63,12 @@
     "fuzzel"
     "ssh"
     "NotepadNext"
+    "fd"
+    "nixpkgs"
+    "secretspec"
+    "ipython"
+    "nix-init"
+    "aria2"
     "vesktop/settings"
     "vesktop/themes"
     # ----------------------------------------------------
@@ -78,6 +84,8 @@
     "mimeapps.list"
     "pavucontrol.ini"
     "electron-flags.conf"
+    "chronium-flags"
+    ".curlrc"
   ];
 in {
   home.file = builtins.listToAttrs (

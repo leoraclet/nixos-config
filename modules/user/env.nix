@@ -12,6 +12,8 @@
     CLUTTER_BACKEND = "wayland";
     ELECTRON_OZONE_PLATFORM_HINT = "wayland";
     NIXOS_XDG_OPEN_USE_PORTAL = "1";
+    XCURSOR_THEME = "Bibata-Modern-Ice";
+    XCURSOR_SIZE = "24";
 
     # Application Specific
     MOZ_ENABLE_WAYLAND = "1";
@@ -24,5 +26,7 @@
   environment.variables = {
     EDITOR = "nvim";
     VISUAL = "nvim";
+    XCURSOR_THEME = "Bibata-Modern-Ice";
+    XCURSOR_SIZE = "24";
   };
 }

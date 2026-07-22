@@ -4,8 +4,9 @@
     ./flatpak.nix
     ./apps.nix
     ./lsp.nix
-    # ./gaming.nix
     ./terminal.nix
+    ./nix-tools.nix
+    # ./gaming.nix
   ];
 
   nixpkgs.config = {

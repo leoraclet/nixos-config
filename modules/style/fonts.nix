@@ -6,6 +6,7 @@
     noto-fonts-color-emoji
     noto-fonts-cjk-sans
     nerd-fonts.jetbrains-mono
+    fira-mono
     icomoon-feather
     iosevka
   ];
