@@ -6,5 +6,6 @@
     ./env.nix
     ./fhs.nix
     ./xserver.nix
+    # ./xdg.nix
   ];
 }

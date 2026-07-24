@@ -72,6 +72,9 @@
     "aria2"
     "lazygit"
     "vlc"
+    "gimp"
+    "feh"
+    "zathura"
     "vesktop/settings"
     "vesktop/themes"
     # ----------------------------------------------------
@@ -83,6 +86,7 @@
     "VSCodium/User/keybindings.json"
     "lapce-stable/settings.toml"
     "lapce-stable/keymaps.toml"
+    # ----------------------------------------------------
     "starship.toml"
     "mimeapps.list"
     "pavucontrol.ini"

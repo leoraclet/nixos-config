@@ -17,5 +17,7 @@
     XDG_DATA_HOME = "$HOME/.local/share";
     XCURSOR_THEME = "Bibata-Modern-Ice";
     XCURSOR_SIZE = "24";
+
+    NIXPKGS_ALLOW_UNFREE = "1"; # To allow nix-shell to use unfree packages
   };
 }

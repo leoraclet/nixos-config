@@ -17,7 +17,13 @@ alias cbe="sudo nix-collect-garbage -d && sudo nix profile wipe-history --profil
 alias con="zeditor ~/Config/"
 
 # Terminal aliases
+alias wget="wget -c" # continue download
+alias pyserver='python3 -m http.server'
+alias less='less -R'
+alias jctl="journalctl -p 3 -xb" # get the error messages from journalctl
 alias py="uv run python"
+alias pdw='pwd'
+alias sha1='openssl sha1'
 alias cl="clear"
 alias c="clear"
 alias cls="clear"

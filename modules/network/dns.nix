@@ -1,5 +1,14 @@
 # https://wiki.nixos.org/wiki/NetworkManager#DNS_Management
 {lib, ...}: {
+  # https://wiki.nixos.org/wiki/Unbound
+  services.unbound = {
+    enable = false;
+    settings.server = {
+      access-control = [];
+      interface = [];
+    };
+  };
+
   # Enable Encrypted DNS
   networking = {
     # Configure DNS servers manually (this example uses Cloudflare and Google DNS)

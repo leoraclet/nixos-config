@@ -21,6 +21,8 @@
     MOZ_DBUS_REMOTE = "1";
     NIXOS_OZONE_WL = "1";
     PROTON_ENABLE_NGX_UPDATER = "1";
+
+    NIXPKGS_ALLOW_UNFREE = "1"; # To allow nix-shell to use unfree packages
   };
 
   environment.variables = {

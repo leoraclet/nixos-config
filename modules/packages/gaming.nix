@@ -1,4 +1,4 @@
-{...}: {
+{pkgs, ...}: {
   ###################################################
   # GAMING & WINDOWS COMPATIBILITY
   ###################################################
@@ -6,7 +6,14 @@
   programs = {
     steam = {
       enable = true;
+      extest.enable = true;
+      remotePlay.openFirewall = false; # Open ports in the firewall for Steam Remote Play
+      dedicatedServer.openFirewall = false; # Open ports for Source Dedicated Server hosting
       gamescopeSession.enable = true;
+      protontricks.enable = true;
+      extraCompatPackages = with pkgs; [
+        proton-ge-bin
+      ];
     };
     gamemode.enable = true;
   };

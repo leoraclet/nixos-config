@@ -368,7 +368,7 @@ show_actions = false
 background_opacity = 0.99999997764825821
 
 [plugins]
-enabled = [ "noctalia/timer", "nightwatch75/file-search", "oldirtty/color_picker" ]
+enabled = [ "noctalia/timer", "nightwatch75/file-search", "oldirtty/color_picker", "noctalia/translator" ]
 
 [shell]
 clipboard_auto_paste = "ctrl_v"

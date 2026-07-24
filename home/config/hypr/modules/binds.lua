@@ -66,9 +66,9 @@ end) -- Toggle window floating state and center it.
 -- Utilities
 -------------------------------------------------------
 
-require("utils.zoom")
-require("utils.layout-toggle")
-require("utils.scratchpad")
+require("modules.utils.zoom")
+require("modules.utils.layout-toggle")
+require("modules.utils.scratchpad")
 
 -------------------------------------------------------
 -- ALT+TAB behaviour

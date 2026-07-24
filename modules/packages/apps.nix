@@ -15,6 +15,7 @@
     # qbittorrent
     # motrix
     # persepolis
+    # logseq
 
     # --------------------------------------------------------- #
     # Utilities
@@ -23,6 +24,7 @@
     flameshot # Screenshot tool
     espanso-wayland # Text Expander
     hunspell
+    bitwarden-cli
     # bitwarden-desktop
     # blanket
     # xremap
@@ -32,6 +34,9 @@
     # Office
     # --------------------------------------------------------- #
     onlyoffice-desktopeditors # Office suite
+    # mattermost
+    # element-desktop
+    # rocketchat-desktop
     # libreoffice-qt
     # zotero
     # foliate

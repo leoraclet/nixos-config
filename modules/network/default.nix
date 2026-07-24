@@ -6,4 +6,6 @@
     ./openvpn.nix
     ./ssh.nix
   ];
+
+  services.vnstat.enable = false;
 }

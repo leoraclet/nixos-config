@@ -8,6 +8,15 @@
   services.spice-vdagentd.enable = true;
 
   virtualisation = {
+    # https://nixos.wiki/wiki/NixOS:nixos-rebuild_build-vm
+    vmVariant = {
+      # following configuration is added only when building VM with build-vm
+      virtualisation = {
+        memorySize = 4096; # Use 2048MiB memory.
+        cores = 4;
+      };
+    };
+
     spiceUSBRedirection.enable = true;
     containers.enable = true;
     containers.storage.settings = {

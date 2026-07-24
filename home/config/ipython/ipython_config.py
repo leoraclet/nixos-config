@@ -1,4 +1,4 @@
-c = get_config()
+c = get_config() #noqa
 
 # No banner
 c.TerminalIPythonApp.display_banner = False

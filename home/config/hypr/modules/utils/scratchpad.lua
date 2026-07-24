@@ -63,7 +63,7 @@ local function toggle_scratchpad()
             hl.dispatch(hl.dsp.window.set_prop({ window = "address:" .. win.address, prop = "no_anim", value = "1" }))
             hl.dispatch(hl.dsp.window.move({ window = "address:" .. win.address, workspace = CONFIG.special_ws, follow = false }))
             state.animating = false
-        end, { timeout = 350, type = "oneshot" })
+        end, { timeout = 50, type = "oneshot" })
     else
         -- SHOW: Warp and Slide
         hl.dispatch(hl.dsp.window.set_prop({ window = "address:" .. win.address, prop = "no_anim", value = "1" }))
@@ -76,7 +76,7 @@ local function toggle_scratchpad()
             hl.dispatch(hl.dsp.window.set_prop({ window = "address:" .. win.address, prop = "no_anim", value = "0" }))
             hl.dispatch(hl.dsp.window.move({ window = "address:" .. win.address, x = x, y = target_y }))
             hl.dispatch(hl.dsp.focus({ window = "address:" .. win.address }))
-            hl.timer(function() state.animating = false end, { timeout = 300, type = "oneshot" })
+            hl.timer(function() state.animating = false end, { timeout = 50, type = "oneshot" })
         end, { timeout = 50, type = "oneshot" })
     end
 end
@@ -101,7 +101,7 @@ end)
 hl.on("window.open", function(win)
     if win.class == CONFIG.class and state.launching then
         state.launching = false
-        hl.timer(toggle_scratchpad, { timeout = 200, type = "oneshot" })
+        hl.timer(toggle_scratchpad, { timeout = 50, type = "oneshot" })
     end
 end)
 

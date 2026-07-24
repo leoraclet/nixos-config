@@ -1,7 +1,6 @@
 {...}: {
-  xdg.mimeApps = {
+  xdg.mime = {
     enable = false;
-    # https://mimetype.io/all-types
     defaultApplications = {
       # ===== Images (imv.desktop) =====
       "image/*" = "imv.desktop";
@@ -154,21 +153,7 @@
       "application/x-debian-package" = "file-roller.desktop";
       "application/x-rpm" = "file-roller.desktop";
     };
-  };
-  # Default directories.
-  xdg.userDirs = {
-    enable = true;
-    setSessionVariables = true;
-    createDirectories = true; # conflicts with impermanence
-
-    # Make sure we're using the english ones.
-    desktop = "$HOME/Desktop";
-    documents = "$HOME/Documents";
-    download = "$HOME/Downloads";
-    pictures = "$HOME/Pictures";
-    videos = "$HOME/Videos";
-    music = "$HOME/Music";
-    publicShare = "$HOME/Public";
-    templates = "$HOME/Templates";
+    addedAssociations = {};
+    removedAssociations = {};
   };
 }

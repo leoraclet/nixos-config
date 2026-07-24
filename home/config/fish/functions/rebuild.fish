@@ -1,4 +1,6 @@
 function rebuild
+    clear
+    
     # cd to your config dir
     pushd ~/Config/ >/dev/null
 
