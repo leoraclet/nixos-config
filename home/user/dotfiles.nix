@@ -75,6 +75,7 @@
     "gimp"
     "feh"
     "zathura"
+    "weechat"
     "vesktop/settings"
     "vesktop/themes"
     # ----------------------------------------------------

@@ -75,8 +75,8 @@ require("modules.utils.scratchpad")
 -------------------------------------------------------
 
 hl.bind(mainMod .. " + Tab", hl.dsp.exec_cmd("snappy-switcher next --mod super --silent "))
--- hl.bind("ALT + TAB", hl.dsp.exec_cmd("snappy-switcher next --mod alt"))
-hl.bind("ALT + TAB", hl.dsp.exec_cmd(ipc .. " window-switcher"))
+hl.bind("ALT + TAB", hl.dsp.exec_cmd("snappy-switcher next --mod alt"))
+-- hl.bind("ALT + TAB", hl.dsp.exec_cmd(ipc .. " window-switcher"))
 
 -- To switch between windows in a floating workspace:
 hl.bind("ALT + A", hl.dsp.window.bring_to_top())

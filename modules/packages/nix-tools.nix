@@ -10,6 +10,7 @@
     manix
     nh
     nvd
+    nixos-shell
 
     nix-init
     hydra-check
