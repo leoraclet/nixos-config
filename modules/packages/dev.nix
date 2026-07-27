@@ -17,10 +17,13 @@
     devenv
     hyperfine
     just
+    distrobox
 
     # VCS
     git
     git-credential-manager
+    git-ignore
+    license-cli
     jj
 
     # --------------------------------------------------------- #

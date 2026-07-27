@@ -31,6 +31,7 @@
     dust # Disk analyzer
     dua # Disk usage analyzer
     duf # Disk Usage/Free Utility
+    diskonaut-ng
 
     # --------------------------------------------------------- #
     # Terminal apps
@@ -93,9 +94,13 @@
     trashy # Simple, fast, and featureful alternative to rm and trash-cli
     glow # CLI markdown renderer
     fastfetch
-
+    tre-command
     lazygit
     lazydocker
+    weechat
+    irssi
+    mosh
+    xxh
 
     # fuzzel
     # gh-dash

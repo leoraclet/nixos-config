@@ -8,7 +8,10 @@
     patchelf
     nix-inspect
     manix
+    nh
+    nvd
 
+    nix-init
     hydra-check
     nix-update
     nixpkgs-review

@@ -37,6 +37,7 @@
     #   inputs.nixpkgs.follows = "nixpkgs";
     # };
 
+    nixos-shell.url = "github:Mic92/nixos-shell";
     snappy-switcher.url = "github:OpalAayan/snappy-switcher";
 
     # Dendritic pattern

@@ -35,12 +35,16 @@
     # --------------------------------------------------------- #
     onlyoffice-desktopeditors # Office suite
     # mattermost
+    # teamspeak6-client
+    # mumble
+    # stoat-desktop
     # element-desktop
     # rocketchat-desktop
     # libreoffice-qt
     # zotero
     # foliate
     # jitsi-meet
+    # focuswriter
 
     # --------------------------------------------------------- #
     # Editors

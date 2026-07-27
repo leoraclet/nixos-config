@@ -31,19 +31,18 @@ hl.config({
         shadow             = { enabled = false },
 
         blur               = {
-            enabled = true,
-            size = 3,
-            passes = 2,
-            vibrancy = 0.1696,
+            enabled           = true,
+            size              = 3,
+            passes            = 2,
+            vibrancy          = 0.1696,
+            ignore_opacity    = true, -- Allows opacity blurring
+            new_optimizations = true,
         },
         glow               = {
             enabled = true,
             range = 1,
             render_power = 3,
         },
-        -- motion_blur = {
-        --     enabled = true,
-        -- },
     },
 
     input = {
@@ -84,6 +83,7 @@ hl.config({
         disable_hyprland_logo           = true,
         on_focus_under_fullscreen       = 2,
         focus_on_activate               = true,
+        session_lock_xray               = true,
         background_color                = "0x24273a",
         disable_splash_rendering        = true,
         disable_scale_notification      = true,
@@ -93,6 +93,8 @@ hl.config({
         key_press_enables_dpms          = true,
         disable_hyprland_guiutils_check = true,
         disable_xdg_env_checks          = true,
+        animate_manual_resizes          = false,
+        animate_mouse_windowdragging    = false,
     },
 
     xwayland = {
@@ -124,6 +126,10 @@ hl.config({
         new_render_scheduling = true,
     },
 
+    binds = {
+        scroll_event_delay = 0,
+    },
+
     -------------------------------------------------------
     -- Layouts
     -------------------------------------------------------
@@ -135,10 +141,12 @@ hl.config({
         direction                = "right",
         follow_min_visible       = 0.0,
         follow_focus             = true,
+        explicit_column_widths   = "0.35, 0.5, 0.65, 1.0",
     },
     dwindle = {
         preserve_split     = true,
         smart_split        = true,
+        smart_resizing     = true,
         precise_mouse_move = true
     },
 

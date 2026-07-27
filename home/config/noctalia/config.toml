@@ -3,71 +3,84 @@ enable_overdrive = true
 enable_sounds = true
 sound_volume = 0.74999998323619366
 
-[bar.default]
-border = "on_surface"
-capsule = true
-capsule_thickness = 0.64999998919665813
-center = [ "widget", "workspaces", "file-search" ]
-end = [ "tray", "bar", "media", "group:g4", "group:g6", "group:g3", "group:g2" ]
-font_weight = 400
-layer = "top"
-margin_edge = 0
-margin_ends = 0
-padding = 0
-panel_overlap = 0
-radius = 0
-shadow = false
-show_on_workspace_switch = false
-start = [ "group:g5", "clock", "group:g1", "active_window" ]
-thickness = 28
+[bar]
+order = [ "default", "sidebar" ]
 
-    [[bar.default.capsule_group]]
-    enabled = true
-    fill = "surface_variant"
-    id = "g1"
-    members = [ "CPU", "temp", "ram", "SWAP", "DISK" ]
-    opacity = 1.0
-    padding = 4.0
+    [bar.default]
+    border = "on_surface"
+    capsule = true
+    capsule_thickness = 0.64999998919665813
+    center = [ "widget", "workspaces", "file-search" ]
+    end = [ "tray", "bar", "media", "group:g4", "group:g6", "group:g3", "group:g2" ]
+    font_weight = 400
+    layer = "top"
+    margin_edge = 0
+    margin_ends = 0
+    padding = 0
+    panel_overlap = 0
+    radius = 0
+    shadow = false
+    show_on_workspace_switch = false
+    start = [ "group:g5", "clock", "group:g1", "active_window" ]
+    thickness = 24
 
-    [[bar.default.capsule_group]]
-    enabled = true
-    fill = "surface_variant"
-    id = "g2"
-    members = [ "caffeine", "notes", "settings", "control-center" ]
-    opacity = 1.0
-    padding = 6.0
+        [[bar.default.capsule_group]]
+        enabled = true
+        fill = "surface_variant"
+        id = "g1"
+        members = [ "CPU", "temp", "ram", "SWAP", "DISK" ]
+        opacity = 1.0
+        padding = 4.0
 
-    [[bar.default.capsule_group]]
-    enabled = true
-    fill = "surface_variant"
-    id = "g3"
-    members = [ "weather", "volume", "input_volume", "brightness", "battery" ]
-    opacity = 1.0
-    padding = 4.0
+        [[bar.default.capsule_group]]
+        enabled = true
+        fill = "surface_variant"
+        id = "g2"
+        members = [ "caffeine", "notes", "settings", "control-center" ]
+        opacity = 1.0
+        padding = 6.0
 
-    [[bar.default.capsule_group]]
-    enabled = true
-    fill = "surface_variant"
-    id = "g4"
-    members = [ "notifications", "nightlight", "clipboard" ]
-    opacity = 1.0
-    padding = 6.0
+        [[bar.default.capsule_group]]
+        enabled = true
+        fill = "surface_variant"
+        id = "g3"
+        members = [ "weather", "volume", "input_volume", "brightness", "battery" ]
+        opacity = 1.0
+        padding = 4.0
 
-    [[bar.default.capsule_group]]
-    enabled = true
-    fill = "surface_variant"
-    id = "g5"
-    members = [ "lock_keys" ]
-    opacity = 1.0
-    padding = 6.0
+        [[bar.default.capsule_group]]
+        enabled = true
+        fill = "surface_variant"
+        id = "g4"
+        members = [ "notifications", "nightlight", "clipboard" ]
+        opacity = 1.0
+        padding = 6.0
 
-    [[bar.default.capsule_group]]
+        [[bar.default.capsule_group]]
+        enabled = true
+        fill = "surface_variant"
+        id = "g5"
+        members = [ "lock_keys" ]
+        opacity = 1.0
+        padding = 6.0
+
+        [[bar.default.capsule_group]]
+        enabled = true
+        fill = "surface_variant"
+        id = "g6"
+        members = [ "keyboard_layout", "network", "bluetooth" ]
+        opacity = 1.0
+        padding = 6.0
+
+    [bar.sidebar]
+    auto_hide = true
+    center = []
     enabled = true
-    fill = "surface_variant"
-    id = "g6"
-    members = [ "keyboard_layout", "network", "bluetooth" ]
-    opacity = 1.0
-    padding = 6.0
+    end = [ "clipboard", "network", "bluetooth", "volume", "brightness", "battery", "control-center", "session" ]
+    position = "left"
+    reserve_space = false
+    show_on_workspace_switch = false
+    start = [ "launcher", "wallpaper" ]
 
 [battery]
 warning_threshold = 20
@@ -169,18 +182,22 @@ widget_order = [
 [dock]
 active_monitor_only = true
 auto_hide = true
+background_opacity = 0.59999998658895493
 cross_axis_padding = 0
 enabled = true
 icon_size = 40
 inactive_opacity = 0.99999997764825821
 item_spacing = 0
-magnification_scale = 1.2500000037252903
+launcher_custom_image_colorize = true
+launcher_position = "end"
+magnification_scale = 1.3500000052154064
 main_axis_padding = 0
 position = "right"
 reserve_space = false
 show_dots = true
 
 [hot_corners]
+delay_ms = 250
 enabled = true
 
     [hot_corners.bottom_left]
@@ -411,6 +428,52 @@ time_format = "{:%H:%M:%S}"
     [shell.screenshot]
     confirm_region = true
     directory = "/home/leonne/Pictures/Screenshots"
+
+    [shell.session]
+    grid = true
+
+        [[shell.session.actions]]
+        action = "lock"
+        countdown_seconds = 0.0
+        enabled = true
+        shortcut = "1"
+        variant = "default"
+
+        [[shell.session.actions]]
+        action = "logout"
+        countdown_seconds = 0.0
+        enabled = true
+        shortcut = "2"
+        variant = "default"
+
+        [[shell.session.actions]]
+        action = "lock_and_suspend"
+        countdown_seconds = 0.0
+        enabled = true
+        shortcut = "3"
+        variant = "default"
+
+        [[shell.session.actions]]
+        action = "reboot"
+        countdown_seconds = 0.0
+        enabled = true
+        shortcut = "4"
+        variant = "default"
+
+        [[shell.session.actions]]
+        action = "shutdown"
+        countdown_seconds = 0.0
+        enabled = true
+        shortcut = "5"
+        variant = "destructive"
+
+        [[shell.session.actions]]
+        action = "suspend"
+        command = "notify-send 'Noctalia' 'Custom session entry'"
+        countdown_seconds = 0.0
+        enabled = true
+        shortcut = "KP_6"
+        variant = "default"
 
 [system.monitor]
 cpu_poll_seconds = 1
