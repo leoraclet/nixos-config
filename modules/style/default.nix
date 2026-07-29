@@ -15,8 +15,6 @@
             "org/gnome/desktop/interface" = {
               icon-theme = "Papirus";
               color-scheme = "prefer-dark";
-            };
-            "org/gnome/desktop/interface" = {
               cursor-theme = "Bibata-Modern-Ice";
               font-name = "FiraMono Nerd Font 11";
             };

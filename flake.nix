@@ -26,6 +26,10 @@
       url = "github:nix-community/nix-index-database";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    disko = {
+      url = "github:nix-community/disko";
+      inputs.disko.inputs.nixpkgs.follows = "nixpkgs";
+    };
 
     # nix-gaming.url = "github:fufexan/nix-gaming";
     # direnv-instant = {
@@ -56,7 +60,6 @@
     # LAPTOP
     ##########################################################
     nixosConfigurations.leonne = nixpkgs.lib.nixosSystem {
-      # inherit system;
       specialArgs = {inherit inputs system;};
       modules = [
         # Configuration
@@ -94,11 +97,32 @@
     # WORSTATION
     ##########################################################
     nixosConfigurations.leon = nixpkgs.lib.nixosSystem {
-      # inherit system;
       specialArgs = {inherit inputs system;};
       modules = [
-        # Configuration
         ./hosts/workstation/configuration.nix
+      ];
+    };
+
+    ##########################################################
+    # VPS
+    ##########################################################
+    # Use this for all other targets
+    # nix run nixpkgs#nixos-anywhere -- --flake .#generic --generate-hardware-config nixos-generate-config ./hosts/vps/hardware-configuration.nix <hostname>
+    nixosConfigurations.vps = nixpkgs.lib.nixosSystem {
+      specialArgs = {inherit inputs system;};
+      modules = [
+        inputs.disko.nixosModules.disko
+        ./hosts/vps/configuration.nix
+      ];
+    };
+
+    ##########################################################
+    # ISO IMAGE
+    ##########################################################
+    nixosConfigurations.iso = nixpkgs.lib.nixosSystem {
+      specialArgs = {inherit inputs system;};
+      modules = [
+        ./hosts/iso/configuration.nix
       ];
     };
   };

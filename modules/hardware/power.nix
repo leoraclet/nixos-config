@@ -9,6 +9,7 @@
 
     # ERROR: conflicts with services.tlp
     power-profiles-daemon.enable = false;
+    tuned.enable = false;
 
     # Enable Thunderbolt
     # https://nixos.wiki/wiki/Thunderbolt

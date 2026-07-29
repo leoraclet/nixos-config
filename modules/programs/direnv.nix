@@ -10,5 +10,5 @@
   };
 
   # https://github.com/nix-community/lorri
-  services.lorri.enable = false;
+  services.lorri.enable = true;
 }

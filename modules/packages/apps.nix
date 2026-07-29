@@ -44,7 +44,6 @@
     # zotero
     # foliate
     # jitsi-meet
-    # focuswriter
 
     # --------------------------------------------------------- #
     # Editors
@@ -53,6 +52,8 @@
     notepad-next
     vscodium
     lapce
+    lite-xl
+    cudatext-qt
 
     # --------------------------------------------------------- #
     # Files

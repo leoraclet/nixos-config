@@ -1,0 +1,38 @@
+{
+  "pos": {
+    "main_max": true,
+    "main_mon": 0
+  },
+  "show_sidepanel": false,
+  "show_bottom": false,
+  "on_top": false,
+  "float_side": false,
+  "float_bottom": false,
+  "size_side": 200,
+  "size_bottom": 120,
+  "tab_left": "",
+  "tab_bottom": "",
+  "recent_files__linux": [
+  ],
+  "list_console": [
+  ],
+  "finder": {
+    "regex": false,
+    "case": false,
+    "words": false,
+    "back": false,
+    "confirm": false,
+    "wrap": true,
+    "insel": false,
+    "tokens": 0,
+    "prescase": false
+  },
+  "lang": "",
+  "session__linux": "default__linux.cuda-session",
+  "last_cmd": 2501,
+  "groups": 1,
+  "grp": {
+    "panel": "352,918",
+    "pages": "10000,10000;352,918;352,918;352,918;352,918;352,918;"
+  }
+}
