@@ -8,5 +8,7 @@
     ./style
     ./system
     ./user
+    ./overlays
+    ./derivations
   ];
 }
