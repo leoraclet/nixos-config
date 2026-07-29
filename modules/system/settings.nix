@@ -14,6 +14,7 @@
         "nix-command"
         "flakes"
       ];
+      extra-experimental-features = ["pipe-operators"];
       auto-optimise-store = true;
       warn-dirty = false;
       sandbox = true;
