@@ -1,6 +1,6 @@
 function rebuild
     clear
-    
+
     # cd to your config dir
     pushd ~/Config/ >/dev/null
 
@@ -24,7 +24,7 @@ function rebuild
     echo "Config formatted!"
 
     # Add all potentially untracked files
-    git add . -A -N
+    git add . -A
 
     echo "NixOS Rebuilding..."
 

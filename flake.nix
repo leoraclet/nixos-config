@@ -30,25 +30,19 @@
       url = "github:nix-community/disko";
       inputs.disko.inputs.nixpkgs.follows = "nixpkgs";
     };
-
-    # nix-gaming.url = "github:fufexan/nix-gaming";
-    # direnv-instant = {
-    #   url = "github:Mic92/direnv-instant";
-    #   inputs.nixpkgs.follows = "nixpkgs";
-    # };
-    # treefmt-nix = {
-    #   url = "github:numtide/treefmt-nix";
-    #   inputs.nixpkgs.follows = "nixpkgs";
-    # };
+    direnv-instant = {
+      url = "github:Mic92/direnv-instant";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    treefmt-nix = {
+      url = "github:numtide/treefmt-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
     nixos-shell.url = "github:Mic92/nixos-shell";
     snappy-switcher.url = "github:OpalAayan/snappy-switcher";
 
-    # Dendritic pattern
-    # - https://dendrix.denful.dev/
-    # - https://github.com/mightyiam/dendritic
-    # - https://github.com/Doc-Steve/dendritic-design-with-flake-parts/wiki
-
+    # nix-gaming.url = "github:fufexan/nix-gaming";
     # flake-parts.url = "github:hercules-ci/flake-parts";
     # import-tree.url = "github:vic/import-tree";
   };
@@ -147,6 +141,15 @@
           nix flake update $input
         fi
       '';
+    });
+
+    devShells = forAllSystems (pkgs: {
+      default = pkgs.mkShell {
+        packages = with pkgs; [
+          alejandra
+          nixfmt
+        ];
+      };
     });
   };
 }

@@ -582,6 +582,7 @@ display = "text"
 detached_panel = true
 drawer = true
 drawer_columns = 5
+drawer_item_size = 14.0
 match_adjacent_spacing = true
 
 [widget.weather]
