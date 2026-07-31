@@ -43,6 +43,10 @@
       url = "github:Mic92/sops-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    microvm = {
+      url = "github:microvm-nix/microvm.nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
     nixos-shell.url = "github:Mic92/nixos-shell";
     snappy-switcher.url = "github:OpalAayan/snappy-switcher";
@@ -133,6 +137,17 @@
         specialArgs = {inherit inputs system;};
         modules = [
           ./hosts/iso/configuration.nix
+        ];
+      };
+
+      # ------------------------------------------------------ #
+      # MICROVM CONFIGURATION
+      # ------------------------------------------------------ #
+      microvm = nixpkgs.lib.nixosSystem {
+        inherit system;
+        modules = [
+          inputs.microvm.nixosModules.microvm
+          ./hosts/microvm/configuration.nix
         ];
       };
     };
