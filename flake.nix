@@ -29,7 +29,7 @@
     };
     disko = {
       url = "github:nix-community/disko";
-      inputs.disko.inputs.nixpkgs.follows = "nixpkgs";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
     direnv-instant = {
       url = "github:Mic92/direnv-instant";
@@ -62,10 +62,13 @@
         "aarch64-darwin"
       ] (system: function nixpkgs.legacyPackages.${system});
   in {
+    ##########################################################
+    # NIXOS CONFIGURATIONS
+    ##########################################################
     nixosConfigurations = {
-      ##########################################################
+      # ------------------------------------------------------ #
       # LAPTOP CONFIGURATION
-      ##########################################################
+      # ------------------------------------------------------ #
       leonne = nixpkgs.lib.nixosSystem {
         specialArgs = {inherit inputs system;};
         modules = [
@@ -100,9 +103,9 @@
         ];
       };
 
-      ##########################################################
+      # ------------------------------------------------------ #
       # WORSTATION CONFIGURATION
-      ##########################################################
+      # ------------------------------------------------------ #
       leon = nixpkgs.lib.nixosSystem {
         specialArgs = {inherit inputs system;};
         modules = [
@@ -110,9 +113,9 @@
         ];
       };
 
-      ##########################################################
+      # ------------------------------------------------------ #
       # VPS CONFIGURATION
-      ##########################################################
+      # ------------------------------------------------------ #
       # Use this for all other targets
       # nix run nixpkgs#nixos-anywhere -- --flake .#generic --generate-hardware-config nixos-generate-config ./hosts/vps/hardware-configuration.nix <hostname>
       vps = nixpkgs.lib.nixosSystem {
@@ -123,9 +126,9 @@
         ];
       };
 
-      ##########################################################
+      # ------------------------------------------------------ #
       # ISO IMAGE CONFIGURATION
-      ##########################################################
+      # ------------------------------------------------------ #
       iso = nixpkgs.lib.nixosSystem {
         specialArgs = {inherit inputs system;};
         modules = [
