@@ -4,8 +4,8 @@ default:
 build-iso:
     echo "Building ISO image ..."
 
-deploy:
-    echo "Deploying config to remote ..."
+deploy-vps:
+    echo "Deploying VPS config to remote machine ..."
 
 clean:
     rm -rf ./result/

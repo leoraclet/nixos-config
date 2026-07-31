@@ -12,8 +12,9 @@
     vmVariant = {
       # following configuration is added only when building VM with build-vm
       virtualisation = {
-        memorySize = 4096; # Use 2048MiB memory.
+        memorySize = 8192; # Use 8192MiB memory.
         cores = 4;
+        diskSize = 51200; # Assigns 50 GB of disk space
       };
     };
 
@@ -91,9 +92,26 @@
     };
   };
 
+  # the default network isn't started by default
+  systemd.services.libvirt-net-start = {
+    description = "Automatically start libvirt default network on boot";
+    after = ["libvirtd.service"];
+    requires = ["libvirtd.service"];
+    wantedBy = ["multi-user.target"];
+    serviceConfig = {
+      Type = "oneshot";
+      ExecStart = "${pkgs.libvirt}/bin/virsh net-start default";
+      RemainAfterExit = true;
+    };
+  };
+
   users.extraGroups.vboxusers.members = ["leonne"];
 
   environment.systemPackages = with pkgs; [
+    nerdctl
+    lima
+    lima-additional-guestagents
+
     OVMF
     podman-compose
     qemu
@@ -101,6 +119,7 @@
     quickemu
     docker-compose
     dnsmasq
+    distrobox
     # android-tools
   ];
 

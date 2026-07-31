@@ -1,3 +1,4 @@
+# https://gvolpe.com/blog/nix-flakes/
 {
   description = "My NixOS/home-manager configuration.";
 
@@ -38,6 +39,10 @@
       url = "github:numtide/treefmt-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    sops-nix = {
+      url = "github:Mic92/sops-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
     nixos-shell.url = "github:Mic92/nixos-shell";
     snappy-switcher.url = "github:OpalAayan/snappy-switcher";
@@ -57,83 +62,88 @@
         "aarch64-darwin"
       ] (system: function nixpkgs.legacyPackages.${system});
   in {
-    ##########################################################
-    # LAPTOP
-    ##########################################################
-    nixosConfigurations.leonne = nixpkgs.lib.nixosSystem {
-      specialArgs = {inherit inputs system;};
-      modules = [
-        # Configuration
-        ./hosts/laptop/configuration.nix
-        # Nix index database
-        # https://github.com/nix-community/nix-index-database
-        # https://github.com/nix-community/nix-index
-        inputs.nix-index-database.nixosModules.default
-        # optional to also wrap and install comma
-        {programs.nix-index-database.comma.enable = true;}
-        # Home Manager
-        inputs.home-manager.nixosModules.home-manager
-        {
-          home-manager = {
-            useGlobalPkgs = true;
-            useUserPackages = true;
-            overwriteBackup = true;
-            backupFileExtension = "bak";
-            users.leonne = {
-              imports = [
-                ./home/user
-              ];
+    nixosConfigurations = {
+      ##########################################################
+      # LAPTOP CONFIGURATION
+      ##########################################################
+      leonne = nixpkgs.lib.nixosSystem {
+        specialArgs = {inherit inputs system;};
+        modules = [
+          # Configuration
+          ./hosts/laptop/configuration.nix
+          # Nix index database
+          # https://github.com/nix-community/nix-index-database
+          # https://github.com/nix-community/nix-index
+          inputs.nix-index-database.nixosModules.default
+          # optional to also wrap and install comma
+          {programs.nix-index-database.comma.enable = true;}
+          # Home Manager
+          inputs.home-manager.nixosModules.home-manager
+          {
+            home-manager = {
+              useGlobalPkgs = true;
+              useUserPackages = true;
+              overwriteBackup = true;
+              backupFileExtension = "bak";
+              users.leonne = {
+                imports = [
+                  ./home/user
+                ];
+              };
+              extraSpecialArgs = {
+                inherit inputs;
+              };
             };
-            extraSpecialArgs = {
-              inherit inputs;
-            };
-          };
-        }
-        # Hardware Configuration (Dell Latitude 5520)
-        inputs.nixos-hardware.nixosModules.dell-latitude-5520
-      ];
+          }
+          # Hardware Configuration (Dell Latitude 5520)
+          inputs.nixos-hardware.nixosModules.dell-latitude-5520
+        ];
+      };
+
+      ##########################################################
+      # WORSTATION CONFIGURATION
+      ##########################################################
+      leon = nixpkgs.lib.nixosSystem {
+        specialArgs = {inherit inputs system;};
+        modules = [
+          ./hosts/workstation/configuration.nix
+        ];
+      };
+
+      ##########################################################
+      # VPS CONFIGURATION
+      ##########################################################
+      # Use this for all other targets
+      # nix run nixpkgs#nixos-anywhere -- --flake .#generic --generate-hardware-config nixos-generate-config ./hosts/vps/hardware-configuration.nix <hostname>
+      vps = nixpkgs.lib.nixosSystem {
+        specialArgs = {inherit inputs system;};
+        modules = [
+          inputs.disko.nixosModules.disko
+          ./hosts/vps/configuration.nix
+        ];
+      };
+
+      ##########################################################
+      # ISO IMAGE CONFIGURATION
+      ##########################################################
+      iso = nixpkgs.lib.nixosSystem {
+        specialArgs = {inherit inputs system;};
+        modules = [
+          ./hosts/iso/configuration.nix
+        ];
+      };
     };
 
     ##########################################################
-    # WORSTATION
+    # PACKAGES
     ##########################################################
-    nixosConfigurations.leon = nixpkgs.lib.nixosSystem {
-      specialArgs = {inherit inputs system;};
-      modules = [
-        ./hosts/workstation/configuration.nix
-      ];
-    };
-
-    ##########################################################
-    # VPS
-    ##########################################################
-    # Use this for all other targets
-    # nix run nixpkgs#nixos-anywhere -- --flake .#generic --generate-hardware-config nixos-generate-config ./hosts/vps/hardware-configuration.nix <hostname>
-    nixosConfigurations.vps = nixpkgs.lib.nixosSystem {
-      specialArgs = {inherit inputs system;};
-      modules = [
-        inputs.disko.nixosModules.disko
-        ./hosts/vps/configuration.nix
-      ];
-    };
-
-    ##########################################################
-    # ISO IMAGE
-    ##########################################################
-    nixosConfigurations.iso = nixpkgs.lib.nixosSystem {
-      specialArgs = {inherit inputs system;};
-      modules = [
-        ./hosts/iso/configuration.nix
-      ];
-    };
-
     packages = forAllSystems (pkgs: {
       default = pkgs.writeShellScriptBin "update-input" ''
         input=$(                                           \
           nix flake metadata --json                        \
           | ${pkgs.jq}/bin/jq -r ".locks.nodes.root.inputs | keys[]" \
           | ${pkgs.fzf}/bin/fzf)
-        commit=$(printf "yes\nno" | ${pkgs.fzf}/bin/fzf --prompt="Commit lock file? ")
+        commit=$(printf "yes\no" | ${pkgs.fzf}/bin/fzf --prompt="Commit lock file? ")
 
         if [ "$commit" = "yes" ]; then
           nix flake update $input --commit-lock-file
@@ -143,11 +153,17 @@
       '';
     });
 
+    ##########################################################
+    # DEVELOPMENT SHELL
+    ##########################################################
     devShells = forAllSystems (pkgs: {
       default = pkgs.mkShell {
         packages = with pkgs; [
           alejandra
           nixfmt
+          nixpkgs-fmt
+          wget
+          gitMinimal
         ];
       };
     });

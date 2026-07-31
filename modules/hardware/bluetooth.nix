@@ -28,6 +28,6 @@
   environment.systemPackages = with pkgs; [
     bluez
     blueman
-    # overskride
+    overskride
   ];
 }

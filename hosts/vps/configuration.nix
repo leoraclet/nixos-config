@@ -3,7 +3,7 @@
   lib,
   pkgs,
   ...
-} @ args: {
+}: {
   imports = [
     (modulesPath + "/installer/scan/not-detected.nix")
     (modulesPath + "/profiles/qemu-guest.nix")
@@ -18,19 +18,19 @@
   };
   services.openssh.enable = true;
 
-  environment.systemPackages = map lib.lowPrio [
-    pkgs.curl
-    pkgs.gitMinimal
-  ];
+  environment.systemPackages = with pkgs;
+    map lib.lowPrio [
+      curl
+      gitMinimal
+      neovim
+    ];
 
   users.users.root.initialHashedPassword = "$y$j9T$umqR8hCW0RMD3RCYEzMKe1$lAYOAA5uLE7uJKXnppWf1doq70SrBi9dnY86bduFkS7";
   users.mutableUsers = true;
-  users.users.root.openssh.authorizedKeys.keys =
-    [
-      # change this to your ssh key
-      "# CHANGE"
-    ]
-    ++ (args.extraPublicKeys or []); # this is used for unit-testing this module and can be removed if not needed
+  users.users.root.openssh.authorizedKeys.keys = [
+    # change this to your ssh key
+    "# CHANGE"
+  ];
 
   system.stateVersion = "24.05";
 }

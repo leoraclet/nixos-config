@@ -1,4 +1,8 @@
-{modulesPath, ...}: {
+{
+  modulesPath,
+  pkgs,
+  ...
+}: {
   imports = [
     "${modulesPath}/installer/cd-dvd/installation-cd-minimal.nix"
   ];
@@ -9,5 +13,9 @@
     "nix-command"
     "flakes"
     "pipe-operators"
+  ];
+
+  environment.systemPackages = with pkgs; [
+    gitMinimal
   ];
 }

@@ -80,6 +80,10 @@
     "cudatext"
     "zathura"
     "weechat"
+    "qutebrowser"
+    "dwm"
+    "dmenu"
+    "st"
     "vesktop/settings"
     "vesktop/themes"
     # ----------------------------------------------------

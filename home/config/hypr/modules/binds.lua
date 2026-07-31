@@ -53,7 +53,6 @@ hl.bind(mainMod .. " + I", hl.dsp.exec_cmd(ipc .. " nightlight-force-toggle"))
 hl.bind(mainMod .. " + V", hl.dsp.exec_cmd(ipc .. " panel-toggle clipboard"))
 hl.bind(mainMod .. " + L", hl.dsp.exec_cmd(ipc .. " session lock"))
 
-hl.bind("ALT + L", hl.dsp.exec_cmd(ipc .. " session lock"))
 hl.bind("ALT + Return", hl.dsp.window.fullscreen({ mode = "fullscreen", action = "toggle", layout_aware = true }))
 hl.bind("ALT + F4", hl.dsp.window.kill())
 

@@ -13,6 +13,8 @@
   "tab_left": "",
   "tab_bottom": "",
   "recent_files__linux": [
+    "~/.config/cudatext/settings/user.json",
+    "~/.config/cudatext/settings/lexer -.json"
   ],
   "list_console": [
   ],
@@ -32,7 +34,7 @@
   "last_cmd": 2501,
   "groups": 1,
   "grp": {
-    "panel": "142,502",
-    "pages": "10000,10000;142,502;142,502;142,502;142,502;142,502;"
+    "panel": "52,266",
+    "pages": "10000,10000;52,266;52,266;52,266;52,266;52,266;"
   }
 }

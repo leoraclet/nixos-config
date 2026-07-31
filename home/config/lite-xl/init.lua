@@ -24,8 +24,13 @@ local style = require "core.style"
 ------------------------------- Fonts ----------------------------------------
 
 -- customize fonts:
-style.font = renderer.font.load(DATADIR .. "/fonts/FiraSans-Regular.ttf", 14, {antialiasing="grayscale", hinting="full"})
-style.code_font = renderer.font.load(DATADIR .. "/fonts/JetBrainsMono-Regular.ttf", 16, {antialiasing="grayscale", hinting="full"})
+style.font = renderer.font.load(DATADIR .. "/fonts/FiraSans-Regular.ttf", 14, {
+    antialiasing = "grayscale",
+    hinting =
+    "full"
+})
+style.code_font = renderer.font.load(DATADIR .. "/fonts/JetBrainsMono-Regular.ttf", 16,
+    { antialiasing = "grayscale", hinting = "full" })
 --
 -- DATADIR is the location of the installed Lite XL Lua code, default color
 -- schemes and fonts.
@@ -58,7 +63,17 @@ style.code_font = renderer.font.load(DATADIR .. "/fonts/JetBrainsMono-Regular.tt
 -- disable plugin detectindent, otherwise it is enabled by default:
 -- config.plugins.detectindent = false
 
+config.plugins.drawwhitespace = {
+    show_selected_only = true
+}
+
 ---------------------------- Miscellaneous -------------------------------------
+
+-- set max project files to 5000
+config.max_project_files = 5000
+
+-- enable custom window borders
+config.borderless = true
 
 -- modify list of files to ignore when indexing the project:
 -- config.ignore_files = {
@@ -71,4 +86,3 @@ style.code_font = renderer.font.load(DATADIR .. "/fonts/JetBrainsMono-Regular.tt
 --   "%.suo$",         "%.pdb$",       "%.idb$",        "%.class$", "%.psd$", "%.db$",
 --   "^desktop%.ini$", "^%.DS_Store$", "^%.directory$",
 -- }
-

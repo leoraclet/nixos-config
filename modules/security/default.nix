@@ -3,6 +3,7 @@
     ./sddm.nix
     ./clamav.nix
     ./sudo.nix
+    # ./yubikey.nix
   ];
 
   security = {
@@ -19,4 +20,8 @@
       ];
     };
   };
+
+  environment.systemPackages = with pkgs; [
+    vulnix
+  ];
 }

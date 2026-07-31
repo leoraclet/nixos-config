@@ -1,0 +1,65 @@
+[2026-07-30 22:11:22.679]	List of discovered tpm plugins: tmux-plugins/tmux-resurrect tmux-plugins/tmux-continuum
+[2026-07-30 22:11:22.691]	Invoking /home/leonne/.config/tmux/plugins/tpm/bin/install_plugins
+[2026-07-30 22:11:22.752]	Already installed "tmux-resurrect"
+[2026-07-30 22:11:22.762]	Already installed "tmux-continuum"
+[2026-07-30 22:11:22.773]	Invoking /home/leonne/.config/tmux/plugins/tpm/bin/update_plugins all
+[2026-07-30 22:11:22.804]	Updating all plugins!
+[2026-07-30 22:11:22.814]	
+[2026-07-30 22:11:24.123]	  "tmux-continuum" update success
+[2026-07-30 22:11:24.133]	    | warning: the `credential.authority` and `GCM_AUTHORITY` settings are deprecated.
+[2026-07-30 22:11:24.147]	    | warning: see https://aka.ms/gcm/authority for more information.
+[2026-07-30 22:11:24.159]	    | Depuis https://github.com/tmux-plugins/tmux-continuum
+[2026-07-30 22:11:24.169]	    |  * [nouvelle étiquette] v1.0.0     -> v1.0.0
+[2026-07-30 22:11:24.178]	    |  * [nouvelle étiquette] v2.0.0     -> v2.0.0
+[2026-07-30 22:11:24.189]	    |  * [nouvelle étiquette] v2.1.0     -> v2.1.0
+[2026-07-30 22:11:24.199]	    |  * [nouvelle étiquette] v2.2.0     -> v2.2.0
+[2026-07-30 22:11:24.209]	    |  * [nouvelle étiquette] v3.0.0     -> v3.0.0
+[2026-07-30 22:11:24.220]	    |  * [nouvelle étiquette] v3.1.0     -> v3.1.0
+[2026-07-30 22:11:24.230]	    | Déjà à jour.
+[2026-07-30 22:11:24.319]	  "tmux-resurrect" update success
+[2026-07-30 22:11:24.330]	    | warning: the `credential.authority` and `GCM_AUTHORITY` settings are deprecated.
+[2026-07-30 22:11:24.340]	    | warning: see https://aka.ms/gcm/authority for more information.
+[2026-07-30 22:11:24.350]	    | Depuis https://github.com/tmux-plugins/tmux-resurrect
+[2026-07-30 22:11:24.363]	    |  * [nouvelle étiquette] v0.0.1     -> v0.0.1
+[2026-07-30 22:11:24.373]	    |  * [nouvelle étiquette] v0.0.2     -> v0.0.2
+[2026-07-30 22:11:24.383]	    |  * [nouvelle étiquette] v0.0.3     -> v0.0.3
+[2026-07-30 22:11:24.393]	    |  * [nouvelle étiquette] v0.0.4     -> v0.0.4
+[2026-07-30 22:11:24.403]	    |  * [nouvelle étiquette] v0.0.5     -> v0.0.5
+[2026-07-30 22:11:24.412]	    |  * [nouvelle étiquette] v0.1.0     -> v0.1.0
+[2026-07-30 22:11:24.421]	    |  * [nouvelle étiquette] v0.2.0     -> v0.2.0
+[2026-07-30 22:11:24.430]	    |  * [nouvelle étiquette] v0.3.0     -> v0.3.0
+[2026-07-30 22:11:24.439]	    |  * [nouvelle étiquette] v0.4.0     -> v0.4.0
+[2026-07-30 22:11:24.449]	    |  * [nouvelle étiquette] v1.0.0     -> v1.0.0
+[2026-07-30 22:11:24.458]	    |  * [nouvelle étiquette] v1.2.0     -> v1.2.0
+[2026-07-30 22:11:24.468]	    |  * [nouvelle étiquette] v1.2.1     -> v1.2.1
+[2026-07-30 22:11:24.479]	    |  * [nouvelle étiquette] v1.3.0     -> v1.3.0
+[2026-07-30 22:11:24.490]	    |  * [nouvelle étiquette] v1.4.0     -> v1.4.0
+[2026-07-30 22:11:24.500]	    |  * [nouvelle étiquette] v1.5.0     -> v1.5.0
+[2026-07-30 22:11:24.509]	    |  * [nouvelle étiquette] v2.0.0     -> v2.0.0
+[2026-07-30 22:11:24.519]	    |  * [nouvelle étiquette] v2.1.0     -> v2.1.0
+[2026-07-30 22:11:24.528]	    |  * [nouvelle étiquette] v2.2.0     -> v2.2.0
+[2026-07-30 22:11:24.538]	    |  * [nouvelle étiquette] v2.4.0     -> v2.4.0
+[2026-07-30 22:11:24.547]	    |  * [nouvelle étiquette] v3.0.0     -> v3.0.0
+[2026-07-30 22:11:24.557]	    |  * [nouvelle étiquette] v4.0.0     -> v4.0.0
+[2026-07-30 22:11:24.566]	    | Déjà à jour.
+[2026-07-30 22:11:24.578]	Invoking /home/leonne/.config/tmux/plugins/tpm/bin/clean_plugins all
+[2026-07-30 22:11:24.715]	Done.
+
+[2026-07-30 22:15:47.613]	List of discovered tpm plugins: tmux-plugins/tmux-resurrect tmux-plugins/tmux-continuum
+[2026-07-30 22:15:47.626]	Invoking /home/leonne/.config/tmux/plugins/tpm/bin/install_plugins
+[2026-07-30 22:15:47.692]	Already installed "tmux-resurrect"
+[2026-07-30 22:15:47.702]	Already installed "tmux-continuum"
+[2026-07-30 22:15:47.713]	Invoking /home/leonne/.config/tmux/plugins/tpm/bin/update_plugins all
+[2026-07-30 22:15:47.754]	Updating all plugins!
+[2026-07-30 22:15:47.764]	
+[2026-07-30 22:15:48.538]	  "tmux-continuum" update success
+[2026-07-30 22:15:48.547]	    | warning: the `credential.authority` and `GCM_AUTHORITY` settings are deprecated.
+[2026-07-30 22:15:48.557]	    | warning: see https://aka.ms/gcm/authority for more information.
+[2026-07-30 22:15:48.567]	    | Déjà à jour.
+[2026-07-30 22:15:48.578]	  "tmux-resurrect" update success
+[2026-07-30 22:15:48.589]	    | warning: the `credential.authority` and `GCM_AUTHORITY` settings are deprecated.
+[2026-07-30 22:15:48.599]	    | warning: see https://aka.ms/gcm/authority for more information.
+[2026-07-30 22:15:48.608]	    | Déjà à jour.
+[2026-07-30 22:15:48.619]	Invoking /home/leonne/.config/tmux/plugins/tpm/bin/clean_plugins all
+[2026-07-30 22:15:48.719]	Done.
+

@@ -12,6 +12,7 @@
     spotify # Music player
     vesktop # Discord alternative client
     brave # Chronium-based web browser
+    qutebrowser
     # qbittorrent
     # motrix
     # persepolis

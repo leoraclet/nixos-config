@@ -1,0 +1,14 @@
+{
+  "|home|leonne|.config|cudatext|settings|lexer -.json": {
+    "enc": "UTF-8",
+    "tab_size": 4,
+    "tab_spaces": false,
+    "crt": "0,0,-1,-1,"
+  },
+  "|home|leonne|.config|cudatext|settings|user.json": {
+    "enc": "UTF-8",
+    "tab_size": 4,
+    "tab_spaces": false,
+    "crt": "1,0,-1,-1,"
+  }
+}

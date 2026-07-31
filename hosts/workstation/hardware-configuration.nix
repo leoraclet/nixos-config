@@ -1,1 +1,1 @@
-throw "You need to run a NixOS install to generate this file !!"
+throw "You need to run a NixOS installer to generate this file !!"

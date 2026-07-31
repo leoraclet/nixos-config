@@ -18,6 +18,7 @@
 
   environment.systemPackages = with pkgs; [
     alsa-utils
+    pamixer
     pulseaudio # Audio control
     pwvucontrol # Pavucontrol for Pipewire
     pavucontrol
