@@ -18,7 +18,7 @@
 This repository houses my NixOS ❄️ configuration, using Hyprland ad Noctalia,
 with full-disk encryption.
 
-You can learn more about this config by consulting my [notes](./docs) on the matter.
+You can learn more about this config by consulting my [notes](./notes) on the matter.
 
 ## 📜 License
 
