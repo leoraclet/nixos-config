@@ -27,7 +27,15 @@ You can learn more about this config by consulting my [notes](./docs) on the mat
 ## 📦 Structure
 
 > [!warning]
-> TODO ...
+> TO BE CONTINUED ...
+
+- [devshells](./devshells)
+- [docs](./docs)
+- [home](./home)
+- [hosts](./hosts)
+- [lib](./lin)
+- [modules](./modules)
+- [packages](./packages)
 
 ## ❄️ Flake outputs
 
@@ -35,17 +43,21 @@ You can learn more about this config by consulting my [notes](./docs) on the mat
 ❯ nix flake show
 ├───devShells
 │   └───x86_64-linux
-│       └───default: development environment 'nix-shell'
+│       ├───my-nix-env: development environment 'nix-shell'
+│       └───my-python-env: development environment 'nix-shell'
+├───formatter
+│   └───x86_64-linux: package 'nixfmt-1.4.0'
 ├───nixosConfigurations
 │   ├───iso: NixOS configuration
 │   ├───leon: NixOS configuration
 │   ├───leonne: NixOS configuration
 │   ├───microvm: NixOS configuration
+│   ├───vm: NixOS configuration
 │   └───vps: NixOS configuration
 └───packages
     └───x86_64-linux
-        ├───default: package 'update-input'
-        └───microvm: package 'microvm-qemu-microvm'
+        ├───microvm: package 'microvm-qemu-microvm'
+        └───update-input: package 'update-input'
 ```
 
 ## 📜 License
