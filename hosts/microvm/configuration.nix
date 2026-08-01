@@ -1,7 +1,13 @@
 {
   networking.hostName = "microvm";
   users.users.root.password = "";
+  # https://microvm-nix.github.io/microvm.nix/options.html
   microvm = {
+    vcpu = 1;
+    mem = 512;
+    # https://microvm-nix.github.io/microvm.nix/interfaces.html
+    interfaces = [
+    ];
     volumes = [
       {
         mountPoint = "/var";
@@ -9,7 +15,16 @@
         size = 256;
       }
     ];
+    # https://microvm-nix.github.io/microvm.nix/shares.html
     shares = [
+      {
+        proto = "9p";
+        tag = "home";
+        # Source path can be absolute or relative
+        # to /var/lib/microvms/$hostName
+        source = "/home";
+        mountPoint = "/home";
+      }
       {
         # use proto = "virtiofs" for MicroVMs that are started by systemd
         proto = "9p";
@@ -20,6 +35,14 @@
         mountPoint = "/nix/.ro-store";
       }
     ];
+    # https://microvm-nix.github.io/microvm.nix/devices.html
+    devices = [
+
+    ];
+
+    # https://microvm-nix.github.io/microvm.nix/cpu-emulation.html
+    # you can choose what CPU will be emulated by qemu
+    # cpu = "cortex-a53"; # NOTE: this feature has a significant performance impact.
 
     # "qemu" has 9p built-in!
     hypervisor = "qemu";

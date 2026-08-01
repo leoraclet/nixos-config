@@ -2,6 +2,11 @@
 {
   description = "My NixOS/home-manager configuration.";
 
+  nixConfig = {
+    extra-substituters = [ "https://microvm.cachix.org" ];
+    extra-trusted-public-keys = [ "microvm.cachix.org-1:oXnBc6hRE3eX5rSYdRyMYXnfzcCxC7yKPTbZXALsqys=" ];
+  };
+
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     nixpkgs-stable.url = "github:nixos/nixpkgs/nixos-26.05-small";
@@ -56,7 +61,7 @@
     # import-tree.url = "github:vic/import-tree";
   };
 
-  outputs = {nixpkgs, ...} @ inputs: let
+  outputs = {self, nixpkgs, ...} @ inputs: let
     system = "x86_64-linux";
     forAllSystems = function:
       nixpkgs.lib.genAttrs [
@@ -143,6 +148,7 @@
       # ------------------------------------------------------ #
       # MICROVM CONFIGURATION
       # ------------------------------------------------------ #
+      # https://microvm-nix.github.io/microvm.nix/
       microvm = nixpkgs.lib.nixosSystem {
         inherit system;
         modules = [
@@ -156,6 +162,7 @@
     # PACKAGES
     ##########################################################
     packages = forAllSystems (pkgs: {
+      microvm = self.nixosConfigurations.microvm.config.microvm.declaredRunner;
       default = pkgs.writeShellScriptBin "update-input" ''
         input=$(                                           \
           nix flake metadata --json                        \

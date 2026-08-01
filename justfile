@@ -4,6 +4,9 @@ default:
 update:
     nix flake update
 
+microvm:
+    nix run .#microvm
+
 iso:
     rm -rf result/
     nix build .#nixosConfigurations.iso.config.system.build.isoImage
@@ -14,3 +17,4 @@ deploy:
 
 clean:
     rm -rf ./result/
+    rm -rf var.img
