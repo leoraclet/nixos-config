@@ -5,6 +5,8 @@
 # Ignore build outputs from performing a nix-build or `nix build` command
 result
 result-*
+# In case of a VM build
+*.qcow2
 
 # Ignore automatically generated direnv output
 .direnv
