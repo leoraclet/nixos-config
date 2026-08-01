@@ -4,15 +4,16 @@
 //// INCLUDES
 /////////////////////////////////////////
 
-include "rules.kdl"
-include "inputs.kdl"
-include "outputs.kdl"
-include "misc.kdl"
-include "workspaces.kdl"
-include "animations.kdl"
-include "gestures.kdl"
-include "layout.kdl"
-include "binds.kdl"
+include "modules/rules.kdl"
+include "modules/inputs.kdl"
+include "modules/outputs.kdl"
+include "modules/misc.kdl"
+include "modules/workspaces.kdl"
+include "modules/animations.kdl"
+include "modules/gestures.kdl"
+include "modules/layout.kdl"
+include "modules/binds.kdl"
+include "modules/noctalia.kdl"
 
 /////////////////////////////////////////
 //// GENERAL
