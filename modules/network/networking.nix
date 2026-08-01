@@ -1,6 +1,6 @@
 {...}: {
   networking = {
-    hostName = "nixos";
+    hostName = "leonne";
     networkmanager = {
       enable = true;
       wifi.powersave = true;

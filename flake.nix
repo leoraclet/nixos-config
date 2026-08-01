@@ -73,7 +73,11 @@
     # import-tree.url = "github:vic/import-tree";
   };
 
-  outputs = {self, nixpkgs, ...} @ inputs: let
+  outputs = {
+    self,
+    nixpkgs,
+    ...
+  } @ inputs: let
     system = "x86_64-linux";
     forAllSystems = function:
       nixpkgs.lib.genAttrs [
@@ -166,6 +170,16 @@
         modules = [
           inputs.microvm.nixosModules.microvm
           ./hosts/microvm/configuration.nix
+        ];
+      };
+
+      # ------------------------------------------------------ #
+      # TEST VM CONFIGURATION
+      # ------------------------------------------------------ #
+      vm = nixpkgs.lib.nixosSystem {
+        specialArgs = {inherit inputs system;};
+        modules = [
+          ./hosts/vm/configuration.nix
         ];
       };
     };

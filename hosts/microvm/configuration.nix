@@ -37,7 +37,6 @@
     ];
     # https://microvm-nix.github.io/microvm.nix/devices.html
     devices = [
-
     ];
 
     # https://microvm-nix.github.io/microvm.nix/cpu-emulation.html
