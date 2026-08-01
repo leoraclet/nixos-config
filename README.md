@@ -22,7 +22,12 @@ This repository houses my current [NixOS](https://nixos.org/) and
 using [**Hyprland**](https://hypr.land/) and [**Noctalia Shell**](https://noctalia.dev/),
 with full-disk encryption.
 
-You can learn more about this config by consulting my [notes](./notes) on the matter.
+You can learn more about this config by consulting my [notes](./docs) on the matter.
+
+## 📦 Structure
+
+> [!warning]
+> TODO ...
 
 ## ❄️ Flake outputs
 
