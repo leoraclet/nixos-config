@@ -33,6 +33,11 @@
     snappy-switcher.url = "github:OpalAayan/snappy-switcher";
     # nix-alien.url = "github:thiagokokada/nix-alien";
 
+    deploy-rs.url = "github:serokell/deploy-rs";
+    colmena = {
+      url = "github:nix-community/colmena";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     nur = {
       url = "github:nix-community/NUR";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -80,6 +85,11 @@
     nixos-shell = {
       url = "github:Mic92/nixos-shell";
       inputs.nixpkgs.follows = "nixpkgs";
+    };
+    agenix = {
+      url = "github:ryantm/agenix";
+      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.darwin.follows = "";
     };
   };
 
