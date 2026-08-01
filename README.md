@@ -24,7 +24,7 @@ with full-disk encryption.
 
 You can learn more about this config by consulting my [notes](./notes) on the matter.
 
-## ❄️ Flake ouputs
+## ❄️ Flake outputs
 
 ```bash
 ❯ nix flake show
