@@ -13,6 +13,8 @@ My current [NixOS](https://nixos.org/) and
 [Home Manager](https://github.com/nix-community/home-manager/) configurations
 </div>
 
+![Desktop Preview](assets/preview.png)
+
 ## 📖 About
 
 This repository houses my current [NixOS](https://nixos.org/) and
@@ -21,6 +23,25 @@ using [**Hyprland**](https://hypr.land/) and [**Noctalia Shell**](https://noctal
 with full-disk encryption.
 
 You can learn more about this config by consulting my [notes](./notes) on the matter.
+
+## ❄️ Flake ouputs
+
+```bash
+❯ nix flake show
+├───devShells
+│   └───x86_64-linux
+│       └───default: development environment 'nix-shell'
+├───nixosConfigurations
+│   ├───iso: NixOS configuration
+│   ├───leon: NixOS configuration
+│   ├───leonne: NixOS configuration
+│   ├───microvm: NixOS configuration
+│   └───vps: NixOS configuration
+└───packages
+    └───x86_64-linux
+        ├───default: package 'update-input'
+        └───microvm: package 'microvm-qemu-microvm'
+```
 
 ## 📜 License
 
