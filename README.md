@@ -9,6 +9,8 @@
 ![ci-badge](https://img.shields.io/static/v1?label=Built%20with&message=nix&color=blue&style=flat&logo=nixos&link=https://nixos.org&labelColor=111212)
 ![nixpkgs](https://img.shields.io/badge/nixpkgs-unstable-informational.svg?style=flat&logo=nixos&logoColor=CAD3F5&colorA=24273A&colorB=8aadf4)
 
+My current [NixOS](https://nixos.org/) and
+[Home Manager](https://github.com/nix-community/home-manager/) configurations
 </div>
 
 ## 📖 About
