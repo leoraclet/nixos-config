@@ -110,32 +110,6 @@
           inputs.nix-index-database.nixosModules.default
           inputs.home-manager.nixosModules.home-manager
           ./hosts/laptop/configuration.nix
-          # # Nix index database
-          # # https://github.com/nix-community/nix-index-database
-          # # https://github.com/nix-community/nix-index
-          # inputs.nix-index-database.nixosModules.default
-          # # optional to also wrap and install comma
-          # {programs.nix-index-database.comma.enable = true;}
-          # # Home Manager
-          # inputs.home-manager.nixosModules.home-manager
-          # {
-          #   home-manager = {
-          #     useGlobalPkgs = true;
-          #     useUserPackages = true;
-          #     overwriteBackup = true;
-          #     backupFileExtension = "bak";
-          #     users.leonne = {
-          #       imports = [
-          #         ./home/user
-          #       ];
-          #     };
-          #     extraSpecialArgs = {
-          #       inherit inputs;
-          #     };
-          #   };
-          # }
-          # # Hardware Configuration (Dell Latitude 5520)
-          # inputs.nixos-hardware.nixosModules.dell-latitude-5520
         ];
       };
 
