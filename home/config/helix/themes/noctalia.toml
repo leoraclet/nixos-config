@@ -151,8 +151,8 @@ onSurface = "#c0caf5"
 surfaceVariant = "#24283b"
 onSurfaceVariant = "#9aa5ce"
 
-outline = "#586691"
-outlineVariant = "#3b4561"
+outline = "#5d6682"
+outlineVariant = "#3d4355"
 
 surfaceContainerLowest = "#1c1d2a"
 surfaceContainerLow = "#1f2130"

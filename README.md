@@ -2,7 +2,7 @@
 <!-- markdownlint-disable MD041 -->
 
 <div align="center">
-<img alt="NixOS" width="300px" src="./assets/nixos-logo.png">
+<img alt="NixOS" width="300px" src="./docs/img/nixos-logo.png">
 
 # ❄️ NixOS Configuration ❄️
 
@@ -13,7 +13,7 @@ My current [NixOS](https://nixos.org/) and
 [Home Manager](https://github.com/nix-community/home-manager/) configurations
 </div>
 
-![Desktop Preview](assets/preview.png)
+![Desktop Preview](docs/img/preview.png)
 
 ## 📖 About
 

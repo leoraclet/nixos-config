@@ -1,11 +1,26 @@
+username := `whoami`
+hostname := `hostname -s`
+system := `nix-instantiate --raw --strict --eval -E builtins.currentSystem`
+
 default:
+    @echo "System   : {{ system }}"
+    @echo "Hostname : {{ hostname }}"
+    @echo "Username : {{ username }}"
+    @echo
+
     @just --list
 
 debug:
     nixos-rebuild switch --flake .#leonne --use-remote-sudo --show-trace --verbose
 
+format:
+    alejandra .
+
 update:
     nix flake update
+
+update-input:
+    nix run .#update-input
 
 history:
     nix profile history --profile /nix/var/nix/profiles/system
