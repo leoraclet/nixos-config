@@ -10,6 +10,9 @@ default:
 
     @just --list
 
+show:
+    nix flake show --no-write-lock-file
+
 debug:
     nixos-rebuild switch --flake .#leonne --use-remote-sudo --show-trace --verbose
 
