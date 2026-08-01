@@ -29,7 +29,7 @@ function rebuild
     echo "NixOS Rebuilding..."
 
     # Rebuild, output simplified errors, log tracebacks
-    if not sudo nixos-rebuild build --sudo --flake ./#leonne > nixos-switch.log 2>&1
+    if not sudo nixos-rebuild build --accept-flake-config --sudo --flake ./#leonne > nixos-switch.log 2>&1
         cat nixos-switch.log | grep --color error
         notify-send -e "BUILD FAILED !!" -t 5000
         popd >/dev/null
@@ -41,7 +41,7 @@ function rebuild
     echo "Switching to new configuration..."
 
     # If it built successfully, switch to new configuration
-    if not sudo nixos-rebuild switch --sudo --flake ./#leonne > nixos-switch.log 2>&1
+    if not sudo nixos-rebuild switch --accept-flake-config --sudo --flake ./#leonne > nixos-switch.log 2>&1
         cat nixos-switch.log | grep --color error
         notify-send -e "SWITCH FAILED !!" -t 5000
         popd >/dev/null

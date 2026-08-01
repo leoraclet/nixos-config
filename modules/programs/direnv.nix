@@ -1,4 +1,4 @@
-{ inputs, ... }: {
+{inputs, ...}: {
   imports = [
     inputs.direnv-instant.nixosModules.direnv-instant
   ];
