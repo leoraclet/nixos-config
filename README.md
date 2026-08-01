@@ -2,7 +2,7 @@
 <!-- markdownlint-disable MD041 -->
 
 <div align="center">
-<img alt="NixOS" style="width: 300px" src="./assets/nixos-logo.png"></div>
+<img alt="NixOS" width="300px" src="./assets/nixos-logo.png">
 
 # ❄️ NixOS Configuration ❄️
 
