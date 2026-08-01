@@ -4,9 +4,6 @@
     ../../modules
   ];
 
-  # optional to also wrap and install comma
-  programs.nix-index-database.comma.enable = true;
-
   # Home Manager
   home-manager = {
     useGlobalPkgs = true;
