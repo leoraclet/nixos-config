@@ -1,8 +1,27 @@
-{...}: {
+{inputs, ...}: {
   imports = [
     ./hardware-configuration.nix
     ../../modules
   ];
+
+  # optional to also wrap and install comma
+  programs.nix-index-database.comma.enable = true;
+
+  # Home Manager
+  home-manager = {
+    useGlobalPkgs = true;
+    useUserPackages = true;
+    overwriteBackup = true;
+    backupFileExtension = "bak";
+    users.leonne = {
+      imports = [
+        ../../home/user
+      ];
+    };
+    extraSpecialArgs = {
+      inherit inputs;
+    };
+  };
 
   # Setup second SSD
   fileSystems."/home/leonne/Data" = {
