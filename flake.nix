@@ -24,13 +24,14 @@
   };
 
   inputs = {
-    flake-parts.url = "github:hercules-ci/flake-parts";
-    import-tree.url = "github:vic/import-tree";
-
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     nixpkgs-stable.url = "github:nixos/nixpkgs/nixos-26.05-small";
     nixos-hardware.url = "github:NixOS/nixos-hardware/master";
+
+    flake-parts.url = "github:hercules-ci/flake-parts";
+    import-tree.url = "github:vic/import-tree";
     snappy-switcher.url = "github:OpalAayan/snappy-switcher";
+    # nix-alien.url = "github:thiagokokada/nix-alien";
 
     nur = {
       url = "github:nix-community/NUR";
@@ -107,7 +108,6 @@
         specialArgs = {inherit inputs system;};
         modules = [
           inputs.nixos-hardware.nixosModules.dell-latitude-5520
-          inputs.nix-index-database.nixosModules.default
           inputs.home-manager.nixosModules.home-manager
           ./hosts/laptop/configuration.nix
         ];
@@ -184,5 +184,10 @@
       my-nix-env = pkgs.callPackage ./devshells/nix-env {};
       my-python-env = pkgs.callPackage ./devshells/python-env {};
     });
+
+    ##########################################################
+    # FORMATTER
+    ##########################################################
+    formatter = forAllSystems({pkgs, ...}: pkgs.nixfmt);
   };
 }
