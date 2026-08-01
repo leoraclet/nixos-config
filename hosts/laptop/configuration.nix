@@ -4,7 +4,9 @@
     ../../modules
   ];
 
-  # Home Manager
+  ################################################
+  # HOME-MANAGER CONFIGURATION
+  ################################################
   home-manager = {
     useGlobalPkgs = true;
     useUserPackages = true;
@@ -19,6 +21,11 @@
       inherit inputs;
     };
   };
+
+  ################################################
+  # HARWARE ADDITIONNAL CONFIGURATION
+  ################################################
+  hardware.facter.reportPath = ./facter.json;
 
   # Setup second SSD
   fileSystems."/home/leonne/Data" = {
