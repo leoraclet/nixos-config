@@ -1,21 +1,21 @@
-<div align="center"><img style="width: 300px" src="./assets/nixos-logo.png"></div>
-<h1 align="center">NixOS & Hyprland Config</h1>
+<!-- markdownlint-disable MD033 -->
+<!-- markdownlint-disable MD041 -->
 
 <div align="center">
+<img alt="NixOS" style="width: 300px" src="./assets/nixos-logo.png"></div>
 
-![nixos](https://img.shields.io/badge/NixOS-24273A.svg?style=flat&logo=nixos&logoColor=CAD3F5)
+# ❄️ NixOS Configuration ❄️
+
+![ci-badge](https://img.shields.io/static/v1?label=Built%20with&message=nix&color=blue&style=flat&logo=nixos&link=https://nixos.org&labelColor=111212)
 ![nixpkgs](https://img.shields.io/badge/nixpkgs-unstable-informational.svg?style=flat&logo=nixos&logoColor=CAD3F5&colorA=24273A&colorB=8aadf4)
-![hyprland](https://img.shields.io/badge/hyprland-stable-informational.svg?style=flat&logo=wayland&logoColor=eed49f&colorA=24273A&colorB=91d7e3)
-<br>
-![Language](https://img.shields.io/badge/Language-Nix-1d50de)
-![Size](https://img.shields.io/badge/Size-23Mo-f12222)
-![OSS](https://badges.frapsoft.com/os/v2/open-source.svg?v=103)
 
 </div>
 
 ## 📖 About
 
-This repository houses my NixOS ❄️ configuration, using Hyprland ad Noctalia,
+This repository houses my current [NixOS](https://nixos.org/) and
+[Home Manager](https://github.com/nix-community/home-manager/) configurations,
+using [**Hyprland**](https://hypr.land/) and [**Noctalia Shell**](https://noctalia.dev/),
 with full-disk encryption.
 
 You can learn more about this config by consulting my [notes](./notes) on the matter.
