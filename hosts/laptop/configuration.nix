@@ -12,6 +12,7 @@
     useUserPackages = true;
     overwriteBackup = true;
     backupFileExtension = "bak";
+    backupCommand = "rm";
     users.leonne = {
       imports = [
         ../../home/user
