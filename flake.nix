@@ -167,16 +167,6 @@
           ./hosts/microvm/configuration.nix
         ];
       };
-
-      # ------------------------------------------------------ #
-      # TEST VM CONFIGURATION
-      # ------------------------------------------------------ #
-      vm = nixpkgs.lib.nixosSystem {
-        specialArgs = {inherit inputs system;};
-        modules = [
-          ./hosts/vm/configuration.nix
-        ];
-      };
     };
 
     ##########################################################
@@ -185,6 +175,7 @@
     packages = forAllSystems (pkgs: {
       microvm = self.nixosConfigurations.microvm.config.microvm.declaredRunner;
       update-input = pkgs.callPackage ./packages/update-input {};
+      vm = pkgs.callPackage ./packages/vm {};
     });
 
     ##########################################################
