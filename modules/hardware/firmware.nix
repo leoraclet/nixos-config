@@ -3,4 +3,6 @@
   # https://nixos.wiki/wiki/Fwupd
   services.fwupd.enable = true;
   hardware.enableRedistributableFirmware = true;
+  hardware.enableAllFirmware = true;
+  nixpkgs.config.allowUnfree = true; # enableAllFirmware depends on this
 }

@@ -175,7 +175,7 @@
     packages = forAllSystems (pkgs: {
       microvm = self.nixosConfigurations.microvm.config.microvm.declaredRunner;
       update-input = pkgs.callPackage ./packages/update-input {};
-      vm = pkgs.callPackage ./packages/vm {};
+      vm = pkgs.callPackage ./packages/run-vm {};
     });
 
     ##########################################################

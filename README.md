@@ -29,13 +29,13 @@ You can learn more about this config by consulting my [notes](./docs) on the mat
 > [!warning]
 > TO BE CONTINUED ...
 
-- [devshells](./devshells)
-- [docs](./docs)
-- [home](./home)
-- [hosts](./hosts)
-- [lib](./lin)
-- [modules](./modules)
-- [packages](./packages)
+- [devshells](./devshells) - Development shells
+- [docs](./docs) - Personnal config documentation
+- [home](./home) - Home-Manager config
+- [hosts](./hosts) - All machines / targets
+- [lib](./lin) - Custom librairies and functions
+- [modules](./modules) - All modules
+- [packages](./packages) - All custom packages
 
 ## ❄️ Flake outputs
 
@@ -57,7 +57,8 @@ You can learn more about this config by consulting my [notes](./docs) on the mat
 └───packages
     └───x86_64-linux
         ├───microvm: package 'microvm-qemu-microvm'
-        └───update-input: package 'update-input'
+        ├───update-input: package 'update-input'
+        └───vm: package 'run-vm'
 ```
 
 ## 📜 License

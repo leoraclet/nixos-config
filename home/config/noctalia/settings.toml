@@ -257,7 +257,7 @@ widget_order = [
     visible = true
 
     [lockscreen_widgets.widget."lockscreen-login-box@eDP-1"]
-    box_height = 229.0
+    box_height = 196.0
     box_width = 810.0
     cx = 960.0
     cy = 945.5
@@ -278,10 +278,11 @@ widget_order = [
         show_login_button = true
         show_media = true
         show_session_buttons = true
+        show_unlock_hint = true
         show_weather = true
 
     [lockscreen_widgets.widget."lockscreen-login-box@winit"]
-    box_height = 229.0
+    box_height = 196.0
     box_width = 720.0
     cx = 479.0
     cy = 931.0
@@ -302,6 +303,7 @@ widget_order = [
         show_login_button = true
         show_media = true
         show_session_buttons = true
+        show_unlock_hint = true
         show_weather = true
 
     [lockscreen_widgets.widget.lockscreen-widget-0000000000000001]
@@ -321,7 +323,7 @@ widget_order = [
     box_height = 112.0
     box_width = 384.0
     cx = 960.0
-    cy = 756.0
+    cy = 732.0
     output = "eDP-1"
     rotation = 0.0
     type = "audio_visualizer"
@@ -360,7 +362,7 @@ widget_order = [
     box_height = 0.0
     box_width = 0.0
     cx = 960.0
-    cy = 474.0
+    cy = 450.0
     output = "eDP-1"
     rotation = 0.0
     type = "fancy_audio_visualizer"
@@ -396,7 +398,7 @@ background_opacity = 0.99999997764825821
 enabled = [ "noctalia/timer", "nightwatch75/file-search", "oldirtty/color_picker", "noctalia/translator" ]
 
 [shell]
-clipboard_auto_paste = "ctrl_v"
+clipboard_auto_paste = "off"
 clipboard_history_max_entries = 1000
 lang = "en"
 password_style = "random"

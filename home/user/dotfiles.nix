@@ -1,13 +1,12 @@
 # https://gvolpe.com/blog/home-manager-dotfiles-management/
 {config, ...}: let
-  configDir = ../config;
   isMutable = true;
   pathToDotfiles = "${config.home.homeDirectory}/Config/home/config";
 
   # Creates bidirectional symlinks if mutable
   pathToFile = path:
     if !isMutable
-    then "${configDir}/${path}"
+    then "${pathToDotfiles}/${path}"
     else config.lib.file.mkOutOfStoreSymlink "${pathToDotfiles}/${path}";
 
   configLinks = [
